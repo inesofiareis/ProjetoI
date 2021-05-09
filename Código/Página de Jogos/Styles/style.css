@@ -1,0 +1,87 @@
+
+
+/* Banner */
+
+  
+body {
+    background-color: #FAFAFA;
+}
+
+.color {
+    height: 10rem;
+    padding-top: 3rem;
+    background-color: #FFFFFF;
+    font-family: 'Play Time', 'Times New Roman', Times, serif;
+}
+
+.logotipo {
+    margin: 0rem;
+    
+}
+
+.icon {
+    width: 9rem;
+    height: 8rem;
+    position: absolute;
+    left: 2rem;
+    bottom: 0.5rem;
+
+}
+
+.logo {
+    width: 23rem;
+    height: 5rem;
+    position: absolute;
+    right: 13rem;
+    bottom: 2rem;
+
+}
+
+.inicio {
+    width: 4rem;
+    height: 5rem;
+}
+.aprender {
+    width: 4.5rem;
+    height: 4.7rem;
+}
+
+.jogar{
+    width: 5rem;
+    height: 4.5rem;
+}
+
+.paginaPessoal {
+    width: 3rem;
+    height: 4.5rem;
+}
+
+.margin-imagem{
+    margin-right: 20px;
+}
+
+.menu {
+    text-align: center;
+}
+
+.imagem-menu{
+    width: 100px;
+}
+
+#user {
+    margin-left: 150px;
+}
+
+.avatar{
+    width: 7rem;
+    height: 7em;
+    position: absolute;
+    right: 10rem;
+}
+
+#username {
+    font-size: 25pt;
+    margin-top: 15px;
+    margin-left: 15px;
+
+}
