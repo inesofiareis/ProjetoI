@@ -1,0 +1,79 @@
+body {
+    overflow: hidden;
+    font-family: 'Play Time', 'Times New Roman', Times, serif;
+}
+
+.logotipo {
+    width: 40rem;
+    margin: 5rem 0rem 0rem 5rem;
+}
+
+.sombra {
+    position: absolute;
+    float: right;
+    width: 100rem;
+    margin: -5rem 0rem 0rem 5rem;
+}
+
+.tatinhas {
+    position: relative;
+    width: 55rem;
+    float: right;
+    margin: 12rem 7rem 0rem 0rem;
+}
+
+.titulo {
+    display: inline-block;
+    text-align: justify;
+    font-size: 4rem;
+    width: 35rem;
+    margin: 0rem 0rem 2rem 0rem;
+}
+
+.lead {
+    width: 50rem;
+    font-size: 2.3rem;
+    text-align: justify;
+}
+
+.caixaDeTexto {
+    position: absolute;
+    left: 0rem;
+    margin: -47rem 0rem 0rem 2rem;
+    padding: 5rem;
+    display: inline-block;
+    text-align: justify;
+    color: #666666;
+}
+
+.botao {
+    margin: 2rem 0rem 0rem 0rem;
+}
+
+.botaoRegistar {
+
+    width: 25rem;
+    height: 7rem;
+    background-color: #FFA09E;
+    border: none;
+    text-align: left;
+    padding: 0rem 0rem 0rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+
+.botaoLogin {
+    width: 25rem;
+    height: 7rem;
+    margin-left: 2rem;
+    background-color: #FFA09E;
+    border: none;
+    text-align: left;
+    padding: 0rem 0rem 0rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+
+.palavraEspecial {
+    color: #205D76;
+}

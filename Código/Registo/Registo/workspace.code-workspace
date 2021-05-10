@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "ProjetoI",
+			"path": "ProjetoI"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Tatudobem"
+	}
+}

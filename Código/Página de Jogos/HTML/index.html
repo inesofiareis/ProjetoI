@@ -1,71 +1,156 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Title</title>
+
+<head>
+    <title>TATUDOBEM</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../Styles/style.css">
     <link rel="stylesheet" href="../Styles/fontes.css">
-  </head>
-  <body>
+</head>
 
-<!--     Banner -->
+<body onload="loadName();">
 
-<div class="container-fluid">
-    <div class="row color">
-            <div class="col-4 logotipo">
-                <img src="../imagens/Tatinhas-página-inicial.png" alt="icon" title="icon" class="icon">
-                <img src="../imagens/tatudobem.png" alt="logo" title="logo" class="logo">
-            </div>
-            <div class="col-5 menu">
-                <div class="row justify-content-start">
-                    <div class="imagem-menu margin-imagem">
-                        <a href="">
-                            <img src="../imagens/Icon-Inicio.png" alt="inicio" title="Início" width="44px" class="inicio">
-                            <br>
-                            <span>Início</span>
-                        </a>
-                    </div>
-                    <div class="imagem-menu margin-imagem">
-                        <a href="informacao.html">
-                            <img src="../imagens/Icon-aprender.png" alt="aprender" title="Aprender" class="aprender">
-                            <br>
-                            <span>Aprender</span>
-                        </a>
-                    </div>
-                    <div class="imagem-menu margin-imagem">
-                        <a href="">
-                            <img src="../imagens/Icon-jogar.png" alt="jogar" title="Jogar" width="65px" class="jogar">
-                            <br>
-                            <span>Jogar</span>
-                        </a>
-                    </div>
-                    <div class="imagem-menu margin-imagem">
-                        <a href="">
-                            <img src="../imagens/Icon- pagina-pessoal.png" alt="Pagina Pessoal" title="Pagina Pessoal" width="38px" class="paginaPessoal">
-                            <br>
-                            <span>O teu espaço</span>
-                        </a>
-                    </div>
+
+    <nav class="navbar navbar-expand-md">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <!-- Brand/logo -->
+            <a class="navbar-brand col-xl-4 col-sm-3 col-xs-12" href="#">
+                <img src="../imagens/Tatinhas-página-inicial.png" alt="icon" class="icon">
+                <img src="../imagens/tatudobem.png" alt="logo" class="logo">
+            </a>
+        </div>
+        <!--     Banner -->
+        <!-- Links -->
+        <div class="mx-auto order-0">
+            <ul class="navbar-nav mx-auto todosOsIcons">
+                <li class="nav-item icons">
+                    <a href="" class="nav-link iconText">
+                        <img src="../imagens/Icon-Inicio.png" alt="inicio" title="Início" width="65px" class="inicio">
+                        <br>
+                        <span>Início</span>
+                    </a>
+                </li>
+                <li class="nav-item icons">
+                    <a href="" class="nav-link iconText">
+                        <img src="../imagens/Icon-aprender.png" alt="aprender" title="Aprender" width="65px"
+                            class="aprender">
+                        <br>
+                        <span>Aprender</span>
+                    </a>
+                </li>
+                <li class="nav-item icons">
+                    <a href="" class="nav-link iconText">
+                        <img src="../imagens/Icon-jogar.png" alt="jogar" title="Jogar" width="65px" class="jogar">
+                        <br>
+                        <span>Jogar</span>
+                    </a>
+                </li>
+                <li class="nav-item icons">
+                    <a href="" class="nav-link iconText">
+                        <img src="../imagens/Icon- pagina-pessoal.png" alt="Pagina Pessoal" title="Pagina Pessoal"
+                            width="65px" class="paginaPessoal">
+                        <br>
+                        <span>O teu espaço</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <a class="navbar-nav ml-auto avatar" href="#">
+                <img src="../imagens/Avatar.png" width="30" height="30" alt="logo" class="avatarImagem">
+                <p id="perfil" class="avatarTexto"></p>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue pt-4">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Sobre</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Para os pais</a>
+                        </li>
+                        <li>
+                            <a href="#!">Contacte-nos</a>
+                        </li>
+                        <li>
+                            <a href="#!">Políticas de privacidade</a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="col-3">
-                <div id="user">
-                        <img src="../imagens/Avatar.png" alt="avatar" id="avatar" class="avatar">
-                        <span id="username">Batuti da Silva</span>
+                <div class="card">
+                    <div class="row">
+                        <div class="col-xs-1-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Tatinhas</h3>
+                                </div>
+                                <img class="card-img-top" src="../imagens/A equipa - tatinhas.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-xs-1-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Xico</h3>
+                                </div>
+                                <img class="card-img-top" src="../imagens/A equipa -xico.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-xs-1-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Dora</h3>
+                                </div>
+                                <img class="card-img-top" src="../imagens/A equipa -dora.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-xs-1-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">André</h3>
+                                </div>
+                                <img class="card-img-top" src="../imagens/A equipa -andre.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer Links -->
                 </div>
-            </div>
-    </div>
-</div>
-      
+                <!-- Copyright -->
+                <div class="footer-copyright text-left py-3">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da
+                    ESMAD.
+                </div>
+                <div class="footer-copyright text-right py-3">Está tudo bem com o tatu do bem.</div>
+                <!-- Copyright -->
+    </footer>
+
+
+
+
+
+
+    <script src="../Scripts/script.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

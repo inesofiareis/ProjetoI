@@ -1,11 +1,22 @@
-.navbar {
-    background-color: #FFFFFF;
+body {
+    background-color: #E7E7E7;
     font-family: 'Play Time', 'Times New Roman', Times, serif;
+
 }
 
+.navbar {
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.navbar-nav.center {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
 
 .logo {
-    width:200px;
+    width: 200px;
 }
 
 .icon {
@@ -16,12 +27,13 @@
     width: 4rem;
     height: 5rem;
 }
+
 .aprender {
     width: 4.5rem;
     height: 4.7rem;
 }
 
-.jogar{
+.jogar {
     width: 5rem;
     height: 4.5rem;
 }
@@ -31,3 +43,66 @@
     height: 4.5rem;
 }
 
+
+
+.dosCards {
+    background-color: #638D94;
+}
+
+.page-footer {
+    background-color: #FFFFFF;
+}
+
+.container-fluid.blocodeTexto1 {
+    display: flex;
+    align-items: baseline;
+}
+
+.titulo {
+    margin: 5rem;
+}
+
+.blocodeTexto {
+    margin: -3rem 0rem 0rem 5.5rem;
+    text-align: justify;
+    padding: 0rem 11rem 0rem 0rem;
+    font-size: 30px;
+}
+
+
+.icons {
+
+    margin: 2rem 2.5rem 0rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+
+.avatar {
+    padding: 0rem 5rem 0rem 0rem;
+}
+
+.avatarImagem {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.avatarTexto {
+    margin: 1.2rem 0rem 0rem 2rem;
+    font-size: 25px;
+}
+
+.containerAprender {
+    background-color: #638D94;
+    padding: 10rem;
+}
+
+.containerJogar {
+    padding: 10rem;
+}
+
+.containerOTeuEspaço {
+    padding: 10rem;
+}
