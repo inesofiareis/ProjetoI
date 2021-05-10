@@ -1,0 +1,63 @@
+#header,
+#footer {
+    padding-top: 10px;
+    font-family: 'Play Time', 'Times New Roman', Times, serif;
+}
+
+.menu {
+    text-align: center;
+    height: 10vh;
+}
+
+.imagem-menu{
+    text-align: center;
+    width: 100px;
+}
+
+#user {
+    text-align: right;
+}
+
+@media only screen and (max-width: 768px){
+    #user {
+        text-align: justify;
+    }
+}
+
+#username {
+    font-size: 15pt;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+#footer {
+    margin-top: 16vh;
+}
+
+#amigosTitulo {
+    text-align: right;
+    font-size: 25px;
+}
+
+.amigos {
+    text-align: center;
+    font-size: 18px;
+}
+
+#slogan {
+    margin-top: 5px;
+    text-align: right;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 576px) {
+    #logo {
+        text-align: center;
+        width: 400px;
+    }
+
+    .menu,
+    #user {
+        display: none;
+    }
+}

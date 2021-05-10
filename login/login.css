@@ -1,0 +1,45 @@
+body {
+    background-color: #F9F8DA;
+}
+
+h1#titulo {
+    background-color: #FFA09E;
+    text-align: center;
+    color: #ffffff;
+    height: 150px;
+    padding: 56px;
+    font-family: 'Play Time';
+    border-bottom: 3px dashed white;
+}
+
+input{
+    font-family: 'Play Time';
+}
+
+label{
+    font-family: 'Play Time';
+}
+
+#nomeUtilizador{
+    margin-top: 150px;
+}
+
+#entrar{
+    position: relative;
+    background-color: #FFA09E;
+    border: none;
+    text-align: center;
+    height: 60px;
+    width: 330px;
+    margin-left: 900px;
+    margin-top: -30px;
+    font-family: 'Play Time';
+    font-size: 25px;
+}
+
+#tatinhas{
+    position: relative;
+    width: 250px;
+    margin-left: 900px;
+    margin-top: -150px;
+}
