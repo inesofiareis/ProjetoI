@@ -4,9 +4,13 @@
     font-family: 'Play Time', 'Times New Roman', Times, serif;
 }
 
+#usernameBR{
+    display: none;
+}
+
 .menu {
     text-align: center;
-    height: 10vh;
+    height: 12vh;
 }
 
 .imagem-menu{
@@ -31,7 +35,7 @@
 }
 
 #footer {
-    margin-top: 16vh;
+    margin-top: 15vh;
 }
 
 #amigosTitulo {
@@ -50,10 +54,17 @@
     font-size: 14px;
 }
 
+@media only screen and (max-width: 876px) {
+    #usernameBR{
+        display: block;
+    }
+}
+
 @media only screen and (max-width: 576px) {
     #logo {
-        text-align: center;
         width: 400px;
+        text-align: center;
+        padding-left: 35px;
     }
 
     .menu,

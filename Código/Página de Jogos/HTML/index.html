@@ -14,125 +14,130 @@
     <link rel="stylesheet" href="../Styles/fontes.css">
 </head>
 
-<body onload="loadName();">
+<body>
 
 
-    <nav class="navbar navbar-expand-md">
-        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-            <!-- Brand/logo -->
-            <a class="navbar-brand col-xl-4 col-sm-3 col-xs-12" href="#">
-                <img src="../imagens/Tatinhas-página-inicial.png" alt="icon" class="icon">
-                <img src="../imagens/tatudobem.png" alt="logo" class="logo">
-            </a>
-        </div>
-        <!--     Banner -->
-        <!-- Links -->
-        <div class="mx-auto order-0">
-            <ul class="navbar-nav mx-auto todosOsIcons">
-                <li class="nav-item icons">
-                    <a href="" class="nav-link iconText">
-                        <img src="../imagens/Icon-Inicio.png" alt="inicio" title="Início" width="65px" class="inicio">
-                        <br>
-                        <span>Início</span>
-                    </a>
-                </li>
-                <li class="nav-item icons">
-                    <a href="" class="nav-link iconText">
-                        <img src="../imagens/Icon-aprender.png" alt="aprender" title="Aprender" width="65px"
-                            class="aprender">
-                        <br>
-                        <span>Aprender</span>
-                    </a>
-                </li>
-                <li class="nav-item icons">
-                    <a href="" class="nav-link iconText">
-                        <img src="../imagens/Icon-jogar.png" alt="jogar" title="Jogar" width="65px" class="jogar">
-                        <br>
-                        <span>Jogar</span>
-                    </a>
-                </li>
-                <li class="nav-item icons">
-                    <a href="" class="nav-link iconText">
-                        <img src="../imagens/Icon- pagina-pessoal.png" alt="Pagina Pessoal" title="Pagina Pessoal"
-                            width="65px" class="paginaPessoal">
-                        <br>
-                        <span>O teu espaço</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+    <div class="container-fluid">
 
-        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <a class="navbar-nav ml-auto avatar" href="#">
-                <img src="../imagens/Avatar.png" width="30" height="30" alt="logo" class="avatarImagem">
-                <p id="perfil" class="avatarTexto"></p>
-            </a>
-        </div>
-    </nav>
+        <header>
+            <div class="row" id="header">
+                    <div class="col-xl-4 col-sm-3 col-xs-12"  id="logo">
+                        <img src="imagens/tatu_logo.png" alt="logo" title="Logo" width="200px">
+                    </div>
+                    <div class="row justify-content-start col-xxl-5 col-sm-6 menu">
+                            <div class="imagem-menu">
+                                <a href="">
+                                    <img src="imagens/Icon-Inicio.png" alt="inicio" title="Início" width="44px">
+                                    <br>
+                                    <span>Início</span>
+                                </a>
+                            </div>
+                            <div class="imagem-menu">
+                                <a href="informacao.html">
+                                    <img src="imagens/Icon-aprender.png" alt="aprender" title="Aprender" width="52px">
+                                    <br>
+                                    <span>Aprender</span>
+                                </a>
+                            </div>
+                            <div class="imagem-menu">
+                                <a href="">
+                                    <img src="imagens/Icon-jogar.png" alt="jogar" title="Jogar" width="65px">
+                                    <br>
+                                    <span>Jogar</span>
+                                </a>
+                            </div>
+                            <div class="imagem-menu">
+                                <a href="">
+                                    <img src="imagens/Icon- pagina-pessoal.png" alt="Pagina Pessoal" title="Pagina Pessoal" width="38px">
+                                    <br>
+                                    <span>O teu espaço</span>
+                                </a>
+                            </div>
+                    </div>
+                    <div class="col-xxl-3 col-sm" id="user">
+                            <img src="imagens/Avatar.png" alt="avatar" width="65px">
+                            <span id="username">Batuti da Silva</span>
+                    </div>
+            </div>
+        </header>
+        <!--heather igual em todos-->
 
-    <!-- Footer -->
-    <footer class="page-footer font-small blue pt-4">
-        <div class="container-fluid text-center text-md-left">
-            <div class="row">
-                <hr class="clearfix w-100 d-md-none pb-3">
-                <div class="col-md-3 mb-md-0 mb-3">
-                    <h5>Sobre</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Para os pais</a>
-                        </li>
-                        <li>
-                            <a href="#!">Contacte-nos</a>
-                        </li>
-                        <li>
-                            <a href="#!">Políticas de privacidade</a>
-                        </li>
-                    </ul>
+        <main>
+            <!--alterar conforme os jogos-->
+            <div class="row justify-content-center">
+                <div class="col-sm-3 col-xs-12 capitulos">
+                    <a href="">
+                        <img src="imagens/Capitulos/Capitulo 1.png" alt="capitulo 1" title="Capítulo 1" width="200px">
+                        <br>
+                        <span>Capítulo 1 - XXXXX</span>
+                    </a>
                 </div>
-                <div class="card">
+                <div class="col-sm-3 col-xs-12 capitulos">
+                    <a href="">
+                        <img src="imagens/Capitulos/Capitulo 2.png" alt="capitulo 2" title="Capítulo 2" width="200px">
+                        <br>
+                        <span>Capítulo 2 - XXXXX</span>
+                    </a>
+                </div>
+                <div class="col-sm-3 col-xs-12 capitulos">
+                    <a href="">
+                        <img src="imagens/Capitulos/Capitulo 3.png" alt="capitulo 3" title="Capítulo 3" width="200px">
+                        <br>
+                        <span>Capítulo 3 - XXXXX</span>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+
+        <footer> <!--footer alterado para as imagens corretas-->
+            <div class="row" id="footer">
+                <div class="col-sm-4 com-xs-12">
+                    <span>Sobre</span>
+                    <hr>
+                    <pre>
+                        Para os pais
+                        Contacte-nos
+                        <a href="">Políticas de privacidade</a>
+                    </pre>
+                    <span>Criado pela Inês, pelo Paulo e pela Sofia, três alunos da ESMAD.</span>
+                </div>
+                <div class="col-xl-3 col-sm-2"></div>
+                <div class="col">
+                    <div id="amigosTitulo">Os amigos</div>
+                    <hr>
                     <div class="row">
-                        <div class="col-xs-1-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title">Tatinhas</h3>
-                                </div>
-                                <img class="card-img-top" src="../imagens/A equipa - tatinhas.png" alt="">
-                            </div>
+                        <div class="col-sm col-xs-12 amigos">
+                            Tatinhas
+                            <br>
+                            <img src="imagensTatu/Tatinhas_footer.png" alt="Tatinhas" title="Tatinhas" width="90px">
                         </div>
-                        <div class="col-xs-1-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title">Xico</h3>
-                                </div>
-                                <img class="card-img-top" src="../imagens/A equipa -xico.png" alt="">
-                            </div>
+                        <div class="col-sm col-xs-12 amigos">
+                            Xico
+                            <br>
+                            <img src="imagensTatu/Xico.png" alt="Xico" title="Xico" width="90px">
                         </div>
-                        <div class="col-xs-1-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title">Dora</h3>
-                                </div>
-                                <img class="card-img-top" src="../imagens/A equipa -dora.png" alt="">
-                            </div>
+                        <div class="col-sm col-xs-12 amigos">
+                            Dora
+                            <br>
+                            <img src="imagensTatu/Dora.png" alt="Dora" title="Dora" width="90px">
                         </div>
-                        <div class="col-xs-1-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title">André</h3>
-                                </div>
-                                <img class="card-img-top" src="../imagens/A equipa -andre.png" alt="">
-                            </div>
+                        <div class="col-sm col-xs-12 amigos">
+                            André
+                            <br>
+                            <img src="imagensTatu/Andre.png" alt="André" title="André" width="90px">
                         </div>
                     </div>
-                    <!-- Footer Links -->
+                    <div id="slogan"><span>Está tudo bem com o tatu do bem</span></div>
                 </div>
-                <!-- Copyright -->
-                <div class="footer-copyright text-left py-3">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da
-                    ESMAD.
-                </div>
-                <div class="footer-copyright text-right py-3">Está tudo bem com o tatu do bem.</div>
-                <!-- Copyright -->
-    </footer>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Imagens fixas -->
+    <img src="imagens/Tatus/Xico/Tatu_pagina.png" alt="Xico" title="Olá, eu sou o Xico!" width="250px" id="xicoPagina" >
+    <img src="imagens/Amigos.png" alt="Amigos" title="chat" width="75px" id="chat">
+    <img src="imagens/TuturialXico.png" alt="Tuturial" title="Tuturial" id="tuturialXico" width="75px">
 
 
 
