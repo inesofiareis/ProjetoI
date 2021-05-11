@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TatudoBem - Pagina de Informação</title>
+    <title>TatudoBem - Area Pessoal</title>
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- CSS da pagina -->
     <link rel="stylesheet" href="barraMenuFooter.css">
     <link rel="stylesheet" href="fontes.css">
-    <link rel="stylesheet" href="informacao.css">
+    <link rel="stylesheet" href="areaPessoal.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -21,7 +21,7 @@
                     <div class="col-xl-4 col-sm-3 col"  id="logo">
                         <img src="imagens/Menu/tatu_logo.png" alt="logo" title="Logo" width="200px">
                     </div>
-                    <nav class="row justify-content-start col-xxl-5 col-sm-6 menu">
+                    <nav class="row justify-content-start col-xxl-5 col-sm menu">
                             <div class="imagem-menu">
                                 <a href="">
                                     <img src="imagens/Menu/Icon-Inicio.png" alt="inicio" title="Início" width="44px">
@@ -51,60 +51,36 @@
                                 </a>
                             </div>
                     </nav>
-                    <div class="col-xxl-3 col-sm" id="user">
+                    <div class="col-md-3 col-sm-2" id="user">
                             <img src="imagens/Avatar.png" alt="avatar" width="65px">
+                            <br id="usernameBR">
                             <span id="username">Batuti da Silva</span>
                     </div>
             </div>
         </header>
 
         <main>
-            <div class="row justify-content-center">
-                <div class="col-sm-3 col-xs-12 capitulos">
-                    <a href="informacaoCapitulo1.html">
-                        <img src="imagens/Capitulos/Capitulo 1.png" alt="capitulo 1" title="Capítulo 1" width="200px">
-                        <br>
-                        <span>Capítulo 1 - XXXXX</span>
-                    </a>
+            <div class="row justify-content-md-center">
+                <div class="col" id="avatar_mobile">
+                    <img src="imagens/Avatar.png" alt="Avatar" width="150px">
                 </div>
-                <div class="col-sm-3 col-xs-12 capitulos">
-                    <a href="">
-                        <img src="imagens/Capitulos/Capitulo 2.png" alt="capitulo 2" title="Capítulo 2" width="200px">
-                        <br>
-                        <span>Capítulo 2 - XXXXX</span>
-                    </a>
+                <div class="col-md-4 col-sm-6 col-xs" id="form">
+                    <form>
+                        <input type="text" name="txtNome" id="txtNome" placeholder="Nome">
+                        <br><br>
+                        <input type="email" name="txtEmail" id="txtEmail" placeholder="Email">
+                        <br><br>
+                        <input type="password" name="txtPass" id="txtPass" placeholder="Palavra Passe">
+                        <br><br>
+                        <input type="password" name="txtConfPass" id="txtConfPass" placeholder="Confirmar Palavra Passe">
+                        <br><br><br>
+                        <input type="submit" value="Confirmar Alteração" id="confirmarAlteracao">
+                    </form>
                 </div>
-                <div class="col-sm-3 col-xs-12 capitulos">
-                    <a href="">
-                        <img src="imagens/Capitulos/Capitulo 3.png" alt="capitulo 3" title="Capítulo 3" width="200px">
-                        <br>
-                        <span>Capítulo 3 - XXXXX</span>
-                    </a>
+                <div class="col-md-4 col-sm-5"  id="avatar_web">
+                    <img src="imagens/Avatar.png" alt="Avatar" width="200px">
                 </div>
-            </div>
 
-            <div class="row justify-content-center">
-                <div class="col-sm-3 col-xs-12 capitulos">
-                    <a href="">
-                        <img src="imagens/Capitulos/Capitulo 4.png" alt="capitulo 4" title="Capítulo 4" width="200px">
-                        <br>
-                        <span>Capítulo 4 - XXXXX</span>
-                    </a>
-                </div>
-                <div class="col-sm-3 col-xs-12 capitulos">
-                    <a href="">
-                        <img src="imagens/Capitulos/Capitulo 5.png" alt="capitulo 5" title="Capítulo 5" width="200px">
-                        <br>
-                        <span>Capítulo 5 - XXXXX</span>
-                    </a>
-                </div>
-                <div class="col-sm-3 col-xs-12 capitulos">
-                    <a href="">
-                        <img src="imagens/Capitulos/Capitulo 6.png" alt="capitulo 6" title="Capítulo 6" width="200px">
-                        <br>
-                        <span>Capítulo 6 - XXXXX</span>
-                    </a>
-                </div>
             </div>
         </main>
 
@@ -153,9 +129,9 @@ Contacte-nos
     </div>
 
     <!-- Imagens fixas -->
-    <img src="imagens/Tatus/Xico/Tatu_pagina.png" alt="Xico" title="Olá, eu sou o Xico!" width="250px" id="xicoPagina" >
+    <img src="imagens/Tatus/Andre/o tatu da pagina pessoal_reverso.png" alt="Andre" title="Olá, eu sou o André!" id="andrePagina" width="200px">
     <img src="imagens/Amigos.png" alt="Amigos" title="chat" width="75px" id="chat">
-    <img src="imagens/TuturialXico.png" alt="Tuturial" title="Tuturial" id="tuturialXico" width="75px">
+    <img src="imagens/TuturialXico.png" alt="Tuturial" title="Tuturial" id="tuturialAndre" width="75px">
     
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -22,7 +22,6 @@ main > div {
 
 @media only screen and (max-width: 1000px){
     #xicoPagina{
-        position: fixed;
         left: -100px;
         top: 100px;
     }
@@ -43,13 +42,11 @@ main > div {
 
 @media only screen and (max-width: 920px){
     #chat{
-        position: fixed;
         right: 0px;
         top: 120px;
     }
     
     #tuturialXico{
-        position: fixed;
         right: 100px;
         top: 120px;
     }

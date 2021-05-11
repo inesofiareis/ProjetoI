@@ -1,4 +1,7 @@
 @font-face {
     font-family: 'Play Time';
     src: url(Fontes/PlayTime/playtime.ttf) format('opentype'), url(Fontes/PlayTime/PlaytimeOblique.ttf) format('opentype'), url(Fontes/PlayTime/PlaytimeWithHotToddies3D.ttf) format('opentype');
+
+    font-weight: normal;
+    font-style: normal, oblique;
 }
