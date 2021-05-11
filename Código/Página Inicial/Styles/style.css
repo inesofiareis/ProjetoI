@@ -36,17 +36,21 @@ body {
 .jogar {
     width: 5rem;
     height: 4.5rem;
+    margin: 0.25rem 0rem 0rem 0rem;
 }
 
 .paginaPessoal {
     width: 3rem;
     height: 4.5rem;
+    margin: 0.25rem 0rem 0rem 0rem;
 }
 
 
 
 .dosCards {
     background-color: #638D94;
+    height:33rem;
+    position: relative;
 }
 
 .page-footer {
@@ -60,6 +64,7 @@ body {
 
 .titulo {
     margin: 5rem;
+    color: #205D76;
 }
 
 .blocodeTexto {
@@ -67,16 +72,19 @@ body {
     text-align: justify;
     padding: 0rem 11rem 0rem 0rem;
     font-size: 30px;
+    color:#6A9299;
 }
 
+a {
+    color: black;
+}
 
+a:hover{
+    color: black;
+    sty
+}
 .icons {
-
-    margin: 2rem 2.5rem 0rem 0rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
+    margin: 2rem 4rem 0rem 0rem;
 }
 
 
@@ -95,14 +103,140 @@ body {
 }
 
 .containerAprender {
-    background-color: #638D94;
-    padding: 10rem;
+    background-color: #62D4D4;
+    padding: 5rem 5rem 5rem 5rem;
+}
+
+.aprenderImage{
+    width:8rem;
+    height:8rem;
+    margin: 0rem 0rem 0rem 7rem;
+}
+
+.aprenderTitle{
+    font-size: 3rem;
+    color: white;
+}
+
+.quadradoAprender{
+    margin: -5rem 5rem 0rem 0rem;
 }
 
 .containerJogar {
-    padding: 10rem;
+    background-color: #FFA09E;
+    padding: 5rem 5rem 5rem 5rem;
 }
 
+.quadradoJogar{
+    margin: -5rem 5rem 0rem 0rem;
+}
+
+.jogarTitle{
+    font-size: 3rem;
+    color: white;
+}
+.jogarImage{
+    width:10rem;
+    height:8rem;
+    margin: 0rem 0rem 0rem 7rem;
+}
 .containerOTeuEspaço {
-    padding: 10rem;
+    background-color: #FFC122;
+    padding: 4.5rem 5rem 4.5rem 5rem;
+}
+
+.quadradoEspaco{
+    margin:-6rem 0rem 0rem 0rem;
+}
+.espacoImage{
+    width:5.5rem;
+    height:8rem;
+    margin: 0rem 0rem 0rem 8.5rem;
+}
+
+.espacoTitle{
+    font-size: 3rem;
+    color: white;
+}
+
+.text{
+    font-size: 1.5rem;
+    color: white;
+}
+
+.page-footer{
+    height:25rem;
+}
+
+div > .amigos{
+    margin: 0rem 0rem 0rem 23rem;
+    font-size: 1.8rem;
+}
+
+.cardEquipa{
+    margin: 2.5rem 0rem 0rem 70rem;
+}
+
+.divDoSobre{
+    margin: 2rem 0rem 0rem 2rem;
+}
+
+.sobre{
+    font-size:2rem;
+    margin: 0rem 0rem 2rem 0rem;
+}
+
+#lineSobre{
+    width: 13rem;
+    height: 0.1rem;
+    margin: -1rem 0rem 0rem 0rem;
+    background: black;
+    position:absolute;
+}
+
+
+.sobreLista{
+    font-size:1.5rem;
+}
+
+.cardTatinhas{
+    width:8rem;
+    text-align: center;
+}
+
+.tatinhasTitle{
+    margin: 0rem 0rem -0.5rem 0rem;
+}
+.xicoTitle{
+    margin: 0rem 0rem -0.5rem 0rem;
+}
+
+.doraTitle{
+    margin: 0rem 0rem -0.5rem 0rem;
+}
+.andreTitle{
+    margin: 0rem 0rem -0.5rem 0rem;
+}
+
+.cardXico{
+    width:8rem;
+    text-align: center;
+}
+
+.cardDora{
+    width:8rem;
+    text-align: center;
+}
+
+.cardAndre{
+    width:8rem;
+    text-align: center;
+}
+
+.footer-copyright{
+    margin: 1rem 50rem 0rem 3rem;
+}
+
+.footer-slogan{
+    margin: 1rem 0rem 0rem 48rem;
 }

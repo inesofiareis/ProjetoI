@@ -20,40 +20,49 @@
   <nav class="navbar navbar-expand-md">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
       <!-- Brand/logo -->
-      <a class="navbar-brand col-xl-4 col-sm-3 col-xs-12" href="#">
+      <div class="navbar-brand col-xl-4 col-sm-3 col-xs-12">
         <img src="../imagens/Tatinhas-página-inicial.png" alt="icon" class="icon">
         <img src="../imagens/tatudobem.png" alt="logo" class="logo">
-      </a>
+      </div>
     </div>
 
     <!-- Links -->
     <div class="mx-auto order-0">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item icons">
-          <img src="../imagens/Icon-Inicio.png" alt="inicio" title="Início" width="65px" class="inicio">
-          <a class="nav-link iconText" href="#">Início</a>
+          <a href="\Código\Página Inicial\HTML\index.html">
+            <img src="../imagens/Icon-Inicio.png" alt="inicio" title="Início" width="65px" class="inicio">
+            <a class="nav-link iconText" href="\Código\Página Principal\HTML\index.html">Início</a>
+          </a>
+        </li>
+        
+        <li class="nav-item icons">
+          <a href="\Código\Página de Informação\informacao.html">
+            <img src="../imagens/Icon-aprender.png" alt="aprender" title="Aprender" width="65px" class="aprender">
+            <a class="nav-link iconText" href="\Código\Página de Informação\informacao.html">Aprender</a>
+          </a>
         </li>
         <li class="nav-item icons">
-          <img src="../imagens/Icon-aprender.png" alt="aprender" title="Aprender" width="65px" class="aprender">
-          <a class="nav-link iconText" href="#">Aprender</a>
+          <a href="\Código\Página de Jogos\HTML\index.html">
+            <img src="../imagens/Icon-jogar.png" alt="jogar" title="Jogar" width="65px" class="jogar">
+            <a class="nav-link iconText" href="#">Jogar</a>
+          </a>
         </li>
         <li class="nav-item icons">
-          <img src="../imagens/Icon-jogar.png" alt="jogar" title="Jogar" width="65px" class="jogar">
-          <a class="nav-link iconText" href="#">Jogar</a>
-        </li>
-        <li class="nav-item icons">
-          <img src="../imagens/Icon- pagina-pessoal.png" alt="Pagina Pessoal" title="Pagina Pessoal" width="65px"
-            class="paginaPessoal">
-          <a class="nav-link iconText" href="#">O teu espaço</a>
+          <a href="\Código\Página 'O teu espaço'\areaPessoal.html">
+            <img src="../imagens/Icon- pagina-pessoal.png" alt="Pagina Pessoal" title="Pagina Pessoal" width="65px"
+              class="paginaPessoal">
+            <a class="nav-link iconText" href="\Código\Página 'O teu espaço'\areaPessoal.html" style="white-space: nowrap">O teu espaço</a>
+          </a>
         </li>
       </ul>
     </div>
 
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-      <a class="navbar-nav ml-auto avatar" href="#">
+      <div class="navbar-nav ml-auto avatar"></div>
         <img src="../imagens/Avatar.png" width="30" height="30" alt="logo" class="avatarImagem">
         <p id="perfil" class="avatarTexto"></p>
-      </a>
+      </div>
     </div>
   </nav>
 
@@ -70,40 +79,71 @@
     </div>
   </div>
 
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-4">
+      </div>
+
+      <div class="col-sm-3">
+        <button>
+          <img src="" alt="">
+        </button>
+      </div>
+      <div class="col-sm-1">
+      </div>
+      <div class="col-sm-3">
+        <button>
+          <img src="" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+
   <div class="container-fluid dosCards">
     <div class="row">
-      <div class="col-sm-4">
-        <div class="card text-center h-70 containerAprender">
-          <img class="card-img-top" src="../imagens/Icon-aprender.png" alt="">
+      <div class="col-sm-3 quadradoAprender">
+        <div class="card text-center h-60 containerAprender">
+          <img class="card-img-top aprenderImage" src="../imagens/Icon-aprender.png" width="50px" alt="">
           <div class="card-body">
-            <h4 class="card-title">Aprender</h4>
-            <p class="card-text">Conhece o médico Xico e vem aprender tudo o que precisas de saber sobre o corona vírus.
+            <h4 class="card-title aprenderTitle">Aprender</h4>
+            <p class="card-text text">Conhece o médico Xico e vem aprender tudo o que precisas de saber sobre o corona vírus.
             </p>
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
-        <div class="card text-center h-100 containerJogar">
-          <img class="card-img-top" src="../imagens/Icon-jogar.png" alt="">
+      <div class="col-sm-1">
+        
+      </div>
+      <div class="col-sm-3 quadradoJogar">
+        <div class="card text-center h-60 containerJogar">
+          <img class="card-img-top jogarImage" src="../imagens/Icon-jogar.png" width="50px" alt="">
           <div class="card-body">
-            <h4 class="card-title">Jogar</h4>
-            <p class="card-text">Conhece a jogadora Dora e vem descobrir os cuidados que deves ter para proteger quem
+            <h4 class="card-title jogarTitle">Jogar</h4>
+            <p class="card-text text">Conhece a jogadora Dora e vem descobrir os cuidados que deves ter para proteger quem
               mais gostas.</p>
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
-        <div class="card text-center h-100 containerOTeuEspaço">
-          <img class="card-img-top" src="../imagens/Icon- pagina-pessoal.png" alt="">
+
+      <div class="col-sm-1">
+        
+      </div>
+      <div class="col-sm-3 quadradoEspaco">
+        <div class="card text-center h-60 containerOTeuEspaço">
+          <img class="card-img-top espacoImage" src="../imagens/Icon- pagina-pessoal.png" width="50px"  alt="">
           <div class="card-body">
-            <h4 class="card-title">O teu espaço</h4>
-            <p class="card-text">Conhece o André, responsável pelo teu cantinho especial.
+            <h4 class="card-title espacoTitle">O teu espaço</h4>
+            <p class="card-text text">Conhece o André, responsável pelo teu cantinho especial.
               Aqui podes ver todos os teus prémios e medalhas.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <a href=''>
+    <img src="" alt="">
+  </a>
 
   <!-- Footer -->
   <footer class="page-footer font-small blue pt-4">
@@ -119,12 +159,12 @@
         <hr class="clearfix w-100 d-md-none pb-3">
 
         <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
+        <div class="col-md-3 mb-md-0 mb-3 divDoSobre">
 
           <!-- Links -->
-          <h5>Sobre</h5>
-
-          <ul class="list-unstyled">
+          <h5 class="sobre">Sobre</h5>
+          <span id="lineSobre"></span>
+          <ul class="list-unstyled sobreLista">
             <li>
               <a href="#!">Para os pais</a>
             </li>
@@ -140,36 +180,38 @@
 
         <!-- Grid row -->
 
-        <div class="card">
+        <div class="cardEquipa">
+          <span class="amigos">Os amigos</span>
+          <div id="line"></div>
           <div class="row">
-            <div class="col-xs-1-12">
-              <div class="card">
+            <div class="col-xs-1">
+              <div class="cardTatinhas">
                 <div class="card-body">
-                  <h3 class="card-title">Tatinhas</h3>
+                  <h3 class="card-title tatinhasTitle">Tatinhas</h3>
                 </div>
                 <img class="card-img-top" src="../imagens/A equipa - tatinhas.png" alt="">
               </div>
             </div>
-            <div class="col-xs-1-12">
-              <div class="card">
+            <div class="col-xs-1">
+              <div class="cardXico">
                 <div class="card-body">
-                  <h3 class="card-title">Xico</h3>
+                  <h3 class="card-title xicoTitle">Xico</h3>
                 </div>
                 <img class="card-img-top" src="../imagens/A equipa -xico.png" alt="">
               </div>
             </div>
-            <div class="col-xs-1-12">
-              <div class="card">
+            <div class="col-xs-1">
+              <div class="cardDora">
                 <div class="card-body">
-                  <h3 class="card-title">Dora</h3>
+                  <h3 class="card-title doraTitle">Dora</h3>
                 </div>
                 <img class="card-img-top" src="../imagens/A equipa -dora.png" alt="">
               </div>
             </div>
-            <div class="col-xs-1-12">
-              <div class="card">
+            <div class="col-xs-1">
+              <div class="cardAndre">
                 <div class="card-body">
-                  <h3 class="card-title">André</h3>
+                  <h3 class="card-title andreTitle">André</h3>
                 </div>
                 <img class="card-img-top" src="../imagens/A equipa -andre.png" alt="">
               </div>
@@ -178,9 +220,8 @@
           <!-- Footer Links -->
         </div>
         <!-- Copyright -->
-        <div class="footer-copyright text-left py-3">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da ESMAD.
-        </div>
-        <div class="footer-copyright text-right py-3">Está tudo bem com o tatu do bem.</div>
+        <div class="footer-copyright text-left py-3">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da ESMAD.</div>
+        <div class="footer-slogan text-right py-3">Está tudo bem com o tatu do bem.</div>
         <!-- Copyright -->
 
   </footer>
