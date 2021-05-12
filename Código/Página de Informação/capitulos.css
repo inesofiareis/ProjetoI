@@ -45,4 +45,27 @@ main>p {
         padding: 5px;
     }
 
+    .quadrado{
+        height: 225px;
+        padding-top: 45px;
+    }
+
+}
+
+@media only screen and (max-width: 375.5px){
+    .quadrado{
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+}
+
+@media only screen and (max-width: 320.5px){
+    .quadrado{
+        margin-left: -13px;
+        margin-right: -12px;
+    }
+
+    .xico{
+        width: 95px;
+    }
 }
