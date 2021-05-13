@@ -7,22 +7,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="icon" href="../imagens/Tatinhas-página-inicial.png">
+  <link rel="icon" href="../img/Tatinhas-página-inicial.png">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="../Styles/style.css">
-  <link rel="stylesheet" href="../Styles/fontes.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body onload="loadGender(); loadGreeting();">
+<body onload="loadGender(); loadGreeting();" class="corpoDaPaginaPrincipal">
 
   <nav class="navbar navbar-expand-md">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
       <!-- Brand/logo -->
       <div class="navbar-brand col-xl-4 col-sm-3 col-xs-12">
-        <img src="../imagens/Tatinhas-página-inicial.png" alt="icon" class="icon">
-        <img src="../imagens/tatudobem.png" alt="logo" class="logo">
+        <img src="../img/Tatinhas-página-inicial.png" alt="icon" class="icon">
+        <img src="../img/tatudobem.png" alt="logo" class="logo">
       </div>
     </div>
 
@@ -31,26 +30,26 @@
       <ul class="navbar-nav mx-auto">
         <li class="nav-item icons">
           <a href="\Código\Página Inicial\HTML\index.html">
-            <img src="../imagens/Icon-Inicio.png" alt="inicio" title="Início" width="65px" class="inicio">
+            <img src="../img/Icon-Inicio.png" alt="inicio" title="Início" width="65px" class="inicio">
             <a class="nav-link iconText" href="\Código\Página Principal\HTML\index.html">Início</a>
           </a>
         </li>
         
         <li class="nav-item icons">
           <a href="\Código\Página de Informação\informacao.html">
-            <img src="../imagens/Icon-aprender.png" alt="aprender" title="Aprender" width="65px" class="aprender">
+            <img src="../img/Icon-aprender.png" alt="aprender" title="Aprender" width="65px" class="aprender">
             <a class="nav-link iconText" href="\Código\Página de Informação\informacao.html">Aprender</a>
           </a>
         </li>
         <li class="nav-item icons">
           <a href="\Código\Página de Jogos\HTML\index.html">
-            <img src="../imagens/Icon-jogar.png" alt="jogar" title="Jogar" width="65px" class="jogar">
+            <img src="../img/Icon-jogar.png" alt="jogar" title="Jogar" width="65px" class="jogar">
             <a class="nav-link iconText" href="#">Jogar</a>
           </a>
         </li>
         <li class="nav-item icons">
           <a href="\Código\Página 'O teu espaço'\areaPessoal.html">
-            <img src="../imagens/Icon- pagina-pessoal.png" alt="Pagina Pessoal" title="Pagina Pessoal" width="65px"
+            <img src="../img/Icon- pagina-pessoal.png" alt="Pagina Pessoal" title="Pagina Pessoal" width="65px"
               class="paginaPessoal">
             <a class="nav-link iconText" href="\Código\Página 'O teu espaço'\areaPessoal.html" style="white-space: nowrap">O teu espaço</a>
           </a>
@@ -60,7 +59,7 @@
 
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
       <div class="navbar-nav ml-auto avatar"></div>
-        <img src="../imagens/Avatar.png" width="30" height="30" alt="logo" class="avatarImagem">
+        <img src="../img/Avatar.png" width="30" height="30" alt="logo" class="avatarImagem">
         <p id="perfil" class="avatarTexto"></p>
       </div>
     </div>
@@ -70,10 +69,10 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-4">
-        <img src="../imagens/imagem da pagina principal.png" class="img-fluid" alt="Responsive image">
+        <img src="../img/imagem da pagina principal.png" class="img-fluid" alt="Responsive image">
       </div>
       <div class="col-sm-5">
-        <h1 class="display-4 titulo">Tatinhas, o que se passa?</h1>
+        <h1 class="display-4 tituloDaPaginaPrincipal">Tatinhas, o que se passa?</h1>
         <p id="textoIntro" class="h2 blocodeTexto"></p>
       </div>
     </div>
@@ -103,7 +102,7 @@
     <div class="row">
       <div class="col-sm-3 quadradoAprender">
         <div class="card text-center h-60 containerAprender">
-          <img class="card-img-top aprenderImage" src="../imagens/Icon-aprender.png" width="50px" alt="">
+          <img class="card-img-top aprenderImage" src="../img/Icon-aprender.png" width="50px" alt="">
           <div class="card-body">
             <h4 class="card-title aprenderTitle">Aprender</h4>
             <p class="card-text text">Conhece o médico Xico e vem aprender tudo o que precisas de saber sobre o corona vírus.
@@ -116,7 +115,7 @@
       </div>
       <div class="col-sm-3 quadradoJogar">
         <div class="card text-center h-60 containerJogar">
-          <img class="card-img-top jogarImage" src="../imagens/Icon-jogar.png" width="50px" alt="">
+          <img class="card-img-top jogarImage" src="../img/Icon-jogar.png" width="50px" alt="">
           <div class="card-body">
             <h4 class="card-title jogarTitle">Jogar</h4>
             <p class="card-text text">Conhece a jogadora Dora e vem descobrir os cuidados que deves ter para proteger quem
@@ -130,7 +129,7 @@
       </div>
       <div class="col-sm-3 quadradoEspaco">
         <div class="card text-center h-60 containerOTeuEspaço">
-          <img class="card-img-top espacoImage" src="../imagens/Icon- pagina-pessoal.png" width="50px"  alt="">
+          <img class="card-img-top espacoImage" src="../img/Icon- pagina-pessoal.png" width="50px"  alt="">
           <div class="card-body">
             <h4 class="card-title espacoTitle">O teu espaço</h4>
             <p class="card-text text">Conhece o André, responsável pelo teu cantinho especial.
@@ -189,7 +188,7 @@
                 <div class="card-body">
                   <h3 class="card-title tatinhasTitle">Tatinhas</h3>
                 </div>
-                <img class="card-img-top" src="../imagens/A equipa - tatinhas.png" alt="">
+                <img class="card-img-top" src="../img/A equipa - tatinhas.png" alt="">
               </div>
             </div>
             <div class="col-xs-1">
@@ -197,7 +196,7 @@
                 <div class="card-body">
                   <h3 class="card-title xicoTitle">Xico</h3>
                 </div>
-                <img class="card-img-top" src="../imagens/A equipa -xico.png" alt="">
+                <img class="card-img-top" src="../img/A equipa -xico.png" alt="">
               </div>
             </div>
             <div class="col-xs-1">
@@ -205,7 +204,7 @@
                 <div class="card-body">
                   <h3 class="card-title doraTitle">Dora</h3>
                 </div>
-                <img class="card-img-top" src="../imagens/A equipa -dora.png" alt="">
+                <img class="card-img-top" src="../img/A equipa -dora.png" alt="">
               </div>
             </div>
             <div class="col-xs-1">
@@ -213,7 +212,7 @@
                 <div class="card-body">
                   <h3 class="card-title andreTitle">André</h3>
                 </div>
-                <img class="card-img-top" src="../imagens/A equipa -andre.png" alt="">
+                <img class="card-img-top" src="../img/A equipa -andre.png" alt="">
               </div>
             </div>
           </div>
