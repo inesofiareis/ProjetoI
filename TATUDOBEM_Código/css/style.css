@@ -672,18 +672,14 @@ main>p {
 
 /* Area pessoal */
 
-body {
+.corpoDaAreaPessoal {
     background-color: #FAF8DA;
 }
 
-#header,
-#footer {
-    background-color: #ffc0222f;
+.navbarAreaPessoal .footerAreaPessoal {
+    background-color: black;
 }
 
-main > div {
-    margin-top: 75px;
-}
 
 #chat{
     position: fixed;
@@ -691,7 +687,7 @@ main > div {
     top: 100px;
 }
 
-#tuturialAndre{
+#tutorialAndre{
     position: fixed;
     right: 100px;
     top: 100px;
@@ -699,7 +695,8 @@ main > div {
 
 #andrePagina{
     position: fixed;
-    top: 100px;
+    top: 230px;
+    left: 50px;
 }
 
 @media only screen and (max-width: 1000px){
