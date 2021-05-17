@@ -9,6 +9,30 @@ body {
     font-family: 'Play Time', 'Times New Roman', Times, serif;
 }
 
+#paginaInicial{
+    background-color: #ffffff;
+}
+
+#headerInicial{
+    font-size: 34px;
+    margin-top: 300px;
+    position: relative;
+}
+
+#textoInicial{
+    font-size: 24px;
+    position: relative;
+}
+
+#logoInicial{
+    width: 450px;
+}
+
+#tatinhasInicial{
+    position: relative;
+    width: 500px;
+}
+
 .corpoDaPaginaInicial {
     overflow: hidden;
 }
@@ -60,7 +84,7 @@ body {
     margin: 2rem 0rem 0rem 0rem;
 }
 
-.botaoRegistar {
+#botaoRegistar {
 
     width: 25rem;
     height: 7rem;
@@ -70,9 +94,10 @@ body {
     padding: 0rem 0rem 0rem 2rem;
     font-size: 1.5rem;
     border-radius: 1rem;
+    position: relative;
 }
 
-.botaoLogin {
+#botaoLogin {
     width: 25rem;
     height: 7rem;
     margin-left: 2rem;
@@ -82,6 +107,7 @@ body {
     padding: 0rem 0rem 0rem 2rem;
     font-size: 1.5rem;
     border-radius: 1rem;
+    position: relative;
 }
 
 .palavraEspecial {
