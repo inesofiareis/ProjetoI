@@ -7,28 +7,33 @@
 
 body {
     font-family: 'Play Time', 'Times New Roman', Times, serif;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
-#paginaInicial{
+#paginaInicial {
     background-color: #ffffff;
 }
 
-#headerInicial{
+#headerInicial {
     font-size: 34px;
     margin-top: 300px;
     position: relative;
 }
 
-#textoInicial{
+#textoInicial {
     font-size: 24px;
     position: relative;
 }
 
-#logoInicial{
+#logoInicial {
     width: 450px;
 }
 
-#tatinhasInicial{
+#tatinhasInicial {
     position: relative;
     width: 500px;
 }
@@ -116,7 +121,7 @@ body {
 
 
 /* Registo */
-#corpoDoLogineRegisto{
+#corpoDoLogineRegisto {
     background-color: #F9F8DA;
 }
 
@@ -147,11 +152,11 @@ body {
 }
 
 #tatinhasRegisto {
-    position: relative;
+    position: absolute;
     width: 200px;
-    margin-left: 900px;
-    margin-top: -450px;
+    float: right;
 }
+
 /* Login */
 
 .corpoDoLogineRegisto {
@@ -203,6 +208,7 @@ h1#titulo {
 .navbar {
     background-color: #FFFFFF;
     text-align: center;
+    margin: 0;
 }
 
 
@@ -215,24 +221,24 @@ h1#titulo {
 }
 
 .inicio {
-    width: 4rem;
-    height: 5rem;
+    width: 4.6rem;
+    height: 5.8rem;
 }
 
 .aprender {
-    width: 4.5rem;
-    height: 4.7rem;
+    width: 5.5rem;
+    height: 5.7rem;
 }
 
 .jogar {
-    width: 5rem;
-    height: 4.5rem;
+    width: 6rem;
+    height: 5.5rem;
     margin: 0.25rem 0rem 0rem 0rem;
 }
 
 .paginaPessoal {
-    width: 3rem;
-    height: 4.5rem;
+    width: 4rem;
+    height: 5.5rem;
     margin: 0.25rem 0rem 0rem 0rem;
 }
 
@@ -447,87 +453,87 @@ body {
     background-color: #62d4d426;
 }
 
-main > div {
+main>div {
     margin-top: 55px;
 }
 
-.capitulos{
+.capitulos {
     text-align: center;
 }
 
-#xicoPagina{
+#xicoPagina {
     position: fixed;
     top: 100px;
 }
 
-@media only screen and (max-width: 1000px){
-    #xicoPagina{
+@media only screen and (max-width: 1000px) {
+    #xicoPagina {
         left: -100px;
         top: 100px;
     }
 }
 
 
-#chat{
+#chat {
     position: fixed;
     right: 0px;
     top: 100px;
 }
 
-#tuturialXico{
+#tuturialXico {
     position: fixed;
     right: 100px;
     top: 100px;
 }
 
-@media only screen and (max-width: 920px){
-    #chat{
+@media only screen and (max-width: 920px) {
+    #chat {
         right: 0px;
         top: 120px;
     }
-    
-    #tuturialXico{
+
+    #tuturialXico {
         right: 100px;
         top: 120px;
     }
 }
 
-@media only screen and (max-width: 768px){
-    #chat{
+@media only screen and (max-width: 768px) {
+    #chat {
         right: 0px;
         top: 165px;
     }
-    
-    #tuturialXico{
+
+    #tuturialXico {
         right: 100px;
         top: 165px;
     }
 
-    #xicoPagina{
+    #xicoPagina {
         top: 150px;
     }
 }
 
 @media only screen and (max-width: 576px) {
-    #xicoPagina{
+    #xicoPagina {
         width: 200px;
         left: -75px;
         top: 250px;
     }
 
-    #chat{
+    #chat {
         right: 0px;
         width: 65px;
         top: 100px;
     }
-    
-    #tuturialXico{
+
+    #tuturialXico {
         left: 0px;
         width: 65px;
         top: 100px;
     }
 
-    .capitulos{
+    .capitulos {
         margin-top: 50px;
     }
 
@@ -567,7 +573,7 @@ main>p {
     background-color: #62D4D4;
 }
 
-@media only screen and (max-width: 1100px){
+@media only screen and (max-width: 1100px) {
     .btn {
         width: 175px;
     }
@@ -585,27 +591,27 @@ main>p {
         padding: 5px;
     }
 
-    .quadrado{
+    .quadrado {
         height: 225px;
         padding-top: 45px;
     }
 
 }
 
-@media only screen and (max-width: 375.5px){
-    .quadrado{
+@media only screen and (max-width: 375.5px) {
+    .quadrado {
         margin-left: -10px;
         margin-right: -10px;
     }
 }
 
-@media only screen and (max-width: 320.5px){
-    .quadrado{
+@media only screen and (max-width: 320.5px) {
+    .quadrado {
         margin-left: -13px;
         margin-right: -12px;
     }
 
-    .xico{
+    .xico {
         width: 95px;
     }
 }
@@ -623,7 +629,7 @@ main>p {
     height: 12vh;
 }
 
-.imagem-menu{
+.imagem-menu {
     text-align: center;
     width: 100px;
 }
@@ -632,7 +638,7 @@ main>p {
     text-align: right;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
     #user {
         text-align: justify;
     }
@@ -664,20 +670,20 @@ main>p {
     font-size: 14px;
 }
 
-@media only screen and (max-width: 860px){
-    #logoTatu{
+@media only screen and (max-width: 860px) {
+    #logoTatu {
         width: 150px;
         padding-top: 15px;
     }
 
-    .capituloImg{
+    .capituloImg {
         width: 175px;
     }
 
 }
 
-@media only screen and (max-width: 730px){
-    .capituloImg{
+@media only screen and (max-width: 730px) {
+    .capituloImg {
         width: 165px;
     }
 
@@ -710,26 +716,26 @@ main>p {
 }
 
 
-#chat{
+#chat {
     position: fixed;
     right: 0px;
     top: 100px;
 }
 
-#tutorialAndre{
+#tutorialAndre {
     position: fixed;
     right: 100px;
     top: 100px;
 }
 
-#andrePagina{
+#andrePagina {
     position: fixed;
     top: 230px;
     left: 50px;
 }
 
-@media only screen and (max-width: 1000px){
-    #andrePagina{
+@media only screen and (max-width: 1000px) {
+    #andrePagina {
         left: -100px;
         top: 100px;
     }
@@ -740,59 +746,59 @@ main>p {
     width: 200px;
 }
 
-#confirmarAlteracao:active{
+#confirmarAlteracao:active {
     background-color: #ffb700;
 }
 
-#avatar_web{
+#avatar_web {
     text-align: right;
 }
 
-#avatar_mobile{
+#avatar_mobile {
     display: none;
 }
 
-#form{
+#form {
     text-align: center;
 }
 
 @media only screen and (max-width: 876px) {
-    #chat{
+    #chat {
         top: 125px;
     }
-    
-    #tuturialAndre{
+
+    #tuturialAndre {
         top: 125px;
     }
 }
 
-@media only screen and (max-width: 575.5px){
-    #avatar_web{
+@media only screen and (max-width: 575.5px) {
+    #avatar_web {
         display: none;
     }
 
-    #avatar_mobile{
+    #avatar_mobile {
         display: block;
         text-align: center;
     }
 
-    #form{
+    #form {
         margin-top: 45px;
     }
 
-    #andrePagina{
+    #andrePagina {
         width: 150px;
         left: -75px;
         top: 175px;
     }
 
-    #chat{
+    #chat {
         right: 0px;
         width: 65px;
         top: 85px;
     }
-    
-    #tuturialAndre{
+
+    #tuturialAndre {
         left: 0px;
         width: 65px;
         top: 85px;
@@ -806,7 +812,7 @@ main>p {
 
 }
 
-.navbarDaPaginaDeJogos {
+.navbarJogos {
     background-color: #FFE1E4;
     text-align: center;
 }
@@ -817,6 +823,9 @@ main>p {
     align-content: center;
 }
 
+.footerJogos {
+    background-color: #FFE1E4;
+}
 
 /* 
 .jogar {
@@ -839,3 +848,21 @@ main>p {
     align-content: center;
 } */
 
+
+/* SCROLLBARS */
+
+
+::-webkit-scrollbar {
+    width: 20px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 40px;
+    background-image: -webkit-gradient(linear,
+            left bottom,
+            left top,
+            color-stop(0.50, rgba(62, 163, 217, 0.61)),
+            color-stop(0.72, rgba(240, 127, 176, 0.61)),
+            color-stop(0.80, rgba(236, 225, 15, 0.61)));
+}

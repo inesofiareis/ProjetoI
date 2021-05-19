@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-pt">
 
 <head>
     <title>TATUDOBEM</title>
@@ -16,128 +16,185 @@
 <body class="corpoDaPaginaDeJogos">
 
 
-    <div class="container-fluid">
+    <!--     <div class="container-fluid"> -->
 
-        <header>
-            <div class="row" id="header">
-                <div class="col-xl-4 col-sm-3 col-xs-12" id="logo">
-                    <img src="../img/tatu_logo.png" alt="logo" title="Logo" width="200px">
-                </div>
-                <div class="row justify-content-start col-xxl-5 col-sm-6 menu">
-                    <div class="imagem-menu">
-                        <a href="">
-                            <img src="../img/Icon-Inicio.png" alt="inicio" title="Início" width="44px">
-                            <br>
-                            <span>Início</span>
-                        </a>
-                    </div>
-                    <div class="imagem-menu">
-                        <a href="informacao.html">
-                            <img src="../img/Icon-aprender.png" alt="aprender" title="Aprender" width="52px">
-                            <br>
-                            <span>Aprender</span>
-                        </a>
-                    </div>
-                    <div class="imagem-menu">
-                        <a href="">
-                            <img src="../img/Icon-jogar.png" alt="jogar" title="Jogar" width="65px">
-                            <br>
-                            <span>Jogar</span>
-                        </a>
-                    </div>
-                    <div class="imagem-menu">
-                        <a href="">
-                            <img src="../img/Icon- pagina-pessoal.png" alt="Pagina Pessoal" title="Pagina Pessoal"
-                                width="38px">
-                            <br>
-                            <span>O teu espaço</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-sm" id="user">
-                    <img src="../img/Avatar.png" alt="avatar" width="65px">
-                    <span id="username">Batuti da Silva</span>
+    <nav class="navbar navbarJogos navbar-expand-md" style="margin:0px 0px 0px 0px;">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2 col-4">
+            <!-- Brand/logo -->
+            <div class="navbar-brand col-xl-4 col-sm-3 col-xs-12">
+                <img src="../img/Tatinhas-página-inicial.png" alt="icon" class="icon">
+                <img src="../img/tatudobem.png" alt="logo" class="logo">
+            </div>
+        </div>
+
+        <!-- Links -->
+        <div class="mx-auto order-0 col-4" style="margin: 0rem 0rem 0rem 10rem;">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item icons">
+                    <a href="../html/paginaprincipal.html">
+                        <img src="../img/Icon-Inicio.png" alt="inicio" title="Início" width="65px" class="inicio">
+                        <a class="nav-link iconText" href="\Código\Página Principal\HTML\index.html">Início</a>
+                    </a>
+                </li>
+
+                <li class="nav-item icons">
+                    <a href="../html/paginadeinformacao.html">
+                        <img src="../img/Icon-aprender.png" alt="aprender" title="Aprender" width="65px"
+                            class="aprender">
+                        <a class="nav-link iconText" href="\Código\Página de Informação\informacao.html">Aprender</a>
+                    </a>
+                </li>
+                <li class="nav-item icons">
+                    <a href="../html/paginadejogos.html">
+                        <img src="../img/Icon-jogar.png" alt="jogar" title="Jogar" width="65px" class="jogar">
+                        <a class="nav-link iconText" href="#">Jogar</a>
+                    </a>
+                </li>
+                <li class="nav-item icons">
+                    <a href="../html/arepessoal-area'oteuespaco'.html">
+                        <img src="../img/Icon- pagina-pessoal.png" alt="Pagina Pessoal" title="Pagina Pessoal"
+                            width="65px" class="paginaPessoal">
+                        <a class="nav-link iconText" href="\Código\Página 'O teu espaço'\areaPessoal.html"
+                            style="white-space: nowrap">O teu espaço</a>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 col-2">
+            <div class="navbar-nav ml-auto avatar"></div>
+            <img src="../img/Avatar.png" width="30" height="30" alt="logo" class="avatarImagem">
+            <p id="perfil" class="avatarTexto">Batuti da Silva</p>
+        </div>
+    </nav>
+    <!--     </div> -->
+
+    <!--heather igual em todos-->
+
+    <main style="height: 650px;">
+        <div class="row">
+            <p class="display-3" style="margin: 0px 0px 30px 50px; color:#444E6E">Sê bem-vinde à área de jogos! Explora e diverte-te!</p>
+            <div class="col-3"></div>
+            <a href="" style="margin: 0rem 0rem 0rem 5rem;">
+                <img src="../img/Icon ajuda dora.png" width="120px" alt="">
+            </a>
+        </div>
+
+        <div class="card-group d-flex justify-content-around">
+            <img src="../img/JogadoraCadeira.png" alt="Dora" title="Olá, eu sou a Dora!" width="250px" id="doraPagina" style="transform: scaleX(-1);">
+            <div class="card col-sm-3 col-xs-12 w-50 " style="background: none; border:none;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Completa os espaços</p>
                 </div>
             </div>
-        </header>
-        <!--heather igual em todos-->
-
-        <main>
-            <!--alterar conforme os jogos-->
-            <div class="row justify-content-center">
-                <div class="col-sm-3 col-xs-12 capitulos">
-                    <a href="">
-                        <img src="../img/Capitulo 1.png" alt="capitulo 1" title="Capítulo 1" width="200px">
-                        <br>
-                        <span>Capítulo 1 - XXXXX</span>
-                    </a>
-                </div>
-                <div class="col-sm-3 col-xs-12 capitulos">
-                    <a href="">
-                        <img src="../img/Capitulo 2.png" alt="capitulo 2" title="Capítulo 2" width="200px">
-                        <br>
-                        <span>Capítulo 2 - XXXXX</span>
-                    </a>
-                </div>
-                <div class="col-sm-3 col-xs-12 capitulos">
-                    <a href="">
-                        <img src="../img/Capitulo 3.png" alt="capitulo 3" title="Capítulo 3" width="200px">
-                        <br>
-                        <span>Capítulo 3 - XXXXX</span>
-                    </a>
+            <div class="card col-sm-3 col-xs-12" style="background: none; border:none;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
+                    </p>
                 </div>
             </div>
-        </main>
-
-        <footer>
-            <!--footer alterado para as imagens corretas-->
-            <div class="row" id="footer">
-                <div class="col-sm-4 com-xs-12">
-                    <span>Sobre</span>
-                    <hr>
-                    <pre>
-                        Para os pais
-                        Contacte-nos
-                        <a href="">Políticas de privacidade</a>
-                    </pre>
-                    <span>Criado pela Inês, pelo Paulo e pela Sofia, três alunos da ESMAD.</span>
+            <div class="card col-sm-3 col-xs-12" style="background: none; border:none;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This card has even longer content than the first to show that equal height
+                        action.</p>
                 </div>
-                <div class="col-xl-3 col-sm-2"></div>
-                <div class="col">
-                    <div id="amigosTitulo">Os amigos</div>
-                    <hr>
+            </div>
+        </div>
+        </div>
+        <!--alterar conforme os jogos-->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer footerJogos font-small navbar-static-bottom">
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none pb-3">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3 divDoSobre">
+
+                    <!-- Links -->
+                    <h5 class="sobre">Sobre</h5>
+                    <span id="lineSobre"></span>
+                    <ul class="list-unstyled sobreLista">
+                        <li>
+                            <a href="#!">Para os pais</a>
+                        </li>
+                        <li>
+                            <a href="#!">Contacte-nos</a>
+                        </li>
+                        <li>
+                            <a href="#!">Políticas de privacidade</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- Grid row -->
+
+                <div class="cardEquipa">
+                    <span class="amigos">Os amigos</span>
+                    <div id="line"></div>
                     <div class="row">
-                        <div class="col-sm col-xs-12 amigos">
-                            Tatinhas
-                            <br>
-                            <img src="../img/A equipa - tatinhas.png" alt="Tatinhas" title="Tatinhas" width="90px">
+                        <div class="col-xs-1">
+                            <div class="cardTatinhas">
+                                <div class="card-body">
+                                    <h3 class="card-title tatinhasTitle">Tatinhas</h3>
+                                </div>
+                                <img class="card-img-top" src="../img/A equipa - tatinhas.png" alt="">
+                            </div>
                         </div>
-                        <div class="col-sm col-xs-12 amigos">
-                            Xico
-                            <br>
-                            <img src="../img/A equipa -xico.png" alt="Xico" title="Xico" width="90px">
+                        <div class="col-xs-1">
+                            <div class="cardXico">
+                                <div class="card-body">
+                                    <h3 class="card-title xicoTitle">Xico</h3>
+                                </div>
+                                <img class="card-img-top" src="../img/A equipa -xico.png" alt="">
+                            </div>
                         </div>
-                        <div class="col-sm col-xs-12 amigos">
-                            Dora
-                            <br>
-                            <img src="../img/A equipa -dora.png" alt="Dora" title="Dora" width="90px">
+                        <div class="col-xs-1">
+                            <div class="cardDora">
+                                <div class="card-body">
+                                    <h3 class="card-title doraTitle">Dora</h3>
+                                </div>
+                                <img class="card-img-top" src="../img/A equipa -dora.png" alt="">
+                            </div>
                         </div>
-                        <div class="col-sm col-xs-12 amigos">
-                            André
-                            <br>
-                            <img src="../img/A equipa -andre.png" alt="André" title="André" width="90px">
+                        <div class="col-xs-1">
+                            <div class="cardAndre">
+                                <div class="card-body">
+                                    <h3 class="card-title andreTitle">André</h3>
+                                </div>
+                                <img class="card-img-top" src="../img/A equipa -andre.png" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div id="slogan"><span>Está tudo bem com o tatu do bem</span></div>
+                    <!-- Footer Links -->
                 </div>
-            </div>
-        </footer>
-    </div>
+                <!-- Copyright -->
+                <div class="footer-copyright text-left py-3">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da
+                    ESMAD.
+                </div>
+                <div class="footer-slogan text-right py-3">Está tudo bem com o tatu do bem.</div>
+                <!-- Copyright -->
+
+    </footer>
 
     <!-- Imagens fixas -->
-    <img src="../img/JogadoraCadeira.png" alt="Dora" title="Olá, eu sou a Dora!" width="250px" id="doraPagina">
-    <img src="../img/Botao_chat.png" alt="Amigos" title="chat" width="75px" id="chat">
-    <img src="../img/Icon ajuda dora.png" alt="Tutorial" title="Tutorial" id="tutorialXico" width="75px">
 
 
 
