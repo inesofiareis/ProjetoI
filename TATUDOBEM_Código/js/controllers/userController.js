@@ -2,23 +2,23 @@ import UserModel from '../models/userModel.js'
 
 export default class UserController{
     constructor() {
-        this.users = localStorage.users ? JSON.parse(localStorage.users) : [];
+        this.utilizadores = localStorage.utilizadores ? JSON.parse(localStorage.utilizadores) : [];
     }
 
-    register(username, password){
-        if(this.users.find(user => user.username === username)) {
-            throw Error(`Já existe um usuario com esse nome de usuario: "${username}"`)
+    registar(nomeUtilizador, palavraPasse){
+        if(this.utilizadores.find(utilizador => utilizador.nomeUtilizador === nomeUtilizador)) {
+            throw Error(`Já existe um utilizador com esse nome de utilizador: "${nomeUtilizador}"`)
         }
         else {
-            const newId = this.users.length > 0 ? this.users[this.users.length - 1].id + 1 : 1
-            this.users.push(new UserModel(username, password))
-            localStorage.setItem('user', JSON.stringify(this.users))
+            const novoID = this.utilizadores.length > 0 ? this.utilizadores[this.utilizadores.length - 1].id + 1 : 1
+            this.utilizadores.push(new UserModel(nomeUtilizador, palavraPasse))
+            localStorage.setItem('utilizador', JSON.stringify(this.utilizadores))
         }
     }
 
-    login(username, password){
-        if (this.users.some(user => user.username === username && user.password === password)) {
-            sessionStorage.setItem('loggedUser', username)
+    login(nomeUtilizador, palavraPasse){
+        if (this.utilizadores.some(utilizador => utilizador.nomeUtilizador === nomeUtilizador && utilizador.palavraPasse === palavraPasse)) {
+            sessionStorage.setItem('loggedUser', nomeUtilizador)
         }
         else {
             throw Error('Login invalido!')
