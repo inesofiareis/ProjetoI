@@ -64,14 +64,12 @@
         </div>
     </nav>
 
-    <main>
+    <main style="height: 100%;">
         <h1>Capitulo 1 - xxx</h1>
         <div class="row">
             <div class="col-sm-1"></div>
-            <div class="col-xl-1 col-sm-2 col-4 quadrado">
-                <img src="imagens/Tatus/Xico/Tatu_pagina.png" alt="Xico" title="Xico" width="100px" class="xico">
-            </div>
             <div class="col">
+                <h1 class="display-4">Olá</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, similique natus? Error, iste culpa
                     eveniet veritatis dolores totam architecto aperiam iure facere excepturi? Natus, esse accusamus. Eos
                     quibusdam provident quisquam.</p>
@@ -83,52 +81,84 @@
         </div>
         <div class="row">
             <div class="col-sm-1"></div>
-            <div class="col">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum nostrum dolor, iure, expedita unde
-                    doloribus molestiae totam ratione voluptatum non alias, nisi aspernatur culpa mollitia omnis facere
-                    praesentium maxime. Beatae.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, iusto aliquam explicabo, unde
-                    ratione, nobis officia beatae quibusdam neque aliquid impedit quaerat iste at assumenda incidunt
-                    maxime doloribus facilis doloremque?</p>
-            </div>
             <div class="col-xl-1 col-sm-2 col-4 quadrado">
                 <img src="imagens/Tatus/Xico/Tatu_pagina_reverso.png" alt="Xico" title="Xico" width="100px"
                     class="xico">
             </div>
             <div class="col-sm-1"></div>
         </div>
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-xl-1 col-sm-2 col-4 quadrado">
-                <img src="imagens/Tatus/Xico/Tatu_pagina.png" alt="Xico" title="Xico" width="100px" class="xico">
-            </div>
-            <div class="col">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam voluptatum atque dicta recusandae
-                    reprehenderit quo tempore veritatis ipsum ducimus architecto, perferendis est nihil dolorum alias
-                    pariatur exercitationem placeat! Alias, neque.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cupiditate molestias itaque, veritatis
-                    fugit ea. Explicabo vitae deleniti repellat officia, officiis at eos nam impedit, nemo adipisci
-                    alias hic. Vitae.</p>
-            </div>
-            <div class="col-sm-1"></div>
+
+        <div class="container localDoQuiz">
+            <h1 class="display-4">Vê o que aprendeste!</h1>
+            <h3 class="perguntaUm">Q1. What is 2+3?</h3>
+            <input type="radio" name="question1" id="correct1">5 <br>
+            <input type="radio" name="question1">8 <br>
+            <input type="radio" name="question1">9 <br>
+            <input type="radio" name="question1">10 <br>
+
+            <h3 class="perguntaDois">Q1. What is 8+3?</h3>
+            <input type="radio" name="question2" >2 <br>
+            <input type="radio" name="question2">8 <br>
+            <input type="radio" name="question2" id="correct2">11 <br>
+            <input type="radio" name="question2">9 <br>
+
+            <h3 class="perguntaTres">Q1. What is 28+3?</h3>
+            <input type="radio" name="question3" >15 <br>
+            <input type="radio" name="question3"id="correct3">31 <br>
+            <input type="radio" name="question3">10 <br>
+            <input type="radio" name="question3">19 <br>
+
+            <h3 class="perguntaQuatro">Q1. What is 28+3?</h3>
+            <input type="radio" name="question3" >15 <br>
+            <input type="radio" name="question3"id="correct3">31 <br>
+            <input type="radio" name="question3">10 <br>
+            <input type="radio" name="question3">19 <br>
+
+            <h3 class="perguntaCinco">Q1. What is 28+3?</h3>
+            <input type="radio" name="question3" >15 <br>
+            <input type="radio" name="question3"id="correct3">31 <br>
+            <input type="radio" name="question3">10 <br>
+            <input type="radio" name="question3">19 <br>
+
+            <input type="submit" name="submit" value="Diz-me a pontuação!" onClick="result()">
+            <script type="text/javascript">
+            function result()
+            {
+                var score=0;
+                if(document.getElementById('correct1').checked)
+                    {	score++;
+                    }
+                if(document.getElementById('correct2').checked)
+                    {	score++;
+                    }
+                if(document.getElementById('correct3').checked)
+                    {	score++;
+                    }
+            alert("Your score is:"+score);
+            // to print on browser
+            // document.write("Your score is:"+score);
+            }
+            </script>
+
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-lg-2 col-sm-3 col-5">
+            <a href="informacao.html"><input type="button" value="Inicio" id="Inicio"
+                    class="btn btn-primary btn-lg"></a>
         </div>
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-lg-2 col-sm-3 col-5">
-                <a href="informacao.html"><input type="button" value="Inicio" id="Inicio"
-                        class="btn btn-primary btn-lg"></a>
-            </div>
-            <div class="col-sm col-1"></div>
-            <div class="col-lg-2 col-sm-3 col-5" id="btnproximoCapitulo">
-                <input type="button" value="Proximo Capitulo >" id="proximoCapitulo" class="btn btn-primary btn-lg">
-            </div>
-            <div class="col-sm-1"></div>
+        <div class="col-sm col-1"></div>
+        <div class="col-lg-2 col-sm-3 col-5" id="btnproximoCapitulo">
+            <input type="button" value="Proximo Capitulo >" id="proximoCapitulo" class="btn btn-primary btn-lg">
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+
         </div>
     </main>
 
 
     <!-- Footer -->
-    <footer class="page-footer font-small blue pt-4 fixed-bottom">
+    <footer class="page-footer font-small blue pt-4">
         <div class="container-fluid text-center text-md-left">
             <div class="row">
                 <hr class="clearfix w-100 d-md-none pb-3">

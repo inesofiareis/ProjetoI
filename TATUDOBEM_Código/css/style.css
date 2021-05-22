@@ -121,6 +121,7 @@ body {
 
 
 /* Registo */
+
 #corpoDoLogineRegisto {
     background-color: #F9F8DA;
 }
@@ -703,6 +704,10 @@ main>p {
     #user {
         display: none;
     }
+}
+
+.cartaoDosAmigos{
+    height:400px;
 }
 
 /* Area pessoal */
