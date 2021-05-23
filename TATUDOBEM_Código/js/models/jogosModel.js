@@ -3,13 +3,13 @@
         this.nome = nome
         this.desc = desc
         this.avaliacao = avaliacao
-        this.comentario = comentario
+        this.comentario = Comentarios()
     }
     // Compara duas bandas pelo seu nome. Faz uma ordenação alfabética crescente
-    static compare(bandA, bandB) {
-        if (bandA.name < bandB.name)
+    static compare(nomeA, nomeB) {
+        if (nomeA.nome < nomeB.nome)
             return -1;
-        if (bandA.name > bandB.name)
+        if (nomeA.nome > nomeB.nome)
             return 1;
         return 0;
     }
@@ -19,17 +19,15 @@
 
     constructor(pessoa, texto, data){
 
-        let tempo = new Date()
+/*         let tempo = new Date()
         tempo.getFullYear()
         tempo.getMonth()
         tempo.getDay()
-        tempo.getTime() 
+        tempo.getTime()  */
         this.pessoa = pessoa
         this.texto = texto
-        this.data = tempo
+        this.data = data
     }
 
 
 }
-
-let comment1 = new Comentarios("joaquim")

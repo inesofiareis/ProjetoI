@@ -15,11 +15,11 @@
 </head>
 
 <body>
-    <nav class="navbar navbarAprender navbar-expand-md" style="margin:0px 0px 0px 0px;">
+    <nav class="navbar navbarAprender navbar-expand-md" style="margin:0px;">
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2 col-4">
             <!-- Brand/logo -->
             <div class="navbar-brand col-xl-4 col-sm-3 col-xs-12">
-                <img src="../img/Tatinhas-página-inicial.png" alt="icon" class="icon">
+                <img src="../img/Tatinhas-página-inicial.png" alt="icone" class="icone" width="150px;">
                 <img src="../img/tatudobem.png" alt="logo" class="logo">
             </div>
         </div>
@@ -28,30 +28,30 @@
         <div class="mx-auto order-0 col-4" style="margin: 0rem 0rem 0rem 10rem;">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item icons">
-                    <a href="../html/paginaprincipal.html">
+                    <a href="./inicio.html">
                         <img src="../img/Icon-Inicio.png" alt="inicio" title="Início" width="65px" class="inicio">
-                        <a class="nav-link iconText" href="\Código\Página Principal\HTML\index.html">Início</a>
+                        <a class="nav-link iconeTexto" href="./inicio.html">Início</a>
                     </a>
                 </li>
 
                 <li class="nav-item icons">
-                    <a href="../html/paginadeinformacao.html">
+                    <a href="./info.html">
                         <img src="../img/Icon-aprender.png" alt="aprender" title="Aprender" width="65px"
                             class="aprender">
-                        <a class="nav-link iconText" href="\Código\Página de Informação\informacao.html">Aprender</a>
+                        <a class="nav-link iconeTexto" href="./info.html">Aprender</a>
                     </a>
                 </li>
                 <li class="nav-item icons">
-                    <a href="../html/paginadejogos.html">
+                    <a href="./jogos.html">
                         <img src="../img/Icon-jogar.png" alt="jogar" title="Jogar" width="65px" class="jogar">
-                        <a class="nav-link iconText" href="#">Jogar</a>
+                        <a class="nav-link iconeTexto" href="./jogos.html">Jogar</a>
                     </a>
                 </li>
                 <li class="nav-item icons">
-                    <a href="../html/arepessoal-area'oteuespaco'.html">
+                    <a href="./perfil.html">
                         <img src="../img/Icon- pagina-pessoal.png" alt="Pagina Pessoal" title="Pagina Pessoal"
                             width="65px" class="paginaPessoal">
-                        <a class="nav-link iconText" href="\Código\Página 'O teu espaço'\areaPessoal.html"
+                        <a class="nav-link iconeTexto" href="./perfil.html"
                             style="white-space: nowrap">O teu espaço</a>
                     </a>
                 </li>
@@ -65,24 +65,19 @@
     </nav>
 
     <main style="height: 100%;">
-        <h1>Capitulo 1 - xxx</h1>
+        <h1 class="numeroDoCapitulo">Inserir número do capítulo</h1>
         <div class="row">
             <div class="col-sm-1"></div>
             <div class="col">
-                <h1 class="display-4">Olá</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, similique natus? Error, iste culpa
-                    eveniet veritatis dolores totam architecto aperiam iure facere excepturi? Natus, esse accusamus. Eos
-                    quibusdam provident quisquam.</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae modi cum aliquid voluptatum, tenetur
-                    molestiae aspernatur non consectetur unde quisquam accusantium, repellat nobis dolores sed laborum
-                    veniam pariatur deleniti explicabo?</p>
+                <h1 class="display-4 tituloDaInfo">Inserir título da info</h1>
+                <p class="conteudoDaInfo">Inserir todo o texto</p>
             </div>
-            <div class="col-sm-1"></div>
+            <img src="../img/Icon ajuda xico.png" alt="Precisas de ajuda?" title="botaoAjuda" id="tutorialXico" width="150px">
         </div>
         <div class="row">
             <div class="col-sm-1"></div>
-            <div class="col-xl-1 col-sm-2 col-4 quadrado">
-                <img src="imagens/Tatus/Xico/Tatu_pagina_reverso.png" alt="Xico" title="Xico" width="100px"
+            <div class="col-xl-1 col-sm-2 col-4 imagemDaInfo">
+                <img src="imagens/Tatus/Xico/Tatu_pagina_reverso.png" alt="Imagem" title="Imagem" width="100px"
                     class="xico">
             </div>
             <div class="col-sm-1"></div>
@@ -91,47 +86,47 @@
         <div class="container localDoQuiz">
             <h1 class="display-4">Vê o que aprendeste!</h1>
             <h3 class="perguntaUm">Q1. What is 2+3?</h3>
-            <input type="radio" name="question1" id="correct1">5 <br>
-            <input type="radio" name="question1">8 <br>
-            <input type="radio" name="question1">9 <br>
-            <input type="radio" name="question1">10 <br>
+            <input type="radio" name="questaoUm" id="corretaUm">5 <br>
+            <input type="radio" name="questaoUm">8 <br>
+            <input type="radio" name="questaoUm">9 <br>
+            <input type="radio" name="questaoUm">10 <br>
 
             <h3 class="perguntaDois">Q1. What is 8+3?</h3>
-            <input type="radio" name="question2" >2 <br>
-            <input type="radio" name="question2">8 <br>
-            <input type="radio" name="question2" id="correct2">11 <br>
-            <input type="radio" name="question2">9 <br>
+            <input type="radio" name="questaoDois" >2 <br>
+            <input type="radio" name="questaoDois">8 <br>
+            <input type="radio" name="questaoDois" id="corretaDois">11 <br>
+            <input type="radio" name="questaoDois">9 <br>
 
             <h3 class="perguntaTres">Q1. What is 28+3?</h3>
             <input type="radio" name="question3" >15 <br>
-            <input type="radio" name="question3"id="correct3">31 <br>
+            <input type="radio" name="question3"id="corretaDois">31 <br>
             <input type="radio" name="question3">10 <br>
             <input type="radio" name="question3">19 <br>
 
             <h3 class="perguntaQuatro">Q1. What is 28+3?</h3>
             <input type="radio" name="question3" >15 <br>
-            <input type="radio" name="question3"id="correct3">31 <br>
+            <input type="radio" name="question3"id="corretaTres">31 <br>
             <input type="radio" name="question3">10 <br>
             <input type="radio" name="question3">19 <br>
 
             <h3 class="perguntaCinco">Q1. What is 28+3?</h3>
             <input type="radio" name="question3" >15 <br>
-            <input type="radio" name="question3"id="correct3">31 <br>
+            <input type="radio" name="question3"id="corretaQuatro">31 <br>
             <input type="radio" name="question3">10 <br>
             <input type="radio" name="question3">19 <br>
 
             <input type="submit" name="submit" value="Diz-me a pontuação!" onClick="result()">
-            <script type="text/javascript">
+<!--             <script type="text/javascript">
             function result()
             {
                 var score=0;
-                if(document.getElementById('correct1').checked)
+                if(document.getElementById('corretaUm').checked)
                     {	score++;
                     }
-                if(document.getElementById('correct2').checked)
+                if(document.getElementById('corretaDois').checked)
                     {	score++;
                     }
-                if(document.getElementById('correct3').checked)
+                if(document.getElementById('corretaTres').checked)
                     {	score++;
                     }
             alert("Your score is:"+score);
@@ -139,16 +134,16 @@
             // document.write("Your score is:"+score);
             }
             </script>
-
+ -->
     <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-lg-2 col-sm-3 col-5">
-            <a href="informacao.html"><input type="button" value="Inicio" id="Inicio"
-                    class="btn btn-primary btn-lg"></a>
+            <a href="informacao.html"><input type="button" value="Voltar" id="botaoVoltar"
+                    class="btn btn-primary btn-lg botaoVoltar"></a>
         </div>
         <div class="col-sm col-1"></div>
-        <div class="col-lg-2 col-sm-3 col-5" id="btnproximoCapitulo">
-            <input type="button" value="Proximo Capitulo >" id="proximoCapitulo" class="btn btn-primary btn-lg">
+        <div class="col-lg-2 col-sm-3 col-5" id="btnProximo">
+            <input type="button" value="Proximo Capitulo >" id="btnProximo" class="btn btn-primary btn-lg btnProximo" disabled>
         </div>
         <div class="col-sm-1"></div>
     </div>
@@ -158,13 +153,13 @@
 
 
     <!-- Footer -->
-    <footer class="page-footer font-small blue pt-4">
+    <footer class="page-footer font-small blue pt-4 footerInfo" style="height: 100%;">
         <div class="container-fluid text-center text-md-left">
             <div class="row">
                 <hr class="clearfix w-100 d-md-none pb-3">
                 <div class="col-md-3 mb-md-0 mb-3 divDoSobre">
                     <h5 class="sobre">Sobre</h5>
-                    <span id="lineSobre"></span>
+                    <span id="linhaSobre"></span>
                     <ul class="list-unstyled sobreLista">
                         <li>
                             <a href="#!">Para os pais</a>
@@ -178,56 +173,55 @@
                     </ul>
 
                 </div>
-                <div class="cardEquipa">
+                <div class="cartaoEquipa">
                     <span class="amigos">Os amigos</span>
-                    <div id="line"></div>
+                    <div id="linhaAmigos"></div>
                     <div class="row">
                         <div class="col-xs-1">
-                            <div class="cardTatinhas">
+                            <div class="cartaoTatinhas">
                                 <div class="card-body">
-                                    <h3 class="card-title tatinhasTitle">Tatinhas</h3>
+                                    <h3 class="card-title tatinhasTitulo">Tatinhas</h3>
                                 </div>
-                                <img class="card-img-top" src="../img/A equipa - tatinhas.png" alt="">
+                                <img class="card-img-top imagemAmigos" src="../img/A equipa - tatinhas.png" alt="">
                             </div>
                         </div>
                         <div class="col-xs-1">
-                            <div class="cardXico">
+                            <div class="cartaoXico">
                                 <div class="card-body">
-                                    <h3 class="card-title xicoTitle">Xico</h3>
+                                    <h3 class="card-title xicoTitulo">Xico</h3>
                                 </div>
-                                <img class="card-img-top" src="../img/A equipa -xico.png" alt="">
+                                <img class="card-img-top imagemAmigos" src="../img/A equipa -xico.png" alt="">
                             </div>
                         </div>
                         <div class="col-xs-1">
-                            <div class="cardDora">
+                            <div class="cartaoDora">
                                 <div class="card-body">
-                                    <h3 class="card-title doraTitle">Dora</h3>
+                                    <h3 class="card-title doraTitulo">Dora</h3>
                                 </div>
-                                <img class="card-img-top" src="../img/A equipa -dora.png" alt="">
+                                <img class="card-img-top imagemAmigos" src="../img/A equipa -dora.png" alt="">
                             </div>
                         </div>
                         <div class="col-xs-1">
-                            <div class="cardAndre">
+                            <div class="cartaoAndre">
                                 <div class="card-body">
-                                    <h3 class="card-title andreTitle">André</h3>
+                                    <h3 class="card-title andreTitulo">André</h3>
                                 </div>
-                                <img class="card-img-top" src="../img/A equipa -andre.png" alt="">
+                                <img class="card-img-top imagemAmigos" src="../img/A equipa -andre.png" alt="">
                             </div>
                         </div>
                     </div>
                     <!-- Footer Links -->
                 </div>
                 <!-- Copyright -->
-                <div class="footer-copyright text-left py-3">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da
+                <div class="fraseFooter text-left py-3">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da
                     ESMAD.</div>
-                <div class="footer-slogan text-right py-3">Está tudo bem com o tatu do bem.</div>
+                <div class="sloganFooter text-right py-3">Está tudo bem com o tatu do bem.</div>
                 <!-- Copyright -->
 
     </footer>
 
     <!-- Imagens fixas -->
-    <img src="imagens/Amigos.png" alt="Amigos" title="chat" width="75px" id="chat">
-    <img src="imagens/TuturialXico.png" alt="Tuturial" title="Tuturial" id="tuturialXico" width="75px">
+
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
