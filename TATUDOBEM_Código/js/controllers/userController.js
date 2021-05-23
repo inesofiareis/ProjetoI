@@ -12,7 +12,8 @@ export default class UserController{
         }
         else {
             const novoID = this.utilizadores.length > 0 ? this.utilizadores[this.utilizadores.length - 1].id + 1 : 1
-            this.utilizadores.push(new UserModel(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero))
+            let pontos = 0  //utilizador começa com 0 pontos
+            this.utilizadores.push(new UserModel(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero, pontos))
             localStorage.setItem('utilizador', JSON.stringify(this.utilizadores))
         }
     }
@@ -36,14 +37,51 @@ export default class UserController{
     }
 
     // perfil.html
-    //em teste ainda
+    /**
+     * Função que recebe alterações no perfil do utilizador
+     * @param {string} nomeUtilizador Nome de utilizador
+     * @param {string} email Novo email (caso haja alterações)
+     * @param {string} palavraPasse Nova palavra passe (caso haja alterações)
+     */
     setEditar(nomeUtilizador, email, palavraPasse){
-        if (this.utilizadores.find(utilizador => utilizador.nome === nome)){
-            let novoPerfil = localStorage.parse['utilizador']
-            novoPerfil.nome.nomeUtilizador = nomeUtilizador
-            novoPerfil.nome.email = email
-            novoPerfil.nome.palavraPasse = palavraPasse
-            localStorage['utilizador'] = JSON.stringify(novoPerfil)
+        if (this.utilizadores.find(utilizador => utilizador.nomeUtilizador === nomeUtilizador)){
+            let novoPerfil = localStorage['utilizadores']
+            novoPerfil = JSON.parse(novoPerfil)
+
+            for(let i = 0; i < novoPerfil.length; i++){
+                if(novoPerfil[i].nomeUtilizador == nomeUtilizador){
+                    novoPerfil[i].palavraPasse = palavraPasse
+                    novoPerfil[i].email = email
+
+                    this.utilizadores[i] = novoPerfil[i]
+                    localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
+                    break
+                }
+            }
+        }
+    }
+
+    //sistema de pontuação
+    //em teste
+    /**
+     * Atualizar os pontos do utilizador
+     * @param {string} nomeUtilizador Nome do utilizador
+     * @param {string} pontos Os pontos para adicionar ou subtrair 
+     */
+    setPontos(nomeUtilizador, pontos){
+        let utilizador = localStorage['utilizadores']
+        utilizador = JSON.parse(utilizador)
+
+        for (let i = 0; i < utilizador.length; i++){
+            if(utilizador[i].nomeUtilizador == nomeUtilizador){
+                const novaPontuacao = utilizador[i].pontos + pontos //somar os pontos atuas com os novos pontos
+
+                utilizador[i].pontos = novaPontuacao
+
+                this.utilizadores[i] == utilizador
+                localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
+                break
+            }
         }
     }
 }
