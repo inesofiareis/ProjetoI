@@ -1,4 +1,4 @@
-export default class Utilizador {
+export default class User {
     constructor(nome, apelido, nomeUtilizador, email, passowrd, confirmarPassword, aniversario, genero) {
         this.nome = nome
         this.apelido = apelido

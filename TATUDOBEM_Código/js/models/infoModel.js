@@ -1,4 +1,4 @@
-export default class Band {
+export default class Informacao {
         constructor(titulo, textoInformacao, foto, pergunta, opcao) {
                 this.titulo = titulo
                 this.textoInformacao = textoInformacao
