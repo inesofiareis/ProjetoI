@@ -1,12 +1,13 @@
 export default class Utilizador {
-    constructor(nome, apelido, nomeUtilizador, email, passowrd, aniversario, genero) {
-        this.nome = nome
-        this.apelido = apelido
-        this.nomeUtilizador = nomeUtilizador
-        this.email = email
-        this.password = passowrd
-        this.aniversario = aniversario
+    constructor(id, nomeUser, apelidoUser, utilizador, emailUser, passowrdUser, nascimento, genero, pontos) {
+        this.id = id
+        this.nomeUser = nomeUser
+        this.apelidoUser = apelidoUser
+        this.utilizador = utilizador
+        this.emailUser = emailUser
+        this.passwordUser = passowrdUser
+        this.nascimento = nascimento
         this.genero = genero
-
+        this.pontos = pontos
     }
 }
