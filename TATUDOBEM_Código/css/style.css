@@ -706,8 +706,8 @@ main>p {
     }
 }
 
-.cartaoDosAmigos{
-    height:400px;
+.cartaoDosAmigos {
+    height: 400px;
 }
 
 /* Area pessoal */
@@ -870,4 +870,516 @@ main>p {
             color-stop(0.50, rgba(62, 163, 217, 0.61)),
             color-stop(0.72, rgba(240, 127, 176, 0.61)),
             color-stop(0.80, rgba(236, 225, 15, 0.61)));
+}
+
+
+/* JOGO DA MEMÓRIA */
+
+
+
+.memory-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #1C7CCC;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+/* O DRAG AND DROP */
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+
+.draggable-elements {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.draggable {
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    margin: 0rem 0.5rem;
+    cursor: move;
+    transition: opacity 0.2s;
+}
+
+.draggable:hover {
+    opacity: 0.5;
+}
+
+.droppable {
+    height: 6.5rem;
+    width: 6.5rem;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    background-color: #fff;
+    border: 3px dashed #111;
+    transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+}
+
+.droppable span {
+    font-size: 1.25rem;
+    pointer-events: none;
+    /* The element is never the target of pointer events */
+}
+
+
+
+/* Drag and Drop Related Styling */
+
+.droppable.droppable-hover {
+    /* background-color: #bee3f0; */
+    border-width: 5px;
+    transform: scale(1.1);
+}
+
+.droppable.dropped {
+    border-style: solid;
+    color: #fff;
+}
+
+.droppable.dropped span {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.droppable.dropped i {
+    pointer-events: none;
+}
+
+.draggable.dragged {
+    user-select: none;
+    opacity: 0.1;
+    cursor: default;
+}
+
+.draggable.dragged:hover {
+    opacity: 0.1;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    .draggable-elements {
+        margin: 1.5rem;
+    }
+}
+
+
+
+/* FOGE DO VIRUS */
+
+#fogeDoVirus {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+
+#personagem {
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 150px;
+}
+
+@keyframes salto {
+    0% {
+        top: 150px;
+    }
+
+    30% {
+        top: 100px;
+    }
+
+    70% {
+        top: 100px;
+    }
+
+    100% {
+        top: 150px;
+    }
+}
+
+
+.animate {
+    animation: salto 300ms linear;
+}
+
+@keyframes virus {
+    0% {
+        left: 500px
+    }
+
+    100% {
+        left: -20px
+    }
+}
+
+
+
+
+#virus {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: block 1s infinite linear;
+}
+
+
+
+
+
+
+
+
+/* FILL IN THE BLANKS */
+
+
+#frame001 {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    padding: 5px;
+}
+
+#color001 {
+    color: black;
+    font-size: large;
+    text-align: left;
+}
+
+#center001 {
+    text-align: center;
+}
+
+.button001 {
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.button002 {
+    width: 10px;
+    height: 10px;
+}
+
+
+
+
+/* MATA O VIRUS */
+
+
+
+
+.wrapper {
+    /* border: 1px solid black; */
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(https://github.com/MohammedHamzaMalik/100-Days-of-JavaScript-Code/blob/main/Day%2097/Whack%20A%20Mole/background.png?raw=true);
+    overflow: hidden;
+}
+
+.score {
+    font-size: 5rem;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+.countDown {
+    position: absolute;
+    top: 490px;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #000;
+}
+
+button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    font-size: 1rem;
+    transform: translate(-50%, 0);
+    background: black;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    z-index: 200;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    background: #f0c27b;
+    color: black;
+}
+
+.game {
+    width: 600px;
+    height: 400px;
+    margin: 70px auto;
+    z-index: 200;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hole {
+    overflow: hidden;
+    flex: 1 0 33.33%;
+    position: relative;
+}
+
+.hole::after {
+    content: "";
+    display: block;
+    background-image: url(https://github.com/MohammedHamzaMalik/100-Days-of-JavaScript-Code/blob/main/Day%2097/Whack%20A%20Mole/sand1.png?raw=true);
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    z-index: 2;
+    bottom: -30px;
+    background-size: contain;
+}
+
+.mole {
+    background-image: url(https://github.com/MohammedHamzaMalik/100-Days-of-JavaScript-Code/blob/main/Day%2097/Whack%20A%20Mole/yoda1.png?raw=true);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.small {
+    background-size: 60%;
+}
+
+.large {
+    background-size: 80%;
+}
+
+.hole.up .mole {
+    cursor: grab;
+    top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    * {
+        zoom: 0.7;
+    }
+}
+
+
+
+
+
+
+/* PUZZLE */
+
+:root {
+    --color: lightgray;
+    --border-radius: 10px;
+    --image: url('https://media.gettyimages.com/vectors/cute-cartoon-dachshunds-in-love-vector-id865392634?s=2048x2048');
+}
+
+
+
+#puz,
+#puzz {
+    position: absolute;
+    border-radius: var(--border-radius) 0 var(--border-radius) 0;
+    user-select: none;
+}
+
+#puz {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px dashed lightgray;
+    overflow: hidden;
+}
+
+#puzz {
+    left: 0;
+    top: 0;
+    border: 0;
+}
+
+#puz i {
+    float: left;
+    width: 100px;
+    height: 100px;
+    outline: 1px dashed lightgray;
+}
+
+#puzz i {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: var(--color);
+    background-image: var(--image);
+    background-size: 300px 300px;
+    cursor: move;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+}
+
+.first {
+    border-top-left-radius: var(--border-radius);
+    background-position: left top !important;
+}
+
+.secon {
+    background-position: center top !important;
+}
+
+.third {
+    /*   border-top-right-radius:var(--border-radius); */
+    background-position: right top !important;
+}
+
+.fourt {
+    background-position: left center !important;
+}
+
+.fifth {
+    background-position: center center !important;
+}
+
+.sixth {
+    background-position: right center !important;
+}
+
+.seven {
+    /*   border-bottom-left-radius:var(--border-radius); */
+    background-position: left bottom !important;
+}
+
+.eight {
+    background-position: center bottom !important;
+}
+
+.ninth {
+    border-bottom-right-radius: var(--border-radius);
+    background-position: right bottom !important;
+}
+
+.clicked {
+    box-shadow: 0 0 0 4px gray !important;
+}
+
+.dropped {
+    background: var(--color);
+    background-image: var(--image);
+    background-size: 300px 300px;
+}
+
+.done {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.allDone {
+    animation: allDone 1s linear forwards;
+    border: 3px solid lightgray !important;
+}
+
+.allDone i {
+    outline: 0 !important;
+}
+
+@keyframes allDone {
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+#clicks {
+    font-size: 8px;
+    font-family: monospace;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
 }
