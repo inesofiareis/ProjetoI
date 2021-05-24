@@ -13,7 +13,8 @@ export default class UserController{
         else {
             const novoID = this.utilizadores.length > 0 ? this.utilizadores[this.utilizadores.length - 1].id + 1 : 1
             let pontos = 0  //utilizador começa com 0 pontos
-            this.utilizadores.push(new UserModel(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero, pontos))
+            let avatar = '../img/navbar/tatudobem.png' //avatar do utilizador
+            this.utilizadores.push(new UserModel(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero, pontos, avatar))
             localStorage.setItem('utilizador', JSON.stringify(this.utilizadores))
         }
     }
@@ -78,7 +79,7 @@ export default class UserController{
 
                 utilizador[i].pontos = novaPontuacao
 
-                this.utilizadores[i] == utilizador
+                this.utilizadores[i] = utilizador[i]
                 localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
                 break
             }
