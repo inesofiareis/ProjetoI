@@ -14,35 +14,39 @@ body {
     overflow-x: hidden;
 }
 
+.corpoDaPaginaPrincipal {
+    background-color: #E7E7E7;
+
+}
+
+.navbar {
+    background-color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+/* INDEX.HTML */
+
 #paginaInicial {
     background-color: #ffffff;
 }
 
-#headerInicial {
-    font-size: 34px;
-    margin-top: 300px;
-    position: relative;
-}
 
-#textoInicial {
-    font-size: 24px;
-    position: relative;
-}
 
-#logoInicial {
-    width: 450px;
-}
-
-#tatinhasInicial {
+#tatinhasIconeInicial {
     position: relative;
-    width: 500px;
+    width: 55rem;
+    float: right;
+    margin: 12rem 7rem 0rem 0rem;
 }
 
 .corpoDaPaginaInicial {
     overflow: hidden;
 }
 
-.logotipo {
+#tatudobemIndex {
     width: 40rem;
     margin: 5rem 0rem 0rem 5rem;
 }
@@ -54,28 +58,8 @@ body {
     margin: -5rem 0rem 0rem 5rem;
 }
 
-.tatinhas {
-    position: relative;
-    width: 55rem;
-    float: right;
-    margin: 12rem 7rem 0rem 0rem;
-}
 
-.titulo {
-    display: inline-block;
-    text-align: justify;
-    font-size: 4rem;
-    width: 35rem;
-    margin: 0rem 0rem 2rem 0rem;
-}
-
-.lead {
-    width: 50rem;
-    font-size: 2.3rem;
-    text-align: justify;
-}
-
-.caixaDeTexto {
+.blocoTextoIndex {
     position: absolute;
     left: 0rem;
     margin: -47rem 0rem 0rem 2rem;
@@ -85,12 +69,29 @@ body {
     color: #666666;
 }
 
-.botao {
+
+#headerIndex {
+    margin-top: 300px;
+    position: relative;
+    display: inline-block;
+    text-align: justify;
+    width: 35rem;
+    margin: 0rem 0rem 2rem 0rem;
+}
+
+#textoIndex {
+    position: relative;
+    width: 50rem;
+    font-size: 2.3rem;
+    text-align: justify;
+}
+
+
+.botoesIndex{
     margin: 2rem 0rem 0rem 0rem;
 }
 
-#botaoRegistar {
-
+.botao {
     width: 25rem;
     height: 7rem;
     background-color: #FFA09E;
@@ -102,17 +103,10 @@ body {
     position: relative;
 }
 
+
+
 #botaoLogin {
-    width: 25rem;
-    height: 7rem;
     margin-left: 2rem;
-    background-color: #FFA09E;
-    border: none;
-    text-align: left;
-    padding: 0rem 0rem 0rem 2rem;
-    font-size: 1.5rem;
-    border-radius: 1rem;
-    position: relative;
 }
 
 .palavraEspecial {
@@ -122,9 +116,6 @@ body {
 
 /* Registo */
 
-#corpoDoLogineRegisto {
-    background-color: #F9F8DA;
-}
 
 
 #genero {
@@ -192,12 +183,12 @@ h1#titulo {
     font-size: 25px;
 }
 
-#tatinhas {
+#tatinhasLogin {
     position: relative;
     width: 250px;
     margin-left: 900px;
     margin-top: -150px;
-}
+} */
 
 /* Página Principal */
 
@@ -206,42 +197,12 @@ h1#titulo {
 
 }
 
-.navbar {
+.navbarInicio {
     background-color: #FFFFFF;
     text-align: center;
     margin: 0;
 }
 
-
-.logo {
-    width: 200px;
-}
-
-.icon {
-    width: 150px;
-}
-
-.inicio {
-    width: 4.6rem;
-    height: 5.8rem;
-}
-
-.aprender {
-    width: 5.5rem;
-    height: 5.7rem;
-}
-
-.jogar {
-    width: 6rem;
-    height: 5.5rem;
-    margin: 0.25rem 0rem 0rem 0rem;
-}
-
-.paginaPessoal {
-    width: 4rem;
-    height: 5.5rem;
-    margin: 0.25rem 0rem 0rem 0rem;
-}
 
 
 
@@ -291,10 +252,6 @@ a:hover {
     padding: 0rem 5rem 0rem 0rem;
 }
 
-.avatarImagem {
-    width: 4.5rem;
-    height: 4.5rem;
-}
 
 .avatarTexto {
     margin: 1.2rem 0rem 0rem 2rem;
@@ -441,11 +398,11 @@ div>.amigos {
 
 .footer-slogan {
     margin: 1rem 0rem 0rem 48rem;
-}
+} */
 
 /* Página de Informação */
 
-body {
+/* body {
     background-color: #DBF0F0;
 }
 
@@ -541,11 +498,11 @@ main>div {
     main>div {
         margin-top: 25px;
     }
-}
+} */
 
 /* capitulos */
 
-main {
+/* main {
     font-family: 'Play Time', 'Times New Roman', Times, serif;
     font-style: normal;
 }
@@ -614,12 +571,12 @@ main>p {
 
     .xico {
         width: 95px;
-    }
-}
+    */
+
 
 /* Barra-menu e footer da informação e da area pessoal */
 
-#header,
+/* #header,
 #footer {
     padding-top: 10px;
     font-family: 'Play Time', 'Times New Roman', Times, serif;
@@ -708,11 +665,11 @@ main>p {
 
 .cartaoDosAmigos {
     height: 400px;
-}
+} */
 
 /* Area pessoal */
 
-.corpoDaAreaPessoal {
+/* .corpoDaAreaPessoal {
     background-color: #FAF8DA;
 }
 
@@ -808,11 +765,11 @@ main>p {
         width: 65px;
         top: 85px;
     }
-}
+} */
 
 /* Pagina de jogos */
 
-.corpoDaPaginaDeJogos {
+/* .corpoDaPaginaDeJogos {
     background-color: #FFF6FB;
 
 }
@@ -832,19 +789,19 @@ main>p {
     background-color: #FFE1E4;
 }
 
-/* 
+
 .jogar {
     width: 5rem;
     height: 4.5rem;
-} */
-/* 
+}
+ 
 .paginaPessoal {
     width: 3rem;
     height: 4.5rem;
-} */
+}
 
 
-/* .icons {
+ .icons {
 
     margin: 2rem 4rem 0rem 0rem;
     display: flex;
@@ -855,6 +812,9 @@ main>p {
 
 
 /* SCROLLBARS */
+
+
+
 
 
 ::-webkit-scrollbar {
