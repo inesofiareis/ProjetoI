@@ -22,7 +22,7 @@ export default class UserController{
     // login.html
     login(nomeUtilizador, palavraPasse){
         if (this.utilizadores.some(utilizador => utilizador.nomeUtilizador === nomeUtilizador && utilizador.palavraPasse === palavraPasse)) {
-            sessionStorage.setItem('loggedUser', nomeUtilizador)
+            sessionStorage.setItem('utilizadorLogado', nomeUtilizador)
         }
         else {
             throw Error('Login invalido!')
@@ -30,11 +30,11 @@ export default class UserController{
     }
 
     logout() {
-        sessionStorage.removeItem('loggedUser')
+        sessionStorage.removeItem('utilizadorLogado')
     }
 
     isLogged(){
-        return sessionStorage.getItem('loggedUser') ? true : false
+        return sessionStorage.getItem('utilizadorLogado') ? true : false
     }
 
     // perfil.html
@@ -44,45 +44,75 @@ export default class UserController{
      * @param {string} email Novo email (caso haja alterações)
      * @param {string} palavraPasse Nova palavra passe (caso haja alterações)
      */
-    setEditar(nomeUtilizador, email, palavraPasse){
-        if (this.utilizadores.find(utilizador => utilizador.nomeUtilizador === nomeUtilizador)){
+    setEditar(nomeUtilizador = '', email = '', palavraPasse = ''){
+            let utilizadorAtual = sessionStorage['utilizadorLogado']
             let novoPerfil = localStorage['utilizadores']
             novoPerfil = JSON.parse(novoPerfil)
 
             for(let i = 0; i < novoPerfil.length; i++){
-                if(novoPerfil[i].nomeUtilizador == nomeUtilizador){
-                    novoPerfil[i].palavraPasse = palavraPasse
-                    novoPerfil[i].email = email
+                if(novoPerfil[i].nomeUtilizador == utilizadorAtual){
+                    if (nomeUtilizador != ''){  // alterar o nome de utilizador
+                        novoPerfil[i].nomeUtilizador = nomeUtilizador
+                        sessionStorage.setItem('utilizadorLogado', nomeUtilizador)  //atualizar a informação da session storage
+                    }
+
+                    if (email != ''){ // alterar o email do utilizador
+                        novoPerfil[i].email = email 
+                    }
+                    
+                    if (palavraPasse != ''){ //alterar a palavra passe do utilizador
+                        novoPerfil[i].palavraPasse = palavraPasse
+                    }
 
                     this.utilizadores[i] = novoPerfil[i]
-                    localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
+                    localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))  //atualizar a informação na local storage
                     break
                 }
             }
-        }
     }
 
     //sistema de pontuação
     //em teste
     /**
      * Atualizar os pontos do utilizador
-     * @param {string} nomeUtilizador Nome do utilizador
      * @param {string} pontos Os pontos para adicionar ou subtrair 
      */
-    setPontos(nomeUtilizador, pontos){
-        let utilizador = localStorage['utilizadores']
-        utilizador = JSON.parse(utilizador)
+    setPontos(pontos){
+        let utilizador = sessionStorage['utilizadorLogado']
+        let utilizadorInfo = localStorage['utilizadores']
+        utilizadorInfo = JSON.parse(utilizadorInfo)
 
-        for (let i = 0; i < utilizador.length; i++){
-            if(utilizador[i].nomeUtilizador == nomeUtilizador){
-                const novaPontuacao = utilizador[i].pontos + pontos //somar os pontos atuas com os novos pontos
+        for (let i = 0; i < utilizadorInfo.length; i++){
+            if(utilizadorInfo[i].nomeUtilizador == utilizador){
+                const novaPontuacao = utilizadorInfo[i].pontos + pontos //somar os pontos atuais com os novos pontos
 
-                utilizador[i].pontos = novaPontuacao
+                utilizadorInfo[i].pontos = novaPontuacao
 
-                this.utilizadores[i] = utilizador[i]
+                this.utilizadores[i] = utilizadorInfo[i]
                 localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
+
                 break
             }
         }
+    }
+
+    /**
+     * Função para returnar o genero do utilizador para os textos
+     * @returns genero do utilizador
+     */
+    getGenero(){
+        let utilizador = sessionStorage['utilizadorLogado']
+        let utilizadorInfo = localStorage['utilizadores']
+        utilizadorInfo = JSON.parse(utilizadorInfo)
+
+        for (let i = 0; i = utilizadorInfo.length; i++){
+            if(utilizadorInfo[i].nomeUtilizador == utilizador){
+                const genero = utilizadorInfo[i].genero
+                
+                break
+            }
+        }
+
+        return genero
     }
 }
