@@ -3,8 +3,6 @@
     src: url(../font/playtime.ttf) format('opentype'), url(../font/PlaytimeOblique.ttf) format('opentype'), url(../font/PlaytimeWithHotToddies3D.ttf) format('opentype');
 }
 
-/* index.html - A página de rosto */
-
 body {
     font-family: 'Play Time', 'Times New Roman', Times, serif;
     width: 100%;
@@ -14,24 +12,9 @@ body {
     overflow-x: hidden;
 }
 
-.corpoDaPaginaPrincipal {
-    background-color: #E7E7E7;
-
-}
-
-.navbar {
-    background-color: #FFFFFF;
-    text-align: center;
-    margin: 0;
-}
-
 
 
 /* INDEX.HTML */
-
-#paginaInicial {
-    background-color: #ffffff;
-}
 
 
 
@@ -149,6 +132,8 @@ body {
     float: right;
 }
 
+
+
 /* Login */
 
 .corpoDoLogineRegisto {
@@ -188,22 +173,111 @@ h1#titulo {
     width: 250px;
     margin-left: 900px;
     margin-top: -150px;
-} */
-
-/* Página Principal */
-
-.corpoDaPaginaPrincipal {
-    background-color: #E7E7E7;
-
 }
+
+/* ELEMENTOS COMUNS */
+
+/* NAVBAR */
+
+.icons {
+    margin: 2rem 8rem 0rem -4rem;
+}
+
+.avatarTexto {
+    margin: 1.2rem 0rem 0rem 2rem;
+    font-size: 25px;
+}
+
+/* FOOTER */
+
+.frasesPequenas{
+    color: #747474;
+}
+
+a {
+    color: #727270;
+}
+
+#linhaSobre {
+    width: 13rem;
+    height: 0.1rem;
+    margin: -0.4rem 0rem 0rem 0rem;
+    background: black;
+    position: absolute;
+}
+
+
+
+/* NAVBARS DE CADA PÁGINA */
 
 .navbarInicio {
     background-color: #FFFFFF;
-    text-align: center;
-    margin: 0;
+}
+
+.navbarAprender {
+    background-color: #BCE9E9;
+}
+
+.navbarJogos {
+    background-color: #FFE1E4;
+}
+
+.navbarPerfil {
+    background-color: #FBEEB5;
 }
 
 
+
+/* BODIES DE CADA PÁGINA */
+
+.corpoInicio {
+    background-color: #FAFAFA;
+
+}
+
+.corpoInfo {
+    background-color: #DBF0F0;
+
+}
+
+.corpoJogos {
+    background-color: #FFF6FB;
+
+}
+
+
+.corpoPerfil{
+    background-color: #FAF8DA;
+}
+
+
+
+/* FOOTERS DE CADA PÁGINA */
+
+.footerInicio {
+    background-color: #FFFFFF;
+}
+
+.footerInfo {
+    background-color: #BCE9E9;
+}
+
+.footerJogos {
+    background-color: #FFE1E4;
+}
+
+.footerPerfil {
+    background-color: #FBEEB5;
+}
+
+
+/* PÁGINA INICIO */
+
+
+
+
+
+/* 
 
 
 .dosCards {
@@ -243,20 +317,10 @@ a:hover {
     color: black;
 }
 
-.icons {
-    margin: 2rem 4rem 0rem 0rem;
-}
 
 
-.avatar {
-    padding: 0rem 5rem 0rem 0rem;
-}
 
 
-.avatarTexto {
-    margin: 1.2rem 0rem 0rem 2rem;
-    font-size: 25px;
-}
 
 .containerAprender {
     background-color: #62D4D4;
@@ -343,13 +407,7 @@ div>.amigos {
     margin: 0rem 0rem 2rem 0rem;
 }
 
-#lineSobre {
-    width: 13rem;
-    height: 0.1rem;
-    margin: -1rem 0rem 0rem 0rem;
-    background: black;
-    position: absolute;
-}
+
 
 
 .sobreLista {
@@ -399,6 +457,7 @@ div>.amigos {
 .footer-slogan {
     margin: 1rem 0rem 0rem 48rem;
 } */
+
 
 /* Página de Informação */
 

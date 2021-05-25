@@ -14,9 +14,9 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body class="corpoDaPaginaPrincipal">
+<body>
 
-  <nav class="navbar navbarInicio navbar-expand-md" style="margin:0px;">
+  <nav class="navbar navbarInicio text-center navbar-expand-md" style="margin:0px;">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2 col-4">
       <!-- Brand/logo -->
       <div class="navbar-brand col-xl-4 col-sm-3 col-xs-12">
@@ -31,27 +31,27 @@
         <li class="nav-item icons">
           <a href="./inicio.html">
             <img src="../img/navbar/Icon-Inicio.png" alt="inicio" title="Início" class="inicio">
-            <a class="nav-link iconeTexto" href="./inicio.html">Início</a>
+            <a class="nav-link iconeTexto h4" href="./inicio.html">Início</a>
           </a>
         </li>
 
         <li class="nav-item icons">
           <a href="./info.html">
             <img src="../img/navbar/Icon-aprender.png" alt="aprender" title="Aprender" class="aprender">
-            <a class="nav-link iconeTexto" href="./info.html">Aprender</a>
+            <a class="nav-link iconeTexto h4" href="./info.html">Aprender</a>
           </a>
         </li>
         <li class="nav-item icons">
           <a href="./jogos.html">
             <img src="../img/navbar/Icon-jogar.png" alt="jogar" title="Jogar" class="jogar">
-            <a class="nav-link iconeTexto" href="./jogos.html">Jogar</a>
+            <a class="nav-link iconeTexto h4" href="./jogos.html">Jogar</a>
           </a>
         </li>
         <li class="nav-item icons">
           <a href="./perfil.html">
             <img src="../img/navbar/Icon-o teu espaço.png" alt="Pagina Pessoal" title="Pagina Pessoal"
               class="paginaPessoal">
-            <a class="nav-link iconeTexto" href="./perfil.html" style="white-space: nowrap">O teu espaço</a>
+            <a class="nav-link iconeTexto h4" href="./perfil.html" style="white-space: nowrap">O teu espaço</a>
           </a>
         </li>
       </ul>
@@ -63,7 +63,7 @@
     </div>
   </nav>
 
-  <main style="height: 100%;">
+  <main class="corpoInicio container-fluid">
 
     <div class="container-fluid">
       <div class="row">
@@ -154,14 +154,19 @@
 
   </main>
   <!-- Footer -->
-  <footer class="page-footer font-small blue pt-4 footerInfo" style="height: 100%;">
-    <div class="container-fluid text-center text-md-left">
-      <div class="row">
-        <hr class="clearfix w-100 d-md-none pb-3">
-        <div class="col-md-3 mb-md-0 mb-3 divDoSobre">
-          <h5 class="sobre">Sobre</h5>
+  <footer class="page-footer footerInicio" style="height: 100%;">
+    <div class="row">
+      <div class="col-9"></div>
+      <span class="amigos h2">Os amigos</span>
+    </div>
+    <div class="row">
+      <div class="container col-4 text-center text-md-left">
+
+        <hr class="clearfix d-md-none">
+        <div class="col-md-5 mb-md-0 mb-3 divDoSobre">
+          <h2 class="sobre">Sobre</h2>
           <span id="linhaSobre"></span>
-          <ul class="list-unstyled sobreLista">
+          <ul class="list-unstyled sobreLista h4">
             <li>
               <a href="#!">Para os pais</a>
             </li>
@@ -172,13 +177,19 @@
               <a href="#!">Políticas de privacidade</a>
             </li>
           </ul>
-
         </div>
-        <div class="cartaoEquipa">
-          <span class="amigos">Os amigos</span>
+
+      </div>
+
+      <div class="col-2">
+        
+      </div>
+
+
+      <div class="cartaoEquipa text-right d-flex justify-content-end col-6">
           <div id="linhaAmigos"></div>
-          <div class="row">
-            <div class="col-xs-1">
+          <div class="d-flex flex-row text-center">
+            <div class="col-3">
               <div class="cartaoTatinhas">
                 <div class="card-body">
                   <h3 class="card-title tatinhasTitulo">Tatinhas</h3>
@@ -186,7 +197,7 @@
                 <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Tatinhas.png" alt="">
               </div>
             </div>
-            <div class="col-xs-1">
+            <div class="col-3">
               <div class="cartaoXico">
                 <div class="card-body">
                   <h3 class="card-title xicoTitulo">Xico</h3>
@@ -194,7 +205,7 @@
                 <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Xico.png" alt="">
               </div>
             </div>
-            <div class="col-xs-1">
+            <div class="col-3">
               <div class="cartaoDora">
                 <div class="card-body">
                   <h3 class="card-title doraTitulo">Dora</h3>
@@ -202,7 +213,7 @@
                 <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Dora.png" alt="">
               </div>
             </div>
-            <div class="col-xs-1">
+            <div class="col-3">
               <div class="cartaoAndre">
                 <div class="card-body">
                   <h3 class="card-title andreTitulo">André</h3>
@@ -213,10 +224,18 @@
           </div>
           <!-- Footer Links -->
         </div>
+    </div>
+
+    <div class="row frasesPequenas">
+          <div class="fraseFooter col-4 h5">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da
+            ESMAD.</div>
+            <div class="col-4">
+              
+            </div>
+          <div class="sloganFooter text-right col-3 py-3 h5">Está tudo bem com o tatu do bem.</div>
+    </div>
         <!-- Copyright -->
-        <div class="fraseFooter text-left py-3">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da
-          ESMAD.</div>
-        <div class="sloganFooter text-right py-3">Está tudo bem com o tatu do bem.</div>
+
         <!-- Copyright -->
 
   </footer>
