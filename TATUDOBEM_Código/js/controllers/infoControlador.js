@@ -1,4 +1,4 @@
-import infoModel from '../models/infoModel.js'
+import infoModelo from '../models/infoModelo.js'
 
 export default class infoController {
     constructor() {

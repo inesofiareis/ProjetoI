@@ -1,4 +1,4 @@
-import jogosModel from '../models/jogosModel.js'
+import jogoModelo from '../models/jogoModelo.js'
 
 export default class jogosController {
     constructor() {

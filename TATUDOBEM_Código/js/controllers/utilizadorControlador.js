@@ -1,4 +1,4 @@
-import UserModel from '../models/userModel.js'
+import utilizadorModelo from '../models/utilizadorModelo.js'
 
 export default class UserController{
     constructor() {
@@ -12,9 +12,10 @@ export default class UserController{
         }
         else {
             const novoID = this.utilizadores.length > 0 ? this.utilizadores[this.utilizadores.length - 1].id + 1 : 1
-            let pontos = 0  //utilizador começa com 0 pontos
-            let avatar = '../img/navbar/tatudobem.png' //avatar do utilizador
-            this.utilizadores.push(new UserModel(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero, pontos, avatar))
+            const pontos = 0  //utilizador começa com 0 pontos
+            const avatar = '../img/navbar/tatudobem.png' //avatar do utilizador
+            const tipo = 'utilizador'  //tipo de utilizador, para novos são sempre utilizadores
+            this.utilizadores.push(new utilizadorModelo(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero, pontos, avatar, tipo))
             localStorage.setItem('utilizador', JSON.stringify(this.utilizadores))
         }
     }
@@ -72,7 +73,6 @@ export default class UserController{
     }
 
     //sistema de pontuação
-    //em teste
     /**
      * Atualizar os pontos do utilizador
      * @param {string} pontos Os pontos para adicionar ou subtrair 
@@ -97,7 +97,7 @@ export default class UserController{
     }
 
     /**
-     * Função para returnar o genero do utilizador para os textos
+     * Função para retornar o genero do utilizador para os textos
      * @returns genero do utilizador
      */
     getGenero(){
@@ -114,5 +114,25 @@ export default class UserController{
         }
 
         return genero
+    }
+
+    /**
+     * Função para retornar os pontos que o utilizador tem no momento
+     * @returns pontos atuais do utilizador
+     */
+    getPontos(){
+        let utilizador = sessionStorage['utilizadorLogado']
+        let utilizadorInfo = localStorage['utilizadores']
+        utilizadorInfo = JSON.parse(utilizadorInfo)
+
+        for (let i = 0; i = utilizadorInfo.length; i++){
+            if(utilizadorInfo[i].nomeUtilizador == utilizador){
+                const pontos = utilizadorInfo[i].pontos
+
+                break
+            }
+        }
+
+        return pontos
     }
 }
