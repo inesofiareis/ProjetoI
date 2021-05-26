@@ -1,10 +1,10 @@
-import UserView from './views/UserView.js'
+import utilizadorVista from './views/utilizadorVista.js'
 
 class App {
     constructor() {
         this.routes = {
-            '': [UserView],
-            'index': [UserView]
+            '': [utilizadorVista],
+            'index': [utilizadorVista]
         };
 
         // import dummy data for testing purposes
@@ -15,22 +15,51 @@ class App {
     }
 
     #importDataFixtures() {
-        const users = [
+        const utilizadores = [
             {
                 id: 1,
-                username: 'user1',
-                password: 'pass1'
+                nome: "Inês",
+                apelido: "Reis",
+                nomeUtilizador: 'InêsReis',
+                email: 'email@email.com',
+                palavraPasse: 'pass1',
+                dataNascimento: '24/08/2002',
+                genero: 'Femenino',
+                pontos: '1000',
+                avatar: '../img/navbar/tatudobem.png',
+                tipo: 'administrador'
             },
             {
                 id: 2,
-                username: 'user2',
-                password: 'pass2'
+                nome: "Sofia",
+                apelido: "Freitas",
+                nomeUtilizador: 'fifs',
+                email: 'email@email.com',
+                palavraPasse: 'pass2',
+                dataNascimento: '07/11/2001',
+                genero: 'Femenino',
+                pontos: '1000',
+                avatar: '../img/navbar/tatudobem.png',
+                tipo: 'administrador'
+            },
+            {
+                id: 3,
+                nome: "Paulo",
+                apelido: "Rodrigues",
+                nomeUtilizador: 'PauloR',
+                email: 'email@email.com',
+                palavraPasse: 'pass3',
+                dataNascimento: '16/09/2000',
+                genero: 'Masculino',
+                pontos: '1000',
+                avatar: '../img/navbar/tatudobem.png',
+                tipo: 'administrador'
             }
         ];
 
         // Load the fixtures in case there is no data in the local storage 
-        if (!localStorage.users) {
-            localStorage.setItem('users', JSON.stringify(users));
+        if (!localStorage.utilizadores) {
+            localStorage.setItem('utilizadores', JSON.stringify(utilizadores));
         }
     }
 
