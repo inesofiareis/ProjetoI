@@ -17,16 +17,25 @@ body {
 /* INDEX.HTML */
 
 
-
+/* 
 #tatinhasIconeInicial {
-    position: relative;
+    position: fixed;
     width: 55rem;
-    float: right;
+    right:0;
     margin: 12rem 7rem 0rem 0rem;
-}
+} */
 
 .corpoDaPaginaInicial {
     overflow: hidden;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 246, 245, 1) 60%, rgba(255, 202, 201, 1) 77%, rgba(255, 169, 168, 1) 100%);
+}
+
+@media (max-width: 1200px) {
+    .corpoDaPaginaInicial {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 246, 245, 1) 60%, rgba(255, 202, 201, 1) 77%, rgba(255, 169, 168, 1) 100%);
+    }
 }
 
 #tatudobemIndex {
@@ -34,24 +43,26 @@ body {
     margin: 5rem 0rem 0rem 5rem;
 }
 
-.sombra {
-    position: absolute;
-    float: right;
-    width: 100rem;
-    margin: -5rem 0rem 0rem 5rem;
-}
 
 
 .blocoTextoIndex {
-    position: absolute;
-    left: 0rem;
-    margin: -47rem 0rem 0rem 2rem;
-    padding: 5rem;
-    display: inline-block;
-    text-align: justify;
     color: #666666;
+    margin-top: 50px;
 }
 
+@media (min-width: 1000px) {
+    .blocoTextoIndex {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .blocoTextoIndex {
+        text-align: center;
+        width: 10px !important;
+        font-size: 50px;
+    }
+}
 
 #headerIndex {
     margin-top: 300px;
@@ -70,7 +81,7 @@ body {
 }
 
 
-.botoesIndex{
+.botoesIndex {
     margin: 2rem 0rem 0rem 0rem;
 }
 
@@ -179,18 +190,25 @@ h1#titulo {
 
 /* NAVBAR */
 
-.icons {
+.iconeZonas {
     margin: 2rem 8rem 0rem -4rem;
+    background: none;
+    border: none;
+    white-space: nowrap;
+
 }
+
 
 .avatarTexto {
     margin: 1.2rem 0rem 0rem 2rem;
     font-size: 25px;
 }
 
+
+
 /* FOOTER */
 
-.frasesPequenas{
+.frasesPequenas {
     color: #747474;
 }
 
@@ -246,7 +264,7 @@ a {
 }
 
 
-.corpoPerfil{
+.corpoPerfil {
     background-color: #FAF8DA;
 }
 
