@@ -14,54 +14,58 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
+<header>
+
+
+</header>
+
 <body>
-    <nav class="navbar navbarAprender text-center navbar-expand-md" style="margin:0px;">
-        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2 col-4">
-            <!-- Brand/logo -->
-            <div class="navbar-brand col-xl-4 col-sm-3 col-xs-12">
-                <img src="../img/navbar/Tatinhas-página-inicial.png" alt="icone" class="icone" width="150px;">
-                <img src="../img/navbar/tatudobem.png" alt="logo" class="logo">
-            </div>
-        </div>
+        <nav class="navbar navbar-expand-lg navbarAprender">
+                <a class="navbar-brand w-50 me-auto">
+                    <img src="../img/navbar/tatu_logo.png" class="d-inline-block align-top" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- Links -->
-        <div class="mx-auto order-0 col-4" style="margin: 0rem 0rem 0rem 10rem;">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item icons">
-                    <a href="./inicio.html">
-                        <img src="../img/navbar/Icon-Inicio.png" alt="inicio" title="Início" class="inicio">
-                        <a class="nav-link iconeTexto h4" href="./inicio.html">Início</a>
-                    </a>
-                </li>
+                <div class="collapse navbar-collapse w-100" id="navbarTogglerDemo02">
 
-                <li class="nav-item icons">
-                    <a href="./info.html">
-                        <img src="../img/navbar/Icon-aprender.png" alt="aprender" title="Aprender" class="aprender">
-                        <a class="nav-link iconeTexto h4" href="./info.html">Aprender</a>
-                    </a>
-                </li>
-                <li class="nav-item icons">
-                    <a href="./jogos.html">
-                        <img src="../img/navbar/Icon-jogar.png" alt="jogar" title="Jogar" class="jogar">
-                        <a class="nav-link iconeTexto h4" href="./jogos.html">Jogar</a>
-                    </a>
-                </li>
-                <li class="nav-item icons">
-                    <a href="./perfil.html">
-                        <img src="../img/navbar/Icon-o teu espaço.png" alt="Pagina Pessoal" title="Pagina Pessoal"
-                            class="paginaPessoal">
-                        <a class="nav-link iconeTexto h4" href="./perfil.html" style="white-space: nowrap">O teu
-                            espaço</a>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 col-2">
-            <div class="navbar-nav ml-auto avatar"></div>
-            <img src="../img/navbar/Avatar.png" alt="Avatar" class="avatarImagem">
-            <p id="perfil" class="avatarTexto">Batuti da Silva</p>
-        </div>
-    </nav>
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item icons">
+                            <a href="./inicio.html">
+                                <img src="../img/navbar/Icon-Inicio.png" alt="inicio" title="Início" class="inicio">
+                                <span class="navbar-text iconeTexto h4 navbar-text" href="./inicio.html">Início</span>
+                            </a>
+                        </li>
+                        <li class="nav-item icons">
+                            <a href="./info.html">
+                                <img src="../img/navbar/Icon-aprender.png" alt="aprender" title="Aprender" class="aprender">
+                                <span class="navbar-text iconeTexto h4" href="./info.html">Aprender</span>
+                            </a>
+                        </li>
+                        <li class="nav-item icons">
+                            <a href="./jogos.html">
+                                <img src="../img/navbar/Icon-jogar.png" alt="jogar" title="Jogar" class="jogar">
+                                <span class="navbar-text iconeTexto h4" href="./jogos.html">Jogar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item icons">
+                            <a href="./perfil.html">
+                                <img src="../img/navbar/Icon-o teu espaço.png" alt="Pagina Pessoal" title="Pagina Pessoal"
+                                    class="paginaPessoal">
+                                <span class="navbar-text iconeTexto h4" href="./perfil.html" style="white-space: nowrap">O teu
+                                    espaço</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="nav navbar-nav ml-auto ">
+                        <img src="../img/navbar/Avatar.png" alt="Avatar" class="avatarImagem">
+                        <span id="perfil" class="avatarTexto navbar-text">Batuti da Silva</span>
+                    </div>
+                </div>
+        </nav>
+
 
     <main class="corpoInfo container-fluid">
         <div class="row justify-content-center">
