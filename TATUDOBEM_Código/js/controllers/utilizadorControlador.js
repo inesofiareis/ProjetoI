@@ -47,8 +47,7 @@ export default class UserController{
      */
     setEditar(nomeUtilizador = '', email = '', palavraPasse = ''){
             let utilizadorAtual = sessionStorage['utilizadorLogado']
-            let novoPerfil = localStorage['utilizadores']
-            novoPerfil = JSON.parse(novoPerfil)
+            let novoPerfil = todosUtilizadores()
 
             for(let i = 0; i < novoPerfil.length; i++){
                 if(novoPerfil[i].nomeUtilizador == utilizadorAtual){
@@ -79,8 +78,7 @@ export default class UserController{
      */
     setPontos(pontos){
         let utilizador = sessionStorage['utilizadorLogado']
-        let utilizadorInfo = localStorage['utilizadores']
-        utilizadorInfo = JSON.parse(utilizadorInfo)
+        let utilizadorInfo = todosUtilizadores()
 
         for (let i = 0; i < utilizadorInfo.length; i++){
             if(utilizadorInfo[i].nomeUtilizador == utilizador){
@@ -102,8 +100,7 @@ export default class UserController{
      */
     getGenero(){
         let utilizador = sessionStorage['utilizadorLogado']
-        let utilizadorInfo = localStorage['utilizadores']
-        utilizadorInfo = JSON.parse(utilizadorInfo)
+        let utilizadorInfo = todosUtilizadores()
 
         for (let i = 0; i = utilizadorInfo.length; i++){
             if(utilizadorInfo[i].nomeUtilizador == utilizador){
@@ -122,8 +119,7 @@ export default class UserController{
      */
     getPontos(){
         let utilizador = sessionStorage['utilizadorLogado']
-        let utilizadorInfo = localStorage['utilizadores']
-        utilizadorInfo = JSON.parse(utilizadorInfo)
+        let utilizadorInfo = todosUtilizadores()
 
         for (let i = 0; i = utilizadorInfo.length; i++){
             if(utilizadorInfo[i].nomeUtilizador == utilizador){
@@ -134,5 +130,16 @@ export default class UserController{
         }
 
         return pontos
+    }
+
+    /**
+     * Função para retonar todos utilizadores que estão guardados na local storage
+     * @returns retorna uma lista com todos utilizadores com as suas informações
+     */
+    todosUtilizadores(){
+        let utilizadores = localStorage['utilizadores']
+        utilizadores = JSON.parse(utilizadores)
+
+        return utilizadores
     }
 }
