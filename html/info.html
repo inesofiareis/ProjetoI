@@ -13,62 +13,125 @@
     <!-- CSS da pagina -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <header>
+    <nav class="navbar navbar-expand-xl navbarAprender justify-content-center">
+        <a class="navbar-brand w-50 me-auto col-xs-5">
+            <img src="../img/navbar/tatu_logo.png" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerMenu"
+            aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation" style="background: none;">
+            <span class="navbar-toggler-icon" style="background-image: url(../img/navbar/menu.png) ;   width: 60px !important;
+            height:30px !important; opacity:70%;"></span>
+        </button>
 
-
-</header>
-
-<body>
-        <nav class="navbar navbar-expand-lg navbarAprender">
-                <a class="navbar-brand w-50 me-auto">
-                    <img src="../img/navbar/tatu_logo.png" class="d-inline-block align-top" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse w-100" id="navbarTogglerDemo02">
-
-                    <ul class="navbar-nav justify-content-center">
-                        <li class="nav-item icons">
-                            <a href="./inicio.html">
-                                <img src="../img/navbar/Icon-Inicio.png" alt="inicio" title="Início" class="inicio">
-                                <span class="navbar-text iconeTexto h4 navbar-text" href="./inicio.html">Início</span>
-                            </a>
-                        </li>
-                        <li class="nav-item icons">
-                            <a href="./info.html">
-                                <img src="../img/navbar/Icon-aprender.png" alt="aprender" title="Aprender" class="aprender">
-                                <span class="navbar-text iconeTexto h4" href="./info.html">Aprender</span>
-                            </a>
-                        </li>
-                        <li class="nav-item icons">
-                            <a href="./jogos.html">
-                                <img src="../img/navbar/Icon-jogar.png" alt="jogar" title="Jogar" class="jogar">
-                                <span class="navbar-text iconeTexto h4" href="./jogos.html">Jogar</span>
-                            </a>
-                        </li>
-                        <li class="nav-item icons">
-                            <a href="./perfil.html">
-                                <img src="../img/navbar/Icon-o teu espaço.png" alt="Pagina Pessoal" title="Pagina Pessoal"
-                                    class="paginaPessoal">
-                                <span class="navbar-text iconeTexto h4" href="./perfil.html" style="white-space: nowrap">O teu
-                                    espaço</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="nav navbar-nav ml-auto ">
-                        <img src="../img/navbar/Avatar.png" alt="Avatar" class="avatarImagem">
-                        <span id="perfil" class="avatarTexto navbar-text">Batuti da Silva</span>
+        <div class="collapse navbar-collapse w-100" id="navbarTogglerMenu">
+            
+            <div class="card-deck deckDeIcones justify-content-center">
+                <div class="card iconeZonas text-center col-auto mb-3">
+                    <a href="./inicio.html">
+                        <img src="../img/navbar/Icon-Inicio.png" alt="inicio" title="Início" class="inicio img-card-top">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title iconeTexto">Início</h4>
                     </div>
                 </div>
-        </nav>
+                <div class="card iconeZonas text-center col-auto mb-3">
+                    <a href="./info.html" class="imagensIcones">
+                        <img src="../img/navbar/Icon-aprender.png" alt="aprender" title="Aprender" class="aprender img-card-top">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title iconeTexto">Aprender</h4>
+                    </div>
+                </div>
+                <div class="card iconeZonas text-center col-auto mb-3">
+                    <a href="./jogo.html">
+                        <img src="../img/navbar/Icon-jogar.png" alt="jogar" title="Jogar" class="jogar img-card-top">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title iconeTexto">Jogar</h4>
+                    </div>
+                </div>
+                <div class="card iconeZonas text-center col-auto mb-8">
+                    <a href="./perfil.html">
+                        <img src="../img/navbar/Icon-o teu espaço.png" alt="Pagina Pessoal" title="Pagina Pessoal"
+                        class="paginaPessoal img-card-top">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title iconeTexto">O teu espaço</h4>
+                    </div>
+                </div>
+            </div>
 
+            <div class="nav ml-auto">
+                <img src="../img/navbar/Avatar.png" alt="Avatar" class="avatarImagem">
+                <span id="perfil" class="avatarTexto navbar-text">Batuti da Silva</span>
+            </div>
+        </div>
+            <div class="col-auto mb-3"> </div>
+
+
+    </nav>
+
+</header>
+<body>
 
     <main class="corpoInfo container-fluid">
-        <div class="row justify-content-center">
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col-2">
+                <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+                    <div class="input-group">
+                        <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1"
+                            class="form-control border-0 bg-light">
+                        <div class="input-group-append">
+                            <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i
+                                    class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 mt-5">
+                <button type="button" class="btn btn-primary col-4">Inserir</button>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-5"></div>
+
+            <div class="col-5">
+                <table class="table table-striped table-inverse table-responsive col-8">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>Título</th>
+                            <th>Texto</th>
+                            <th>Foto</th>
+                            <th>Pergunta</th>
+                            <th>Opção</th>
+                            <th>Altera</th>
+                            <th>Remover</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row utilizadorTabela"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td scope="row utilizadorTabela"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4"></div>
+        </div>
+
+
+
+
+        <!--         <div class="row justify-content-center">
             <div class="col-sm-3 col-xs-12 capitulos">
                 <a href="informacaoCapitulo1.html">
                     <img src="../img/Capitulo 1.png" alt="capitulo 1" title="Capítulo 1" class='capituloImg'
@@ -120,7 +183,7 @@
                     <span>Capítulo 6 - XXXXX</span>
                 </a>
             </div>
-        </div>
+        </div> -->
     </main>
 
     <!-- Footer -->
