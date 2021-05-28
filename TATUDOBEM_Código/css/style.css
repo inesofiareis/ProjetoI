@@ -27,6 +27,7 @@ body {
 
 .corpoDaPaginaInicial {
     overflow: hidden;
+    height: auto !important;
     background: rgb(255, 255, 255);
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 246, 245, 1) 60%, rgba(255, 202, 201, 1) 77%, rgba(255, 169, 168, 1) 100%);
 }
