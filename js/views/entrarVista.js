@@ -15,34 +15,32 @@ export default class UserView {
     }
 
     verificarLogin() {
-        this.loginBotao.addEventListener('click', () => {
+        this.loginBotao.addEventListener('click', event => {
+
             try {
                 this.utilizadorControlador.login(this.utilizadorLogin.value, this.passwordLogin.value);
-                this.displayMessage('Login efetuado com sucesso!', 'success');
-
+                alert('Login efecutado com sucesso')
+                location.href = '../html/inicio.html'
                 // Wait 1 second before reloading, so the user can see the login success message
-                setTimeout(() => {
-                    this.updateButtons('login');
-                    location.reload()
-                },
-                    1000);
+                // setTimeout(() => {
+                //     this.updateButtons('login');
+                //     location.reload()
+                // },
+                //     1000);
 
-            } catch (e) {
+            } 
+            catch (e) {
                 this.displayMessage(e, 'danger');
             }
+            event.preventDefault()
         });
-
-        // this.logoutButton.addEventListener('click', () => {
-        //     this.userController.logout();
-        //     this.updateButtons('logout');
-        //     location.reload()
-        // });
+        
     }
 
 
 
     checkLoginStatus() {
-        if (this.userController.isLogged()) {
+        if (this.utilizadorControlador.isLogged()) {
             this.updateButtons('login');
         }
         // } else {

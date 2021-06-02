@@ -2,7 +2,7 @@ import utilizadorControlador from '../controllers/utilizadorControlador.js'
 
 export default class UserView {
     constructor() {
-        this.userController = new UserController();
+        this.utilizadorControlador = new utilizadorControlador();
 
         // registo DOM
         this.nomeUser = document.getElementById('nome');
@@ -25,7 +25,7 @@ export default class UserView {
                 if (this.passwordUser.value !== this.passwordUser2.value) {
                     throw Error('As passswords não são iguais');
                 }
-                this.userController.registar(this.utilizador.value, this.passwordUser.value);
+                this.utilizadorControlador.registar(this.nomeUser.value, this.apelidoUser.value, this.passwordUser.value, this.utilizador.value, this.emailUser.value, this.passwordUser, this.nascimento, this.genero);
                 this.displayMessage('Registo efetuado com sucesso!', 'success');
             } catch (e) {
                 this.displayMessage(e, 'danger');

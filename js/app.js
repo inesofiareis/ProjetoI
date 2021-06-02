@@ -5,7 +5,7 @@ import registoVista from './views/registoVista.js'
 class App {
     constructor() {
         this.routes = {
-            '': [utilizadorVista],
+            '': [],
             'index': [],
             'entrar': [entrarVista],
             'registo': [registoVista],
