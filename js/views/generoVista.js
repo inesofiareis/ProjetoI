@@ -23,4 +23,4 @@ export default class genero{
             txtInicio.innerHTML = 'Surgiu um bichinho perigoso chamado covid-19. Ele salta de pessoa em pessoa e deixa-as muito doentes. Os teus pais dizem-te que está no mundo inteiro, por isso, tens de ter muito cuidado. Estás preocupade e assustade? Comigo e com os meus amigos, tu estás segure.'
         }  
     }
-}
+
