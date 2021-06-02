@@ -16,7 +16,7 @@
 
 
 <header>
-    <nav class="navbar navbar-expand-xl navbarPerfil justify-content-center">
+   <!--- <nav class="navbar navbar-expand-xl navbarPerfil justify-content-center">
         <a class="navbar-brand w-50 me-auto col-xs-5">
             <img src="../img/navbar/tatu_logo.png" class="d-inline-block align-top" alt="">
         </a>
@@ -72,13 +72,60 @@
             <div class="col-auto mb-3"> </div>
 
 
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg justify-content-center" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand tatinhasNavbar" href="#page-top">
+                <img src="../img/navbar/tatu_logo.png">
+            </a>
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#elementosNavbar">
+                <span class="navbar-toggler-icon">
+                    <img src="../img/navbar/menu.png" alt="" srcset="">
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="elementosNavbar">
+                <ul class="navbar-nav mx-auto itemsNavbar">
+                    <li class="nav-item">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-Inicio.png">
+                            <figcaption class="figure-caption">Inicio</figcaption>
+                        </figure>
+                    </li>
+                    <li class="nav-item">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-aprender.png">
+                            <figcaption class="figure-caption">Aprender</figcaption>
+                        </figure>
+                    </li>
+                    <li class="nav-item">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-jogar.png">
+                            <figcaption class="figure-caption">Jogar</figcaption>
+                        </figure>
+                    </li>
+                    <li class="nav-item">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-o teu espaço.png">
+                            <figcaption class="figure-caption">O teu espaço</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <span class="d-none d-lg-inline me-2 text-gray-600 small">Batuti da silva</span>
+                            <img class="border rounded-circle img-profile" src="avatars/avatar1.jpeg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
 </header>
 <body>
-
-    <main class="corpoPerfil container-fluid">
-
 
 
         <!-- OS QUATRO BOTÕES -->
@@ -105,7 +152,7 @@
 
         <!-- APENAS PARA O ADMIN -->
 
-
+<!--
         <div class="row">
             <div class="col-2"></div>
             <div class="col-2 mt-5">
@@ -138,66 +185,103 @@
                         </tr>
                     </tbody>
             </table>
-        </div>
+        </div> -->
 
 
 
 
         <!-- A PÁGINA DE EDITAR PERFIL -->
-
-        <!-- 
-        <div class="row justify-content-md-center">
-            <div class="col" id="avatar_mobile">
-                <img src="imagens/Avatar.png" alt="Avatar" width="150px">
+        <main class="corpoPerfil">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 offset-md-0">
+                        <a href="#">
+                            <img src="../img/perfil/Icon ajuda Andre.png" alt="Precisas de ajuda?">
+                        </a>
+                    </div>
+                    <div class="col-md-3 offset-md-0">
+                        <a href="#">
+                            <img src="../img/perfil/" alt="O teu espaço">
+                        </a>
+                    </div>
+                    <div class="col-md-3 offset-md-0">
+                        <a href="#">
+                            <img src="../img/perfil/Botao amigos.png" alt="Os teus amigos">
+                        </a>
+                    </div>
+                    <div class="col-md-3 offset-md-0">
+                        <a href="#">
+                            <img src="../img/perfil/Botao pontos.png" alt="Troca os teus pontos com o André">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs" id="form">
-                <form>
-                    <input type="text" name="txtNome" id="txtNome" placeholder="Nome">
-                    <br><br>
-                    <input type="email" name="txtEmail" id="txtEmail" placeholder="Email">
-                    <br><br>
-                    <input type="password" name="txtPass" id="txtPass" placeholder="Palavra Passe">
-                    <br><br>
-                    <input type="password" name="txtConfPass" id="txtConfPass" placeholder="Confirmar Palavra Passe">
-                    <br><br><br>
-                    <input type="submit" value="Confirmar Alteração" id="confirmarAlteracao">
-                </form>
-            </div>
-            <div class="col-md-4 col-sm-5" id="avatar_web">
-                <img src="imagens/Avatar.png" alt="Avatar" width="200px">
-            </div>
-            <h3 class="display-4 estatisticas">Sobre ti</h3>
-            <li class="list-group" name="estatisticas">
-                <ul class="list-group-item flex-column align-items-start active"></a>
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Estas é o número de atividades que já fizeste:</h5>
+            <section class="seccaoEditarPerfil">
+                <div class="container alterarAvatar">
+                    <a href="">
+                        <img src="../img/perfil/unnamed.png" alt="" width="250px">
+                    </a>
+                </div>
+                
+                <div class="container-fluid z">
+                    <div class="infoAlteravel">
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" name="txtNome" id="txtNome" placeholder="Nome">
+                            </div>
+                            <br><br>
+                            <input type="email" name="txtEmail" id="txtEmail" placeholder="Email">
+                            <br><br>
+                            <input type="password" name="txtPass" id="txtPass" placeholder="Palavra Passe">
+                            <br><br>
+                            <input type="password" name="txtConfPass" id="txtConfPass" placeholder="Confirmar Palavra Passe">
+                            <br><br><br>
+                        </form>
+                        <a class="btn btn-outline-primary confirmarInformacao" role="button" href="#">Já está!</a>
                     </div>
-                    <p class="mb-1">Inserir número</p>
-                </ul>
-                <ul class="list-group-item flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Escolhe uma atividade para veres a pontuação que tiveste:</h5>
-                        <small class="text-muted">3 days ago</small>
+                </div>
+            </section>
+            <section class="estatisticas">
+                <div class="container">
+                    <div class="tudoSobreUser">
+                        <div class="tituloDasEstatisticas">
+                            <h2 class="text-center">Tudo sobre ti!</h2>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Este é o número de atividades que já fizeste:</h3>
+                                </div>
+                                <div class="col-md-6"></div>
+                            </div>
+                            <h4 class="text-muted atividadesFeitas">Inserir número</h4>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-10">
+                                    <h3>Escolhe uma atividade para veres a pontuação que tiveste:</h3>
+                                    <div class="form-group">
+                                        <select class="form-control" name="nomeDaAtividade" id="nomeDaAtividade">
+                                            <option>Inserir atividades que a criança já fez</option>
+                                            <option></option>
+                                            <option></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6"></div>
+                            </div>
+                            <h4 class="text-muted pontuacaoAtividade">Meter aqui a pontuação da atividade.</h4>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Esta foi a tua pontuação mais alta:</h3>
+                                </div>
+                                <div class="col-md-6"></div>
+                            </div>
+                            <h4 class="text-muted pontuacaoMaisAlta">Inserir pontuação</h4>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <select class="form-control" name="nomeDaAtividade" id="nomeDaAtividade">
-                            <option>Inserir atividades que a criança já fez</option>
-                            <option></option>
-                            <option></option>
-                        </select>
-                    </div>
-                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus
-                        varius blandit.</p>
-                </ul>
-                <ul class="list-group-item flex-column align-items-start">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">Esta foi a tua pontuação mais alta!</h5>
-                    </div>
-                    <p class="mb-1">Inserir pontuação</p>
-                </ul>
-            </li>
-
-        </div> -->
 
 
 
@@ -437,7 +521,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="page-footer footerPerfil" style="height: 100%;">
+    <!-- <footer class="page-footer footerPerfil" style="height: 100%;">
         <div class="row">
             <div class="col-9"></div>
             <span class="amigos h2">Os amigos</span>
@@ -505,7 +589,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Footer Links -->
             </div>
         </div>
 
@@ -517,11 +600,7 @@
             </div>
             <div class="sloganFooter text-right col-3 py-3 h5">Está tudo bem com o tatu do bem.</div>
         </div>
-        <!-- Copyright -->
-
-        <!-- Copyright -->
-
-    </footer>
+    </footer> -->
     <!-- Footer -->
 
     <!-- Imagens fixas -->
@@ -530,7 +609,48 @@
     <img src="imagens/Amigos.png" alt="Amigos" title="chat" width="75px" id="chat">
     <img src="imagens/TuturialXico.png" alt="Tutorial" title="Tutorial" id="tutorialAndre" width="75px"> -->
 
-
+    <footer>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 footer-navigation">
+                <h3><a href="#">Company<span>logo </span></a></h3>
+                <ul>
+                    <li><a href="#">Para os pais</a></li>
+                    <li><a href="#">Contacte-nos</a></li>
+                    <li><a href="#">Políticas de privacidade</a></li>
+                </ul>
+                <p class="company-name"><br />Criado pela Inês, pelo Paulo e pela Sofia, da ESMAD.<br /><br /></p>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xxl-3 offset-xxl-0 footer-contacts"></div>
+            <div class="col-md-4 col-xxl-5 footer-about">
+                <h4>Os amigos</h4>
+                <div class="social-links social-icons">
+                    <div class="card-group">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Tatinhas</h4>
+                            </div><img class="card-img-bottom w-100 d-block" />
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Xico</h4>
+                            </div><img class="card-img-bottom w-100 d-block" />
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Dora</h4>
+                            </div><img class="card-img-bottom w-100 d-block" />
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">André</h4>
+                            </div><img class="card-img-bottom w-100 d-block" />
+                        </div>
+                    </div>
+                </div>
+                <p> Está tudo bem com o tatu do bem </p>
+            </div>
+        </div>
+    </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

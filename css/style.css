@@ -10,10 +10,8 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    
 }
-
-
-
 
 
 /* REGISTO */
@@ -21,11 +19,13 @@ body {
 .espacoDeRegisto {
     background: #F9F8DA;
     padding: 80px 0px;
-    height: 1100px;
+    height: auto !important; /* real browsers */
+    min-height: 100%;
 }
 
 .espacoDeRegisto.login{
-    padding: 200px 0px; 
+    height: auto !important; /* real browsers */
+    min-height: 100%;
 }
 
 .espacoDeRegisto form {
@@ -78,4 +78,28 @@ body {
 }
 
 
+.navbarPerfil{
+background-color: #FBEEB5;
+}
 
+.footerPerfil{
+    background-color: #FBEEB5;
+}
+
+.itemsNavbar{
+    text-align: center;
+}
+
+.iconNavbar{
+    margin: 10px 20px 10px 20px;
+}
+
+
+
+.corpoPerfil{
+    background: #FAF8DA
+}
+
+.seccaoEditarPerfil{
+    text-align: center;
+}
