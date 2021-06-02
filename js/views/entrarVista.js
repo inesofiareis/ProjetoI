@@ -2,7 +2,7 @@ import utilizadorControlador from '../controllers/utilizadorControlador.js'
 
 export default class UserView {
     constructor() {
-        this.userController = new UserController();
+        this.utilizadorControlador = new utilizadorControlador();
 
         // login DOM
         this.utilizadorLogin = document.getElementById('nomeUtilizador');
@@ -15,21 +15,23 @@ export default class UserView {
     }
 
     verificarLogin() {
-        this.loginBotao.addEventListener('click', () => {
+        this.loginBotao.addEventListener('click', event => {
+
             try {
-                this.userController.login(this.utilizadorLogin.value, this.passwordLogin.value);
-                this.displayMessage('Login efetuado com sucesso!', 'success');
-
+                this.utilizadorControlador.login(this.utilizadorLogin.value, this.passwordLogin.value);
+                alert('Login efecutado com sucesso')
                 // Wait 1 second before reloading, so the user can see the login success message
-                setTimeout(() => {
-                    this.updateButtons('login');
-                    location.reload()
-                },
-                    1000);
+                // setTimeout(() => {
+                //     this.updateButtons('login');
+                //     location.reload()
+                // },
+                //     1000);
 
-            } catch (e) {
+            } 
+            catch (e) {
                 this.displayMessage(e, 'danger');
             }
+            event.preventDefault()
         });
 
         // this.logoutButton.addEventListener('click', () => {
@@ -53,5 +55,6 @@ export default class UserView {
     // displayMessage(message, type) {
     //     this.messages.innerHTML =
     //         `<div class="alert alert-${type}" role="alert">${message}</div>`;
+    //     alert(messages)
     // }
 }

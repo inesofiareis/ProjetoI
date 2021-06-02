@@ -15,7 +15,8 @@ export default class UserController{
             const pontos = 0  //utilizador começa com 0 pontos
             const avatar = '../img/navbar/tatudobem.png' //avatar do utilizador
             const tipo = 'utilizador'  //tipo de utilizador, para novos são sempre utilizadores
-            this.utilizadores.push(new utilizadorModelo(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero, pontos, avatar, tipo))
+            const estado = 'regular' //utilizador estra com estado de utilizador regular
+            this.utilizadores.push(new utilizadorModelo(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero, pontos, avatar, tipo, estado))
             localStorage.setItem('utilizador', JSON.stringify(this.utilizadores))
         }
     }
@@ -46,8 +47,8 @@ export default class UserController{
      * @param {string} palavraPasse Nova palavra passe (caso haja alterações)
      */
     setEditar(nomeUtilizador = '', email = '', palavraPasse = ''){
-            let utilizadorAtual = sessionStorage['utilizadorLogado']
-            let novoPerfil = todosUtilizadores()
+            const utilizador = sessionStorage['utilizadorLogado']
+            let novoPerfil = this.todosUtilizadores()
 
             for(let i = 0; i < novoPerfil.length; i++){
                 if(novoPerfil[i].nomeUtilizador == utilizadorAtual){
@@ -77,16 +78,16 @@ export default class UserController{
      * @param {string} pontos Os pontos para adicionar ou subtrair 
      */
     setPontos(pontos){
-        let utilizador = sessionStorage['utilizadorLogado']
-        let utilizadorInfo = todosUtilizadores()
+        const utilizador = sessionStorage['utilizadorLogado']
+        let utilizadoresInfo = this.todosUtilizadores()
 
-        for (let i = 0; i < utilizadorInfo.length; i++){
-            if(utilizadorInfo[i].nomeUtilizador == utilizador){
-                const novaPontuacao = utilizadorInfo[i].pontos + pontos //somar os pontos atuais com os novos pontos
+        for (let i = 0; i < utilizadoresInfo.length; i++){
+            if(utilizadoresInfo[i].nomeUtilizador == utilizador){
+                const novaPontuacao = utilizadoresInfo[i].pontos + pontos //somar os pontos atuais com os novos pontos
 
-                utilizadorInfo[i].pontos = novaPontuacao
+                utilizadoresInfo[i].pontos = novaPontuacao
 
-                this.utilizadores[i] = utilizadorInfo[i]
+                this.utilizadores[i] = utilizadoresInfo[i]
                 localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
 
                 break
@@ -99,12 +100,12 @@ export default class UserController{
      * @returns genero do utilizador
      */
     getGenero(){
-        let utilizador = sessionStorage['utilizadorLogado']
-        let utilizadorInfo = todosUtilizadores()
+        const utilizador = sessionStorage['utilizadorLogado']
+        let utilizadoresInfo = this.todosUtilizadores()
 
-        for (let i = 0; i = utilizadorInfo.length; i++){
-            if(utilizadorInfo[i].nomeUtilizador == utilizador){
-                const genero = utilizadorInfo[i].genero
+        for (let i = 0; i = utilizadoresInfo.length; i++){
+            if(utilizadoresInfo[i].nomeUtilizador == utilizador){
+                const genero = utilizadoresInfo[i].genero
                 
                 break
             }
@@ -118,12 +119,12 @@ export default class UserController{
      * @returns pontos atuais do utilizador
      */
     getPontos(){
-        let utilizador = sessionStorage['utilizadorLogado']
-        let utilizadorInfo = todosUtilizadores()
+        const utilizador = sessionStorage['utilizadorLogado']
+        let utilizadoresInfo = this.todosUtilizadores()
 
-        for (let i = 0; i = utilizadorInfo.length; i++){
-            if(utilizadorInfo[i].nomeUtilizador == utilizador){
-                const pontos = utilizadorInfo[i].pontos
+        for (let i = 0; i = utilizadoresInfo.length; i++){
+            if(utilizadoresInfo[i].nomeUtilizador == utilizador){
+                const pontos = utilizadoresInfo[i].pontos
 
                 break
             }
@@ -131,6 +132,103 @@ export default class UserController{
 
         return pontos
     }
+
+    //admin - gerir utilizadores
+    /**
+     * Função para alterar o tipo de utilizador (utilizador <=> administrador)
+     * @param {string} nomeUtilizador 
+     */
+    alterarTipo(nomeUtilizador) {
+        let utilizadoresInfo = this.todosUtilizadores()
+        for (let i = 0; i < utilizadoresInfo.length; i++){
+            if(utilizadoresInfo[i].nomeUtilizador == nomeUtilizador){
+                let tipo = utilizadoresInfo[i].tipo
+
+                if (tipo == 'administrador'){
+                    tipo = 'utilizador'
+                }
+                else{
+                    tipo = 'administrador'
+                }
+
+                utilizadoresInfo[i].tipo = tipo
+                this.utilizadores[i] = utilizadoresInfo[i]
+                localStorage.setItem('utilizador', JSON.stringify(this.utilizadores))
+
+                break
+            }
+        }
+    }
+
+    /**
+     * Função para alterar o estado de utilizador (regular <=> bloqueado)
+     * @param {string} nomeUtilizador 
+     */
+    bloquearUtilizador(nomeUtilizador){
+        let utilizadoresInfo = this.todosUtilizadores()
+        for (let i = 0; i < utilizadoresInfo.length; i++){
+            if(utilizadoresInfo[i].nomeUtilizador == nomeUtilizador){
+                let estado = utilizadoresInfo[i].estado
+                
+                if (estado == 'regular'){
+                    estado = 'bloqueado'
+                }
+                else if (estado == 'bloqueado'){
+                    estado = 'regular'
+                }
+
+                utilizadoresInfo[i].estado = estado
+                this.utilizadores[i] = utilizadoresInfo
+                localStorage.setItem('utilizador', JSON.stringify(this.utilizadores))
+
+                break
+            }
+        }
+    }
+
+    /**
+     * Função para alterar o estado de utilizador (regular/bloqueado <=> banido)
+     * @param {*} nomeUtilizador 
+     */
+    banirUtilizador(nomeUtilizador){
+        let utilizadoresInfo = this.todosUtilizadores()
+        for (let i = 0; i < utilizadoresInfo.length; i++){
+            if(utilizadoresInfo[i].nomeUtilizador == nomeUtilizador){
+                let estado = utilizadoresInfo[i].estado
+                
+                if (estado == 'regular' || estado == 'bloqueado'){
+                    estado = 'banido'
+                }
+                else if (estado == 'banido'){
+                    estado = 'regular'
+                }
+
+                utilizadoresInfo[i].estado = estado
+                this.utilizadores[i] = utilizadoresInfo
+                localStorage.setItem('utilizador', JSON.stringify(this.utilizadores))
+
+                break
+            }
+        }
+    }
+
+    /**
+     * Função para returnar o estado do utilizador para a tabela dos utilizadores
+     * @param {string} nomeUtilizador 
+     * @returns estado do utilizador
+     */
+    estados(nomeUtilizador){
+        let utilizadoresInfo = this.todosUtilizadores()
+        for (let i = 0; i < utilizadoresInfo.length; i++){
+            if (utilizadoresInfo[i].nomeUtilizador == nomeUtilizador){
+                return utilizadoresInfo[i].estado
+
+                break
+            }
+        }
+    }
+    //admin - gerir utilizadores
+
 
     /**
      * Função para retonar todos utilizadores que estão guardados na local storage
