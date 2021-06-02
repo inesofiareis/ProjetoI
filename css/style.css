@@ -94,6 +94,18 @@ background-color: #FBEEB5;
     margin: 10px 20px 10px 20px;
 }
 
+.contentorSobre{
+    margin-top: 50px;
+}
+
+.osAmigos{
+    margin-top:20px;
+    margin-left: 370px;
+}
+.cardsAmigos{
+    border: none;
+    background: none;
+}
 
 
 .corpoPerfil{
