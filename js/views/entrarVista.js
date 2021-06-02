@@ -51,5 +51,6 @@ export default class UserView {
     // displayMessage(message, type) {
     //     this.messages.innerHTML =
     //         `<div class="alert alert-${type}" role="alert">${message}</div>`;
+    //     alert(messages)
     // }
 }

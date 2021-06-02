@@ -19,7 +19,7 @@ export default class UserView {
     }
 
     verificarRegisto() {
-        this.registoBotao.addEventListener('click', () => {
+        this.registoBotao.addEventListener('click', event => {
 
             try {
                 if (this.passwordUser.value !== this.passwordUser2.value) {
@@ -28,8 +28,10 @@ export default class UserView {
                 this.utilizadorControlador.registar(this.nomeUser.value, this.apelidoUser.value, this.passwordUser.value, this.utilizador.value, this.emailUser.value, this.passwordUser, this.nascimento, this.genero);
                 this.displayMessage('Registo efetuado com sucesso!', 'success');
             } catch (e) {
-                this.displayMessage(e, 'danger');
+                // this.displayMessage(e, 'danger');
             }
+
+            event.preventDefault()
         });
     }
 
