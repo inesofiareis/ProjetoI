@@ -1,10 +1,15 @@
-import utilizadorVista from './views/utilizadorVista.js'
+import entrarVista from './views/entrarVista.js'
+import registoVista from './views/registoVista.js'
+// import perfilVista from './views/editarperfilVista.js'
 
 class App {
     constructor() {
         this.routes = {
             '': [utilizadorVista],
-            'index': [utilizadorVista]
+            'index': [],
+            'entrar': [entrarVista],
+            'registo': [registoVista],
+            // 'perfil': [utilizadorVista, perfilVista]
         };
 
         // import dummy data for testing purposes
@@ -25,9 +30,10 @@ class App {
                 palavraPasse: 'pass1',
                 dataNascimento: '24/08/2002',
                 genero: 'Femenino',
-                pontos: '1000',
+                pontos: 1000,
                 avatar: '../img/navbar/tatudobem.png',
-                tipo: 'administrador'
+                tipo: 'administrador',
+                estado: 'regular'
             },
             {
                 id: 2,
@@ -38,9 +44,10 @@ class App {
                 palavraPasse: 'pass2',
                 dataNascimento: '07/11/2001',
                 genero: 'Femenino',
-                pontos: '1000',
+                pontos: 1000,
                 avatar: '../img/navbar/tatudobem.png',
-                tipo: 'administrador'
+                tipo: 'administrador',
+                estado: 'regular'
             },
             {
                 id: 3,
@@ -51,9 +58,10 @@ class App {
                 palavraPasse: 'pass3',
                 dataNascimento: '16/09/2000',
                 genero: 'Masculino',
-                pontos: '1000',
+                pontos: 1000,
                 avatar: '../img/navbar/tatudobem.png',
-                tipo: 'administrador'
+                tipo: 'administrador',
+                estado: 'regular'
             }
         ];
 
