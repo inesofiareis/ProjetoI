@@ -12,7 +12,7 @@ export default class UserView {
         this.passwordUser = document.getElementById('password');
         this.passwordUser2 = document.getElementById('confirmarPassword');
         this.nascimento = document.getElementById('dataNascimento');
-        this.genero = document.getElementById('genero').checked;
+        this.genero = document.querySelectorAll('input[name="genero"]');
         this.registoBotao = document.getElementById('registar');
         
         this.verificarRegisto();
@@ -20,13 +20,19 @@ export default class UserView {
 
     verificarRegisto() {
         this.registoBotao.addEventListener('click', event => {
-
-            try {
+            
+            try {  
                 if (this.passwordUser.value !== this.passwordUser2.value) {
+                    alert('Erro')
                     throw Error('As passswords não são iguais');
                 }
-                this.utilizadorControlador.registar(this.nomeUser.value, this.apelidoUser.value, this.passwordUser.value, this.utilizador.value, this.emailUser.value, this.passwordUser, this.nascimento, this.genero);
-                this.displayMessage('Registo efetuado com sucesso!', 'success');
+                for (let i = 0; i < this.genero.length; i++){
+                    if (this.genero[i].checked){
+                        this.utilizadorControlador.registar(this.nomeUser.value, this.apelidoUser.value, this.utilizador.value, this.emailUser.value, this.passwordUser.value, this.nascimento.value, this.genero[i].value);
+                        location.href = '../html/inicio.html'
+                        // this.displayMessage('Registo efetuado com sucesso!', 'success');
+                    }
+                } 
             } catch (e) {
                 // this.displayMessage(e, 'danger');
             }

@@ -15,70 +15,73 @@
 </head>
 
 <header>
-  <nav class="navbar navbar-expand-xl navbarInicio justify-content-center">
-      <a class="navbar-brand w-50 me-auto col-xs-5">
-          <img src="../img/navbar/tatu_logo.png" class="d-inline-block align-top" alt="">
-      </a>
-      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerMenu"
-          aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation" style="background: none;">
-          <span class="navbar-toggler-icon" style="background-image: url(../img/navbar/menu.png) ;   width: 60px !important;
-          height:30px !important; opacity:70%;"></span>
-      </button>
 
-      <div class="collapse navbar-collapse w-100" id="navbarTogglerMenu">
-          
-          <div class="card-deck deckDeIcones justify-content-center">
-              <div class="card iconeZonas text-center col-auto mb-3">
-                  <a href="./inicio.html">
-                      <img src="../img/navbar/Icon-Inicio.png" alt="inicio" title="Início" class="inicio img-card-top">
-                  </a>
-                  <div class="card-body">
-                      <h4 class="card-title iconeTexto">Início</h4>
-                  </div>
-              </div>
-              <div class="card iconeZonas text-center col-auto mb-3">
-                  <a href="./info.html" class="imagensIcones">
-                      <img src="../img/navbar/Icon-aprender.png" alt="aprender" title="Aprender" class="aprender img-card-top">
-                  </a>
-                  <div class="card-body">
-                      <h4 class="card-title iconeTexto">Aprender</h4>
-                  </div>
-              </div>
-              <div class="card iconeZonas text-center col-auto mb-3">
-                  <a href="./jogo.html">
-                      <img src="../img/navbar/Icon-jogar.png" alt="jogar" title="Jogar" class="jogar img-card-top">
-                  </a>
-                  <div class="card-body">
-                      <h4 class="card-title iconeTexto">Jogar</h4>
-                  </div>
-              </div>
-              <div class="card iconeZonas text-center col-auto mb-8">
-                  <a href="./perfil.html">
-                      <img src="../img/navbar/Icon-o teu espaço.png" alt="Pagina Pessoal" title="Pagina Pessoal"
-                      class="paginaPessoal img-card-top">
-                  </a>
-                  <div class="card-body">
-                      <h4 class="card-title iconeTexto">O teu espaço</h4>
-                  </div>
-              </div>
-          </div>
+  <nav class="navbar navbar-expand-lg justify-content-center navbarInicio" id="mainNav">
 
-          <div class="nav ml-auto">
-              <img src="../img/navbar/Avatar.png" alt="Avatar" class="avatarImagem">
-              <span id="perfil" class="avatarTexto navbar-text">Batuti da Silva</span>
-          </div>
-      </div>
-          <div class="col-auto mb-3"> </div>
+    <a class="navbar-brand me-auto">
+      <img src="../img/navbar/tatu_logo.png" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerMenu"
+      aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation" style="background: none;">
+      <span class="navbar-toggler-icon" style="background-image: url(../img/navbar/menu.png) ;   width: 60px !important;
+              height:30px !important; opacity:70%;"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerMenu">
+      <ul class="navbar-nav center mx-auto itemsNavbar justify-content-center">
+        <li class="nav-item">
+          <a href="./inicio.html">
+            <figure class="figure">
+              <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-Inicio.png">
+              <figcaption class="figure-caption captionIcone">Inicio</figcaption>
+            </figure>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./info.html">
+            <figure class="figure">
+              <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-aprender.png">
+              <figcaption class="figure-caption captionIcone">Aprender</figcaption>
+            </figure>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./jogo.html">
+            <figure class="figure">
+              <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-jogar.png">
+              <figcaption class="figure-caption captionIcone">Jogar</figcaption>
+            </figure>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="./perfil.html">
+            <figure class="figure">
+              <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-o teu espaço.png">
+              <figcaption class="figure-caption captionIcone">O teu espaço</figcaption>
+            </figure>
+        </a>
+        </li>
+      </ul>
 
+      <ul class="navbar-nav avatar">
+        <li class="nav-item">
+          <figure class="figure">
+            <img class="img-fluid figure-img" src="../img/navbar/Avatar.png" />
+            <figcaption class="figure-caption nomeUtilizador" style="float: left;">Batuti da Silva</figcaption>
+          </figure>
 
+        </li>
+      </ul>
+    </div>
+    </div>
   </nav>
 
 </header>
+
 <body>
 
   <main class="corpoInicio container-fluid">
 
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
       <div class="row">
         <div class="col-sm-4">
           <img src="../img/inicio/imagem da pagina principal.png" class="img-fluid todosOsTatus" alt="Responsive image">
@@ -163,95 +166,137 @@
 
     <a href=''>
       <img src="" alt="">
-    </a>
+    </a> -->
 
-  </main>
-  <!-- Footer -->
-  <footer class="page-footer footerInicio" style="height: 100%;">
-    <div class="row">
-      <div class="col-9"></div>
-      <span class="amigos h2">Os amigos</span>
-    </div>
-    <div class="row">
-      <div class="container col-4 text-center text-md-left">
+    <body class="corpoInicio">
+      <header class="text-justify masthead" style="background-size:cover;">
+        <div class="overlay">
 
-        <hr class="clearfix d-md-none">
-        <div class="col-md-5 mb-md-0 mb-3 divDoSobre">
-          <h2 class="sobre">Sobre</h2>
-          <span id="linhaSobre"></span>
-          <ul class="list-unstyled sobreLista h4">
-            <li>
-              <a href="#!">Para os pais</a>
-            </li>
-            <li>
-              <a href="#!">Contacte-nos</a>
-            </li>
-            <li>
-              <a href="#!">Políticas de privacidade</a>
-            </li>
-          </ul>
         </div>
-
-      </div>
-
-      <div class="col-2">
-        
-      </div>
-
-
-      <div class="cartaoEquipa text-right d-flex justify-content-end col-6">
-          <div id="linhaAmigos"></div>
-          <div class="d-flex flex-row text-center">
-            <div class="col-3">
-              <div class="cartaoTatinhas">
-                <div class="card-body">
-                  <h3 class="card-title tatinhasTitulo">Tatinhas</h3>
+        <div class="container containerDoTexto">
+          <div class="row ">
+            <div class="col-md-12 col-xl-9 col-xxl-12 offset-xl-3 offset-xxl-4">
+              <h1 class="tituloInicio display-4">Tatinhas, o que se passa?</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-xl-9 col-xxl-12 offset-xl-3 offset-xxl-4 ">
+              <p class="textoInicio">Surgiu um bichinho perigoso chamado covid-19.
+                <br>Ele salta de pessoa em pessoa e deixa-as muito doentes.<br>
+                Os teus pais dizem-te que está no mundo inteiro, por
+                isso, tens de ter muito cuidado. <br>
+                Estás preocupadx e assustadx? <br>
+                Comigo e com os meus amigos, tu estás segurx.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-lg-12 col-xl-5 col-xxl-4 offset-xxl-0">
+            <img src="../img/inicio/imagem da pagina principal.png" />
+          </div>
+        </div>
+      </header>
+      <section class="text-center fundoAzulInicio features-icons">
+        <div class="container containerDasCartas">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                <div class="card cartaoAprender">
+                  <img src="../img/navbar/Icon-aprender.png" width="100px" alt="">
+                  <div class="card-body text-white">
+                    <h4 class="card-title">Aprender</h4>
+                    <p class="card-text">Conhece o médico Xico e vem aprender tudo o que precisas de saber sobre o
+                      corona vírus.</p>
+                  </div>
                 </div>
-                <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Tatinhas.png" alt="">
               </div>
             </div>
-            <div class="col-3">
-              <div class="cartaoXico">
-                <div class="card-body">
-                  <h3 class="card-title xicoTitulo">Xico</h3>
+            <div class="col-lg-4">
+              <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                <div class="card cartaoJogar">
+                  <img src="../img/navbar/Icon-jogar.png" height="110px" width="130px" alt="">
+                  <div class="card-body text-white">
+                    <h4 class="card-title">Jogar</h4>
+                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus
+                      ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                  </div>
                 </div>
-                <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Xico.png" alt="">
               </div>
             </div>
-            <div class="col-3">
-              <div class="cartaoDora">
-                <div class="card-body">
-                  <h3 class="card-title doraTitulo">Dora</h3>
+            <div class="col-lg-4">
+              <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                <div class="card cartaoPerfil">
+                  <img src="../img/navbar/Icon-o teu espaço.png" alt="" height="110px" width="80px">
+                  <div class="card-body text-white">
+                    <h4 class="card-title">O teu espaço</h4>
+                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus
+                      ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                  </div>
                 </div>
-                <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Dora.png" alt="">
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="cartaoAndre">
-                <div class="card-body">
-                  <h3 class="card-title andreTitulo">André</h3>
-                </div>
-                <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Andre.png" alt="">
               </div>
             </div>
           </div>
-          <!-- Footer Links -->
         </div>
-    </div>
+      </section>
+    </body>
 
-    <div class="row frasesPequenas">
-          <div class="fraseFooter col-4 h5">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da
-            ESMAD.</div>
-            <div class="col-4">
-              
+  </main>
+  <!-- Footer -->
+  <footer class="footerInicio">
+    <div class="row">
+      <div class="col-sm-6 col-md-4 contentorSobre">
+        <h3 class="sobreFooter">Sobre</h3>
+        <hr class="linhaSobre">
+        <ul class="listaSobreFooter">
+          <li>
+            <a href="#" class="elementoSobre">Para os pais</a>
+          </li>
+          <li>
+            <a href="#" class="elementoSobre">Contacte-nos</a>
+          </li>
+          <li>
+            <a href="#" class="elementoSobre">Políticas de privacidade</a>
+          </li>
+        </ul>
+        <p class="criadoresFooter"><br />Criado pela Inês, pelo Paulo e pela Sofia, da ESMAD.<br /><br /></p>
+      </div>
+      <div class="col-sm-6 col-md-4 col-xxl-3 offset-xxl-0 footer-contacts"></div>
+      <div class="col-md-4 col-xxl-5 footer-about">
+        <h4 class="osAmigosFooter">Os amigos</h4>
+        <div class="cartoesAmigosFooter">
+          <div class="card-group grupoCartoesFooter">
+            <div class="card cardsAmigos">
+              <div class="card-body">
+                <h4 class="card-title tituloCarta">Tatinhas</h4>
+              </div>
+              <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Tatinhas.png" />
             </div>
-          <div class="sloganFooter text-right col-3 py-3 h5">Está tudo bem com o tatu do bem.</div>
+            <div class="card cardsAmigos">
+              <div class="card-body">
+                <h4 class="card-title tituloCarta">Xico</h4>
+              </div>
+              <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Xico.png" />
+            </div>
+            <div class="card cardsAmigos">
+              <div class="card-body">
+                <h4 class="card-title tituloCarta">Dora</h4>
+              </div>
+              <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Dora.png" />
+            </div>
+            <div class="card cardsAmigos">
+              <div class="card-body">
+                <h4 class="card-title tituloCarta">André</h4>
+              </div>
+              <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Andre.png" />
+            </div>
+          </div>
+        </div>
+        <p class="slogan"> Está tudo bem com o tatu do bem </p>
+      </div>
     </div>
-        <!-- Copyright -->
-
-        <!-- Copyright -->
-
   </footer>
+
   <!-- Footer -->
 
 

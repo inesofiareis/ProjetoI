@@ -1,11 +1,11 @@
 export default class Utilizador {
-    constructor(id, nomeUser, apelidoUser, utilizador, emailUser, passowrdUser, nascimento, genero, pontos, avatar, tipo, estado) {
+    constructor(id, nome, apelido, utilizador, email, palavraPasse, nascimento, genero, pontos, avatar, tipo, estado) {
         this.id = id
-        this.nomeUser = nomeUser
-        this.apelidoUser = apelidoUser
+        this.nome = nome
+        this.apelido = apelido
         this.utilizador = utilizador
-        this.emailUser = emailUser
-        this.passwordUser = passowordUser
+        this.email = email
+        this.palavraPasse = palavraPasse
         this.nascimento = nascimento
         this.genero = genero
         this.pontos = pontos

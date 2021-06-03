@@ -1,6 +1,6 @@
 import utilizadorModelo from '../models/utilizadorModelo.js'
 
-export default class UserController{
+export default class utilizadorControlador{
     constructor() {
         this.utilizadores = localStorage.utilizadores ? JSON.parse(localStorage.utilizadores) : [];
     }
@@ -17,7 +17,7 @@ export default class UserController{
             const tipo = 'utilizador'  //tipo de utilizador, para novos são sempre utilizadores
             const estado = 'regular' //utilizador estra com estado de utilizador regular
             this.utilizadores.push(new utilizadorModelo(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero, pontos, avatar, tipo, estado))
-            localStorage.setItem('utilizador', JSON.stringify(this.utilizadores))
+            localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
         }
     }
 

@@ -39,6 +39,8 @@ body {
     color: #848484;
     margin-bottom: 25px;
     margin-top: -25px;
+    font-size: 25px;
+    width:40rem;
 }
 
 .palavraEspecial{
@@ -290,10 +292,103 @@ background-color: #FBEEB5;
     
 }
 
+.navbarInicio{
+    background-color:#F9F7F2 ;
+}
+
+.corpoInicio{
+    background-color: #FAFAFA;
+}
+
+.footerInicio{
+    background-color:#F9F7F2 ;
+}
+
 .corpoPerfil{
     background: #FAF8DA
 }
 
 .seccaoEditarPerfil{
     text-align: center;
+}
+
+.fundoAzulInicio{
+    background-color: #638D94;
+}
+
+.cartaoAprender{
+    background-color: #62D4D4;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.cartaoAprender>img{
+    margin-top: 20px;
+}
+
+.cartaoJogar{
+background-color: #FFA09E;
+align-items: center;
+margin-top: -50px;
+
+}
+
+.cartaoJogar>img{
+    margin-top: 20px;
+}
+
+.cartaoPerfil{
+background-color: #FFC122;
+align-items: center;
+margin-top: -50px;
+
+}
+
+.cartaoPerfil>img{
+    margin-top: 20px;
+}
+
+.tituloInicio{
+    color: #205D76;
+}
+
+.textoInicio{
+    font-size: 25px;  
+    color: #6A9299;
+}
+@media (min-width: 984px) {
+
+    .cartaoAprender {
+        width:300px;
+        height: 300px;
+    }
+    .cartaoJogar{
+        width:300px;
+        height: 300px;
+    }
+    .cartaoPerfil{
+        width:300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 984px){
+    .containerDasCartas{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    .tituloInicio{
+        position:absolute;
+        margin-top:70px;
+        margin-left: 200px;
+    }
+
+    .textoInicio{
+        position:absolute;
+        margin-top:140px;
+        margin-left: 200px;
+    }
 }
