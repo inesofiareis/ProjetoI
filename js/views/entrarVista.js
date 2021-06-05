@@ -8,6 +8,7 @@ export default class UserView {
         this.utilizadorLogin = document.getElementById('nomeUtilizador');
         this.passwordLogin = document.getElementById('passwordLogin');
         this.loginBotao = document.getElementById('entrar');
+        this.mensagem = document.querySelector('#mensagem')
         this.verificarLogin();
 
         // this.messages = document.querySelector('#messages')
@@ -19,19 +20,12 @@ export default class UserView {
 
             try {
                 this.utilizadorControlador.login(this.utilizadorLogin.value, this.passwordLogin.value);
-                alert('Login efecutado com sucesso')
                 location.href = '../html/inicio.html'
-                // Wait 1 second before reloading, so the user can see the login success message
-                // setTimeout(() => {
-                //     this.updateButtons('login');
-                //     location.reload()
-                // },
-                //     1000);
-
             } 
             catch (e) {
-                this.displayMessage(e, 'danger');
+                mensagem.innerHTML = `<div class="alert alert-danger" role="alert">${e}</div>`
             }
+
             event.preventDefault()
         });
         
@@ -47,10 +41,4 @@ export default class UserView {
         //     this.updateButtons('logout');
         // }
     }
-
-    // displayMessage(message, type) {
-    //     this.messages.innerHTML =
-    //         `<div class="alert alert-${type}" role="alert">${message}</div>`;
-    //     alert(messages)
-    // }
 }
