@@ -10,14 +10,19 @@ export default class utilizadorControlador{
         if(this.utilizadores.find(utilizador => utilizador.nomeUtilizador === nomeUtilizador)) {
             throw Error(`Já existe um utilizador com esse nome de utilizador: "${nomeUtilizador}"`)
         }
+        else if(palavraPasse.length < 5){
+            throw Error(`A Palavra Passe tem que ter pelo menos 5 caracteres!`)
+        }
         else {
             const novoID = this.utilizadores.length > 0 ? this.utilizadores[this.utilizadores.length - 1].id + 1 : 1
             const pontos = 0  //utilizador começa com 0 pontos
             const avatar = '../img/navbar/tatudobem.png' //avatar do utilizador
             const tipo = 'utilizador'  //tipo de utilizador, para novos são sempre utilizadores
             const estado = 'regular' //utilizador estra com estado de utilizador regular
+            const amigos = [] //array vazio para puder ser adicionado novos amigos
             this.utilizadores.push(new utilizadorModelo(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero, pontos, avatar, tipo, estado))
             localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
+            sessionStorage.setItem('utilizadorLogado', nomeUtilizador)
         }
     }
 
@@ -39,7 +44,54 @@ export default class utilizadorControlador{
         return sessionStorage.getItem('utilizadorLogado') ? true : false
     }
 
+    /**
+     * Função para juntar o primeiro e ultimo nome do utilizador numa só string
+     * @returns primeiro e ultimo nome do utilizador
+     */
+    nomeApelido(){
+        const utilizador = sessionStorage['utilizadorLogado']
+        let utilizadoresInfo = this.todosUtilizadores()
+
+        for(let i = 0; i < utilizadoresInfo.length; i++){
+            if(utilizadoresInfo[i].nomeUtilizador == utilizador){
+                let nomeCompleto = utilizadoresInfo[i].nome + ' ' + utilizadoresInfo[i].apelido
+
+                return nomeCompleto
+            }
+        }
+    }
+
+    /**
+     * Função para pegar o avatar do utilizador
+     * @returns avatar do utilizador
+     */
+    avatar(){
+        const utilizador = sessionStorage['utilizadorLogado']
+        let utilizadoresInfo = this.todosUtilizadores()
+
+        for(let i = 0; i < utilizadoresInfo.length; i++){
+            if(utilizadoresInfo[i].nomeUtilizador == utilizador){
+                return utilizadoresInfo[i].avatar
+            }
+        }
+    }
+
     // perfil.html
+    /**
+     * Função para pegar o email do utilizador (para o perfil)
+     * @returns email do utilizador
+     */
+     email(){
+        const utilizador = sessionStorage['utilizadorLogado']
+        let utilizadoresInfo = this.todosUtilizadores()
+
+        for(let i = 0; i < utilizadoresInfo.length; i++){
+            if(utilizadoresInfo[i].nomeUtilizador == utilizador){
+                return utilizadoresInfo[i].email
+            }
+        }
+    }
+
     /**
      * Função que recebe alterações no perfil do utilizador
      * @param {string} nomeUtilizador Nome de utilizador
@@ -51,7 +103,7 @@ export default class utilizadorControlador{
             let novoPerfil = this.todosUtilizadores()
 
             for(let i = 0; i < novoPerfil.length; i++){
-                if(novoPerfil[i].nomeUtilizador == utilizadorAtual){
+                if(novoPerfil[i].nomeUtilizador == utilizador){
                     if (nomeUtilizador != ''){  // alterar o nome de utilizador
                         novoPerfil[i].nomeUtilizador = nomeUtilizador
                         sessionStorage.setItem('utilizadorLogado', nomeUtilizador)  //atualizar a informação da session storage
@@ -131,6 +183,70 @@ export default class utilizadorControlador{
         }
 
         return pontos
+    }
+
+    /**
+     * Função para adicionar amigos ao utilizador
+     * @param {string} amigo amigo a ser adicionado
+     */
+    adcionarAmigos(amigo){
+        const utilizador = sessionStorage['utilizadorLogado']
+
+        if (utilizador == amigo){
+            throw Error(`Não te podes adicionar a ti proprio!`)
+        }
+        else{
+            let utilizadoresInfo = this.todosUtilizadores()
+
+           for (let i = 0; i = utilizadoresInfo.length; i++){
+                if(utilizadoresInfo[i].nomeApelido == utilizador){
+                    if(utilizadoresInfo[i].amigos.some(amigos => amigos == amigo)){
+                        throw Error (`${amigo} já é teu amiguinho!`)
+                    }
+                    else if (!this.utilizadores.some(utilizador => utilizador.nomeUtilizador == amigo)){
+                        throw Error (`${amigo} não existe :(`)
+                    }
+                    else {
+                        utilizadoresInfo[i].amigos.push(amigo)
+                        this.utilizadores[i] = utilizadoresInfo[i]
+
+                        for (let c = 0; c < utilizadoresInfo.length; c++){
+                            if (utilizadoresInfo[c].nomeUtilizador == amigo){
+                                utilizadoresInfo[c].amigos.push(utilizador)
+                                this.utilizadores[c] = utilizadoresInfo[c]
+                            }
+                        }
+
+                        localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
+                    }
+                }
+            } 
+        } 
+    }
+
+    /**
+     * Função para remover amigos do utilizador
+     * @param {string} amigo amigo a ser removido
+     */
+    removerAmigos(amigo){
+        const utilizador = sessionStorage['utilizadorLogado']
+        let utilizadoresInfo = this.todosUtilizadores()
+
+        for (let i = 0; i = utilizadoresInfo.length; i++){
+            if(utilizadoresInfo[i].nomeApelido == utilizador){
+                utilizadoresInfo[i].amigos.splice(utilizadoresInfo[i].amigos.indexOf(amigo), 1)
+                this.utilizadores[i] = utilizadoresInfo[i]
+
+                for (let c = 0; c < utilizadoresInfo.length; c++){
+                    if (utilizadoresInfo[c].nomeUtilizador == amigo){
+                        utilizadoresInfo[c].amigos.splice(utilizadoresInfo[i].amigos.indexOf(utilizador), 1)
+                        this.utilizadores[c] = utilizadoresInfo[c]
+                    }
+                }
+
+                localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
+            }
+        } 
     }
 
     //admin - gerir utilizadores
@@ -222,8 +338,6 @@ export default class utilizadorControlador{
         for (let i = 0; i < utilizadoresInfo.length; i++){
             if (utilizadoresInfo[i].nomeUtilizador == nomeUtilizador){
                 return utilizadoresInfo[i].estado
-
-                break
             }
         }
     }

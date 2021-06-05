@@ -34,7 +34,7 @@ export default class UserView {
                     }
                 } 
             } catch (e) {
-                // this.displayMessage(e, 'danger');
+                alert(e)
             }
 
             event.preventDefault()

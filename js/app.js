@@ -1,6 +1,13 @@
 import entrarVista from './views/entrarVista.js'
 import registoVista from './views/registoVista.js'
+//import navbarVista from './views/navbarVista.js'
+// import infoVista from './views/infoVista.js'
+// import jogoVista from './views/jogoVista.js'
 // import perfilVista from './views/editarperfilVista.js'
+// import generoVista from './views/generoVista.js'
+// import amigoVista from './views/amigoVista.js'
+// import tuturialVista from './views/tutorialVista.js'
+// import pontuacaoVista from './views/pontuacaoVista.js'
 
 class App {
     constructor() {
@@ -9,13 +16,18 @@ class App {
             'index': [],
             'entrar': [entrarVista],
             'registo': [registoVista],
-            // 'perfil': [utilizadorVista, perfilVista]
+            'inicio': [],
+            'info': [],
+            'info-detalhe': [],
+            'jogo': [],
+            'jogo-detalhe': [],
+            'perfil': []
         };
 
-        // import dummy data for testing purposes
+        // importar dados fictícios para fins de teste
         this.#importDataFixtures();
 
-        // instantiate the views mapped in the routes object
+        // instanciar as visualizações mapeadas no objeto de routes
         this.#instantiateViews();
     }
 
@@ -28,12 +40,13 @@ class App {
                 nomeUtilizador: 'InêsReis',
                 email: 'email@email.com',
                 palavraPasse: 'pass1',
-                dataNascimento: '24/08/2002',
+                dataNascimento: '2002-08-24',
                 genero: 'Femenino',
                 pontos: 1000,
                 avatar: '../img/navbar/tatudobem.png',
                 tipo: 'administrador',
-                estado: 'regular'
+                estado: 'regular',
+                amigos: ['fifs', 'PauloR']
             },
             {
                 id: 2,
@@ -42,12 +55,13 @@ class App {
                 nomeUtilizador: 'fifs',
                 email: 'email@email.com',
                 palavraPasse: 'pass2',
-                dataNascimento: '07/11/2001',
+                dataNascimento: '2001-11-07',
                 genero: 'Femenino',
                 pontos: 1000,
                 avatar: '../img/navbar/tatudobem.png',
                 tipo: 'administrador',
-                estado: 'regular'
+                estado: 'regular',
+                amigos: ['InêsReis', 'PauloR']
             },
             {
                 id: 3,
@@ -56,16 +70,17 @@ class App {
                 nomeUtilizador: 'PauloR',
                 email: 'email@email.com',
                 palavraPasse: 'pass3',
-                dataNascimento: '16/09/2000',
+                dataNascimento: '2000-09-16',
                 genero: 'Masculino',
                 pontos: 1000,
                 avatar: '../img/navbar/tatudobem.png',
                 tipo: 'administrador',
-                estado: 'regular'
+                estado: 'regular',
+                amigos: ['InêsReis', 'fifs']
             }
         ];
 
-        // Load the fixtures in case there is no data in the local storage 
+        // Carrega as innformações, caso não haja na localStorage 
         if (!localStorage.utilizadores) {
             localStorage.setItem('utilizadores', JSON.stringify(utilizadores));
         }
