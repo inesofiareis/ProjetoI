@@ -8,16 +8,16 @@ export default class utilizadorControlador{
     // registo.html
     registar(nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero){
         if (nome.length == 0 || apelido.length == 0 || nomeUtilizador.length == 0 || email.length == 0 || dataNascimento.length == 0){ //caso o utilizador tenha esquecido de preencher algum campo
-            throw Error(`Campos em falta! Verifique novamente, por favor!`)
+            throw Error(`Campos em falta! Verifica outra vez!`)
         }
         else if(this.utilizadores.find(utilizador => utilizador.nomeUtilizador === nomeUtilizador)) {  //se já existir um usuario com o nome de usuario escolhido
-            throw Error(`Já existe um utilizador com esse nome de utilizador: "${nomeUtilizador}"`)
+            throw Error(`Já existe um utilizador com este nome: "${nomeUtilizador}"`)
         }
         else if(palavraPasse.length < 5){  //Se a palavra passe tiver menos que 5 caracteres (para a segurança do utilizador)
-            throw Error(`A Palavra Passe tem que ter pelo menos 5 caracteres!`)
+            throw Error(`A palavra passe tem que ter pelo menos 5 caracteres!`)
         }
         else if(email.indexOf('@') == -1){ //caso o email não tenha o @
-            throw Error(`Email invalido!`)
+            throw Error(`Email inválido!`)
         }
         else {
             const novoID = this.utilizadores.length > 0 ? this.utilizadores[this.utilizadores.length - 1].id + 1 : 1
@@ -38,7 +38,7 @@ export default class utilizadorControlador{
             sessionStorage.setItem('utilizadorLogado', nomeUtilizador)
         }
         else {
-            throw Error('Dados invalido!')
+            throw Error('Dados inválidos!')
         }
     }
 

@@ -12,7 +12,7 @@ export default class infoController {
      */
     setCapituloAtual(titulo){
         this.capituloAtual = titulo
-        sessionStorage.setItem('irformacao', titulo)
+        sessionStorage.setItem('informacao', titulo)
     }
 
     getCapituloAtual(){
