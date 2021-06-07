@@ -24,7 +24,6 @@ export default class UserView {
             
             try {  
                 if (this.passwordUser.value !== this.passwordUser2.value) {
-                    alert('Erro')
                     throw Error('As passswords não são iguais');
                 }
                 for (let i = 0; i < this.genero.length; i++){
