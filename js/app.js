@@ -1,10 +1,10 @@
 import entrarVista from './views/entrarVista.js'
 import registoVista from './views/registoVista.js'
-//import navbarVista from './views/navbarVista.js'
+import navbarVista from './views/navbarVista.js'
 // import infoVista from './views/infoVista.js'
 // import jogoVista from './views/jogoVista.js'
 // import perfilVista from './views/editarperfilVista.js'
-// import generoVista from './views/generoVista.js'
+import generoVista from './views/generoVista.js'
 // import amigoVista from './views/amigoVista.js'
 // import tuturialVista from './views/tutorialVista.js'
 // import pontuacaoVista from './views/pontuacaoVista.js'
@@ -16,12 +16,12 @@ class App {
             'index': [],
             'entrar': [entrarVista],
             'registo': [registoVista],
-            'inicio': [],
-            'info': [],
-            'info-detalhe': [],
-            'jogo': [],
-            'jogo-detalhe': [],
-            'perfil': []
+            'inicio': [navbarVista, generoVista],
+            'info': [navbarVista],
+            'info-detalhe': [navbarVista],
+            'jogo': [navbarVista],
+            'jogo-detalhe': [navbarVista],
+            'perfil': [navbarVista]
         };
 
         // importar dados fictícios para fins de teste
