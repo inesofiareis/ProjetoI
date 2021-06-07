@@ -7,7 +7,7 @@ export default class utilizadorControlador{
 
     // registo.html
     registar(nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero){
-        if (nome.length == 0 || apelido.length == 0 || nomeUtilizador.length == 0 || email.length == 0 || dataNascimento.length == 0){ //caso o utilizador tenha esquecido de preencher algum campo
+        if (nome == '' || apelido == '' || nomeUtilizador == '' || email == '' || dataNascimento == ''){ //caso o utilizador tenha esquecido de preencher algum campo
             throw Error(`Campos em falta! Verifique novamente, por favor!`)
         }
         else if(this.utilizadores.find(utilizador => utilizador.nomeUtilizador === nomeUtilizador)) {  //se já existir um usuario com o nome de usuario escolhido
@@ -26,7 +26,8 @@ export default class utilizadorControlador{
             const tipo = 'utilizador'  //tipo de utilizador, para novos são sempre utilizadores
             const estado = 'regular' //utilizador estra com estado de utilizador regular
             const amigos = [] //lista vazia para puder ser adicionado novos amigos
-            this.utilizadores.push(new utilizadorModelo(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero, pontos, avatar, tipo, estado))
+            const atividades = 0 //numero de ativades que utilizador já fez (0 no inicio)
+            this.utilizadores.push(new utilizadorModelo(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero, pontos, avatar, tipo, estado, atividades))
             localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
             sessionStorage.setItem('utilizadorLogado', nomeUtilizador)
         }
@@ -107,6 +108,20 @@ export default class utilizadorControlador{
 
         this.guardarLocalStorage(utilizador)
     }
+
+    getAtividades(){
+        const utilizador = this.utilizadoresInfo()
+
+        return utilizador.atividades
+    }
+
+    setAtividades(){
+        let utilizador = this.utilizadoresInfo()
+
+        utilizador.atividades++
+
+        this.guardarLocalStorage(utilizador)
+    }
     //perfil.html
 
     //sistema de pontuação
@@ -172,6 +187,16 @@ export default class utilizadorControlador{
                 this.guardarLocalStorage(utilizadorAmigo)
             }
         }
+    }
+
+    /**
+     * Função para returnar uma lista de todos os amigos que ele tem
+     * @returns Returna a lista de amigos do utilizador
+     */
+    listaAmigos(){
+        const utilizador = this.utilizadoresInfo()
+
+        return utilizador.amigos
     }
 
     /**
@@ -278,7 +303,7 @@ export default class utilizadorControlador{
      * @returns Returna o objeto com a informação do utilizador
      */
     utilizadoresInfo(utilizador = ''){
-        if (utilizador == ''){
+        if (utilizador == ''){  //caso não seja passado nenhum utilizador como parametro, utilizar o utilizador logado
             utilizador = sessionStorage['utilizadorLogado']
         }
         const todosUtilizadores = this.todosUtilizadores()

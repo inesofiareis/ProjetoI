@@ -46,7 +46,8 @@ class App {
                 avatar: '../img/navbar/tatudobem.png',
                 tipo: 'administrador',
                 estado: 'regular',
-                amigos: ['fifs', 'PauloR']
+                amigos: ['fifs', 'PauloR'],
+                atividades: 10
             },
             {
                 id: 2,
@@ -61,7 +62,8 @@ class App {
                 avatar: '../img/navbar/tatudobem.png',
                 tipo: 'administrador',
                 estado: 'regular',
-                amigos: ['InêsReis', 'PauloR']
+                amigos: ['InêsReis', 'PauloR'],
+                atividades: 10
             },
             {
                 id: 3,
@@ -76,7 +78,8 @@ class App {
                 avatar: '../img/navbar/tatudobem.png',
                 tipo: 'administrador',
                 estado: 'regular',
-                amigos: ['InêsReis', 'fifs']
+                amigos: ['InêsReis', 'fifs'],
+                atividades: 10
             }
         ];
 
