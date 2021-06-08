@@ -1,18 +1,21 @@
-/* export default */ class Jogo {
-    constructor(nome, desc, avaliacao, comentario) {
+export default  class Jogo {
+    constructor(id, nome, genero, descricao, perguntasErespostas) {
+        this.id = id
         this.nome = nome
-        this.desc = desc
-        this.avaliacao = avaliacao
-        this.comentario = Comentarios()
+        this.genero = genero
+        this.descricao = descricao
+        this.perguntasErespostas = perguntasErespostas
     }
+
+
     // Compara duas bandas pelo seu nome. Faz uma ordenação alfabética crescente
-    static compare(nomeA, nomeB) {
-        if (nomeA.nome < nomeB.nome)
-            return -1;
-        if (nomeA.nome > nomeB.nome)
-            return 1;
-        return 0;
-    }
+    // static compare(nomeA, nomeB) {
+    //     if (nomeA.nome < nomeB.nome)
+    //         return -1;
+    //     if (nomeA.nome > nomeB.nome)
+    //         return 1;
+    //     return 0;
+    // }
 }
 
 /* export default */ class Comentarios{
