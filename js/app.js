@@ -2,7 +2,7 @@ import entrarVista from './views/entrarVista.js'
 import registoVista from './views/registoVista.js'
 import navbarVista from './views/navbarVista.js'
 // import infoVista from './views/infoVista.js'
-// import jogoVista from './views/jogoVista.js'
+import jogoVista from './views/jogoVista.js'
 import perfilVista from './views/editarperfilVista.js'
 import generoVista from './views/generoVista.js'
 // import amigoVista from './views/amigoVista.js'
@@ -19,7 +19,7 @@ class App {
             'inicio': [navbarVista, generoVista],
             'info': [navbarVista],
             'info-detalhe': [navbarVista],
-            'jogo': [navbarVista],
+            'jogo': [navbarVista, jogoVista],
             'jogo-detalhe': [navbarVista],
             'perfil': [navbarVista, perfilVista]
         };

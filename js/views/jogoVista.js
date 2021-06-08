@@ -1,26 +1,47 @@
 import jogosController from '../controllers/jogoControlador.js';
+import utilizadorControlador from '../controllers/utilizadorControlador.js';
 
-export default class UserVista {
+export default class jogoVista{
     constructor() {
         this.jogoControlador = new jogosController();
 
-        // registo DOM nome do jogo, perguntas, resposta correta, 
-        this.nomeJogo = document.getElementById('nome');
-        this.pergunta = document.getElementById('dataNascimento');
-        this.primeiraOpcao = document.getElementById('apelido');
-        this.segundaOpacao = document.getElementById('nomeUtilizadorR');
-        this.terceiraOpcao = document.getElementById('email');
-        this.quartaOpcao = document.getElementById('password');
-        this.opcaoCorreta = document.getElementById('confirmarPassword');
+        this.catalogoJogos = document.querySelector('#catalogoJogos');
+        this.catalogoJogo(this.jogoControlador.getJogos());
+        this.gerarCardJogo();
+
         
-        this.concluidoBotao = document.getElementById('registar');
+    }
 
-        this.mensagem = document.querySelector('#mensagem')
-        this.novoJogo();
+    catalogoJogo(jogos = []) {
+        let divisao = '<div class="row row-cols-3">';
+        for (const jogo of jogos) {
+            divisao += this.gerarCardJogo(jogo);
+        }
 
-        // novoJogo() {
-        //     // Junta toda a informação que a passa para o controller :)
-        // }
+        divisao += '</div>'
+        this.catalogoJogos.innerHTML = divisao
+           
+    }
+    gerarCardJogo(jogo) {
+        let html = `
+        <div class="col">
+            <div class="card">
+                
+                <div class="card-body">
+                    <h4 class="card-title">${jogo.nome}</h4>
+                    <p class="card-text">${jogo.genero}</p>
+                    <button id="${jogo.nome}" class="btn btn-primary see">Jogar</button>
+            `
+        if (this.utilizadorControlador.admin()) {
+            html += `<button id="${jogo.nome}" class="btn btn-danger remove">Remove</button>`
+        }
+
+        html += `
+                </div>
+            </div>
+        </div>        
+        `
+        return html
     }
 
     // verificarRegisto() {
@@ -44,3 +65,17 @@ export default class UserVista {
     //     });
     // }
 }
+
+// jogo novo// registo DOM nome do jogo, perguntas, resposta correta, 
+        // this.nomeJogo = document.getElementById('nome');
+        // this.pergunta = document.getElementById('dataNascimento');
+        // this.primeiraOpcao = document.getElementById('apelido');
+        // this.segundaOpacao = document.getElementById('nomeUtilizadorR');
+        // this.terceiraOpcao = document.getElementById('email');
+        // this.quartaOpcao = document.getElementById('password');
+        // this.opcaoCorreta = document.getElementById('confirmarPassword');
+        
+        // this.concluidoBotao = document.getElementById('registar');
+
+        // this.mensagem = document.querySelector('#mensagem')
+        // this.novoJogo();

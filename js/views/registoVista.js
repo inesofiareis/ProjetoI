@@ -1,6 +1,6 @@
 import utilizadorControlador from '../controllers/utilizadorControlador.js'
 
-export default class UserVista {
+export default class UtilizadorVista {
     constructor() {
         this.utilizadorControlador = new utilizadorControlador();
 
