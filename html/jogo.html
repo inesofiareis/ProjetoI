@@ -14,65 +14,70 @@
 </head>
 
 <header>
-    <nav class="navbar navbar-expand-xl navbarJogos justify-content-center">
-        <a class="navbar-brand w-50 me-auto col-xs-5">
+
+    <nav class="navbar navbar-expand-lg justify-content-center navbarJogo" id="mainNav">
+
+        <a class="navbar-brand me-auto">
             <img src="../img/navbar/tatu_logo.png" class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerMenu"
-            aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation" style="background: none;">
+            aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation"
+            style="background: none;">
             <span class="navbar-toggler-icon" style="background-image: url(../img/navbar/menu.png) ;   width: 60px !important;
-            height:30px !important; opacity:70%;"></span>
+                height:30px !important; opacity:70%;"></span>
         </button>
-
-        <div class="collapse navbar-collapse w-100" id="navbarTogglerMenu">
-            
-            <div class="card-deck deckDeIcones justify-content-center">
-                <div class="card iconeZonas text-center col-auto mb-3">
+        <div class="collapse navbar-collapse" id="navbarTogglerMenu">
+            <ul class="navbar-nav center mx-auto itemsNavbar justify-content-center">
+                <li class="nav-item">
                     <a href="./inicio.html">
-                        <img src="../img/navbar/Icon-Inicio.png" alt="inicio" title="Início" class="inicio img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-Inicio.png">
+                            <figcaption class="figure-caption captionIcone">Inicio</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Início</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-3">
-                    <a href="./info.html" class="imagensIcones">
-                        <img src="../img/navbar/Icon-aprender.png" alt="aprender" title="Aprender" class="aprender img-card-top">
+                </li>
+                <li class="nav-item">
+                    <a href="./info.html">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-aprender.png">
+                            <figcaption class="figure-caption captionIcone">Aprender</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Aprender</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-3">
+                </li>
+                <li class="nav-item">
                     <a href="./jogo.html">
-                        <img src="../img/navbar/Icon-jogar.png" alt="jogar" title="Jogar" class="jogar img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-jogar.png">
+                            <figcaption class="figure-caption captionIcone">Jogar</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Jogar</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-8">
+                </li>
+                <li class="nav-item">
                     <a href="./perfil.html">
-                        <img src="../img/navbar/Icon-o teu espaço.png" alt="Pagina Pessoal" title="Pagina Pessoal"
-                        class="paginaPessoal img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-o teu espaço.png">
+                            <figcaption class="figure-caption captionIcone">O teu espaço</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">O teu espaço</h4>
-                    </div>
-                </div>
-            </div>
+                </li>
+            </ul>
 
-            <div class="nav ml-auto">
-                <img src="../img/navbar/Avatar.png" alt="Avatar" class="avatarImagem" id="avatar">
-                <span id="perfil" class="avatarTexto navbar-text" id="nome">Batuti da Silva</span>
-            </div>
+            <ul class="navbar-nav avatar">
+                <li class="nav-item">
+                    <figure class="figure">
+                        <img class="img-fluid figure-img" id="avatar" src="../img/navbar/Avatar.png" />
+                        <figcaption class="figure-caption nomeUtilizador" style="float: left;" id="nome">Batuti da Silva
+                        </figcaption>
+                    </figure>
+
+                </li>
+            </ul>
         </div>
-            <div class="col-auto mb-3"> </div>
-
-
+        </div>
     </nav>
 
 </header>
+
 <body>
     <!--     </div> -->
 

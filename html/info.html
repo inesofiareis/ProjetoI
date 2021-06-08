@@ -14,65 +14,70 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <header>
-    <nav class="navbar navbar-expand-xl navbarAprender justify-content-center">
-        <a class="navbar-brand w-50 me-auto col-xs-5">
+
+    <nav class="navbar navbar-expand-lg justify-content-center navbarAprender" id="mainNav">
+
+        <a class="navbar-brand me-auto">
             <img src="../img/navbar/tatu_logo.png" class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerMenu"
-            aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation" style="background: none;">
+            aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation"
+            style="background: none;">
             <span class="navbar-toggler-icon" style="background-image: url(../img/navbar/menu.png) ;   width: 60px !important;
-            height:30px !important; opacity:70%;"></span>
+                height:30px !important; opacity:70%;"></span>
         </button>
-
-        <div class="collapse navbar-collapse w-100" id="navbarTogglerMenu">
-            
-            <div class="card-deck deckDeIcones justify-content-center">
-                <div class="card iconeZonas text-center col-auto mb-3">
+        <div class="collapse navbar-collapse" id="navbarTogglerMenu">
+            <ul class="navbar-nav center mx-auto itemsNavbar justify-content-center">
+                <li class="nav-item">
                     <a href="./inicio.html">
-                        <img src="../img/navbar/Icon-Inicio.png" alt="inicio" title="Início" class="inicio img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-Inicio.png">
+                            <figcaption class="figure-caption captionIcone">Inicio</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Início</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-3">
-                    <a href="./info.html" class="imagensIcones">
-                        <img src="../img/navbar/Icon-aprender.png" alt="aprender" title="Aprender" class="aprender img-card-top">
+                </li>
+                <li class="nav-item">
+                    <a href="./info.html">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-aprender.png">
+                            <figcaption class="figure-caption captionIcone">Aprender</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Aprender</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-3">
+                </li>
+                <li class="nav-item">
                     <a href="./jogo.html">
-                        <img src="../img/navbar/Icon-jogar.png" alt="jogar" title="Jogar" class="jogar img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-jogar.png">
+                            <figcaption class="figure-caption captionIcone">Jogar</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Jogar</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-8">
+                </li>
+                <li class="nav-item">
                     <a href="./perfil.html">
-                        <img src="../img/navbar/Icon-o teu espaço.png" alt="Pagina Pessoal" title="Pagina Pessoal"
-                        class="paginaPessoal img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-o teu espaço.png">
+                            <figcaption class="figure-caption captionIcone">O teu espaço</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">O teu espaço</h4>
-                    </div>
-                </div>
-            </div>
+                </li>
+            </ul>
 
-            <div class="nav ml-auto">
-                <img src="../img/navbar/Avatar.png" alt="Avatar" class="avatarImagem" id="avatar">
-                <span id="perfil" class="avatarTexto navbar-text" id="nomeUtilizador">Batuti da Silva</span>
-            </div>
+            <ul class="navbar-nav avatar">
+                <li class="nav-item">
+                    <figure class="figure">
+                        <img class="img-fluid figure-img" id="avatar" src="../img/navbar/Avatar.png" />
+                        <figcaption class="figure-caption nomeUtilizador" style="float: left;" id="nome">Batuti da Silva
+                        </figcaption>
+                    </figure>
+
+                </li>
+            </ul>
         </div>
-            <div class="col-auto mb-3"> </div>
-
-
+        </div>
     </nav>
 
 </header>
+
 <body>
 
     <main class="corpoInfo container-fluid">
@@ -187,90 +192,58 @@
     </main>
 
     <!-- Footer -->
-    <footer class="page-footer footerInfo" style="height: 100%;">
+    <footer class="footerAprender">
         <div class="row">
-            <div class="col-9"></div>
-            <span class="amigos h2">Os amigos</span>
-        </div>
-        <div class="row">
-            <div class="container col-4 text-center text-md-left">
-
-                <hr class="clearfix d-md-none">
-                <div class="col-md-5 mb-md-0 mb-3 divDoSobre">
-                    <h2 class="sobre">Sobre</h2>
-                    <span id="linhaSobre"></span>
-                    <ul class="list-unstyled sobreLista h4">
-                        <li>
-                            <a href="#!">Para os pais</a>
-                        </li>
-                        <li>
-                            <a href="#!">Contacte-nos</a>
-                        </li>
-                        <li>
-                            <a href="#!">Políticas de privacidade</a>
-                        </li>
-                    </ul>
-                </div>
-
+            <div class="col-sm-6 col-md-4 contentorSobre">
+                <h3 class="sobreFooter">Sobre</h3>
+                <hr class="linhaSobre">
+                <ul class="listaSobreFooter">
+                    <li>
+                        <a href="#" class="elementoSobre">Para os pais</a>
+                    </li>
+                    <li>
+                        <a href="#" class="elementoSobre">Contacte-nos</a>
+                    </li>
+                    <li>
+                        <a href="#" class="elementoSobre">Políticas de privacidade</a>
+                    </li>
+                </ul>
+                <p class="criadoresFooter"><br />Criado pela Inês, pelo Paulo e pela Sofia, da ESMAD.<br /><br /></p>
             </div>
-
-            <div class="col-2">
-
-            </div>
-
-
-            <div class="cartaoEquipa text-right d-flex justify-content-end col-6">
-                <div id="linhaAmigos"></div>
-                <div class="d-flex flex-row text-center">
-                    <div class="col-3">
-                        <div class="cartaoTatinhas">
+            <div class="col-sm-6 col-md-4 col-xxl-3 offset-xxl-0 footer-contacts"></div>
+            <div class="col-md-4 col-xxl-5 footer-about">
+                <h4 class="osAmigosFooter">Os amigos</h4>
+                <div class="cartoesAmigosFooter">
+                    <div class="card-group grupoCartoesFooter">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title tatinhasTitulo">Tatinhas</h3>
+                                <h4 class="card-title tituloCarta">Tatinhas</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Tatinhas.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Tatinhas.png" />
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="cartaoXico">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title xicoTitulo">Xico</h3>
+                                <h4 class="card-title tituloCarta">Xico</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Xico.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Xico.png" />
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="cartaoDora">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title doraTitulo">Dora</h3>
+                                <h4 class="card-title tituloCarta">Dora</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Dora.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Dora.png" />
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="cartaoAndre">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title andreTitulo">André</h3>
+                                <h4 class="card-title tituloCarta">André</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Andre.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Andre.png" />
                         </div>
                     </div>
                 </div>
-                <!-- Footer Links -->
+                <p class="slogan"> Está tudo bem com o tatu do bem </p>
             </div>
         </div>
-
-        <div class="row frasesPequenas">
-            <div class="fraseFooter col-4 h5">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da
-                ESMAD.</div>
-            <div class="col-4">
-
-            </div>
-            <div class="sloganFooter text-right col-3 py-3 h5">Está tudo bem com o tatu do bem.</div>
-        </div>
-        <!-- Copyright -->
-
-        <!-- Copyright -->
-
     </footer>
     <!-- Imagens fixas -->
     <img src="../img/Tatu_pagina.png" alt="Xico" title="Olá, eu sou o Xico!" width="250px" id="xicoPagina">

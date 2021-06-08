@@ -207,6 +207,13 @@ color: #205D76;
     }
 }
 
+.navbarJogo{
+    background-color: #FFE1E4;
+}
+
+.navbarAprender, .footerAprender{
+    background-color: #BCE9E9;
+}
 .navbarPerfil{
 background-color: #FBEEB5;
 }
