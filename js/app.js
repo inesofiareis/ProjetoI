@@ -2,7 +2,7 @@ import entrarVista from './views/entrarVista.js'
 import registoVista from './views/registoVista.js'
 import navbarVista from './views/navbarVista.js'
 // import infoVista from './views/infoVista.js'
-// import jogoVista from './views/jogoVista.js'
+import jogoVista from './views/jogoVista.js'
 import perfilVista from './views/editarperfilVista.js'
 import generoVista from './views/generoVista.js'
 // import amigoVista from './views/amigoVista.js'
@@ -19,7 +19,7 @@ class App {
             'inicio': [navbarVista, generoVista],
             'info': [navbarVista],
             'info-detalhe': [navbarVista],
-            'jogo': [navbarVista],
+            'jogo': [navbarVista, jogoVista],
             'jogo-detalhe': [navbarVista],
             'perfil': [navbarVista, perfilVista]
         };
@@ -32,6 +32,121 @@ class App {
     }
 
     #importDataFixtures() {
+        const jogos = [{
+            id: 1,
+            nome: 'Ajudar o Xico',
+            genero: 'Preencher espaços',
+            descricao: 'Ajuda o Xico a recuperar a suas informações',
+            perguntasErespostas: [{
+                                    id:1,
+                                    perguntas: ['pergunta1', 'pergunta2', 'pergunta3', 'pergunta4', 'pergunta5'],
+                                    respostas: [{
+                                                    numeroPergunta: 1,
+                                                    resposta: 'resposta1',
+                                                    alternativas: [
+                                                        'alternativa1',
+                                                        'alternativa2',
+                                                        'alternativa3',
+                                                        'alternativa4'
+                                                    ]
+                                                },
+                                                {
+                                                    numeroPergunta: 2,
+                                                    resposta: 'resposta2',
+                                                    alternativas: [
+                                                        'alternativa1',
+                                                        'alternativa2',
+                                                        'alternativa3',
+                                                        'alternativa4'
+                                                    ]
+                                                },
+                                                {
+                                                    numeroPergunta: 3,
+                                                    resposta: 'resposta3',
+                                                    alternativas: [
+                                                        'alternativa1',
+                                                        'alternativa2',
+                                                        'alternativa3',
+                                                        'alternativa4'
+                                                    ]
+                                                },
+                                                {
+                                                    numeroPergunta: 4,
+                                                    resposta: 'resposta4',
+                                                    alternativas: [
+                                                        'alternativa1',
+                                                        'alternativa2',
+                                                        'alternativa3',
+                                                        'alternativa4'
+                                                    ]
+                                                },
+                                                {
+                                                    numeroPergunta: 5,
+                                                    resposta: 'resposta5',
+                                                    alternativas: [
+                                                        'alternativa1',
+                                                        'alternativa2',
+                                                        'alternativa3',
+                                                        'alternativa4'
+                                                    ]
+                                                }]
+                                    },
+                                    {
+                                        id:1,
+                                        perguntas: ['pergunta1', 'pergunta2', 'pergunta3', 'pergunta4', 'pergunta5'],
+                                        respostas: [{
+                                                        numeroPergunta: 1,
+                                                        resposta: 'resposta1',
+                                                        alternativas: [
+                                                            'alternativa1',
+                                                            'alternativa2',
+                                                            'alternativa3',
+                                                            'alternativa4'
+                                                        ]
+                                                    },
+                                                    {
+                                                        numeroPergunta: 2,
+                                                        resposta: 'resposta2',
+                                                        alternativas: [
+                                                            'alternativa1',
+                                                            'alternativa2',
+                                                            'alternativa3',
+                                                            'alternativa4'
+                                                        ]
+                                                    },
+                                                    {
+                                                        numeroPergunta: 3,
+                                                        resposta: 'resposta3',
+                                                        alternativas: [
+                                                            'alternativa1',
+                                                            'alternativa2',
+                                                            'alternativa3',
+                                                            'alternativa4'
+                                                        ]
+                                                    },
+                                                    {
+                                                        numeroPergunta: 4,
+                                                        resposta: 'resposta4',
+                                                        alternativas: [
+                                                            'alternativa1',
+                                                            'alternativa2',
+                                                            'alternativa3',
+                                                            'alternativa4'
+                                                        ]
+                                                    },
+                                                    {
+                                                        numeroPergunta: 5,
+                                                        resposta: 'resposta5',
+                                                        alternativas: [
+                                                            'alternativa1',
+                                                            'alternativa2',
+                                                            'alternativa3',
+                                                            'alternativa4'
+                                                        ]
+                                                    }]
+                                        }]
+        }]
+
         const utilizadores = [
             {
                 id: 1,
@@ -85,7 +200,8 @@ class App {
 
         // Carrega as innformações, caso não haja na localStorage 
         if (!localStorage.utilizadores) {
-            localStorage.setItem('utilizadores', JSON.stringify(utilizadores));
+            localStorage.setItem('utilizadores', JSON.stringify(utilizadores))
+            localStorage.setItem('jogos', JSON.stringify(jogos));
         }
     }
 
@@ -102,8 +218,6 @@ class App {
     #getViews(route) {
         return typeof this.routes[route] === 'undefined' ? [] : this.routes[route];
     }
-
-
 }
 
 new App();

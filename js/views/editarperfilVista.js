@@ -9,30 +9,27 @@ export default class genero{
         this.palavraPasse = document.querySelector('#txtPass');
         this.palavraPasse2 = document.querySelector('#txtConfPass');
         this.botaoAlterar = document.querySelector('#botaoAlterar');
-
         this.atualizarDados();
+
         this.placeholder();
     }
 
     atualizarDados(){
-        this.botaoAlterar.addEventListener("click", function(){ 
+        this.botaoAlterar.addEventListener("click", () =>{ 
+            try {
 
-            this.utilizadorControlador.setEditar(this.nomeUtilizador, this.emailUtilizador,this.palavraPasse);
-
-            try {  
                 if (this.palavraPasse.value != this.palavraPasse2.value) {
                     
                     throw Error('As passswords não são iguais');
                 }
-                
-                this.utilizadorControlador.setEditar(this.nomeUtilizador, this.emailUtilizador,this.palavraPasse);
+
+                this.utilizadorControlador.setEditar(this.nomeUtilizador.value, this.emailUtilizador.value,this.palavraPasse.value);
 
             
             } catch (e) {
+                alert('Erro')
                 // mensagem.innerHTML = `<div class="alert alert-danger" role="alert">${e}</div>`;
             }
-
-            event.preventDefault();
         })
     }
 

@@ -89,10 +89,9 @@ export default class utilizadorControlador {
         let utilizador = this.utilizadoresInfo()
 
         if (nomeUtilizador != '') { // alterar o nome de utilizador
-            utilizador.nomeUtilizador = nomeUtilizador
-            sessionStorage.setItem('utilizadorLogado', nomeUtilizador) //atualizar a informação da session storage
+            this.alterarNomeUtilizador(utilizador, nomeUtilizador)
         }
-
+        
         if (email != '') { // alterar o email do utilizador
             utilizador.email = email
         }
@@ -286,7 +285,23 @@ export default class utilizadorControlador {
     }
     //admin - gerir utilizadores
 
-    guardarLocalStorage(utilizador) {
+    alterarNomeUtilizador(utilizador, novoUtilizador){
+        const todosUtilizadores = this.todosUtilizadores()
+
+        for (let i = 0; i < todosUtilizadores.length; i++){
+            if(todosUtilizadores[i].nomeUtilizador == utilizador.nomeUtilizador){
+                utilizador.nomeUtilizador = novoUtilizador
+                this.utilizadores[i] = utilizador
+                localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
+            }
+        }
+    }
+
+    /**
+     * Função para guardar alterações das informações do utilizador feitas
+     * @param {object} utilizador lista de informação do utilizador
+     */
+    guardarLocalStorage(utilizador) {    
         const todosUtilizadores = this.todosUtilizadores()
 
         for (let i = 0; i < todosUtilizadores.length; i++) {
@@ -299,6 +314,7 @@ export default class utilizadorControlador {
 
     /**
      * Função que só retorna a informação de um utilizador
+     * @param {object} utilizador lista de informação de todos utilizadores
      * @returns Returna o objeto com a informação do utilizador
      */
     utilizadoresInfo(utilizador = '') {
