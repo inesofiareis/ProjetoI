@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TATUDOBEM</title>
-    <link rel="icon" href="../img/Tatinhas-página-inicial.png">
+    <link rel="icon" href="../img/navbar/Tatinhas-página-inicial.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -60,8 +60,8 @@
                 <ul class="navbar-nav avatar">
                     <li class="nav-item">
                         <figure class="figure">
-                            <img class="img-fluid figure-img" src="../img/navbar/Avatar.png"/>
-                            <figcaption class="figure-caption nomeUtilizador" style="float: left;">Batuti da Silva</figcaption>
+                            <img class="img-fluid figure-img" src="../img/navbar/Avatar.png" id="avatar"/>
+                            <figcaption class="figure-caption nomeUtilizador" style="float: left;" id="nome">Batuti da Silva</figcaption>
                         </figure>
 
                     </li>
@@ -184,9 +184,10 @@
                                         <input type="password" name="txtPass" id="txtPass" placeholder="Palavra Passe">
                                         <br><br>
                                         <input type="password" name="txtConfPass" id="txtConfPass" placeholder="Confirmar Palavra Passe">
-                                        <br><br><br>
+                                        <br><br>
+                                        <button type="button" class="btn btn-outline-primary" id="botaoAlterar">Já está!</button>
                                     </form>
-                                    <a class="btn btn-outline-primary confirmarInformacao" role="button" href="#">Já está!</a>
+                                    
                                 </div>
                             </div>
                         </section>

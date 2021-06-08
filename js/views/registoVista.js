@@ -14,7 +14,8 @@ export default class UserView {
         this.nascimento = document.getElementById('dataNascimento');
         this.genero = document.querySelectorAll('input[name="genero"]');
         this.registoBotao = document.getElementById('registar');
-        
+
+        this.mensagem = document.querySelector('#mensagem')
         this.verificarRegisto();
     }
 
@@ -23,18 +24,16 @@ export default class UserView {
             
             try {  
                 if (this.passwordUser.value !== this.passwordUser2.value) {
-                    alert('Erro')
                     throw Error('As passswords não são iguais');
                 }
                 for (let i = 0; i < this.genero.length; i++){
                     if (this.genero[i].checked){
                         this.utilizadorControlador.registar(this.nomeUser.value, this.apelidoUser.value, this.utilizador.value, this.emailUser.value, this.passwordUser.value, this.nascimento.value, this.genero[i].value);
                         location.href = '../html/inicio.html'
-                        // this.displayMessage('Registo efetuado com sucesso!', 'success');
                     }
                 } 
             } catch (e) {
-                // this.displayMessage(e, 'danger');
+                mensagem.innerHTML = `<div class="alert alert-danger" role="alert">${e}</div>`
             }
 
             event.preventDefault()
@@ -51,8 +50,4 @@ export default class UserView {
     //     // }
     // }
 
-    // displayMessage(message, type) {
-    //     this.messages.innerHTML =
-    //         `<div class="alert alert-${type}" role="alert">${message}</div>`;
-    // }
 }
