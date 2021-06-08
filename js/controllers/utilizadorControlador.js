@@ -208,6 +208,16 @@ export default class utilizadorControlador {
 
     //admin - gerir utilizadores
     /**
+     * Função para ver se o utilizador é administrador ou utilizador
+     * @returns returna true se for administrador e false se for utilizador
+     */
+    admin(){
+        let utilizador = this.utilizadoresInfo()
+
+        return utilizador.tipo == 'administrador' ? true : false
+    }
+
+    /**
      * Função para fazer alterações no utilizador
      * @param {string} nomeUtilizador 
      */
