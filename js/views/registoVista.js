@@ -1,16 +1,16 @@
 import utilizadorControlador from '../controllers/utilizadorControlador.js'
 
-export default class UserView {
+export default class UserVista {
     constructor() {
         this.utilizadorControlador = new utilizadorControlador();
 
         // registo DOM
-        this.nomeUser = document.getElementById('nome');
-        this.apelidoUser = document.getElementById('apelido');
+        this.nomeUtilizador = document.getElementById('nome');
+        this.apelidoUtilizador = document.getElementById('apelido');
         this.utilizador = document.getElementById('nomeUtilizadorR');
-        this.emailUser = document.getElementById('email');
-        this.passwordUser = document.getElementById('password');
-        this.passwordUser2 = document.getElementById('confirmarPassword');
+        this.emailUtilizador = document.getElementById('email');
+        this.palavraPasseUtilizador = document.getElementById('password');
+        this.palavraPasseUtilizador2 = document.getElementById('confirmarPassword');
         this.nascimento = document.getElementById('dataNascimento');
         this.genero = document.querySelectorAll('input[name="genero"]');
         this.registoBotao = document.getElementById('registar');
@@ -23,12 +23,12 @@ export default class UserView {
         this.registoBotao.addEventListener('click', event => {
             
             try {  
-                if (this.passwordUser.value !== this.passwordUser2.value) {
+                if (this.palavraPasseUser.value !== this.palavraPasseUser2.value) {
                     throw Error('As passswords não são iguais');
                 }
                 for (let i = 0; i < this.genero.length; i++){
                     if (this.genero[i].checked){
-                        this.utilizadorControlador.registar(this.nomeUser.value, this.apelidoUser.value, this.utilizador.value, this.emailUser.value, this.passwordUser.value, this.nascimento.value, this.genero[i].value);
+                        this.utilizadorControlador.registar(this.nomeUtilizador.value, this.apelidoUtilizador.value, this.utilizador.value, this.emailUtilizador.value, this.palavraPasseUtilizador.value, this.nascimento.value, this.genero[i].value);
                         location.href = '../html/inicio.html'
                     }
                 } 

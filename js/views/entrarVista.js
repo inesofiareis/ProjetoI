@@ -1,12 +1,12 @@
 import utilizadorControlador from '../controllers/utilizadorControlador.js'
 
-export default class UserView {
+export default class UserVista {
     constructor() {
         this.utilizadorControlador = new utilizadorControlador();
 
         // login DOM
         this.utilizadorLogin = document.getElementById('nomeUtilizador');
-        this.passwordLogin = document.getElementById('passwordLogin');
+        this.palavraPasseLogin = document.getElementById('passwordLogin');
         this.loginBotao = document.getElementById('entrar');
         this.mensagem = document.querySelector('#mensagem')
         this.verificarLogin();
@@ -19,7 +19,7 @@ export default class UserView {
         this.loginBotao.addEventListener('click', event => {
 
             try {
-                this.utilizadorControlador.login(this.utilizadorLogin.value, this.passwordLogin.value);
+                this.utilizadorControlador.login(this.utilizadorLogin.value, this.palavraPasseLogin.value);
                 location.href = '../html/inicio.html'
             } 
             catch (e) {

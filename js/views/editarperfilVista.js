@@ -17,11 +17,9 @@ export default class genero{
     atualizarDados(){
         this.botaoAlterar.addEventListener("click", function(){ 
 
-            this.utilizadorControlador.setEditar(this.nomeUtilizador, this.emailUtilizador,this.palavraPasse);
-
             try {  
-                if (this.palavraPasse.value != this.palavraPasse2.value) {
-                    
+                alert("bora")
+                if (this.palavraPasse.value !== this.palavraPasse2.value) {
                     throw Error('As passswords não são iguais');
                 }
                 
