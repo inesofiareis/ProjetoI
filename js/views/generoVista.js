@@ -14,7 +14,6 @@ export default class genero{
 
     textoGenero(){
         const generoUtilizador = this.utilizadorControlador.getGenero();
-        alert(generoUtilizador)
         if (generoUtilizador == 'Feminino'){
             // txtJogos.innerHTML = 'Sê bem-vinda à área de jogos! Explora e diverte-te!';
             this.txtInicio.innerHTML = 'Surgiu um bichinho perigoso chamado covid-19. Ele salta de pessoa em pessoa e deixa-as muito doentes. Os teus pais dizem-te que está no mundo inteiro, por isso, tens de ter muito cuidado. Estás preocupada e assustada? Comigo e com os meus amigos, tu estás segura.';
