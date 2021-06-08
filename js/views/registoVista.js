@@ -21,11 +21,11 @@ export default class UtilizadorVista {
 
     verificarRegisto() {
         this.registoBotao.addEventListener('click', event => {
-            
-            try {  
-                if (this.palavraPasseUser.value !== this.palavraPasseUser2.value) {
+            try { 
+                if (this.palavraPasseUtilizador.value !== this.palavraPasseUtilizador2.value) {
                     throw Error('As passswords não são iguais');
                 }
+                
                 for (let i = 0; i < this.genero.length; i++){
                     if (this.genero[i].checked){
                         this.utilizadorControlador.registar(this.nomeUtilizador.value, this.apelidoUtilizador.value, this.utilizador.value, this.emailUtilizador.value, this.palavraPasseUtilizador.value, this.nascimento.value, this.genero[i].value);
@@ -39,15 +39,4 @@ export default class UtilizadorVista {
             event.preventDefault()
         });
     }
-
-
-    // checkLoginStatus() {
-    //     if (this.userController.isLogged()) {
-    //         this.updateButtons('login');
-    //     }
-    //     // } else {
-    //     //     this.updateButtons('logout');
-    //     // }
-    // }
-
 }
