@@ -80,10 +80,10 @@
 
 <body>
     <main class="corpoJogos container-fluid">
-        <div class="container localJogo">
-            <div class="container cartasMemoria">
+        <!-- <div class="container localJogo"> -->
+            <!-- <div class="container cartasMemoria"> -->
                 <!-- Jogo da memória -->
-                <section class="jogoMemoria">
+                <!--                 <section class="jogoMemoria">
                     <div class="cartaMemoria">
                         <img class="parteDaFrente" src="img/react.svg" alt="Fica em casa">
                         <img class="parteDeTras" src="img/js-badge.svg" alt="Carta">
@@ -143,7 +143,7 @@
                         <img class="parteDaFrente" src="img/aurelia.svg" alt="Afastamento Social">
                         <img class="parteDeTras" src="img/js-badge.svg" alt="Carta">
                     </div>
-                </section>
+                </section> -->
 
                 <!--                 <div class="jogoDeArrastar">
                     <section class="dragAndDrop">
@@ -263,8 +263,58 @@
                 <div id='clicks'>0</div> -->
 
 
+                <section class="jogo">
+                    <div class="container-fluid sitioJogo">
+                        <div class="row">
+                            <div class="col-lg-10 col-xl-10 col-xxl-10 offset-lg-1  containerJogo">
+                                <div class="caixaJogos">
 
-            </div>
+                                </div>
+                                <div class="infoJogo">
+                                    <div class="textoJogo">
+                                        <h1 class="text-center nomeJogo">Nome do jogo</h1>
+                                        <p class="text-center descJogo">Aqui vai ficar a grande descrição de cada jogo
+                                        </p>
+                                    </div>
+                                    <div class="d-flex justify-content-around">
+                                        <figure class="figure positivo d-flex align-items-center">
+                                            <img class="figure-img" src="../img/jogos/carinha feliz.png" />
+                                            <figcaption class="figure-caption textoFiguraJogo positivoTexto">0</figcaption>
+                                        </figure>
+                                        <figure class="figure medio d-flex align-items-center">
+                                            <img class="img-fluid figure-img" src="../img/jogos/carinha media.png" />
+                                            <figcaption class="figure-caption textoFiguraJogo medioTexto">0</figcaption>
+                                        </figure>
+                                        <figure class="figure negativo d-flex align-items-center">
+                                            <img class="img-fluid figure-img" src="../img/jogos/carinha triste.png" />
+                                            <figcaption class="figure-caption textoFiguraJogo negativoTexto">0</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- 
             <div class="container infoGeralJogo">
                 <div class="card text-left cartaoInfoJogo">
                     <img class="card-img-bottom" src="holder.js/100px180/" alt="">
@@ -325,95 +375,65 @@
             </div>
 
         </div>
+ -->
     </main>
 
     <!-- Footer -->
-    <footer class="page-footer footerJogos" style="height: 100%;">
+    <footer class="footerJogo">
         <div class="row">
-            <div class="col-9"></div>
-            <span class="amigos h2">Os amigos</span>
-        </div>
-        <div class="row">
-            <div class="container col-4 text-center text-md-left">
-
-                <hr class="clearfix d-md-none">
-                <div class="col-md-5 mb-md-0 mb-3 divDoSobre">
-                    <h2 class="sobre">Sobre</h2>
-                    <span id="linhaSobre"></span>
-                    <ul class="list-unstyled sobreLista h4">
-                        <li>
-                            <a href="#!">Para os pais</a>
-                        </li>
-                        <li>
-                            <a href="#!">Contacte-nos</a>
-                        </li>
-                        <li>
-                            <a href="#!">Políticas de privacidade</a>
-                        </li>
-                    </ul>
-                </div>
-
+            <div class="col-sm-6 col-md-4 contentorSobre">
+                <h3 class="sobreFooter">Sobre</h3>
+                <hr class="linhaSobre">
+                <ul class="listaSobreFooter">
+                    <li>
+                        <a href="#" class="elementoSobre">Para os pais</a>
+                    </li>
+                    <li>
+                        <a href="#" class="elementoSobre">Contacte-nos</a>
+                    </li>
+                    <li>
+                        <a href="#" class="elementoSobre">Políticas de privacidade</a>
+                    </li>
+                </ul>
+                <p class="criadoresFooter"><br />Criado pela Inês, pelo Paulo e pela Sofia, da ESMAD.<br /><br /></p>
             </div>
-
-            <div class="col-2">
-
-            </div>
-
-
-            <div class="cartaoEquipa text-right d-flex justify-content-end col-6">
-                <div id="linhaAmigos"></div>
-                <div class="d-flex flex-row text-center">
-                    <div class="col-3">
-                        <div class="cartaoTatinhas">
+            <div class="col-sm-6 col-md-4 col-xxl-3 offset-xxl-0 footer-contacts"></div>
+            <div class="col-md-4 col-xxl-5 footer-about">
+                <h4 class="osAmigosFooter">Os amigos</h4>
+                <div class="cartoesAmigosFooter">
+                    <div class="card-group grupoCartoesFooter">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title tatinhasTitulo">Tatinhas</h3>
+                                <h4 class="card-title tituloCarta">Tatinhas</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Tatinhas.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Tatinhas.png" />
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="cartaoXico">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title xicoTitulo">Xico</h3>
+                                <h4 class="card-title tituloCarta">Xico</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Xico.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Xico.png" />
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="cartaoDora">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title doraTitulo">Dora</h3>
+                                <h4 class="card-title tituloCarta">Dora</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Dora.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Dora.png" />
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="cartaoAndre">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title andreTitulo">André</h3>
+                                <h4 class="card-title tituloCarta">André</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Andre.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Andre.png" />
                         </div>
                     </div>
                 </div>
-                <!-- Footer Links -->
+                <p class="slogan"> Está tudo bem com o tatu do bem </p>
             </div>
         </div>
-
-        <div class="row frasesPequenas">
-            <div class="fraseFooter col-4 h5">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da
-                ESMAD.</div>
-            <div class="col-4">
-
-            </div>
-            <div class="sloganFooter text-right col-3 py-3 h5">Está tudo bem com o tatu do bem.</div>
-        </div>
-        <!-- Copyright -->
-
-        <!-- Copyright -->
-
     </footer>
 
+    <!-- Footer -->
     <!-- Imagens fixas -->
 
 

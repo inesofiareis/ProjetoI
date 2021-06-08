@@ -399,3 +399,36 @@ margin-top: -50px;
         margin-left: 200px;
     }
 }
+
+.infoJogo{
+    background-color: #FFA09E;
+    height: 100%;
+    padding: 20px 0px 20px 0px;
+}
+
+.sitioJogo{
+    height: 100%;
+    margin-bottom: 80px;
+}
+
+.caixaJogos{
+    margin-top: 40px; 
+}
+
+.corpoJogos{
+    background-color: #FFF6FB;
+}
+
+.descJogo{
+    color: #6A9299;
+}
+
+.nomeJogo{
+color: #205D76;
+}
+
+.textoFiguraJogo{
+    margin-left: 40px;
+    font-size: 25px;
+    color: #205D76;
+}
