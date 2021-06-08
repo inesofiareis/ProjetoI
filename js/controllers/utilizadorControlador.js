@@ -81,7 +81,7 @@ export default class utilizadorControlador {
 
     /**
      * Função que recebe alterações no perfil do utilizador
-     * @param {string} nomeUtilizador Nome de utilizador
+     * @param {string} nomeUtilizador Nome de utilizador (caso haja alterações)
      * @param {string} email Novo email (caso haja alterações)
      * @param {string} palavraPasse Nova palavra passe (caso haja alterações)
      */

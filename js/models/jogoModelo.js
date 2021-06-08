@@ -1,7 +1,7 @@
 export default  class Jogo {
-    constructor(id, nome, genero, descricao, perguntasErespostas) {
-        this.id = id
+    constructor(nome, foto, genero, descricao, perguntasErespostas) {
         this.nome = nome
+        this.foto = foto
         this.genero = genero
         this.descricao = descricao
         this.perguntasErespostas = perguntasErespostas

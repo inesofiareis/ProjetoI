@@ -19,7 +19,7 @@ class App {
             'inicio': [navbarVista, generoVista],
             'info': [navbarVista],
             'info-detalhe': [navbarVista],
-            'jogo': [navbarVista, jogoVista],
+            'jogo': [navbarVista, jogoVista, generoVista],
             'jogo-detalhe': [navbarVista],
             'perfil': [navbarVista, perfilVista]
         };
@@ -35,6 +35,7 @@ class App {
         const jogos = [{
             id: 1,
             nome: 'Ajudar o Xico',
+            foto: '../img/jogos/A missao do Xico.png',
             genero: 'Preencher espaços',
             descricao: 'Ajuda o Xico a recuperar a suas informações',
             perguntasErespostas: [{
@@ -145,7 +146,14 @@ class App {
                                                         ]
                                                     }]
                                         }]
-        }]
+                                },
+                                {   id: 2,
+                                    nome: 'Ajudar o Xico',
+                                    foto: '../img/jogos/A missao do Xico.png',
+                                    genero: 'Preencher espaços',
+                                    descricao: 'Ajuda o Xico a recuperar a suas informações',
+                                    perguntasErespostas: []
+                                }]
 
         const utilizadores = [
             {
