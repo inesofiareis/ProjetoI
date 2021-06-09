@@ -12,6 +12,25 @@ body {
     overflow-x: hidden;
 }
 
+
+/* SCROLLBARS */
+
+::-webkit-scrollbar {
+    width: 20px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 40px;
+    background-image: -webkit-gradient(linear,
+            left bottom,
+            left top,
+            color-stop(0.50, rgba(62, 163, 217, 0.61)),
+            color-stop(0.72, rgba(240, 127, 176, 0.61)),
+            color-stop(0.80, rgba(236, 225, 15, 0.61)));
+}
+
+
 /* index */
 
 .corpoDoIndex{
@@ -436,4 +455,327 @@ color: #205D76;
 .box{
     margin-bottom:40px;
 
+}
+
+
+
+
+
+
+/* O CSS DOS JOGOS */
+
+
+/* PROTEGE-TE */
+
+#fogeDoVirus {
+    width: 500px;
+    height: 300px;
+    /* width: 100%; */
+    /* height: 100%; */
+    border: 1px solid black;
+    margin: auto;
+}
+
+
+#personagem {
+    width: 20px;
+    height: 50px;
+    background-image: ;
+    position: relative;
+    top: 150px;
+}
+
+@keyframes salto {
+    0% {
+        top: 150px;
+    }
+
+    30% {
+        top: 100px;
+    }
+
+    70% {
+        top: 100px;
+    }
+
+    100% {
+        top: 150px;
+    }
+}
+
+
+.animate {
+    animation: salto 300ms linear;
+}
+
+@keyframes virus {
+    0% {
+        left: 500px
+    }
+
+    100% {
+        left: -20px
+    }
+}
+
+#virus {
+    width: 20px;
+    height: 20px;
+    background-image: ;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: block 1s infinite linear;
+}
+
+
+
+
+/* MATA O VIRUS */
+
+
+.mataVirus {
+    /* border: 1px solid black; */
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(https://github.com/MohammedHamzaMalik/100-Days-of-JavaScript-Code/blob/main/Day%2097/Whack%20A%20Mole/background.png?raw=true);
+    overflow: hidden;
+}
+
+.pontuacaoMataVirus {
+    font-size: 5rem;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+.contagemMataVirus {
+    position: absolute;
+    top: 490px;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #000;
+}
+
+.comecarMataVirus {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    font-size: 1rem;
+    transform: translate(-50%, 0);
+    background: black;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    z-index: 200;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.comecarMataVirus:hover {
+    background: #f0c27b;
+    color: black;
+}
+
+.jogoMataVirus {
+    width: 600px;
+    height: 400px;
+    margin: 70px auto;
+    z-index: 200;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buraco {
+    overflow: hidden;
+    flex: 1 0 33.33%;
+    position: relative;
+}
+
+.buraco::after {
+    content: "";
+    display: block;
+    background-image: url(https://github.com/MohammedHamzaMalik/100-Days-of-JavaScript-Code/blob/main/Day%2097/Whack%20A%20Mole/sand1.png?raw=true);
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    z-index: 2;
+    bottom: -30px;
+    background-size: contain;
+}
+
+.virus {
+    background-image: url(https://github.com/MohammedHamzaMalik/100-Days-of-JavaScript-Code/blob/main/Day%2097/Whack%20A%20Mole/yoda1.png?raw=true);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.virusPequeno {
+    background-size: 60%;
+}
+
+.virusGrande {
+    background-size: 80%;
+}
+
+.buraco .virus {
+    cursor: grab;
+    top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    * {
+        zoom: 0.7;
+    }
+}
+
+/* O DRAG AND DROP */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+
+.elementosArrastar {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.arrastar {
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    margin: 0rem 0.5rem;
+    cursor: move;
+    transition: opacity 0.2s;
+}
+
+.arrastar:hover {
+    opacity: 0.5;
+}
+
+.largar {
+    height: 6.5rem;
+    width: 6.5rem;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    background-color: #fff;
+    border: 3px dashed #111;
+    transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+}
+
+.largar span {
+    font-size: 1.25rem;
+    pointer-events: none;
+    /* The element is never the target of pointer events */
+}
+
+
+
+.largar.largado {
+    border-style: solid;
+    color: #fff;
+}
+
+.largar.largado span {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.largar.largado img {
+    pointer-events: none;
+}
+
+.arrastar.arrastado {
+    user-select: none;
+    opacity: 0.1;
+    cursor: default;
+}
+
+.draggable.arrstado:hover {
+    opacity: 0.1;
+}
+
+
+
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    .elementosArrastar {
+        margin: 1.5rem;
+    }
+}
+
+/* O JOGO DA MEMORIA */
+
+
+.jogoMemoria {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.cartaMemoria {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.cartaMemoria:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.cartaMemoria.virar {
+    transform: rotateY(180deg);
+}
+
+.parteDaFrente,
+.parteDeTras {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #1C7CCC;
+    backface-visibility: hidden;
+}
+
+.parteDaFrente {
+    transform: rotateY(180deg);
 }
