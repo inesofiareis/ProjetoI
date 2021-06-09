@@ -45,119 +45,35 @@ class App {
             perguntasErespostas: [{
                                     id:1,
                                     perguntas: ['pergunta1', 'pergunta2', 'pergunta3', 'pergunta4', 'pergunta5'],
-                                    respostas: [{
-                                                    numeroPergunta: 1,
-                                                    resposta: 'resposta1',
-                                                    alternativas: [
-                                                        'alternativa1',
-                                                        'alternativa2',
-                                                        'alternativa3',
-                                                        'alternativa4'
-                                                    ]
-                                                },
-                                                {
-                                                    numeroPergunta: 2,
-                                                    resposta: 'resposta2',
-                                                    alternativas: [
-                                                        'alternativa1',
-                                                        'alternativa2',
-                                                        'alternativa3',
-                                                        'alternativa4'
-                                                    ]
-                                                },
-                                                {
-                                                    numeroPergunta: 3,
-                                                    resposta: 'resposta3',
-                                                    alternativas: [
-                                                        'alternativa1',
-                                                        'alternativa2',
-                                                        'alternativa3',
-                                                        'alternativa4'
-                                                    ]
-                                                },
-                                                {
-                                                    numeroPergunta: 4,
-                                                    resposta: 'resposta4',
-                                                    alternativas: [
-                                                        'alternativa1',
-                                                        'alternativa2',
-                                                        'alternativa3',
-                                                        'alternativa4'
-                                                    ]
-                                                },
-                                                {
-                                                    numeroPergunta: 5,
-                                                    resposta: 'resposta5',
-                                                    alternativas: [
-                                                        'alternativa1',
-                                                        'alternativa2',
-                                                        'alternativa3',
-                                                        'alternativa4'
-                                                    ]
-                                                }]
+                                    respostasCorretas: ['resposta1', 'resposta2', 'resposta3', 'resposta4', 'resposta5'],
+                                    alternativas: [
+                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
+                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
+                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
+                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
+                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4']
+                                                ]
                                     },
-                                    {
-                                        id:1,
-                                        perguntas: ['pergunta1', 'pergunta2', 'pergunta3', 'pergunta4', 'pergunta5'],
-                                        respostas: [{
-                                                        numeroPergunta: 1,
-                                                        resposta: 'resposta1',
-                                                        alternativas: [
-                                                            'alternativa1',
-                                                            'alternativa2',
-                                                            'alternativa3',
-                                                            'alternativa4'
-                                                        ]
-                                                    },
-                                                    {
-                                                        numeroPergunta: 2,
-                                                        resposta: 'resposta2',
-                                                        alternativas: [
-                                                            'alternativa1',
-                                                            'alternativa2',
-                                                            'alternativa3',
-                                                            'alternativa4'
-                                                        ]
-                                                    },
-                                                    {
-                                                        numeroPergunta: 3,
-                                                        resposta: 'resposta3',
-                                                        alternativas: [
-                                                            'alternativa1',
-                                                            'alternativa2',
-                                                            'alternativa3',
-                                                            'alternativa4'
-                                                        ]
-                                                    },
-                                                    {
-                                                        numeroPergunta: 4,
-                                                        resposta: 'resposta4',
-                                                        alternativas: [
-                                                            'alternativa1',
-                                                            'alternativa2',
-                                                            'alternativa3',
-                                                            'alternativa4'
-                                                        ]
-                                                    },
-                                                    {
-                                                        numeroPergunta: 5,
-                                                        resposta: 'resposta5',
-                                                        alternativas: [
-                                                            'alternativa1',
-                                                            'alternativa2',
-                                                            'alternativa3',
-                                                            'alternativa4'
-                                                        ]
-                                                    }]
-                                        }]
+                                {
+                                    id:2,
+                                    perguntas: ['pergunta1', 'pergunta2', 'pergunta3', 'pergunta4', 'pergunta5'],
+                                    respostasCorretas: ['resposta1', 'resposta2', 'resposta3', 'resposta4', 'resposta5'],
+                                    alternativas: [
+                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
+                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
+                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
+                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
+                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4']
+                                                ]
+                                    }]
                                 },
-                                {   id: 2,
-                                    nome: 'Ajudar o Xico',
-                                    foto: '../img/jogos/A missao do Xico.png',
-                                    genero: 'Jogo da memória',
-                                    descricao: 'Ajuda o Xico a recuperar a suas informações',
-                                    perguntasErespostas: []
-                                }]
+            {   id: 2,
+                nome: 'Ajudar o Xico 2',
+                foto: '../img/jogos/A missao do Xico.png',
+                genero: 'Jogo da memória',
+                descricao: 'Ajuda o Xico a recuperar a suas informações',
+                perguntasErespostas: []
+            }]
 
         const utilizadores = [
             {
