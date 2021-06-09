@@ -26,16 +26,33 @@ export default class jogosController {
      * @param {boolean} ordenado 
      * @returns 
      */
-    getJogos(filtroNome = '', filtroGenero = '', ordenado = false){
+    getJogos(filtroGenero = '', filtroNome = '', ordenado = false){
+        if(filtroGenero != ''){
+            if (filtroGenero == 'todos'){
+                filtroGenero = ''
+            }
+            else if(filtroGenero == 'questionarios'){
+                filtroGenero = 'Questionários'
+            }
+            else if (filtroGenero == 'Preencher'){
+                filtroGenero = 'Preencher espaços'
+            }
+            else if (filtroGenero == 'jogodamemoria'){
+                filtroGenero = 'Jogo da memória'
+                alert(filtroGenero)
+
+            }
+        }
+
         let filtroJogos = this.jogos.filter(
             jogo =>
-                (jogo.nome.toLowerCase().includes(filtroNome.toLocaleLowerCase()) || filtroNome === ''
-                &&
+                (
                 (jogo.genero == filtroGenero || filtroGenero === ''))
         )
+        
 
         filtroJogos = ordenado ? filtroJogos.sort(this.#comparar) : filtroJogos
-
+        
         return filtroJogos
     }
 
