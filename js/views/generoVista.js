@@ -16,13 +16,13 @@ export default class genero{
         const generoUtilizador = this.utilizadorControlador.getGenero();
         if (generoUtilizador == 'Feminino'){
             // this.txtJogos.innerHTML = 'Sê bem-vinda à área de jogos! Explora e diverte-te!';
-            this.txtInicio.innerHTML = 'Surgiu um bichinho perigoso chamado covid-19. Ele salta de pessoa em pessoa e deixa-as muito doentes. Os teus pais dizem-te que está no mundo inteiro, por isso, tens de ter muito cuidado. Estás preocupada e assustada? Comigo e com os meus amigos, tu estás segura.';
+            this.txtInicio.innerHTML = 'Surgiu um bichinho perigoso chamado covid-19.<br> Ele salta de pessoa em pessoa e deixa-as muito doentes.<br> Os teus pais dizem-te que está no mundo inteiro, por isso, tens de ter muito cuidado.<br> Estás preocupada e assustada?<br> Comigo e com os meus amigos, tu estás segura.';
         }else if(generoUtilizador == 'Masculino'){
             // this.txtJogos.innerHTML = 'Sê bem-vindo à área de jogos! Explora e diverte-te!';
-            this.txtInicio.innerHTML = 'Surgiu um bichinho perigoso chamado covid-19. Ele salta de pessoa em pessoa e deixa-as muito doentes. Os teus pais dizem-te que está no mundo inteiro, por isso, tens de ter muito cuidado. Estás preocupado e assustado? Comigo e com os meus amigos, tu estás seguro.';
+            this.txtInicio.innerHTML = 'Surgiu um bichinho perigoso chamado covid-19.<br> Ele salta de pessoa em pessoa e deixa-as muito doentes.<br> Os teus pais dizem-te que está no mundo inteiro, por isso, tens de ter muito cuidado.<br> Estás preocupado e assustado?<br> Comigo e com os meus amigos, tu estás seguro.';
         }else{
             // this.txtJogos.innerHTML = 'Sê bem-vinde à área de jogos! Explora e diverte-te!';
-            this.txtInicio.innerHTML = 'Surgiu um bichinho perigoso chamado covid-19. Ele salta de pessoa em pessoa e deixa-as muito doentes. Os teus pais dizem-te que está no mundo inteiro, por isso, tens de ter muito cuidado. Estás preocupade e assustade? Comigo e com os meus amigos, tu estás segure.';
+            this.txtInicio.innerHTML = 'Surgiu um bichinho perigoso chamado covid-19.<br> Ele salta de pessoa em pessoa e deixa-as muito doentes.<br> Os teus pais dizem-te que está no mundo inteiro, por isso, tens de ter muito cuidado.<br> Estás preocupade e assustade?<br> Comigo e com os meus amigos, tu estás segure.';
         }
     }
 

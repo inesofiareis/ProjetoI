@@ -3,6 +3,7 @@ import registoVista from './views/registoVista.js'
 import navbarVista from './views/navbarVista.js'
 // import infoVista from './views/infoVista.js'
 import jogoVista from './views/jogoVista.js'
+import jogoDetalheVista from './views/jogo-detalheVista.js'
 import perfilVista from './views/editarperfilVista.js'
 import generoVista from './views/generoVista.js'
 // import amigoVista from './views/amigoVista.js'
@@ -20,7 +21,7 @@ class App {
             'info': [navbarVista],
             'info-detalhe': [navbarVista],
             'jogo': [navbarVista, jogoVista, generoVista],
-            'jogo-detalhe': [navbarVista],
+            'jogo-detalhe': [navbarVista, jogoDetalheVista],
             'perfil': [navbarVista, perfilVista]
         };
 
@@ -150,7 +151,7 @@ class App {
                                 {   id: 2,
                                     nome: 'Ajudar o Xico',
                                     foto: '../img/jogos/A missao do Xico.png',
-                                    genero: 'Preencher espaços',
+                                    genero: 'Jogo da Memoria',
                                     descricao: 'Ajuda o Xico a recuperar a suas informações',
                                     perguntasErespostas: []
                                 }]
