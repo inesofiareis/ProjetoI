@@ -90,6 +90,7 @@ export default class utilizadorControlador {
 
         if (nomeUtilizador != '') { // alterar o nome de utilizador
             this.alterarNomeUtilizador(utilizador, nomeUtilizador)
+            sessionStorage.setItem('utilizadorLogado', nomeUtilizador)
         }
         
         if (email != '') { // alterar o email do utilizador

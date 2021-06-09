@@ -20,7 +20,7 @@ class App {
             'inicio': [navbarVista, generoVista],
             'info': [navbarVista],
             'info-detalhe': [navbarVista],
-            'jogo': [navbarVista, jogoVista, generoVista],
+            'jogo': [navbarVista, jogoVista],
             'jogo-detalhe': [navbarVista, jogoDetalheVista],
             'perfil': [navbarVista, perfilVista]
         };
@@ -39,6 +39,9 @@ class App {
             foto: '../img/jogos/A missao do Xico.png',
             genero: 'Preencher espaços',
             descricao: 'Ajuda o Xico a recuperar a suas informações',
+            avaliacao: [{postiva: 5,
+                        normal: 2,
+                        negativa: 0}],
             perguntasErespostas: [{
                                     id:1,
                                     perguntas: ['pergunta1', 'pergunta2', 'pergunta3', 'pergunta4', 'pergunta5'],
@@ -151,7 +154,7 @@ class App {
                                 {   id: 2,
                                     nome: 'Ajudar o Xico',
                                     foto: '../img/jogos/A missao do Xico.png',
-                                    genero: 'Jogo da Memoria',
+                                    genero: 'Jogo da memória',
                                     descricao: 'Ajuda o Xico a recuperar a suas informações',
                                     perguntasErespostas: []
                                 }]

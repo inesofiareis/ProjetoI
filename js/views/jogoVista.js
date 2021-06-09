@@ -9,7 +9,19 @@ export default class jogoVista{
         this.catalogoJogos = document.querySelector('#catalogoJogos');
         this.catalogoJogo(this.jogoControlador.getJogos());
 
+        //filtros
+        this.btnsFiltro = document.querySelectorAll('.botaoFiltrar')
+        this.filtrar()      
+
         this.vicularMostrarJogo()
+    }
+
+    filtrar(){
+        for (let btnFiltro of this.btnsFiltro){
+                btnFiltro.addEventListener('click', () => {
+                    this.catalogoJogo(this.jogoControlador.getJogos(btnFiltro.id))
+            })
+        }
     }
 
     catalogoJogo(jogos = []) {
@@ -20,7 +32,6 @@ export default class jogoVista{
 
         divisao += '</div>'
         this.catalogoJogos.innerHTML = divisao
-           
     }
 
     gerarCardJogo(jogo) {
