@@ -72,7 +72,7 @@ class App {
             {   id: 2,
                 nome: 'Ajudar o Xico 2',
                 foto: '../img/jogos/A missao do Xico.png',
-                genero: 'Jogo da memória',
+                genero: 'Preencher espaços',
                 descricao: 'Ajuda o Xico a recuperar a suas informações',
                 perguntasErespostas: []
             }]

@@ -22,7 +22,7 @@ export default class JogosDetalhes {
         document.querySelector('.descJogo').innerHTML = jogo.descricao;
     }
 
-    gerarJogoEspaços(jogo){
+    gerarJogoQuestionarios(jogo){
         // let perguntas = this.jogoControlador.perguntasJogo()
         // let respostas = this.jogoControlador.respostasJogo()
 
@@ -183,9 +183,9 @@ export default class JogosDetalhes {
     jogo() {
         let jogo = this.jogoControlador.getJogoAtual();
         if(jogo.genero == 'Preencher espaços') {
-            this.posJogo += this.gerarJogoEspaços(jogo);
-        }else if(jogo ==''){
-
+            this.posJogo = this.gerarJogoArrastar(jogo);
+        }else if(jogo.genero =='Questionários'){
+            this.posJogo = this.gerarJogoQuestionarios(jogo)
         }else if(jogo == ''){
 
         }else{
