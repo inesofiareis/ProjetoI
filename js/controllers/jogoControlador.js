@@ -26,7 +26,7 @@ export default class jogosController {
      * @param {boolean} ordenado 
      * @returns 
      */
-    getJogos(filtroGenero = '', filtroNome = '', ordenado = false){
+    getJogos(filtroGenero = '', ordenado = false){
         if(filtroGenero != ''){
             if (filtroGenero == 'todos'){
                 filtroGenero = ''
@@ -39,8 +39,6 @@ export default class jogosController {
             }
             else if (filtroGenero == 'jogodamemoria'){
                 filtroGenero = 'Jogo da memória'
-                alert(filtroGenero)
-
             }
         }
 
