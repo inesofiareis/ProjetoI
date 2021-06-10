@@ -26,7 +26,7 @@ export default class jogosController {
      * @param {boolean} ordenado 
      * @returns 
      */
-    getJogos(filtroGenero = '', ordenado = false){
+    getJogos(filtroGenero = ''){
         if(filtroGenero != ''){
             if (filtroGenero == 'todos'){
                 filtroGenero = ''
@@ -47,26 +47,26 @@ export default class jogosController {
                 (
                 (jogo.genero == filtroGenero || filtroGenero === ''))
         )
-        
-
-        filtroJogos = ordenado ? filtroJogos.sort(this.#comparar) : filtroJogos
-        
+                
         return filtroJogos
     }
 
-    /**
-     * Função para ordenar os jogos por ordem alfabetica
-     * @param {string} jogoA 
-     * @param {string} jogoB 
-     * @returns retorna -1/1/0 para poder ordenar
-     */
-    #comparar(jogoA, jogoB) {
-        if (jogoA.nome < jogoB.nome) {
-            return -1
+    jogoQuestionario(){
+        let jogo = jogosInformacoes(sessionStorage['jogos'])
+
+        //criar um filtro para as idades 
+
+        return jogo.perguntasErespostas
+        
+    }
+
+    jogosInformacoes(jogo){
+        let todosJogos = localStorage('jogos')
+
+        for (let i = 0; i < todosJogos.length; i++){
+            if(todosJogos[i] == jogo){
+                return todosJogos[i]
+            }
         }
-        if (jogoA.nome > jogoB.nome){
-            return 1
-        }
-        return 0
     }
 }

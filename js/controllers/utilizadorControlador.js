@@ -59,6 +59,35 @@ export default class utilizadorControlador {
     }
 
     /**
+     * Função para ver qual é a idade do utilizador
+     * @returns returna a idade atual do utilizador
+     */
+    idade(){
+        const utizador = this.utilizadoresInfo()
+        const data = new Date
+
+        const ano = +utizador.dataNascimento.slice(0, dataNascimento.indexOf('-'))  //ano que utilizador nasceu
+        const mes = +utizador.dataNascimento.slice(dataNascimento.indexOf('-')+1, dataNascimento.lastIndexOf('-')+1) //mes em que o utilizador nasceu
+        const dia = +utizador.dataNascimento.slice(dataNascimento.lastIndexOf('-'))  //mes em que utilizador nasceu
+
+        const anoAtual = data.getFullYear()
+        const mesAtual = data.getMonth()
+        const diaAtual = data.getDay()
+
+        let idade = anoAtual - ano - 1 // calcular a idade do utilizador e retirar 1 para caso ainda não tenha feito anos no ano atual
+
+        //verificar se o utilizador já fez anos no ano atual e se sim somar 1
+        if (mesAtual > mes){
+            idade++
+        }
+        else if (mesAtual == mes && diaAtual >= dia ){
+            idade++
+        }
+
+        return idade
+    }
+
+    /**
      * Função para pegar o avatar do utilizador
      * @returns avatar do utilizador
      */

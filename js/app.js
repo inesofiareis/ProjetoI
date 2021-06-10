@@ -37,13 +37,14 @@ class App {
             id: 1,
             nome: 'Ajudar o Xico',
             foto: '../img/jogos/A missao do Xico.png',
-            genero: 'Preencher espaços',
+            genero: 'Questionários',
             descricao: 'Ajuda o Xico a recuperar a suas informações',
             avaliacao: [{postiva: 5,
                         normal: 2,
                         negativa: 0}],
             perguntasErespostas: [{
                                     id:1,
+                                    idades: '<12',
                                     perguntas: ['pergunta1', 'pergunta2', 'pergunta3', 'pergunta4', 'pergunta5'],
                                     respostasCorretas: ['resposta1', 'resposta2', 'resposta3', 'resposta4', 'resposta5'],
                                     alternativas: [
@@ -56,6 +57,7 @@ class App {
                                     },
                                 {
                                     id:2,
+                                    idades: '>= 12',
                                     perguntas: ['pergunta1', 'pergunta2', 'pergunta3', 'pergunta4', 'pergunta5'],
                                     respostasCorretas: ['resposta1', 'resposta2', 'resposta3', 'resposta4', 'resposta5'],
                                     alternativas: [
