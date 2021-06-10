@@ -1,19 +1,24 @@
 import jogoControlador from '../controllers/jogoControlador.js';
 import utilizadorControlador from '../controllers/utilizadorControlador.js';
+import generoVista from './generoVista.js'
 
 export default class jogoVista{
     constructor() {
         this.jogoControlador = new jogoControlador();
         this.utilizadorControlador = new utilizadorControlador()
+        // this.generoVista = new generoVista()
 
         this.catalogoJogos = document.querySelector('#catalogoJogos');
         this.catalogoJogo(this.jogoControlador.getJogos());
 
         //filtros
         this.btnsFiltro = document.querySelectorAll('.botaoFiltrar')
-        this.filtrar()      
+        this.filtrar() 
+        
+        this.txtJogos = document.querySelector('#textoJogos');
 
         this.vicularMostrarJogo()
+        this.textoJogo()
     }
 
     filtrar(){
@@ -63,5 +68,10 @@ export default class jogoVista{
                 location.href = '../html/jogo-detalhe.html';
             })
         }
-    }   
+    }
+
+    textoJogo(){
+        let texto = this.generoVista.textoJogo();
+        this.txtJogos.innerHTML = texto;
+    }
 }

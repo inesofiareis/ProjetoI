@@ -9,8 +9,9 @@ export default class genero{
         this.palavraPasse = document.querySelector('#txtPass');
         this.palavraPasse2 = document.querySelector('#txtConfPass');
         this.botaoAlterar = document.querySelector('#botaoAlterar');
+        this.tabelaUtilizadores = document.querySelector('')
         this.atualizarDados();
-
+        this.gerirUtilizadores();
         this.placeholder();
     }
 
@@ -39,6 +40,12 @@ export default class genero{
         
         this.nomeUtilizador.placeholder = atualNomeUtilizador.nomeUtilizador;
         this.emailUtilizador.placeholder = email;
+    }
+
+    gerirUtilizadores(){
+        if (this.utilizadorControlador.admin()) {
+            this.tabelaUtilizadores.style = "visibility: visible"
+        }
     }
 
 }
