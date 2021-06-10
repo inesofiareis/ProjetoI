@@ -7,7 +7,7 @@ import jogoDetalheVista from './views/jogo-detalheVista.js'
 import perfilVista from './views/editarperfilVista.js'
 import generoVista from './views/generoVista.js'
 // import amigoVista from './views/amigoVista.js'
-// import tuturialVista from './views/tutorialVista.js'
+// import tutorialVista from './views/tutorialVista.js'
 // import pontuacaoVista from './views/pontuacaoVista.js'
 
 class App {
@@ -45,14 +45,14 @@ class App {
             perguntasErespostas: [{
                                     id:1,
                                     idades: '<12',
-                                    perguntas: ['pergunta1', 'pergunta2', 'pergunta3', 'pergunta4', 'pergunta5'],
-                                    respostasCorretas: ['resposta1', 'resposta2', 'resposta3', 'resposta4', 'resposta5'],
+                                    perguntas: ['Em que ano foi descoberto o covid-19?', 'Em que pais começou a pandemia?', 'Em que mes houve o primeiro caso de covid-19 em Portugal?', 'Qual destes não é um sintoma do covid-19?', 'O que temos de usar no rosto para nos proteger e proteger aos outros do corona virus'],
+                                    respostasCorretas: ['2019', 'China', 'Março', 'Gripe', 'Mascara'],
                                     alternativas: [
-                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
-                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
-                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
-                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
-                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4']
+                                                    ['2021', '2019', '2018', '2020'],
+                                                    ['Portugal', 'Italia', 'China', 'India'],
+                                                    ['Março', 'Janeiro', 'Abril', 'Fevereiro'],
+                                                    ['Tosse', 'Febre', 'Dores de cabeça', 'Gripe'],
+                                                    ['Alcool em gel', 'Mascara', 'Protetor Solar', 'Capacete']
                                                 ]
                                     },
                                 {
@@ -72,7 +72,7 @@ class App {
             {   id: 2,
                 nome: 'Ajudar o Xico 2',
                 foto: '../img/jogos/A missao do Xico.png',
-                genero: 'Jogo da memória',
+                genero: 'Preencher espaços',
                 descricao: 'Ajuda o Xico a recuperar a suas informações',
                 perguntasErespostas: []
             }]
