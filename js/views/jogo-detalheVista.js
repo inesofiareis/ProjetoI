@@ -62,15 +62,15 @@ export default class JogosDetalhes {
     gerarJogoArrastar(){
         this.posJogo.innerHTML = `<div class="jogoDeArrastar">
         <section class="elementosArrastar">
-            <img class="arastar" draggable="true" src="" id="virusdrop">
-            <img class="arastar" draggable="true" src="" id="mascaradrop">
-            <img class="arastar" draggable="true" src="" id="alcooldrop">
-            <img class="arastar" draggable="true" src="" id="distanciamentodrop">
-            <img class="arastar" draggable="true" src="" id="lavarAsMaosdrop">
-            <img class="arastar" draggable="true" src="" id="doencadrop">
+            <img class="arastar" draggable="true" src="../../img/jogos/Asset 1distancia.png" id="virusdrop">
+            <img class="arastar" draggable="true" src="../../img/jogos/Asset 1mascara.png" id="mascaradrop">
+            <img class="arastar" draggable="true" src="../../img/jogos/Asset 1distancia.png" id="alcooldrop">
+            <img class="arastar" draggable="true" src="../../img/jogos/Asset 1distancia.png" id="distanciamentodrop">
+            <img class="arastar" draggable="true" src="../../img/jogos/Asset 2maos.png" id="lavarAsMaosdrop">
+            <img class="arastar" draggable="true" src="../../img/jogos/Asset 1distancia.png" id="doencadrop">
         </section>
         <section class="elementoLargar">
-            <div class="largar" data-id="virusdrop"><span>Vírus</span>
+            <div class="largar" droppable="true" data-id="virusdrop"><span>Vírus</span>
             </div>
             <div class="largar" data-id="mascaradrop">
                 <span>Máscara</span>
