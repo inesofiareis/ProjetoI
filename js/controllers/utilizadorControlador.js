@@ -133,12 +133,19 @@ export default class utilizadorControlador {
         this.guardarLocalStorage(utilizador)
     }
 
+    /**
+     * Função para returnar quantas atividades o utilizador já fez
+     * @returns numero de atividades que o utilizador já fez
+     */
     getAtividades() {
         const utilizador = this.utilizadoresInfo()
 
         return utilizador.atividades
     }
 
+    /**
+     * Função para adicionar mais uma atividade feita quando o utilizador conclui mais uma atividade
+     */
     setAtividades() {
         let utilizador = this.utilizadoresInfo()
 
@@ -247,7 +254,7 @@ export default class utilizadorControlador {
     }
 
     /**
-     * Função para fazer alterações no utilizador
+     * Função para alterar o tipo de utilizador (administrador <=> utilizador)
      * @param {string} nomeUtilizador 
      */
     alterar(nomeUtilizador) {
@@ -284,23 +291,17 @@ export default class utilizadorControlador {
         this.guardarLocalStorage(utilizador)
     }
 
-    /**
-     * Função para alterar o estado de utilizador (regular/bloqueado <=> banido)
-     * @param {string} nomeUtilizador 
-     */
-    banirUtilizador(nomeUtilizador) {
-        let utilizador = this.utilizadoresInfo(nomeUtilizador)
+    remover(nomeUtilizador){
+        let todosUtilizadores = this.todosUtilizadores()
 
-        let estado = utilizador.estado
+        for (let i = 0; i < todosUtilizadores.length; i++) {
+            if (todosUtilizadores[i].nomeUtilizador == nomeUtilizador) {
+                this.utilizadores.splice(i, 1)
+                break
+            }
+        } 
 
-        if (estado == 'regular' || estado == 'bloqueado') {
-            estado = 'banido'
-        } else if (estado == 'banido') {
-            estado = 'regular'
-        }
-
-        utilizador.estado = estado
-        this.guardarLocalStorage(utilizador)
+        localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
     }
 
     /**

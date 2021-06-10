@@ -13,6 +13,9 @@ export default class genero{
         this.atualizarDados();
         this.gerirUtilizadores();
         this.placeholder();
+        this.botaoAlterarTipo();
+        this.botaoRemover();
+        this.botaoBloquear();
     }
 
     atualizarDados(){
@@ -25,7 +28,7 @@ export default class genero{
                 }
 
                 this.utilizadorControlador.setEditar(this.nomeUtilizador.value, this.emailUtilizador.value,this.palavraPasse.value);
-
+                this.placeholder();
             
             } catch (e) {
                 alert('Erro')
@@ -42,7 +45,9 @@ export default class genero{
         this.emailUtilizador.placeholder = email;
     }
 
-    gerirUtilizadores(){
+    gerirUtilizadores(){    
+        let utilizadores = this.utilizadorControlador.todosUtilizadores();
+
         let tabela = `<div class="col-2"></div>
         <div class="col-2 mt-5">
             <button type="button" class="btn btn-primary col-4">Inserir</button>
@@ -55,29 +60,70 @@ export default class genero{
                     <th>Nome de utilizador</th>
                     <th>Email</th>
                     <th>Género</th>
+                    <th>Tipo</th> 
                     <th>Alterar</th>
                     <th>Remover</th>
                     <th>Bloquear</th>
                     <th></th>
                 </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td scope="row utilizadorTabela"></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td scope="row utilizadorTabela"></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-        </table>`
+                </thead>`
+
+        for (let i = 0; i < utilizadores.length; i++){ 
+            let estado = this.utilizadorControlador.estados(utilizadores[i].nomeUtilizador)
+
+            if (estado == 'bloqueado'){
+                tabela += `<tr class='table-danger'>`
+            }
+            else {
+                tabela += `<tr>`
+            }
+            
+             tabela += `
+                <td>${utilizadores[i].nome} ${utilizadores[i].apelido}</td>
+                <td>${utilizadores[i].nomeUtilizador}</td>
+                <td>${utilizadores[i].email}</td>
+                <td>${utilizadores[i].genero}</td>
+                <td>${utilizadores[i].tipo}</td>
+                <td><input type="button" class='btn btn-secondary alterar'value='Alterar' id='${utilizadores[i].nomeUtilizador}'></td>
+                <td><input type="button" class='btn btn-danger remover' value='Remover' id='${utilizadores[i].nomeUtilizador}'></td>
+                <td><input type="button" class='btn btn-warning bloquear' value='Bloquear' id='${utilizadores[i].nomeUtilizador}'></td>
+            </tr>`
+        }
         
-        if (this.utilizadorControlador.admin() == 'true') {
+        tabela += `</table>`
+        if (this.utilizadorControlador.admin()) {
             this.tabelaUtilizadores.innerHTML = tabela;
    
+        }
+
+        
+    }
+
+    botaoAlterarTipo(){
+        for (const btnAlterar of document.querySelectorAll('.alterar')){
+            btnAlterar.addEventListener('click', event =>{
+            this.utilizadorControlador.alterar(event.target.id);
+            location.reload();
+            }) 
+        }
+        
+    }
+
+    botaoRemover(){
+        for (const btnRemover of document.querySelectorAll('.remover')){
+            btnRemover.addEventListener('click', event =>{
+                this.utilizadorControlador.remover(event.target.id);
+                location.reload();
+            })
+        }
+    }
+
+    botaoBloquear(){
+        for (const btnBloquear of document.querySelectorAll('.bloquear')){
+            btnBloquear.addEventListener('click', event =>{
+            this.utilizadorControlador.bloquearUtilizador(event.target.id)
+            location.reload();
+            })
         }
     }
 
