@@ -1,4 +1,5 @@
 import jogoControlador from '../controllers/jogoControlador.js';
+import utilizadorControlador from '../controllers/utilizadorControlador.js'
 
 export default class JogosDetalhes {
     constructor(){
@@ -61,65 +62,97 @@ export default class JogosDetalhes {
 
     gerarJogoArrastar(){
         this.posJogo.innerHTML = `<div class="jogoDeArrastar">
-        <section class="elementosArrastar">
-            <img draggable="true" src="../../img/jogos/virus.png" id="virusdrop">
-            <img draggable="true" src="../../img/jogos/mascara.png" id="mascaradrop">
-            <img draggable="true" src="../../img/jogos/alcool.png" id="alcooldrop">
-            <img draggable="true" src="../../img/jogos/distanciamento.png" id="distanciamentodrop">
-            <img draggable="true" src="../../img/jogos/lavar maos.png" id="lavarAsMaosdrop">
-            <img draggable="true" src="../../img/jogos/tobias febre.png" id="doencadrop">
-        </section>
-        <section class="elementoLargar">
-            <div droppable="true" data-id="virusdrop"><span>Vírus</span>
+        <div class="elementosArrastar">
+            <div draggable="true"><img src="../../img/jogos/virus.png" id="virusdrop" ondragstart="drag(event)">
             </div>
-            <div data-id="mascaradrop">
+
+            <div draggable="true"><img src="../../img/jogos/mascara.pngg" id="virusdrop" ondragstart="drag(event)">
+            </div>
+
+            <div draggable="true"><img src="../../img/jogos/alcool.png" id="virusdrop" ondragstart="drag(event)">
+            </div>
+            
+            <div draggable="true"><img src="../../img/jogos/distanciamento.png" id="virusdrop" ondragstart="drag(event)">
+            </div>
+
+            <div draggable="true"><img src="../../img/jogos/tobias febre.png" id="virusdrop" ondragstart="drag(event)">
+            </div>
+        </div>
+        <div class="elementoLargar">
+            <div data-id="virusdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <span>Vírus</span>
+            </div>
+            <div data-id="mascaradrop" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>Máscara</span>
             </div>
-            <div data-id="alcooldrop">
+            <div data-id="alcooldrop" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>Álcool-gel</span>
             </div>
-            <div data-id="distanciamentodrop">
+            <div data-id="distanciamentodrop" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>Distanciamento</span>
             </div>
-            <div data-id="lavarAsMaosdrop">
+            <div data-id="lavarAsMaosdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>Lavar as mãos</span>
             </div>
-            <div data-id="doencadrop">
+            <div data-id="doencadrop" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>Doença</span>
             </div>
-        </section>
+        </div>
         </div>`
 
+        const imagens = document.querySelectorAll('[draggable = "true"]');
+        const palavras = document.querySelector('.elementoLargar');
+        const imagemArrastada = document.querySelector('.aArrastar');
+        let imgArrastada = this.jogoControlador.largar(imagemArrastada);
 
-        const elementosArrastar = document.querySelectorAll('.arrastar');
-        const elementosLargar = document.querySelectorAll('.largar');
-        const imagemArrastada = document.querySelector('.aSerArrastado');
-
-        //funçoes a chamar
-        //arrastar
-        let arrastarInicio = this.jogoControlador.arrastarInicio();
-        let arrastar = this.jogoControlador.arrastar();
-        let arrastarFim = this.jogoControlador.arrastarFim();
-
-        //largar
-        let largarEntrada = this.jogoControlador.largarEntrada();
-        let largarValido = this.jogoControlador.largarValido();
-        let largarFim = this.jogoControlador.largarFim();
-        let largar = this.jogoControlador.largar();
-
-        elementosArrastar.forEach(elem => {
-            elem.addEventListener('dragStart', arrastarInicio);
-            elem.addEventListener("drag", arrastar);
-            elem.addEventListener("dragend",arrastarFim);
-
+        imagens.forEach((imagem) => {
+            imagem.addEventListener('dragstart', comecarArrastar);
         })
 
-        elementosLargar.forEach(elem => {
-            elem.addEventListener('dragenter',largarEntrada);
-            elem.addEventListener('dragover',largarValido);
-            elem.addEventListener('dragleave',largarFim);
-            elem.addEventListener('drop',largar);
-        })
+        palavras.addEventListener('dragover', largar);
+        
+
+        
+
+        
+
+        // var data = ev.dataTransfer.getData("text");
+        // ev.target.appendChild(document.getElementById(data));
+
+        // let drag = this.jogoControlador.drag(ev)
+        // let drop = this.jogoControlador.drop(ev)
+        // let allowDrop = this.jogoControlador.allowDrop(ev)
+
+
+        // const elementosArrastar = document.querySelectorAll('.arrastar');
+        // const elementosLargar = document.querySelectorAll('.largar');
+        // const imagemArrastada = document.querySelector('.aSerArrastado');
+
+        // //funçoes a chamar
+        // //arrastar
+        // let arrastarInicio = this.jogoControlador.arrastarInicio();
+        // let arrastar = this.jogoControlador.arrastar();
+        // let arrastarFim = this.jogoControlador.arrastarFim();
+
+        // //largar
+        // let largarEntrada = this.jogoControlador.largarEntrada();
+        // let largarValido = this.jogoControlador.largarValido();
+        // let largarFim = this.jogoControlador.largarFim();
+        // let largar = this.jogoControlador.largar();
+
+        // elementosArrastar.forEach(elem => {
+        //     elem.addEventListener('dragStart', arrastarInicio);
+        //     elem.addEventListener("drag", arrastar);
+        //     elem.addEventListener("dragend",arrastarFim);
+
+        // })
+
+        // elementosLargar.forEach(elem => {
+        //     elem.addEventListener('dragenter',largarEntrada);
+        //     elem.addEventListener('dragover',largarValido);
+        //     elem.addEventListener('dragleave',largarFim);
+        //     elem.addEventListener('drop',largar);
+        // })
 
         // controller mas sem certezas 
 
@@ -189,7 +222,15 @@ export default class JogosDetalhes {
             let rCinco = document.querySelector('input[name="respostaCinco"]:checked')
 
             let certas = this.jogoControlador.respostasQuestionario(rUm.value, rDois.value, rTres.value, rQuatro.value, rCinco.value)
+            let pontos = certas*20
+
             alert(`Tens ${certas} respostas certas!`)
+            
+            alert(`A tua pontuação foi de ${pontos}`)
+
+            // this.utilizadorControlador.setPontos(pontos)
+
+            // enviar para uma tabela de classificação
         })
     }
 }

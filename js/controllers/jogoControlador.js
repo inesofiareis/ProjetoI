@@ -102,33 +102,22 @@ export default class jogosController {
         }
     }
 
-    //preencher espaços
-
-    arrastarInicio(){
-        alert("a arrastar")
-    }
-
-    arrastar(){
+    //guardar novos jogos
+    novoJogoQuestionario(pergunta, alternativa1, alternativa2, alternativa3, alternativa4, resposta){
         
     }
 
-    arrastarFim(){
+    //preencher espaços
 
-    }
+    //preencher espaços
 
-    largarEntrada(){
+    comecarArrastar(){
 
-    }
-
-    largarValido(){
-        this.appendChild(imagemArrastada);
-    }
-
-    largarFim(){
-
+        this.classList.add("aArrastar")
     }
 
     largar(){
 
+        this.appendChild(imagemArrastada)
     }
-}
+} 

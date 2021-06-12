@@ -6,16 +6,6 @@ export default  class Jogo {
         this.descricao = descricao
         this.perguntasErespostas = perguntasErespostas
     }
-
-
-    // Compara duas bandas pelo seu nome. Faz uma ordenação alfabética crescente
-    // static compare(nomeA, nomeB) {
-    //     if (nomeA.nome < nomeB.nome)
-    //         return -1;
-    //     if (nomeA.nome > nomeB.nome)
-    //         return 1;
-    //     return 0;
-    // }
 }
 
 /* export default */ class Comentarios{
