@@ -781,5 +781,78 @@ body {
     transform: rotateY(180deg);
 }
 
+.apresentacaoAndre{
+    color:#205D76;
+}
+
+.introAndre{
+    font-size: 45px;
+}
+
+.tituloDasEstatisticas{
+    color:#205D76;
+}
+
+.tituloItem{
+    color:#227f8f;
+}
+
+.textoAtividade{
+    color:#5d919b;
+}
+
+.estatisticas{
+    opacity: 75%;
+}
+
+@media (max-width: 800px) {
+    .estatisticas {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
 
 
+@media (min-width: 800px) {
+    .estatisticas {
+        margin-top: 80px;
+    }
+}
+
+.formAlterar::placeholder{
+    color: #205D76;
+    font-size: 17px;
+}
+
+.fotoPerfil{
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#botaoAlterar{
+    float: right;
+    margin-top: 90px;
+    margin-right: 20px;
+    color: #205D76;
+    background: #FFC122;
+    border-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+.containerConteudoPerfil{
+    margin-bottom: 50px;
+}
+
+.containerBotoesPerfil{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
+.formAlterar::placeholder{
+    color: #205D76;
+    font-size: 17px;
+}

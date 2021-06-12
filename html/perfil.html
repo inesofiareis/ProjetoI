@@ -62,7 +62,7 @@
                         </figure>
                     </a>
                 </li>
-            </ul>  
+            </ul>
 
             <ul class="navbar-nav avatar">
                 <li class="nav-item">
@@ -107,92 +107,103 @@
 
     <!-- APENAS PARA O ADMIN -->
 
-    
-        <div class="row" id="gerirUtilizadores">
-            
-        </div>
+
+    <div class="row" id="gerirUtilizadores">
+
+    </div>
 
 
 
 
     <!-- A PÁGINA DE EDITAR PERFIL -->
     <main class="corpoPerfil">
-        <div class="container">
+        <div class="container-fluid">
+            <div class="apresentacaoAndre">
+                <h1 class="introAndre text-center" id="textoPerfil">
+                    Sê bem-vinde à área de
+                    jogos! Explora e diverte-te!</h1>
+            </div>
+        </div>
+        <div class="container containerBotoesPerfil">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-6 col-md-3 ">
                     <a href="#">
-                        <img src="../img/perfil/Icon ajuda Andre.png" alt="Precisas de ajuda?">
+                        <img src="../img/perfil/Icon ajuda Andre.png" alt="Precisas de ajuda?" width="120px">
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
                     <a href="#">
-                        <img src="../img/perfil/botao perfil.png" width="150px" alt="O teu espaço">
+                        <img src="../img/perfil/botao perfil.png" alt="O teu espaço" width="120px">
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
                     <a href="#">
-                        <img src="../img/perfil/Botao amigos.png" alt="Os teus amigos">
+                        <img src="../img/perfil/Botao amigos.png" alt="Os teus amigos" width="120px">
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-6 col-md-3">
                     <a href="#">
-                        <img src="../img/perfil/Botao pontos.png" alt="Troca os teus pontos com o André">
+                        <img src="../img/perfil/Botao pontos.png" alt="Troca os teus pontos com o André" width="120px">
                     </a>
                 </div>
             </div>
         </div>
-        <div class="container">
+
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
+                <div class="d-md-block col-md-4 text-center d-sm-none">
+                    <img src="../img/perfil/Andre.png" alt="Olá, eu sou o André!" style="transform: scaleX(-1);"
+                        width="250px">
+                </div>
+                <div class="col-md-4 containerConteudoPerfil">
                     <section class="seccaoEditarPerfil">
-                        <div class="container alterarAvatar">
+                        <div class="container alterarAvatar text-left">
                             <a href="">
-                                <img src="../img/perfil/unnamed.png" alt="" width="250px">
+                                <img src="../img/perfil/unnamed.png" alt="" width="180px" class="fotoPerfil">
                             </a>
+                            <button type="button" class="btn btn-outline-primary" id="botaoAlterar">Já está!</button>
                         </div>
 
-                        <div class="container-fluid z">
+                        <div class="container-fluid">
                             <div class="infoAlteravel">
-                                <form>
+                                <form class="">
                                     <div class="mb-3">
-                                        <input type="text" name="txtNome" id="txtNome" placeholder="Nome">
+                                        <input class="form-control formAlterar" type="text" name="txtNome" id="txtNome" placeholder="Nome">
                                     </div>
-
-                                    <input type="email" name="txtEmail" id="txtEmail" placeholder="Email">
-                                    <br><br>
-                                    <input type="password" name="txtPass" id="txtPass" placeholder="Palavra Passe">
-                                    <br><br>
-                                    <input type="password" name="txtConfPass" id="txtConfPass"
-                                        placeholder="Confirmar Palavra Passe">
-                                    <br><br>
-                                    <button type="button" class="btn btn-outline-primary" id="botaoAlterar">Já
-                                        está!</button>
+                                    <div class="mb-3">
+                                        <input class="form-control formAlterar" type="email" name="txtEmail" id="txtEmail" placeholder="Email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input class="form-control formAlterar" type="password" name="txtPass" id="txtPass" placeholder="Palavra passe">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input class="form-control formAlterar" type="password" name="txtConfPass" id="txtConfPass"
+                                        placeholder="Confirmar palavra passe">
+                                    </div>
                                 </form>
-
                             </div>
                         </div>
                     </section>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <section class="estatisticas">
-                        <div class="container">
+                        <div class="container containerEstatisticas">
                             <div class="tudoSobreUser">
                                 <div class="tituloDasEstatisticas">
-                                    <h2 class="text-center">Tudo sobre ti!</h2>
+                                    <h1 class="tituloEstatisticas text-justify">Tudo sobre ti!</h1>
                                 </div>
-                                <div class="item">
+                                <div class="item numeroAtividades">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <h3>Este é o número de atividades que já fizeste:</h3>
+                                        <div class="col-md-12">
+                                            <h3 class="tituloItem text-justify">Número de atividades que já fizeste:</h3>
                                         </div>
-                                        <div class="col-md-6"></div>
                                     </div>
-                                    <h4 class="text-muted atividadesFeitas">Inserir número</h4>
+                                    <h4 class="text-justify atividadesFeitas textoAtividade">Inserir número</h4>
                                 </div>
                                 <div class="item">
                                     <div class="row">
-                                        <div class="col-10">
-                                            <h3>Escolhe uma atividade para veres a pontuação que tiveste:</h3>
+                                        <div class="col-12 text-justify">
+                                            <h3 class="tituloItem">Escolhe uma atividade e vê a pontuação que tiveste:</h3>
                                             <div class="form-group">
                                                 <select class="form-control" name="nomeDaAtividade"
                                                     id="nomeDaAtividade">
@@ -202,36 +213,28 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-md-6"></div>
                                     </div>
-                                    <h4 class="text-muted pontuacaoAtividade">Meter aqui a pontuação da atividade.</h4>
-                                </div>
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h3>Esta foi a tua pontuação mais alta:</h3>
-                                        </div>
-                                        <div class="col-md-6"></div>
-                                    </div>
-                                    <h4 class="text-muted pontuacaoMaisAlta">Inserir pontuação</h4>
+                                    <h4 class="pontuacaoAtividade text-justify textoAtividade">Meter aqui a pontuação da atividade.
+                                    </h4>
                                 </div>
                             </div>
 
                         </div>
                 </div>
+                <div class="d-sm-block col-md-4 text-center d-md-none">
+                    <img src="../img/perfil/Andre segunda pose.png" alt="Olá, eu sou o André!" style="transform: scaleX(-1);"
+                        width="250px">
+                </div>
             </div>
-
-
-
-            <br><br>
+        </div>
 
 
 
 
 
-            <!-- A PÁGINA DE AMIGOS -->
+        <!-- A PÁGINA DE AMIGOS -->
 
-            <!--         <div class="row justify-content-md-center">
+        <!--         <div class="row justify-content-md-center">
 
             <div class="col-sm-8 cartaoDosAmigos">
                 <div class="card text-center">
@@ -345,8 +348,8 @@
 
 
 
-            <!--     A PÁGINA DA TROCA DE PONTOS -->
-            <!--         <div class="row">
+        <!--     A PÁGINA DA TROCA DE PONTOS -->
+        <!--         <div class="row">
             <div class="col-1"></div>
             <div class="container col-2">
                 <img src="../img/o tatu da pagina pessoal_reverso.png" alt="" srcset="">
@@ -367,8 +370,8 @@
 
 
 
-            <!--  CASO CLIQUE NO BOTÃO TROCA PONTOS -->
-            <!-- 
+        <!--  CASO CLIQUE NO BOTÃO TROCA PONTOS -->
+        <!-- 
     <div class="row">
         <div class="col-1"></div>
         <div class="container col-2">
