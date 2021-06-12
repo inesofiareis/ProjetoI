@@ -1,24 +1,43 @@
 import jogoControlador from '../controllers/jogoControlador.js';
 import utilizadorControlador from '../controllers/utilizadorControlador.js';
-import generoVista from './generoVista.js'
 
 export default class jogoVista{
     constructor() {
         this.jogoControlador = new jogoControlador();
         this.utilizadorControlador = new utilizadorControlador()
-        // this.generoVista = new generoVista()
 
-        this.catalogoJogos = document.querySelector('#catalogoJogos');
-        this.catalogoJogo(this.jogoControlador.getJogos());
+        this.botaoAdicionar = document.querySelector('#botaoAdicionar')
+        this.adicionarJogo()
 
         //filtros
-        this.btnsFiltro = document.querySelectorAll('.botaoFiltrar')
+        this.btnsFiltro = document.querySelectorAll('.botaoAdicionar')
         this.filtrar() 
         
         this.txtJogos = document.querySelector('#textoJogos');
-
-        this.vicularMostrarJogo()
         this.textoJogo()
+
+        this.catalogoJogos = document.querySelector('#catalogoJogos');
+        this.catalogoJogo(this.jogoControlador.getJogos());
+    }
+
+    /**
+     * Função para por o texto do titulo corresponde com o genero do utilizador
+     */
+    textoJogo(){
+        const generoUtilizador = this.utilizadorControlador.getGenero();
+
+        let texto
+
+        if (generoUtilizador == 'Feminino'){
+            texto = 'Sê bem-vinda à área de jogos! Explora e diverte-te!';
+        }else if(generoUtilizador == 'Masculino'){
+            texto = 'Sê bem-vindo à área de jogos! Explora e diverte-te!';
+            
+        }else{
+            texto = 'Sê bem-vinde à área de jogos! Explora e diverte-te!';
+        }
+
+        this.txtJogos.innerHTML = texto;
     }
 
     filtrar(){
@@ -30,13 +49,24 @@ export default class jogoVista{
     }
 
     catalogoJogo(jogos = []) {
+        //gerir o botão de adicionar jogo
+        if (this.utilizadorControlador.admin()){
+            this.botaoAdicionar.style.visibility = 'visible'
+        }
+
+        //gerar catalogo
         let divisao = '<div class="row row-cols-2">';
         for (const jogo of jogos) {
             divisao += this.gerarCardJogo(jogo);
         }
 
         divisao += '</div>'
+        
         this.catalogoJogos.innerHTML = divisao
+
+        //Gerir botões de vincular um jogo e remover
+        this.vicularMostrarJogo()
+        this.removerJogo()
     }
 
     gerarCardJogo(jogo) {
@@ -50,7 +80,7 @@ export default class jogoVista{
                     <button id="${jogo.nome}" class="btn btn-primary jogar">Jogar</button>
             `
         if (this.utilizadorControlador.admin()) {
-            resultado += `<button id="${jogo.nome}" class="btn btn-danger remove">Remove</button>`
+            resultado += `<button id="${jogo.nome}" class="btn btn-danger remover">Remover</button>`
         }
 
         resultado += `
@@ -59,6 +89,12 @@ export default class jogoVista{
         </div>        
         `
         return resultado
+    }
+
+    adicionarJogo(){
+        this.botaoAdicionar.addEventListener('click', () => {
+
+        })
     }
 
     vicularMostrarJogo() {
@@ -70,8 +106,12 @@ export default class jogoVista{
         }
     }
 
-    textoJogo(){
-        let texto = this.generoVista.textoJogo();
-        this.txtJogos.innerHTML = texto;
+    removerJogo(){
+        for (const btnRemover of document.querySelectorAll('.remover')){
+            btnRemover.addEventListener('click', event => {
+                this.jogoControlador.removerJogo(event.target.id)
+                this.catalogoJogo(this.jogoControlador.getJogos())
+            })
+        }
     }
 }

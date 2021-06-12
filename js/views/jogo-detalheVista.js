@@ -62,50 +62,65 @@ export default class JogosDetalhes {
     gerarJogoArrastar(){
         this.posJogo.innerHTML = `<div class="jogoDeArrastar">
         <section class="elementosArrastar">
-            <img class="arastar" draggable="true" src="../../img/jogos/Asset 1distancia.png" id="virusdrop">
-            <img class="arastar" draggable="true" src="../../img/jogos/Asset 1mascara.png" id="mascaradrop">
-            <img class="arastar" draggable="true" src="../../img/jogos/Asset 1distancia.png" id="alcooldrop">
-            <img class="arastar" draggable="true" src="../../img/jogos/Asset 1distancia.png" id="distanciamentodrop">
-            <img class="arastar" draggable="true" src="../../img/jogos/Asset 2maos.png" id="lavarAsMaosdrop">
-            <img class="arastar" draggable="true" src="../../img/jogos/Asset 1distancia.png" id="doencadrop">
+            <img draggable="true" src="../../img/jogos/virus.png" id="virusdrop">
+            <img draggable="true" src="../../img/jogos/mascara.png" id="mascaradrop">
+            <img draggable="true" src="../../img/jogos/alcool.png" id="alcooldrop">
+            <img draggable="true" src="../../img/jogos/distanciamento.png" id="distanciamentodrop">
+            <img draggable="true" src="../../img/jogos/lavar maos.png" id="lavarAsMaosdrop">
+            <img draggable="true" src="../../img/jogos/tobias febre.png" id="doencadrop">
         </section>
         <section class="elementoLargar">
-            <div class="largar" droppable="true" data-id="virusdrop"><span>Vírus</span>
+            <div droppable="true" data-id="virusdrop"><span>Vírus</span>
             </div>
-            <div class="largar" data-id="mascaradrop">
+            <div data-id="mascaradrop">
                 <span>Máscara</span>
             </div>
-            <div class="largar" data-id="alcooldrop">
+            <div data-id="alcooldrop">
                 <span>Álcool-gel</span>
             </div>
-            <div class="largar" data-id="distanciamentodrop">
+            <div data-id="distanciamentodrop">
                 <span>Distanciamento</span>
             </div>
-            <div class="largar" data-id="lavarAsMaosdrop">
+            <div data-id="lavarAsMaosdrop">
                 <span>Lavar as mãos</span>
             </div>
-            <div class="largar" data-id="doencadrop">
+            <div data-id="doencadrop">
                 <span>Doença</span>
             </div>
         </section>
         </div>`
 
+
         const elementosArrastar = document.querySelectorAll('.arrastar');
         const elementosLargar = document.querySelectorAll('.largar');
+        const imagemArrastada = document.querySelector('.aSerArrastado');
+
+        //funçoes a chamar
+        //arrastar
+        let arrastarInicio = this.jogoControlador.arrastarInicio();
+        let arrastar = this.jogoControlador.arrastar();
+        let arrastarFim = this.jogoControlador.arrastarFim();
+
+        //largar
+        let largarEntrada = this.jogoControlador.largarEntrada();
+        let largarValido = this.jogoControlador.largarValido();
+        let largarFim = this.jogoControlador.largarFim();
+        let largar = this.jogoControlador.largar();
 
         elementosArrastar.forEach(elem => {
-            elem.addEventListener('arrastarInicio', arrastarInicio);
-            elem.addEventListener("arrastar", arrastar);
-            elem.addEventListener("arrastarFim",arrastarFim);
+            elem.addEventListener('dragStart', arrastarInicio);
+            elem.addEventListener("drag", arrastar);
+            elem.addEventListener("dragend",arrastarFim);
 
         })
 
         elementosLargar.forEach(elem => {
-            elem.addEventListener('largarEntrada',largarEntrada);
-            elem.addEventListener('largarValido',largarValido);
-            elem.addEventListener('largarFim',largarFim);
-            elem.addEventListener('largar',largar);
+            elem.addEventListener('dragenter',largarEntrada);
+            elem.addEventListener('dragover',largarValido);
+            elem.addEventListener('dragleave',largarFim);
+            elem.addEventListener('drop',largar);
         })
+
         // controller mas sem certezas 
 
         // function arrastarInicio(event){

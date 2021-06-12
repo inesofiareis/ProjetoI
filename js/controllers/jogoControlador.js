@@ -22,6 +22,11 @@ export default class jogosController {
         return this.jogos.find(jogo => jogo.nome == this.jogoAtual)
     }
 
+    removerJogo(nome){
+        this.jogos = this.jogos.filter(jogo => jogo.nome != nome)
+        localStorage.setItem('jogos', JSON.stringify(this.jogos))
+    }
+
     /**
      * Função que vai filtrar os jogos
      * @param {string} filtroNome se quiser ordenar por nome
@@ -95,5 +100,35 @@ export default class jogosController {
                 return todosJogos[i]
             }
         }
+    }
+
+    //preencher espaços
+
+    arrastarInicio(){
+        alert("a arrastar")
+    }
+
+    arrastar(){
+        
+    }
+
+    arrastarFim(){
+
+    }
+
+    largarEntrada(){
+
+    }
+
+    largarValido(){
+        this.appendChild(imagemArrastada);
+    }
+
+    largarFim(){
+
+    }
+
+    largar(){
+
     }
 }

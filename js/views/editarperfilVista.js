@@ -48,12 +48,8 @@ export default class genero{
     gerirUtilizadores(){    
         let utilizadores = this.utilizadorControlador.todosUtilizadores();
 
-        let tabela = `<div class="col-2"></div>
-        <div class="col-2 mt-5">
-            <button type="button" class="btn btn-primary col-4">Inserir</button>
-        </div>
-        
-        <table class="table table-striped table-inverse table-responsive col-4" >
+        let tabela = `<div class="col-3"></div>
+        <table class="table table-striped table-inverse table-responsive col-6" >
             <thead class="thead-inverse">
                 <tr>
                     <th>Nome e Sobrenome</th>
