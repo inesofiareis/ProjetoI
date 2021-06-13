@@ -144,7 +144,18 @@ export default class jogoVista{
                                                 <input class="btn btn-danger" type="button" value="Cancelar" id='cancelarAdicao'>    
                                             </div>`
 
+            //nome
+            this.nomeJogo = document.querySelector('#nomeJogo')
+
+            //imagem
+            this.imgJogo = document.querySelector('#imgJogo')
+
+            //descrição
+            this.descricao = document.querySelector('#descricao')
+
+            //genero
             this.generoJogo = document.querySelector('#genero')
+
             this.informacaoJogo = document.querySelector('.informacaoJogo')
             this.adicionarJogoGenero()
 
@@ -344,7 +355,7 @@ export default class jogoVista{
 
     confirmarQuestionario(){
         this.botaoConfirmarQuestionario.addEventListener('click', () => {
-            
+            this.jogoControlador.novoJogoQuestionario(this.nomeJogo.value, this.imgJogo.value, this.descricao.value, this.generoJogo.value, this.pergunta1.value, this.alternativa1, this.resposta1.value, this.pergunta2.value, this.alternativa2, this.resposta2.value, this.pergunta3.value, this.alternativa3, this.resposta3.value, this.pergunta4.value, this.alternativa4, this.resposta4.value, this.pergunt5.value, this.alternativa5, this.respost5.value)
         })
     }
 }

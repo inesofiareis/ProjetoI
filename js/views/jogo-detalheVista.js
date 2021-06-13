@@ -4,6 +4,7 @@ import utilizadorControlador from '../controllers/utilizadorControlador.js'
 export default class JogosDetalhes {
     constructor(){
         this.jogoControlador = new jogoControlador()
+        this.utilizadorControlador = new utilizadorControlador()
  
         this.posJogo = document.querySelector(".caixaJogos");
 
@@ -110,95 +111,9 @@ export default class JogosDetalhes {
         })
 
         palavras.addEventListener('dragover', largar);
-        
-
-        
-
-        
-
-        // var data = ev.dataTransfer.getData("text");
-        // ev.target.appendChild(document.getElementById(data));
-
-        // let drag = this.jogoControlador.drag(ev)
-        // let drop = this.jogoControlador.drop(ev)
-        // let allowDrop = this.jogoControlador.allowDrop(ev)
-
-
-        // const elementosArrastar = document.querySelectorAll('.arrastar');
-        // const elementosLargar = document.querySelectorAll('.largar');
-        // const imagemArrastada = document.querySelector('.aSerArrastado');
-
-        // //funçoes a chamar
-        // //arrastar
-        // let arrastarInicio = this.jogoControlador.arrastarInicio();
-        // let arrastar = this.jogoControlador.arrastar();
-        // let arrastarFim = this.jogoControlador.arrastarFim();
-
-        // //largar
-        // let largarEntrada = this.jogoControlador.largarEntrada();
-        // let largarValido = this.jogoControlador.largarValido();
-        // let largarFim = this.jogoControlador.largarFim();
-        // let largar = this.jogoControlador.largar();
-
-        // elementosArrastar.forEach(elem => {
-        //     elem.addEventListener('dragStart', arrastarInicio);
-        //     elem.addEventListener("drag", arrastar);
-        //     elem.addEventListener("dragend",arrastarFim);
-
-        // })
-
-        // elementosLargar.forEach(elem => {
-        //     elem.addEventListener('dragenter',largarEntrada);
-        //     elem.addEventListener('dragover',largarValido);
-        //     elem.addEventListener('dragleave',largarFim);
-        //     elem.addEventListener('drop',largar);
-        // })
-
-        // controller mas sem certezas 
-
-        // function arrastarInicio(event){
-        //     event.dataTransfer.setData("text", event.target.id);
-        // }
-
-        // function largarEntrada(event) {
-        //     if(!event.target.classList.contains("dropped")) {
-        //       event.target.classList.add("droppable-hover");
-        //     }
-        //   }
-          
-        //   function largarValido(event) {
-        //     if(!event.target.classList.contains("dropped")) {
-        //       event.preventDefault(); // Prevent default to allow drop
-        //     }
-        //   }
-          
-        //   function largarFim(event) {
-        //     if(!event.target.classList.contains("dropped")) {
-        //       event.target.classList.remove("droppable-hover");
-        //     }
-        //   }
-          
-        //   function largar(event) {
-        //     event.preventDefault(); // This is in order to prevent the browser default handling of the data
-        //     event.target.classList.remove("droppable-hover");
-        //     const elementosArrastarData = event.dataTransfer.getData("text"); // Get the dragged data. This method will return any data that was set to the same type in the setData() method
-        //     const elementosLargarData = event.target.getAttribute("data-draggable-id");
-        //     const respostaCorreta = elementosArrastarData === elementosLargarData;
-        //     if(respostaCorreta) {
-        //       const elementoArrastar = document.getElementById(elementosArrastarData);
-        //       event.target.classList.add("dropped");
-        //       // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
-        //       event.target.style.backgroundColor = window.getComputedStyle(elementoArrastar).color;
-        //       elementoArrastar.classList.add("dragged");
-        //       elementoArrastar.setAttribute("draggable", "false");
-        //       event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${elementoArrastar}"></i>`);
-        //     }
-        //   }
-
 
     }
 
-    
 
     jogo() {
         let jogo = this.jogoControlador.getJogoAtual();
@@ -227,6 +142,8 @@ export default class JogosDetalhes {
             alert(`Tens ${certas} respostas certas!`)
             
             alert(`A tua pontuação foi de ${pontos}`)
+
+            this.utilizadorControlador.setPontos(pontos);
 
             // this.utilizadorControlador.setPontos(pontos)
 

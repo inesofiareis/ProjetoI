@@ -103,8 +103,62 @@ export default class jogosController {
     }
 
     //guardar novos jogos
-    novoJogoQuestionario(pergunta, alternativa1, alternativa2, alternativa3, alternativa4, resposta){
+    novoJogoQuestionario(nomeJogo, imgJogo, descricao, generoJogo, pergunta1, alternativa1, resposta1, pergunta2, alternativa2, resposta2, pergunta3, alternativa3, resposta3, pergunta4, alternativa4, resposta4, pergunta5, alternativa5, resposta5){
+        const novoID = this.jogos.length > 0 ? this.jogos[this.jogos.length - 1].id + 1 : 1
+
+        const perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5]
+
+        const resp1 = this.respostaCorreta(resposta1, alternativa1)
+        const resp2 = this.respostaCorreta(resposta2, alternativa2)
+        const resp3 = this.respostaCorreta(resposta3, alternativa3)
+        const resp4 = this.respostaCorreta(resposta4, alternativa4)
+        const resp5 = this.respostaCorreta(resposta5, alternativa5)
+
+
+        const respostas = [resp1, resp2, resp3, resp4, resp5]
+
+        const alternativas1 = this.guardarAlternativas(alternativa1)
+        const alternativas2 = this.guardarAlternativas(alternativa2)    
+        const alternativas3 = this.guardarAlternativas(alternativa3)
+        const alternativas4 = this.guardarAlternativas(alternativa4)
+        const alternativas5 = this.guardarAlternativas(alternativa5)
+        const alternativas = [alternativas1, alternativas2, alternativas3, alternativas4, alternativas5]
+
+        const avalicao = [{postiva: 0,
+                            normal: 0,
+                            negativa: 0}]
         
+        const perguntasErespostas = [{perguntas: perguntas,
+                                    respostasCorretas: respostas,
+                                    alternativas: alternativas}]
+        
+        this.jogos.push(new jogoModelo(novoID, nomeJogo, imgJogo, generoJogo, descricao, avalicao, perguntasErespostas))
+        localStorage.setItem('jogos', JSON.stringify(this.jogos))
+
+    }
+
+    guardarAlternativas(alternativas){
+        const alternativasArray = []
+        for (let alternativa of alternativas){
+            alternativasArray.push(alternativa.value)
+        }
+
+        return alternativasArray
+    }
+
+    respostaCorreta(resposta, alternativas){
+        if (resposta == 'alternativa1'){
+            return alternativas[0].value 
+        }
+        else if (resposta == 'alternativa2'){
+            return alternativas[1].value 
+        }
+        else if (resposta == 'alternativa3'){
+            return alternativas[2].value 
+        }
+        else if (resposta == 'alternativa4'){
+            return alternativas[3].value 
+        }
     }
 
     //preencher espaços
