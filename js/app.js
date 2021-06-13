@@ -8,7 +8,7 @@ import perfilVista from './views/editarperfilVista.js'
 import generoVista from './views/generoVista.js'
 // import amigoVista from './views/amigoVista.js'
 // import tutorialVista from './views/tutorialVista.js'
-// import pontuacaoVista from './views/pontuacaoVista.js'
+import pontuacaoVista from './views/pontuacaoVista.js'
 
 class App {
     constructor() {
@@ -22,7 +22,7 @@ class App {
             'info-detalhe': [navbarVista],
             'jogo': [navbarVista, jogoVista],
             'jogo-detalhe': [navbarVista, jogoDetalheVista],
-            'perfil': [navbarVista, perfilVista]
+            'perfil': [navbarVista, perfilVista, pontuacaoVista]
         };
 
         // importar dados fictícios para fins de teste
