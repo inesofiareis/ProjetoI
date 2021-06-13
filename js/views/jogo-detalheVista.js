@@ -5,6 +5,10 @@ export default class JogosDetalhes {
     constructor(){
         this.jogoControlador = new jogoControlador()
         this.utilizadorControlador = new utilizadorControlador()
+
+        this.btnPositivo = document.querySelector('#positivo').addEventListener('click', positivo());
+        this.btnMedio = document.querySelector('#medio').addEventListener('click', medio());
+        this.btnNegativo = document.querySelector('#negativo').addEventListener('click',negativo());
  
         this.posJogo = document.querySelector(".caixaJogos");
 
