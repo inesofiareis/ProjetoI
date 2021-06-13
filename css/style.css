@@ -650,6 +650,13 @@ body {
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+.caixasDragDrop {
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    text-align: center;
+  }
 
 
 .elementosArrastar {

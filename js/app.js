@@ -42,7 +42,7 @@ class App {
             avaliacao: [{postiva: 5,
                         normal: 2,
                         negativa: 0}],
-            perguntasErespostas: [{
+            detelhesJogo: [{
                                     id:1,
                                     idades: '<12',
                                     perguntas: ['Em que ano foi descoberto o covid-19?', 'Em que pais começou a pandemia?', 'Em que mes houve o primeiro caso de covid-19 em Portugal?', 'Qual destes não é um sintoma do covid-19?', 'O que temos de usar no rosto para nos proteger e proteger aos outros do corona virus'],
@@ -70,11 +70,12 @@ class App {
                                     }]
                                 },
             {   id: 2,
-                nome: 'Ajudar o Xico 2',
-                foto: '../img/jogos/A missao do Xico.png',
+                nome: 'Preencher os espaços',
+                foto: '../img/jogos/virus.png',
                 genero: 'Preencher espaços',
-                descricao: 'Ajuda o Xico a recuperar a suas informações',
-                perguntasErespostas: []
+                descricao: 'Mete as imagens nos seus repetivos lugares',
+                detelhesJogo: [{item:['Vírus', 'Máscara', 'Álcool-gel', 'Distanciamento', 'Lavar as mãos', 'Doença'],
+                                imagens:['../../img/jogos/virus.png']}]
             }]
 
         const utilizadores = [

@@ -9,13 +9,16 @@ export default class genero{
         this.palavraPasse = document.querySelector('#txtPass');
         this.palavraPasse2 = document.querySelector('#txtConfPass');
         this.botaoAlterar = document.querySelector('#botaoAlterar');
-        this.tabelaUtilizadores = document.querySelector('#gerirUtilizadores')
+        this.tabelaUtilizadores = document.querySelector('#gerirUtilizadores');
+        this.nAtividades = document.querySelector('.atividadesFeitas');
+        this.nomeAtividades = document.querySelector('#nomeDaAtividade');
         this.atualizarDados();
         this.gerirUtilizadores();
         this.placeholder();
         this.botaoAlterarTipo();
         this.botaoRemover();
         this.botaoBloquear();
+        this.estatisticas();
     }
 
     atualizarDados(){
@@ -121,6 +124,12 @@ export default class genero{
             location.reload();
             })
         }
+    }
+
+    estatisticas(){
+        let atividades = this.utilizadorControlador.getAtividades();
+        this.nAtividades.innerHTML = atividades;
+        this.nomeAtividades.innerHTML += `<option value=""></option>`
     }
 
 }

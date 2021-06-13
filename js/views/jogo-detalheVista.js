@@ -17,8 +17,6 @@ export default class JogosDetalhes {
 
         document.querySelector('.nomeJogo').innerHTML = jogo.nome;
         document.querySelector('.descJogo').innerHTML = jogo.descricao;
-
-        this.confirmar()
     }
     
 
@@ -58,60 +56,67 @@ export default class JogosDetalhes {
         <input type="radio" name="respostaCinco" value="${perguntasErespostas.alternativas[4][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[4][3]} <br>
     
         <input type="submit" name="submit" value="Diz-me a pontuação!" id="resultado">`
+
+        this.confirmar()
+
     }
     
 
     gerarJogoArrastar(){
-        this.posJogo.innerHTML = `<div class="jogoDeArrastar">
-        <div class="elementosArrastar">
-            <div draggable="true"><img src="../../img/jogos/virus.png" id="virusdrop" ondragstart="drag(event)">
-            </div>
+        this.posJogo.innerHTML = `<div class="row elementosArrastar">
+                                    <div class="col imgdrop" draggable="true">
+                                        <img class="imagemJogo" src="../../img/jogos/virus.png" id="virusDrop" height="220px">
+                                    </div>
+                                    <div class="col imgdrop" draggable="true">
+                                        <img class="imagemJogo" src="../../img/jogos/mascara.png" id="mascaraDrop" height="215px">
+                                    </div>
+                                    <div class="col imgdrop" draggable="true">
+                                        <img class="imagemJogo" src="../../img/jogos/alcool.png" id="alcoolDrop" height="220px">
+                                    </div> 
+                                    <div class="col imgdrop" draggable="true">
+                                        <img class="imagemJogo" src="../../img/jogos/distanciamento.png" id="distanciamentoDrop" height="220px">
+                                    </div>
+                                    <div class="col imgdrop" draggable="true">
+                                        <img class="imagemJogo" src="../../img/jogos/lavar maos.png" id="lavarAsMaosDrop" height="220px">
+                                    </div>
+                                    <div class="col imgdrop" draggable="true">
+                                        <img class="imagemJogo" src="../../img/jogos/tobias febre.png" id="doencaDrop" height="220px">
+                                    </div>
+                                </div>
+                                <br><br><br>
+                                <div class=" row elementoLargar">
+                                    <div class="caixasDragDrop" id="virusdrop">
+                                        <span>Vírus</span>
+                                    </div>
 
-            <div draggable="true"><img src="../../img/jogos/mascara.pngg" id="virusdrop" ondragstart="drag(event)">
-            </div>
+                                    <div class="caixasDragDrop" id="mascaradrop">
+                                        <span>Máscara</span>
+                                    </div>
+                                    <div class="caixasDragDrop" id="alcooldrop">
+                                        <span>Álcool-gel</span>
+                                    </div>
+                                    <div class="caixasDragDrop" id="distanciamentodrop">
+                                        <span>Distanciamento</span>
+                                    </div>
+                                    <div class="caixasDragDrop" id="lavarAsMaosdrop">
+                                        <span>Lavar as mãos</span>
+                                    </div>
+                                    <div class="caixasDragDrop" id="doencadrop">
+                                        <span>Doença</span>
+                                    </div>
+                                </div>
 
-            <div draggable="true"><img src="../../img/jogos/alcool.png" id="virusdrop" ondragstart="drag(event)">
-            </div>
-            
-            <div draggable="true"><img src="../../img/jogos/distanciamento.png" id="virusdrop" ondragstart="drag(event)">
-            </div>
+                                <input type="button" value="Confirmar" id="confirmar">
+                                <input type="button" value="Resetar" id="resete">
+                                </div>`
 
-            <div draggable="true"><img src="../../img/jogos/tobias febre.png" id="virusdrop" ondragstart="drag(event)">
-            </div>
-        </div>
-        <div class="elementoLargar">
-            <div data-id="virusdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <span>Vírus</span>
-            </div>
-            <div data-id="mascaradrop" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <span>Máscara</span>
-            </div>
-            <div data-id="alcooldrop" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <span>Álcool-gel</span>
-            </div>
-            <div data-id="distanciamentodrop" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <span>Distanciamento</span>
-            </div>
-            <div data-id="lavarAsMaosdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <span>Lavar as mãos</span>
-            </div>
-            <div data-id="doencadrop" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <span>Doença</span>
-            </div>
-        </div>
-        </div>`
-
-        const imagens = document.querySelectorAll('[draggable = "true"]');
-        const palavras = document.querySelector('.elementoLargar');
-        const imagemArrastada = document.querySelector('.aArrastar');
-        let imgArrastada = this.jogoControlador.largar(imagemArrastada);
-
-        imagens.forEach((imagem) => {
-            imagem.addEventListener('dragstart', comecarArrastar);
-        })
-
-        palavras.addEventListener('dragover', largar);
-
+        this.imgsdrop = document.querySelectorAll('.imgdrop')
+        this.caixasDragDrop = document.querySelectorAll('.caixasDragDrop')
+        this.JogoArrastar()
+        this.botaoResetar = document.querySelector('#resete')
+        this.resetar()
+        this.botaoConfirmarPreencher = document.querySelector('#confirmar')
+        this.ConfirmarPreencher()
     }
 
 
@@ -144,10 +149,78 @@ export default class JogosDetalhes {
             alert(`A tua pontuação foi de ${pontos}`)
 
             this.utilizadorControlador.setPontos(pontos);
+            this.utilizadorControlador.setAtividades();
 
             // this.utilizadorControlador.setPontos(pontos)
 
             // enviar para uma tabela de classificação
+        })
+    }
+
+    JogoArrastar(){
+        let arrastados
+        this.imgsdrop.forEach(imgdrop => {
+            imgdrop.addEventListener('dragstart', e => {
+                e.dataTransfer.setData("text/plain", imgdrop.id)
+            })
+            imgdrop.addEventListener('drag', e => {
+                arrastados = e.target;
+                // e.target.style.opacity = .5;
+            })
+            imgdrop.addEventListener('dragend', e => {
+                // e.target.style.opacity = "";
+            } )
+        })
+
+        //local onde soltar as imagens
+        this.caixasDragDrop.forEach(caixaDragDrop => {
+            caixaDragDrop.addEventListener('dragenter', e => {
+                e.preventDefault();
+            })
+            caixaDragDrop.addEventListener('dragover', e => {
+                e.preventDefault()
+                e.target.style.background = "lightgray";
+            })
+            caixaDragDrop.addEventListener('dragleave', e => {
+                if (e.target.className == "caixasDragDrop") {
+                    e.target.style.background = "";
+                  }
+            })
+            caixaDragDrop.addEventListener('drop', e => {
+                e.preventDefault();
+                if (e.target.className == "caixasDragDrop") {
+                    e.target.style.background = "";
+                    arrastados.parentNode.removeChild(arrastados);
+                    e.target.appendChild(arrastados);
+                  }
+            })
+        })
+    }
+
+    resetar(){
+        this.botaoResetar.addEventListener('click', () => {
+            location.reload()
+        })
+    }
+
+    ConfirmarPreencher(){
+        this.botaoConfirmarPreencher.addEventListener('click', () => {
+            let caixaVirus = document.querySelector('#virusdrop')
+            let imagemVirus = caixaVirus.querySelector('.imagemJogo')
+            let caixaMascara = document.querySelector('#mascaradrop')
+            let imagemMascara = caixaMascara.querySelector('.imagemJogo')
+            let caixaAlcool = document.querySelector('#alcooldrop')
+            let imagemAlcool = caixaAlcool.querySelector('.imagemJogo')
+            let caixaDistancia = document.querySelector('#distanciamentodrop')
+            let imagemDistancia = caixaDistancia.querySelector('.imagemJogo')
+            let caixaLavar = document.querySelector('#lavarAsMaosdrop')
+            let imagemLavar = caixaLavar.querySelector('.imagemJogo')
+            let caixaDoenca = document.querySelector('#doencadrop')
+            let imagemDoenca = caixaDoenca.querySelector('.imagemJogo')
+            
+            const resultado = this.jogoControlador.jogoPreencherEspacos(caixaVirus.id, imagemVirus.id, caixaMascara.id, imagemMascara.id, caixaAlcool.id, imagemAlcool.id, caixaDistancia.id, imagemDistancia.id, caixaLavar.id, imagemLavar.id, caixaDoenca.id, imagemDoenca.id)
+
+            alert(`Tens ${resultado} certas`)
         })
     }
 }

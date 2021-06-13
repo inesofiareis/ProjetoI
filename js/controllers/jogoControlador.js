@@ -128,7 +128,7 @@ export default class jogosController {
                             normal: 0,
                             negativa: 0}]
         
-        const perguntasErespostas = [{perguntas: perguntas,
+        const detelhesJogo = [{perguntas: perguntas,
                                     respostasCorretas: respostas,
                                     alternativas: alternativas}]
         
@@ -163,15 +163,28 @@ export default class jogosController {
 
     //preencher espaços
 
-    //preencher espaços
+    jogoPreencherEspacos(caixaVirus, imagemVirus, caixaMascara, imagemMascara, caixaAlcool, imagemAlcool, caixaDistancia, imagemDistancia, caixaLavar, imagemLavar, caixaDoenca, imagemDoenca){
+        let certas = 0
 
-    comecarArrastar(){
+        if (caixaVirus.toLocaleLowerCase() == imagemVirus.toLocaleLowerCase()){
+            certas++
+        }
+        if (caixaMascara.toLocaleLowerCase() == imagemMascara.toLocaleLowerCase()){
+            certas++
+        }
+        if (caixaAlcool.toLocaleLowerCase() == imagemAlcool.toLocaleLowerCase()){
+            certas++
+        }
+        if (caixaDistancia.toLocaleLowerCase() == imagemDistancia.toLocaleLowerCase()){
+            certas++
+        }
+        if (caixaLavar.toLocaleLowerCase() == imagemLavar.toLocaleLowerCase()){
+            certas++
+        }
+        if (caixaDoenca.toLocaleLowerCase() == imagemDoenca.toLocaleLowerCase()){
+            certas++
+        }
 
-        this.classList.add("aArrastar")
-    }
-
-    largar(){
-
-        this.appendChild(imagemArrastada)
+        return certas
     }
 } 
