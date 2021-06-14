@@ -18,10 +18,18 @@ export default class jogosController {
         sessionStorage.setItem('jogos', nome)
     }
 
+    /**
+     * Função para returnar o jogo que utilizador escolheio jogar
+     * @returns retorna toda as informações do jogo
+     */
     getJogoAtual(){
         return this.jogos.find(jogo => jogo.nome == this.jogoAtual)
     }
 
+    /**
+     * Quando o admin carrega em remover o jogo a lista dos jogos
+     * @param {string} nome do jogo
+     */
     removerJogo(nome){
         this.jogos = this.jogos.filter(jogo => jogo.nome != nome)
         localStorage.setItem('jogos', JSON.stringify(this.jogos))
@@ -59,15 +67,32 @@ export default class jogosController {
         return filtroJogos
     }
 
+    /**
+     * Quando o jogo escolhi pelo o utilizador é um do genero Questionario
+     * @returns terna todas as infromações (perguntas e respostas) do jogo
+     */
     jogoQuestionario(){
         let jogo = this.jogosInformacoes(sessionStorage['jogos'])
 
-        //criar um filtro para as idades 
-
-        return jogo.perguntasErespostas[0]
-        
+        return jogo.detelhesJogo[0]  
     }
 
+    jogoAvaliacao(){
+        let jogo = this.jogosInformacoes(sessionStorage['jogos']);
+        let avaliacao = jogo.avaliacao;
+
+        return avaliacao
+    }
+
+    /**
+     * função para ver se o utilizador acertou as nas perguntas feitas pelo questionario
+     * @param {string} rUm resposta a primeira pergunta
+     * @param {string} rDois resposta a segunda pergunta
+     * @param {string} rTres resposta a terceira pergunta
+     * @param {string} rQuatro resposta a quarta pergunta
+     * @param {string} rCinco resposta a quinta pergunta
+     * @returns retorna a quantidade de respostas certas
+     */
     respostasQuestionario(rUm, rDois, rTres, rQuatro, rCinco){
         let jogo = this.jogoQuestionario()
         let certas = 0 //número de respostas certas
@@ -91,6 +116,11 @@ export default class jogosController {
         return certas
     }
 
+    /**
+     * Função para returnar todas as informações do jogo
+     * @param {string} jogo 
+     * @returns 
+     */
     jogosInformacoes(jogo){
         let todosJogos = localStorage['jogos']
         todosJogos = JSON.parse(todosJogos)
@@ -160,6 +190,7 @@ export default class jogosController {
             return alternativas[3].value 
         }
     }
+    //guardar novos jogos
 
     //preencher espaços
 
@@ -187,4 +218,34 @@ export default class jogosController {
 
         return certas
     }
-} 
+
+    //pontos
+    positivo(){
+        let avaliacao = this.jogoAvaliacao()
+        avaliacao.positivo++
+        this.guardarAvaliacao(avaliacao)
+    }
+    medio(){
+        let avaliacao = this.jogoAvaliacao()
+        avaliacao.normal++
+        this.guardarAvaliacao(avaliacao)
+    }
+    negativo(){
+        let avaliacao = this.jogoAvaliacao()
+        avaliacao.negativa++
+        this.guardarAvaliacao(avaliacao)
+    }
+
+    guardarAvaliacao(avaliacao){
+        let jogo = sessionStorage['jogos']
+        let todosJogos = localStorage['jogos']
+        todosJogos = JSON.parse(todosJogos)
+
+        for (let i = 0; i < todosJogos.length; i++){
+            if(todosJogos[i].nome == jogo){
+                todosJogos[i].avaliacao == avaliacao
+                this.jogos
+            }
+        }
+    }
+}

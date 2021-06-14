@@ -39,9 +39,9 @@ class App {
             foto: '../img/jogos/A missao do Xico.png',
             genero: 'Questionários',
             descricao: 'Ajuda o Xico a recuperar a suas informações',
-            avaliacao: [{postiva: 5,
+            avaliacao: {positiva: 5,
                         normal: 2,
-                        negativa: 0}],
+                        negativa: 0},
             detelhesJogo: [{
                                     id:1,
                                     idades: '<12',
