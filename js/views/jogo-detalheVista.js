@@ -263,19 +263,22 @@ export default class JogosDetalhes {
 
     positivo(){
         this.btnPositiva.addEventListener('click', () =>{
-            this.positivo()
+            this.jogoControlador.positivo()
+            this.gostos()
         })
     }
 
     medio(){
         this.btnNormal.addEventListener('click', () =>{
-            this.medio()
+            this.jogoControlador.medio()
+            this.gostos()
         })
     }
 
     negativo(){
         this.btnNegativa.addEventListener('click', () =>{
-            this.negativo()
+            this.jogoControlador.negativo()
+            this.gostos()
         })
     }
 }

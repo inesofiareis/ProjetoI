@@ -164,7 +164,6 @@ export default class jogosController {
         
         this.jogos.push(new jogoModelo(novoID, nomeJogo, imgJogo, generoJogo, descricao, avalicao, perguntasErespostas))
         localStorage.setItem('jogos', JSON.stringify(this.jogos))
-
     }
 
     guardarAlternativas(alternativas){
@@ -222,7 +221,7 @@ export default class jogosController {
     //pontos
     positivo(){
         let avaliacao = this.jogoAvaliacao()
-        avaliacao.positivo++
+        avaliacao.positiva++
         this.guardarAvaliacao(avaliacao)
     }
     medio(){
@@ -243,8 +242,9 @@ export default class jogosController {
 
         for (let i = 0; i < todosJogos.length; i++){
             if(todosJogos[i].nome == jogo){
-                todosJogos[i].avaliacao == avaliacao
-                this.jogos
+                todosJogos[i].avaliacao = avaliacao
+                this.jogos[i] = todosJogos[i]
+                localStorage.setItem('jogos', JSON.stringify(this.jogos))
             }
         }
     }
