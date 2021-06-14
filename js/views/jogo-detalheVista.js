@@ -5,15 +5,12 @@ export default class JogosDetalhes {
     constructor(){
         this.jogoControlador = new jogoControlador()
         this.utilizadorControlador = new utilizadorControlador()
-
-        this.btnPositivo = document.querySelector('#positivo').addEventListener('click', positivo());
-        this.btnMedio = document.querySelector('#medio').addEventListener('click', medio());
-        this.btnNegativo = document.querySelector('#negativo').addEventListener('click',negativo());
  
         this.posJogo = document.querySelector(".caixaJogos");
 
         this.txtJogos = document.querySelector('.textoJogos');  
-        this.jogo()   
+        this.jogo();
+        this.gostos();
 
         let jogo = this.jogoControlador.getJogoAtual();
 
@@ -226,5 +223,14 @@ export default class JogosDetalhes {
 
             alert(`Tens ${resultado} certas`)
         })
+    }
+
+    gostos(){
+        let gostos = this.utilizadorControlador.
+        this.btnPositivo = document.querySelector('#positivo').addEventListener('click', () => {
+
+        });
+        this.btnMedio = document.querySelector('#medio').addEventListener('click', medio());
+        this.btnNegativo = document.querySelector('#negativo').addEventListener('click',negativo());
     }
 }
