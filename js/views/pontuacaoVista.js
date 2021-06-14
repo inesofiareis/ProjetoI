@@ -4,15 +4,16 @@ export default class pontuacaoMedalhas{
 
         constructor(){
             this.utilizadorControlador = new utilizadorControlador();
-            this.pontos = 0;
             this.tabelaMedalhas = document.querySelector('#tabelaMedalha');
-
+            this.botaoAdicionarFuncao = document.querySelector('#botaoAdicionar');
+            this.adicionarFuncao = document.querySelector('#adicionarFuncao');
+            this.botaoAdicionarF();
+            this.botaoAdicionar();
             this.conquistas();
         }
 
         conquistas(){
-            this.pontos = this.utilizadorContolador.getPontos();
-            console.log(pontos)
+            let pontos = this.utilizadorControlador.getPontos();
 
             if(pontos >= 1000){
                 this.tabelaMedalhas.innerHTML += `<div class="media-body order-2 order-lg-1" id="primeiraBadge">
@@ -54,5 +55,23 @@ export default class pontuacaoMedalhas{
                 <img src="../img/premios/Trofeu.png" alt="badge" width="200" class="ml-lg-5 order-1 order-lg-2" />
                 </div>`
             }
+        }
+
+        botaoAdicionar(){
+            if (this.utilizadorControlador.admin()) {
+                this.tabelaMedalhas.innerHTML = `<button type="submit" class="btn btn-outline-danger" id="botaoAdicionar">Adicionar Badge</button>`;  
+       
+            }
+        }
+
+        botaoAdicionarF(){
+            // let nome = document.querySelector('#nomeBadge');
+            // let descricao = document.querySelector('#descricaoBadge');
+            // let pontosNecessarios = document.querySelector('#pontosNecessarios');
+            // let pontos = this.utilizadorControlador.getPontos();
+
+            //this.adicionarFuncao.innerHTML = `<input type="text" id="nomeBadge"><input type="text" id="descricaoBadge"><input t `
+
+             
         }
 }

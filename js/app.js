@@ -1,7 +1,7 @@
 import entrarVista from './views/entrarVista.js'
 import registoVista from './views/registoVista.js'
 import navbarVista from './views/navbarVista.js'
-// import infoVista from './views/infoVista.js'
+import infoVista from './views/infoVista.js'
 import jogoVista from './views/jogoVista.js'
 import jogoDetalheVista from './views/jogo-detalheVista.js'
 import perfilVista from './views/editarperfilVista.js'
@@ -18,7 +18,7 @@ class App {
             'entrar': [entrarVista],
             'registo': [registoVista],
             'inicio': [navbarVista, generoVista],
-            'info': [navbarVista],
+            'info': [navbarVista, infoVista],
             'info-detalhe': [navbarVista],
             'jogo': [navbarVista, jogoVista],
             'jogo-detalhe': [navbarVista, jogoDetalheVista],
@@ -33,6 +33,73 @@ class App {
     }
 
     #importDataFixtures() {
+        const informacao =[{
+            id: 1,
+            capitulo: 'Capitulo I',
+            titlo: "Covid-19",
+            subtitlo: 'Já ouviste falar do corona vírus?',
+            imagem: '../img/info/infetada.jpg',
+            texto: ['Os vírus são seres estranhos. Só vistos num telescópio, para sobreviverem, tentam viajar em grupo, entrando nariz,pela boca ou até mesmo pelos olhos das pessoas. São eles que fazem com que fiques doentinho. O corona é o vírus que faz a doença covid-19.', 'Não precisas de te preocupar, porque felizmente o teu corpo sabe proteger-se se tiveres cuidado.<br>Daqui a alguns capítulos, vou ensinar-te como o fazer.']
+        },
+        {
+            id: 2,
+            capitulo: 'Capitulo II',
+            titlo: "A pandemia",
+            subtitlo: 'Sabes o que é uma pandemia? Eu, o Xico, explico-te!',
+            imagem: '../img/info/pandemia.jpg',
+            texto: ['A COVID-19 foi considerada uma pandemia pela OMS (Organização Mundial de Saúde), o que significa que esta doeça infeciosa se espalhou pelo mundo e afetou muitas pessoas em muitos países diferentes.', 'É normal estares com medo numa altura destas.<br>Não tens de sentir vergonha por teres medo, todos estamos assim!<br>Nunca te esqueças, isto vai passsar e tudo vai ficar bem.']
+        },
+        {
+            id: 3,
+            capitulo: 'Capitulo III',
+            titlo: "Estarei com covid?",
+            subtitlo: 'Sabes que o covid é uma doença, mas como sabes se estás ou não infetado? Fica aqui a saber mais.',
+            imagem: '../img/info/cama doente.jpg',
+            texto: ['Os grandes sinais desta doença são a febre, estares com tosse e teres alguma falta de ar, dores de cabeça, garganta, não sentires cheiro nem sabor ao comer.<br>Os sintomas da covid são parecidos com os da gripe, por isso, deves ter ainda mais cuidado!']
+        },
+        {
+            id: 4,
+            capitulo: 'Capitulo IV',
+            titlo: "A transmissão",
+            subtitlo: 'Como é que o vírus passa de pessoa para pessoa?',
+            imagem: '../img/info/transmitir.jpg',
+            texto: ['O vírus transmite-se pelas gotinhas que "lançamos" ao espirrar, tossir ou até mesmo falar.<br>Também o podes apanhar ao tocar em coisas que estão infetadas.']
+        },
+        {
+            id: 5,
+            capitulo: 'Capitulo V',
+            titlo: "Protege-te",
+            subtitlo: 'Sabes como te proteger desta doença?',
+            imagem: '../img/info/lavar maos.jpg',
+            texto: [`Tenta ao máximo ter sempre estes cuidados:
+            <li>
+                <ul>Lava muitas vezes as mãos.</ul>
+                <ul>Usa água e sabonete ou algo que contenha álcool.</ul>
+                <ul> Afasta-te pelo menos 2 metros de alguém que esteja a espirrar ou a tossir.</ul>
+                <ul>Não toque nos olhos, no nariz ou na boca.</ul>
+                <ul>Cubre o nariz e a boca com o cotovelo ou com um lenço quando tossires ou espirrares.</ul>
+                <ul>Se te sentires doente, com tosse, febre ou dificuldade em respirar, fica em casa e procura ajuda de um médico.</ul>
+            </li>`]
+        },
+        {
+            id: 6,
+            capitulo: 'Capitulo VI',
+            titlo: "Colocar a máscara",
+            subtitlo: 'Também tens de ter cuidado com a forma como colocas a máscara.',
+            imagem: '../img/info/meter mascara.jpg',
+            texto: [`Quando tiveres de meter a máscara, segue estes passos comigo:
+            <li>
+                <ul>Antes de colocar a máscara, lava as mãos com água e sabonete ou com uma solução que tenha álcool;</ul>
+                <ul>Pega na máscara pelos elásticos;</ul>
+                <ul>Mete-a na posição correta de modo a ficar apertadinha na boca e no nariz;</ul>
+                <ul> Não metas as mãos na máscara enquanto a estiveres a usar!</ul>
+                <ul>Antes de a tirar, lava as mãos com água e sabonete ou com uma solução que tenha álcool;</ul>
+                <ul>Tira-a segurando nos elásticos e coloca-a no lixo, se descartável ou para lavar, se for reutilizável, de modo a não infetar nada;</ul>
+                <ul>Em último lugar, lavar outra vez as mãos.</ul>
+            
+            </li>`]
+        }]
+
         const jogos = [{
             id: 1,
             nome: 'Ajudar o Xico',
@@ -74,6 +141,9 @@ class App {
                 foto: '../img/jogos/virus.png',
                 genero: 'Preencher espaços',
                 descricao: 'Mete as imagens nos seus repetivos lugares',
+                avaliacao: {positiva: 5,
+                            normal: 2,
+                            negativa: 0},
                 detelhesJogo: [{item:['Vírus', 'Máscara', 'Álcool-gel', 'Distanciamento', 'Lavar as mãos', 'Doença'],
                                 imagens:['../../img/jogos/virus.png']}]
             }]
@@ -132,7 +202,8 @@ class App {
         // Carrega as innformações, caso não haja na localStorage 
         if (!localStorage.utilizadores) {
             localStorage.setItem('utilizadores', JSON.stringify(utilizadores))
-            localStorage.setItem('jogos', JSON.stringify(jogos));
+            localStorage.setItem('jogos', JSON.stringify(jogos))
+            localStorage.setItem('informação', JSON.stringify(informacao));
         }
     }
 
