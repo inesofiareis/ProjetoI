@@ -2,6 +2,7 @@ import entrarVista from './views/entrarVista.js'
 import registoVista from './views/registoVista.js'
 import navbarVista from './views/navbarVista.js'
 import infoVista from './views/infoVista.js'
+import infoDetalheVista from './views/info-detalheVista.js'
 import jogoVista from './views/jogoVista.js'
 import jogoDetalheVista from './views/jogo-detalheVista.js'
 import perfilVista from './views/editarperfilVista.js'
@@ -19,7 +20,7 @@ class App {
             'registo': [registoVista],
             'inicio': [navbarVista, generoVista],
             'info': [navbarVista, infoVista],
-            'info-detalhe': [navbarVista],
+            'info-detalhe': [navbarVista, infoDetalheVista],
             'jogo': [navbarVista, jogoVista],
             'jogo-detalhe': [navbarVista, jogoDetalheVista],
             'perfil': [navbarVista, perfilVista, pontuacaoVista]
@@ -35,41 +36,41 @@ class App {
     #importDataFixtures() {
         const informacao =[{
             id: 1,
-            capitulo: 'Capitulo I',
-            titlo: "Covid-19",
-            subtitlo: 'Já ouviste falar do corona vírus?',
+            capitulo: 'capitulo1',
+            titulo: "Covid-19",
+            subtitulo: 'Já ouviste falar do corona vírus?',
             imagem: '../img/info/infetada.jpg',
             texto: ['Os vírus são seres estranhos. Só vistos num telescópio, para sobreviverem, tentam viajar em grupo, entrando nariz,pela boca ou até mesmo pelos olhos das pessoas. São eles que fazem com que fiques doentinho. O corona é o vírus que faz a doença covid-19.', 'Não precisas de te preocupar, porque felizmente o teu corpo sabe proteger-se se tiveres cuidado.<br>Daqui a alguns capítulos, vou ensinar-te como o fazer.']
         },
         {
             id: 2,
-            capitulo: 'Capitulo II',
-            titlo: "A pandemia",
-            subtitlo: 'Sabes o que é uma pandemia? Eu, o Xico, explico-te!',
+            capitulo: 'capitulo2',
+            titulo: "A pandemia",
+            subtitulo: 'Sabes o que é uma pandemia? Eu, o Xico, explico-te!',
             imagem: '../img/info/pandemia.jpg',
             texto: ['A COVID-19 foi considerada uma pandemia pela OMS (Organização Mundial de Saúde), o que significa que esta doeça infeciosa se espalhou pelo mundo e afetou muitas pessoas em muitos países diferentes.', 'É normal estares com medo numa altura destas.<br>Não tens de sentir vergonha por teres medo, todos estamos assim!<br>Nunca te esqueças, isto vai passsar e tudo vai ficar bem.']
         },
         {
             id: 3,
-            capitulo: 'Capitulo III',
-            titlo: "Estarei com covid?",
-            subtitlo: 'Sabes que o covid é uma doença, mas como sabes se estás ou não infetado? Fica aqui a saber mais.',
+            capitulo: 'capitulo3',
+            titulo: "Estarei com covid?",
+            subtitulo: 'Sabes que o covid é uma doença, mas como sabes se estás ou não infetado? Fica aqui a saber mais.',
             imagem: '../img/info/cama doente.jpg',
             texto: ['Os grandes sinais desta doença são a febre, estares com tosse e teres alguma falta de ar, dores de cabeça, garganta, não sentires cheiro nem sabor ao comer.<br>Os sintomas da covid são parecidos com os da gripe, por isso, deves ter ainda mais cuidado!']
         },
         {
             id: 4,
-            capitulo: 'Capitulo IV',
-            titlo: "A transmissão",
-            subtitlo: 'Como é que o vírus passa de pessoa para pessoa?',
+            capitulo: 'capitulo4',
+            titulo: "A transmissão",
+            subtitulo: 'Como é que o vírus passa de pessoa para pessoa?',
             imagem: '../img/info/transmitir.jpg',
             texto: ['O vírus transmite-se pelas gotinhas que "lançamos" ao espirrar, tossir ou até mesmo falar.<br>Também o podes apanhar ao tocar em coisas que estão infetadas.']
         },
         {
             id: 5,
-            capitulo: 'Capitulo V',
-            titlo: "Protege-te",
-            subtitlo: 'Sabes como te proteger desta doença?',
+            capitulo: 'capitulo5',
+            titulo: "Protege-te",
+            subtitulo: 'Sabes como te proteger desta doença?',
             imagem: '../img/info/lavar maos.jpg',
             texto: [`Tenta ao máximo ter sempre estes cuidados:
             <li>
@@ -83,9 +84,9 @@ class App {
         },
         {
             id: 6,
-            capitulo: 'Capitulo VI',
-            titlo: "Colocar a máscara",
-            subtitlo: 'Também tens de ter cuidado com a forma como colocas a máscara.',
+            capitulo: 'capitulo6',
+            titulo: "Colocar a máscara",
+            subtitulo: 'Também tens de ter cuidado com a forma como colocas a máscara.',
             imagem: '../img/info/meter mascara.jpg',
             texto: [`Quando tiveres de meter a máscara, segue estes passos comigo:
             <li>
@@ -159,11 +160,14 @@ class App {
                 dataNascimento: '2002-08-24',
                 genero: 'Feminino',
                 pontos: 1000,
-                avatar: '../img/navbar/tatudobem.png',
+                avatar: '../img/navbar/Avatar.png',
                 tipo: 'administrador',
                 estado: 'regular',
                 amigos: ['fifs', 'PauloR'],
-                atividades: 10
+                atividades: [{
+                    atividade: 'Ajudar o xico',
+                    pontuacao: 100
+                }]
             },
             {
                 id: 2,
@@ -175,11 +179,14 @@ class App {
                 dataNascimento: '2001-11-07',
                 genero: 'Feminino',
                 pontos: 1000,
-                avatar: '../img/navbar/tatudobem.png',
+                avatar: '../img/navbar/Avatar.png',
                 tipo: 'administrador',
                 estado: 'regular',
                 amigos: ['InêsReis', 'PauloR'],
-                atividades: 10
+                atividades: [{
+                    atividade: 'Ajudar o xico',
+                    pontuacao: 100
+                }]
             },
             {
                 id: 3,
@@ -191,11 +198,14 @@ class App {
                 dataNascimento: '2000-09-16',
                 genero: 'Masculino',
                 pontos: 1000,
-                avatar: '../img/navbar/tatudobem.png',
+                avatar: '../img/navbar/Avatar.png',
                 tipo: 'administrador',
                 estado: 'regular',
                 amigos: ['InêsReis', 'fifs'],
-                atividades: 10
+                atividades: [{
+                    atividade: 'Ajudar o xico',
+                    pontuacao: 100
+                }]
             }
         ];
 
@@ -203,7 +213,7 @@ class App {
         if (!localStorage.utilizadores) {
             localStorage.setItem('utilizadores', JSON.stringify(utilizadores))
             localStorage.setItem('jogos', JSON.stringify(jogos))
-            localStorage.setItem('informação', JSON.stringify(informacao));
+            localStorage.setItem('informacao', JSON.stringify(informacao));
         }
     }
 

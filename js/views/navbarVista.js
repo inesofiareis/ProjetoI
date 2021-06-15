@@ -15,7 +15,7 @@ export default class UtilizadorVista {
         let avatar = this.utilizadorControlador.avatar();
 
         this.utilizador.innerHTML = `<span id="perfil" class="avatarTexto navbar-text" id="nomeUtilizador">${nomeApelido}</span>`;
-        this.imagem.scr = avatar; 
+        this.imagem.src = avatar; 
 
     }
 }

@@ -23,7 +23,7 @@ export default class utilizadorControlador {
             const estado = 'regular' //utilizador estra com estado de utilizador regular
             const amigos = [] //lista vazia para puder ser adicionado novos amigos
             const atividades = 0 //numero de ativades que utilizador já fez (0 no inicio)
-            this.utilizadores.push(new utilizadorModelo(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero, pontos, avatar, tipo, estado, atividades))
+            this.utilizadores.push(new utilizadorModelo(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero, pontos, avatar, tipo, estado, amigos, atividades))
             localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
             sessionStorage.setItem('utilizadorLogado', nomeUtilizador)
         }
@@ -31,10 +31,16 @@ export default class utilizadorControlador {
 
     // login.html
     login(nomeUtilizador, palavraPasse) {
-        if (this.utilizadores.some(utilizador => utilizador.nomeUtilizador === nomeUtilizador && utilizador.palavraPasse === palavraPasse)) {
-            sessionStorage.setItem('utilizadorLogado', nomeUtilizador)
-        } else {
-            throw Error('Dados inválidos!')
+        let estado = this.utilizadoresInfo(nomeUtilizador)
+        if (estado.estado == 'bloqueado'){
+            throw Error('Não podes entrar na nossa aplicação porque foste bloquado')
+        }
+        else{
+            if (this.utilizadores.some(utilizador => utilizador.nomeUtilizador === nomeUtilizador && utilizador.palavraPasse === palavraPasse)) {
+                sessionStorage.setItem('utilizadorLogado', nomeUtilizador)
+            } else {
+                throw Error('Dados inválidos!')
+            }
         }
     }
 
@@ -93,7 +99,7 @@ export default class utilizadorControlador {
      */
     avatar() {
         const utilizador = this.utilizadoresInfo()
-
+        
         return utilizador.avatar
     }
 
@@ -146,12 +152,34 @@ export default class utilizadorControlador {
     /**
      * Função para adicionar mais uma atividade feita quando o utilizador conclui mais uma atividade
      */
-    setAtividades() {
+    setAtividades(atividade, pontos) {
         let utilizador = this.utilizadoresInfo()
+        let atividadeRealizada = false //ver se a atividade foi realizada anteriormente
 
-        utilizador.atividades++
+        for (let i of utilizador.atividades){
+            if (i.atividade == atividade){
+                if (i.pontuacao < pontos){
+                    i.pontuacao = pontos
+                    atividadeRealizada = true
 
+                    break
+                }
+            }
+        }
+
+        if(!atividadeRealizada){
+            utilizador.atividades.push({atividade: atividade, pontuacao: pontos})
+        }
+        console.log(utilizador.atividades)
         this.guardarLocalStorage(utilizador)
+    }
+
+    atividadePontuacao(atividades, atividade){
+        for (const ati of atividades){
+            if(ati.atividade == atividade){
+                return ati.pontuacao
+            }
+        }
     }
     //perfil.html
 

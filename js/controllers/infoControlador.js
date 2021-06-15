@@ -10,13 +10,13 @@ export default class infoController {
      * 
      * @param {string} titulo titulo do capitulo
      */
-    setCapituloAtual(titulo){
-        this.capituloAtual = titulo
-        sessionStorage.setItem('informacao', titulo)
+    setCapituloAtual(capitulo){
+        this.capituloAtual = capitulo
+        sessionStorage.setItem('informacao', capitulo)
     }
 
     getCapituloAtual(){
-        return this.capitulos.find(capitulo => capitulo.titulo == this.capituloAtual)
+        return this.capitulos.find(capitulo => capitulo.capitulo == this.capituloAtual)
     }
 
     

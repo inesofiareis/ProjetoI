@@ -122,7 +122,7 @@ export default class jogoVista{
                                                     </div>
                                                     <div>
                                                         <label class="form-label" for="imgJogo">Imagem do jogo:</label>
-                                                        <input class="form-control" type="text" name="imgJogo" id="imgJogo">
+                                                        <input class="form-control" type="file" name="imgJogo" id="imgJogo">
                                                     </div>
                                                     <div>
                                                         <label class="form-label" for="descricao">Descrição</label>

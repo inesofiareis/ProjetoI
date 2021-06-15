@@ -4,6 +4,7 @@ export default class genero{
     constructor(){
         this.utilizadorControlador = new utilizadorControlador();
 
+        this.fotoPerfil = document.querySelector('.fotoPerfil');
         this.nomeUtilizador = document.querySelector('#txtNome');
         this.emailUtilizador = document.querySelector('#txtEmail');
         this.palavraPasse = document.querySelector('#txtPass');
@@ -12,13 +13,17 @@ export default class genero{
         this.tabelaUtilizadores = document.querySelector('#gerirUtilizadores');
         this.nAtividades = document.querySelector('.atividadesFeitas');
         this.nomeAtividades = document.querySelector('#nomeDaAtividade');
+        this.pontuacaoAtividade = document.querySelector('.pontuacaoAtividade')
+
         this.atualizarDados();
         this.gerirUtilizadores();
+        this.avatar()
         this.placeholder();
         this.botaoAlterarTipo();
         this.botaoRemover();
         this.botaoBloquear();
         this.estatisticas();
+        this.estatisticasAtividade()
     }
 
     atualizarDados(){
@@ -38,6 +43,12 @@ export default class genero{
                 // mensagem.innerHTML = `<div class="alert alert-danger" role="alert">${e}</div>`;
             }
         })
+    }
+
+    avatar(){
+        let avatar = this.utilizadorControlador.avatar()
+
+        this.fotoPerfil.src = avatar
     }
 
     placeholder(){
@@ -128,8 +139,20 @@ export default class genero{
 
     estatisticas(){
         let atividades = this.utilizadorControlador.getAtividades();
-        this.nAtividades.innerHTML = atividades;
-        this.nomeAtividades.innerHTML += `<option value=""></option>`
+        this.nAtividades.innerHTML = atividades.length;
+        for (let atividade of atividades){
+            this.nomeAtividades.innerHTML += `<option value="${atividade.atividade}">${atividade.atividade}</option>`
+        }
+        
+
+    }
+
+    estatisticasAtividade(){
+        this.nomeAtividades.addEventListener('change', () =>{
+            let atividades = this.utilizadorControlador.getAtividades();
+            let atividadePontuacao = this.utilizadorControlador.atividadePontuacao(atividades, this.nomeAtividades.value)
+            this.pontuacaoAtividade.innerHTML = `<h4 class="pontuacaoAtividade text-justify textoAtividade"> Nessa atividade tiveste ${atividadePontuacao} pontos!</h4>`
+        })
     }
 
 }

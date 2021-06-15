@@ -473,7 +473,9 @@ body {
 
 
 /* O CSS DOS JOGOS */
-
+.avaliacaoBtn:hover{
+    background-color: #ff8e8c;
+}
 
 /* PROTEGE-TE */
 

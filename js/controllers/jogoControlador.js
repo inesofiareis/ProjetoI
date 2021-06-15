@@ -1,9 +1,7 @@
 import jogoModelo from '../models/jogoModelo.js'
-// import utilizadorControlador from '../controllers//utilizadorControlador.js'
 
 export default class jogosController {
     constructor() {
-        // this.utilizadorControlador = new utilizadorControlador()
 
         this.jogos = localStorage.jogos ? JSON.parse(localStorage.jogos) : [];
         this.jogoAtual = sessionStorage.jogos ? sessionStorage.jogos : null

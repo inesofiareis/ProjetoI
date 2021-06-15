@@ -31,8 +31,8 @@ export default class infoVista{
 
     btnCapitulo(){
         for (let btnCapitulo of this.btnsCapitulo){
-            btnCapitulo.addEventListener('click', event =>{
-                this.infoControlador.setCapituloAtual(event.target.id)
+            btnCapitulo.addEventListener('click', () =>{
+                this.infoControlador.setCapituloAtual(btnCapitulo.id)
                 location.href = '../html/info-detalhe.html';
             })
         }

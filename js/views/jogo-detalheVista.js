@@ -23,9 +23,8 @@ export default class JogosDetalhes {
         this.jogo();
         this.gostos();
 
-        let jogo = this.jogoControlador.getJogoAtual();
-
         //alimentar a pagina
+        let jogo = this.jogoControlador.getJogoAtual();
 
         document.querySelector('.nomeJogo').innerHTML = jogo.nome;
         document.querySelector('.descJogo').innerHTML = jogo.descricao;
@@ -161,7 +160,7 @@ export default class JogosDetalhes {
             alert(`A tua pontuação foi de ${pontos}`)
 
             this.utilizadorControlador.setPontos(pontos);
-            this.utilizadorControlador.setAtividades();
+            this.utilizadorControlador.setAtividades(sessionStorage['jogos'], pontos);
 
             // this.utilizadorControlador.setPontos(pontos)
 
@@ -233,6 +232,13 @@ export default class JogosDetalhes {
             const resultado = this.jogoControlador.jogoPreencherEspacos(caixaVirus.id, imagemVirus.id, caixaMascara.id, imagemMascara.id, caixaAlcool.id, imagemAlcool.id, caixaDistancia.id, imagemDistancia.id, caixaLavar.id, imagemLavar.id, caixaDoenca.id, imagemDoenca.id)
 
             alert(`Tens ${resultado} certas`)
+
+            let pontos = resultado*20
+
+            alert(`A tua pontuação foi de ${pontos}`)
+
+            this.utilizadorControlador.setPontos(pontos);
+            this.utilizadorControlador.setAtividades(sessionStorage['jogos'], pontos);
         })
     }
 
