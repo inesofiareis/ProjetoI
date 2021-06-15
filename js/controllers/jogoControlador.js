@@ -89,7 +89,7 @@ export default class jogosController {
      * @returns retorna a quantidade de respostas certas
      */
     respostasQuestionario(rUm, rDois, rTres, rQuatro, rCinco){
-        let jogo = this.jogoQuestionario()
+        let jogo = this.getJogo()
         let certas = 0 //número de respostas certas
 
         if  (rUm == jogo.respostasCorretas[0]){

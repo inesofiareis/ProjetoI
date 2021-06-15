@@ -178,7 +178,6 @@ export default class utilizadorControlador {
         if(!atividadeRealizada){
             utilizador.atividades.push({atividade: atividade, pontuacao: pontos})
         }
-        console.log(utilizador.atividades)
         this.guardarLocalStorage(utilizador)
     }
 
