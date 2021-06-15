@@ -1,17 +1,20 @@
 import utilizadorControlador from '../controllers/utilizadorControlador.js';
+import gamificacaoControlador from '../controllers/gamificacaoControlador.js';
 
 export default class pontuacaoMedalhas{
 
         constructor(){
             this.utilizadorControlador = new utilizadorControlador();
+            this.gamificacaoControlador = new gamificacaoControlador()
             this.tabelaMedalhas = document.querySelector('#tabelaMedalha');
-            this.botaoAdicionarMedalha = document.querySelector('#botaoAdicionar')
             this.adicionar = document.querySelector('#funcaoAdicionar');
+            this.botaoAdicionarMedalha = document.querySelector('#botaoAdicionarMedalha')
             // this.adicionarFuncao = document.querySelector('#funcaoAdicionar');
             this.btnAdicionar();
-            this.adicionarBadge();
             // this.botaoAdicionar();
             this.conquistas();
+            this.novoBadge()
+
         }
 
         conquistas(){
@@ -57,86 +60,46 @@ export default class pontuacaoMedalhas{
                 <img src="../img/premios/Trofeu.png" alt="badge" width="200" class="ml-lg-5 order-1 order-lg-2" />
                 </div>`
             }
+
+            let novasMedalhas = this.gamificacaoControlador.getMedalhas()
+
+
+            for (let medalha of novasMedalhas){
+                if(pontos >= medalha.pontos){
+                    this.tabelaMedalhas.innerHTML += `<div class="media-body order-2 order-lg-1" id="Badge" >
+                    <h5 class="mt-0 font-weight-bold mb-2">${medalha.nome}</h5>
+                    <p class="font-italic text-muted mb-0 small">${medalha.descricao}</p>  
+                    <img src="${medalha.img}" alt="badge" width="200" class="ml-lg-5 order-1 order-lg-2" />
+                    </div>`
+                }
+            }
         }
 
         btnAdicionar(){
             if (this.utilizadorControlador.admin()) {
                 this.botaoAdicionarMedalha.style.visibility = 'visible'
 
-                this.adicionar.innerHTML = `<label for="nome">Nome</label>
-                <input type="text" id="nome">
-                <label for="descricao">Descrição</label>
-                <input type="text" id="descricao">
-                <label for="pontosNecessarios">Pontos Necessários</label>
-                <input type="number" id="pontosNecessarios">`
+                this.adicionar.innerHTML = `<label for="nomeBadge">Nome</label>
+                <input type="text" id="nomeBadge">
+                <label for="descricaoBadge">Descrição</label>
+                <input type="text" id="descricaoBadge">
+                <label for="pontosNecessariosBadge">Pontos Necessários</label>
+                <input type="number" id="pontosNecessariosBadge">`
+
+                this.nomeBadge = document.querySelector('#nomeBadge');
+                this.descricaoBadge = document.querySelector('#descricaoBadge');
+                this.pontosNecessariosBadge = document.querySelector('#pontosNecessariosBadge');
             }
 
-            // this.adicionarBadge();
         }
 
-        adicionarBadge(){
-            document.querySelector('#botaoAdicionar').addEventListener('click', () => {
-                alert('boa')
-
-                let nome = document.querySelector('#nome');
-                let descricao = document.querySelector('#descricao');
-                let pontosNecessarios = document.querySelector('#pontosNecessarios');
+        novoBadge(){
+            botaoAdicionarMedalha.addEventListener("click", () => {
                 let pontos = this.utilizadorControlador.getPontos();
-
-                if(pontos >= pontosNecessarios){
-                    this.tabelaMedalhas.innerHTML += `<div class="media-body order-2 order-lg-1" id="Badge" >
-                    <h5 class="mt-0 font-weight-bold mb-2">${nome}</h5>
-                    <p class="font-italic text-muted mb-0 small">${descricao}</p>  
-                    <img src="../img/premios/Badge.png" alt="badge" width="200" class="ml-lg-5 order-1 order-lg-2" />
-                                
-                    </div>`
-                }
-
-            })
-          
-
-        }
-
-
-
-
-
-
-
-//         botaoAdicionar(){
-//             if (this.utilizadorControlador.admin()) {
-//                 this.tabelaMedalhas.innerHTML = `<button type="submit" class="btn btn-outline-danger" id="botaoAdicionar">Adicionar Badge</button>`;  
-//             }
-//             let nome = document.querySelector('#nomeBadge');
-//             let descricao = document.querySelector('#descricaoBadge');
-//             let pontosNecessarios = document.querySelector('#pontosNecessarios');
-//             let pontos = this.utilizadorControlador.getPontos();
-            
-//             if(pontos >= pontosNecessarios){
-//                 this.tabelaMedalhas.innerHTML += `<div class="media-body order-2 order-lg-1" id="trofeu">
-//                 <h5 class="mt-0 font-weight-bold mb-2"> ${nome}</h5>
-//                 <p class="font-italic text-muted mb-0 small">${descricao}</p>
-//                 <img src="../img/premios/Badge.png" alt="badge" width="200" class="ml-lg-5 order-1 order-lg-2" />
-//                 </div>`
-             
-//             }
-//         }
-
-//         adicionarBadge(){
-//             let resultado
-
-//             if (this.utilizadorControlador.admin()) {
-//                 resultado += `<button class="btn btn-danger" id="botaoAdicionar">Adicionar Badge</button>`
-//             }
-            
-            
-
-            
-//             this.botaoAdicionarBadge = document.querySelector('#botaoAdicionar')
-//             // this.botaoAdicionarBadge.addEventListener('click', () => {
-//                 //inserir badge
-//                 // // this.adicionarFuncao.innerHTML = `<input type="text" id="nomeBadge"><input type="text" id="descricaoBadge"><input type="number" id="pontosNecessarios">`  
                 
-//             // })
-//         }
+                this.gamificacaoControlador.guardarMedalha(this.nomeBadge.value, this.descricaoBadge.value, '../img/premios/Badge.png', this.pontosNecessariosBadge.value)
+
+                location.reload()
+            })
+        }
 }

@@ -1075,7 +1075,7 @@ body {
     padding: 10px 25px 10px 25px;
 }
 
-#jogodamemoria {
+#preencherEspaços {
     background-color: #FAF8DA;
     color: #EF9AC3;
     border-color: #EF9AC3;
@@ -1126,4 +1126,8 @@ body {
 .nomeCapítulo {
     margin-top: 10px;
     color:#444E6E;
+}
+
+.modal-body{
+    text-align: center;
 }

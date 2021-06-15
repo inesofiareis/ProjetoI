@@ -31,12 +31,4 @@ export default class Informacao {
                             this.opcaoTresperguntaCinco = */
 
         }
-        // Compara duas bandas pelo seu nome. Faz uma ordenação alfabética crescente
-        static compare(tituloA, tituloB) {
-                if (tituloA.titulo < tituloB.titulo)
-                        return -1;
-                if (tituloA.titulo > tituloB.titulo)
-                        return 1;
-                return 0;
-        }
 }

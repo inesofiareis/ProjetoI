@@ -122,7 +122,7 @@ export default class jogoVista{
                                                     </div>
                                                     <div>
                                                         <label class="form-label" for="imgJogo">Imagem do jogo:</label>
-                                                        <input class="form-control" type="file" name="imgJogo" id="imgJogo">
+                                                        <input class="form-control" type="text" name="imgJogo" id="imgJogo">
                                                     </div>
                                                     <div>
                                                         <label class="form-label" for="descricao">Descrição</label>
@@ -135,7 +135,6 @@ export default class jogoVista{
                                                             <option value="">-- Seleciona um genero --</option>
                                                             <option value="Questionários">Questionários</option>
                                                             <option value="Preencher espaços">Preencher espaços</option>
-                                                            <option value="Jogo da memória">Jogo da memória</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -168,6 +167,9 @@ export default class jogoVista{
         this.generoJogo.addEventListener('change', () => {
             if(this.generoJogo.value == 'Questionários'){
                 this.adicionarJogoQuestionario()
+            }
+            if(this.generoJogo.value == 'Preencher espaços'){
+                this.adicionarJogoPreencher()
             }
         })
     }
@@ -346,6 +348,97 @@ export default class jogoVista{
         this.confirmarQuestionario()
     }
 
+    adicionarJogoPreencher(){
+        this.informacaoJogo.innerHTML = `<div class="col preencher">
+                                            <div class='row'>
+                                                <div class='col'>
+                                                    <input class="form-control" type="text" name="caixa1" id="caixa1" placeholder="Primeira caixa">
+                                                </div>                                                
+                                                <div class='col'>
+                                                    <input class="form-control" type="text" name="img1" id="img1" placeholder="Primeira Imagem">
+                                                </div>                                                
+                                            </div>
+                                            <div class='row'>
+                                                <div class='col'>
+                                                    <input class="form-control" type="text" name="caixa2" id="caixa2" placeholder="Segunda caixa">
+                                                </div>                                                
+                                                <div class='col'>
+                                                    <input class="form-control" type="text" name="img2" id="img2" placeholder="Segunda Imagem">
+                                                </div>                                                
+                                            </div>
+                                            <div class='row'>
+                                                <div class='col'>
+                                                    <input class="form-control" type="text" name="caixa3" id="caixa3" placeholder="Terceira caixa">
+                                                </div>                                                
+                                                <div class='col'>
+                                                    <input class="form-control" type="text" name="img3" id="img3" placeholder="Terceira Imagem">
+                                                </div>                                                
+                                            </div>
+                                            <div class='row'>
+                                                <div class='col'>
+                                                    <input class="form-control" type="text" name="caixa4" id="caixa4" placeholder="Quarta caixa">
+                                                </div>                                                
+                                                <div class='col'>
+                                                    <input class="form-control" type="text" name="img4" id="img4" placeholder="Quarta Imagem">
+                                                </div>                                                
+                                            </div>
+                                            <div class='row'>
+                                                <div class='col'>
+                                                    <input class="form-control" type="text" name="caixa5" id="caixa5" placeholder="Quinta caixa">
+                                                </div>                                                
+                                                <div class='col'>
+                                                    <input class="form-control" type="text" name="img5" id="img5" placeholder="Quinta Imagem">
+                                                </div>                                                
+                                            </div>
+                                            <div class='row'>
+                                                <div class='col'>
+                                                    <input class="form-control" type="text" name="caixa6" id="caixa6" placeholder="Sexta caixa">
+                                                </div>                                                
+                                                <div class='col'>
+                                                    <input class="form-control" type="text" name="img6" id="img6" placeholder="Sexta Imagem">
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <input class="btn btn-danger" type="button" value="Cancelar" id='cancelarAdicao'>
+                                            </div>
+                                            <div class="col"></div>
+                                            <div class="col-2">
+                                                <input class="btn btn-success" type="button" value="Confirmar" id='confirmar'>
+                                            </div>
+                                        </div>`
+
+        this.botaoCancelar = document.querySelector('#cancelarAdicao')
+        this.cancelarAdicao()
+
+        // Primeira caixa
+        this.caixa1 = document.querySelector('#caixa1')
+        this.img1 = document.querySelector('#img1')
+
+        // Segunda caixa
+        this.caixa2 = document.querySelector('#caixa2')
+        this.img2 = document.querySelector('#img2')
+
+        // Terceira caixa
+        this.caixa3 = document.querySelector('#caixa3')
+        this.img3 = document.querySelector('#img3')
+
+        // Quarta caixa
+        this.caixa4 = document.querySelector('#caixa4')
+        this.img4 = document.querySelector('#img4')
+
+        // Quinta caixa
+        this.caixa5 = document.querySelector('#caixa5')
+        this.img5 = document.querySelector('#img5')
+
+        // Sexta caixa
+        this.caixa6 = document.querySelector('#caixa6')
+        this.img6 = document.querySelector('#img6')
+
+        this.botaoConfirmarPreencher = document.querySelector('#confirmar')
+        this.confirmarPreencher()
+    }
 
     cancelarAdicao(){
         this.botaoCancelar.addEventListener('click', () => {
@@ -356,6 +449,12 @@ export default class jogoVista{
     confirmarQuestionario(){
         this.botaoConfirmarQuestionario.addEventListener('click', () => {
             this.jogoControlador.novoJogoQuestionario(this.nomeJogo.value, this.imgJogo.value, this.descricao.value, this.generoJogo.value, this.pergunta1.value, this.alternativa1, this.resposta1.value, this.pergunta2.value, this.alternativa2, this.resposta2.value, this.pergunta3.value, this.alternativa3, this.resposta3.value, this.pergunta4.value, this.alternativa4, this.resposta4.value, this.pergunt5.value, this.alternativa5, this.respost5.value)
+        })
+    }
+
+    confirmarPreencher(){
+        this.botaoConfirmarPreencher.addEventListener('click', () =>{
+            this.jogoControlador.novoJogoPreencher(this.nomeJogo.value, this.imgJogo.value, this.descricao.value, this.generoJogo.value, this.caixa1.value, this.img1.value, this.caixa2.value, this.img2.value, this.caixa3.value, this.img3.value, this.caixa4.value, this.img4.value, this.caixa5.value, this.img5.value, this.caixa6.value, this.img6.value)
         })
     }
 }

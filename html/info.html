@@ -140,7 +140,9 @@
                     <p class="display-3 introXico text-center" id="textoInfo">
                         Sê bem-vinde à área de aprender! <br> Explora os capítulos que tenho para ti!</p>
                 </div>
-
+                <div class="row justify-content-md-end">
+                    <button class="btn btn-outline-dark" id="botaoAdicionar" style="visibility: hidden;" data-toggle="modal" data-target="#modalInfo">Adicionar</button>
+                </div>
                 <div class="row justify-content-center caixaDaInfo">
                     <div class="col-lg-4 xicoDaPagina">
                         <img src="../img/info/Xico.png" alt="Xico" title="Olá, eu sou o Xico!" width="320px"
@@ -304,6 +306,44 @@
         </div>
     </div>
 </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Adicionar/Editar Capitulos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <select class="form-control" name="capitulo" id="capituloEditar">
+                        <option value="">-- Escolhe um Capitulo</option>
+                        <option value="capitulo1">Capitulo 1</option>
+                        <option value="capitulo2">Capitulo 2</option>
+                        <option value="capitulo3">Capitulo 3</option>
+                        <option value="capitulo4">Capitulo 4</option>
+                        <option value="capitulo5">Capitulo 5</option>
+                        <option value="capitulo6">Capitulo 6</option>
+                    </select>
+                </div>
+                <input class="form-control" type="text" name="titulo" id="titulo" placeholder="Titulo">
+                <input class="form-control" type="text" name="subtitulo" id="subtitulo" placeholder="Subtitulo">
+                <input class="form-control" type="text" name="imagem" id="imagem" placeholder="Imagem">
+                <label for="texto1">Primeiro Paragrafo</label>
+                <textarea class="form-control" name="texto1" id="texto1"rows="5"></textarea>
+                <label for="texto2">Segundo Paragrafo</label>
+                <textarea class="form-control" name="texto2" id="texto2"rows="5"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-lg" id="guardarInfo">Guardar</button>
+                <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Imagens fixas -->
 <img src="../img/Tatu_pagina.png" alt="Xico" title="Olá, eu sou o Xico!" width="250px" id="xicoPagina">
 <img src="../img/Botao_chat.png" alt="Amigos" title="chat" width="75px" id="chat">

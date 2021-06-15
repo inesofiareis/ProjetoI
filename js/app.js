@@ -113,27 +113,14 @@ class App {
             detelhesJogo: [{
                                     id:1,
                                     idades: '<12',
-                                    perguntas: ['Em que ano foi descoberto o covid-19?', 'Em que pais começou a pandemia?', 'Em que mes houve o primeiro caso de covid-19 em Portugal?', 'Qual destes não é um sintoma do covid-19?', 'O que temos de usar no rosto para nos proteger e proteger aos outros do corona virus'],
-                                    respostasCorretas: ['2019', 'China', 'Março', 'Gripe', 'Mascara'],
+                                    perguntas: ['O que devo fazer quando chego a casa?', 'Qual não é uma forma de me proteger do vírus?', 'Qual a distância que devo manter?', 'Qual destes não é um sintoma do covid-19?', 'O que temos de usar no rosto para nos proteger?'],
+                                    respostasCorretas: ['Lavar as mãos', 'Correr', '2m', 'Espirros', 'Mascara'],
                                     alternativas: [
-                                                    ['2021', '2019', '2018', '2020'],
-                                                    ['Portugal', 'Italia', 'China', 'India'],
-                                                    ['Março', 'Janeiro', 'Abril', 'Fevereiro'],
-                                                    ['Tosse', 'Febre', 'Dores de cabeça', 'Gripe'],
+                                                    ['Ir jogar', 'Comer aqualas bolachas deliciosas da mãe', 'Lavar as mãos', 'Ver televisão'],
+                                                    ['Mascara', 'Lavar as mãos', 'Ir correr', 'Distanciamento'],
+                                                    ['2m', '0.5m', '1m', '5m'],
+                                                    ['Tosse', 'Febre', 'Dores de cabeça', 'Espirros'],
                                                     ['Alcool em gel', 'Mascara', 'Protetor Solar', 'Capacete']
-                                                ]
-                                    },
-                                {
-                                    id:2,
-                                    idades: '>= 12',
-                                    perguntas: ['pergunta1', 'pergunta2', 'pergunta3', 'pergunta4', 'pergunta5'],
-                                    respostasCorretas: ['resposta1', 'resposta2', 'resposta3', 'resposta4', 'resposta5'],
-                                    alternativas: [
-                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
-                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
-                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
-                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4'],
-                                                    ['alternativa1', 'alternativa2', 'alternativa3', 'alternativa4']
                                                 ]
                                     }]
                                 },
@@ -145,8 +132,12 @@ class App {
                 avaliacao: {positiva: 5,
                             normal: 2,
                             negativa: 0},
-                detelhesJogo: [{item:['Vírus', 'Máscara', 'Álcool-gel', 'Distanciamento', 'Lavar as mãos', 'Doença'],
-                                imagens:['../../img/jogos/virus.png']}]
+                detelhesJogo: [ {caixa: "Vírus", imagem: "../../img/jogos/virus.png"},
+                                {caixa: "Máscara", imagem: "../../img/jogos/mascara.png"},
+                                {caixa: "Álcool-gel", imagem: "../../img/jogos/alcool.png"},
+                                {caixa: "Distanciamento", imagem: "../../img/jogos/distanciamento.png"},
+                                {caixa: "Lavar as mãos", imagem: "../../img/jogos/lavar maos.png"},
+                                {caixa: "Doença", imagem: "../../img/jogos/tobias febre.png"}]
             }]
 
         const utilizadores = [

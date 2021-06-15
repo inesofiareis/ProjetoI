@@ -18,7 +18,7 @@ export default class utilizadorControlador {
         } else {
             const novoID = this.utilizadores.length > 0 ? this.utilizadores[this.utilizadores.length - 1].id + 1 : 1
             const pontos = 0 //utilizador começa com 0 pontos
-            const avatar = '../img/navbar/tatudobem.png' //avatar do utilizador
+            const avatar = '../img/avatares/Avatar.png' //avatar do utilizador
             const tipo = 'utilizador' //tipo de utilizador, para novos são sempre utilizadores
             const estado = 'regular' //utilizador estra com estado de utilizador regular
             const amigos = [] //lista vazia para puder ser adicionado novos amigos
@@ -101,6 +101,14 @@ export default class utilizadorControlador {
         const utilizador = this.utilizadoresInfo()
         
         return utilizador.avatar
+    }
+
+    setAvatar(avatar){
+        let utilizador = this.utilizadoresInfo()
+        
+        utilizador.avatar = avatar
+
+        this.guardarLocalStorage(utilizador)
     }
 
     // perfil.html

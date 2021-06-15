@@ -13,7 +13,9 @@ export default class genero{
         this.tabelaUtilizadores = document.querySelector('#gerirUtilizadores');
         this.nAtividades = document.querySelector('.atividadesFeitas');
         this.nomeAtividades = document.querySelector('#nomeDaAtividade');
-        this.pontuacaoAtividade = document.querySelector('.pontuacaoAtividade')
+        this.pontuacaoAtividade = document.querySelector('.pontuacaoAtividade');
+        this.avataresModal = document.querySelector('#avataresModal');
+        this.guardarAvatar = document.querySelector('#guardarAvatar');
 
         this.atualizarDados();
         this.gerirUtilizadores();
@@ -23,7 +25,9 @@ export default class genero{
         this.botaoRemover();
         this.botaoBloquear();
         this.estatisticas();
-        this.estatisticasAtividade()
+        this.estatisticasAtividade();
+        this.avataresModalF()
+        this.guardarAvatarF()
     }
 
     atualizarDados(){
@@ -39,8 +43,7 @@ export default class genero{
                 this.placeholder();
             
             } catch (e) {
-                alert('Erro')
-                // mensagem.innerHTML = `<div class="alert alert-danger" role="alert">${e}</div>`;
+                document.querySelector('.infoAlteravel').innerHTML += `<div class="alert alert-danger" role="alert">${e}</div>`;
             }
         })
     }
@@ -155,4 +158,56 @@ export default class genero{
         })
     }
 
+    avataresModalF(){
+        let pontuacao = this.utilizadorControlador.getPontos()
+        let novosAvatares = `<div class="row">
+                                <div class="col-3 novoAvatar">
+                                    <input type="image" src="../img/avatares/Avatar.png">
+                                </div>`
+
+        if (pontuacao >= 300){
+            novosAvatares += `<div class="col-3 novoAvatar">
+                                <input type="image" src="../img/avatares/andreAvatar.png">
+                            </div>`
+        }
+        if (pontuacao >= 600){
+            novosAvatares += `<div class="col-3 novoAvatar">
+                                <input type="image" src="../img/avatares/doraAvatar.png">
+                            </div>` 
+        }
+        if (pontuacao >= 900){
+            novosAvatares += `<div class="col-3 novoAvatar">
+                                <input type="image" src="../img/avatares/xicoAvatar.png">
+                            </div>`
+        }
+        if (pontuacao >= 1200){
+            novosAvatares += `<div class="col-3 novoAvatar">
+                                <input type="image" src="../img/avatares/tatinhasAvatar.png">
+                            </div>`
+        }
+
+        novosAvatares += `</div>`
+
+        this.avataresModal.innerHTML = novosAvatares
+        this.novoAvatar = document.querySelectorAll('.novoAvatar')
+        this.novoAvatarF()
+    }
+
+    novoAvatarF(){
+        for (let novo of this.novoAvatar){
+            novo.addEventListener('click', event =>{
+                for (let limpar of this.novoAvatar){
+                    limpar.style.background = ''
+                }
+                this.utilizadorControlador.setAvatar(event.target.src)
+                novo.style.background = 'lightgrey'
+            })
+        }
+    }
+
+    guardarAvatarF(){
+        this.guardarAvatar.addEventListener('click', () => {
+            location.reload()
+        })
+    }
 }

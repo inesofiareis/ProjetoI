@@ -32,8 +32,7 @@ export default class JogosDetalhes {
 
 
     gerarJogoQuestionarios() {
-        let perguntasErespostas = this.jogoControlador.jogoQuestionario()
-        // let respostas = this.jogoControlador.respostasJogo()
+        let perguntasErespostas = this.jogoControlador.getJogo()
 
         this.posJogo.innerHTML = `<h1 class="display-4">Vê o que aprendeste!</h1>
         <h3 class="perguntaUm" style="color:#205D76;">${perguntasErespostas.perguntas[0]}</h3>
@@ -70,50 +69,53 @@ export default class JogosDetalhes {
 
         this.confirmar()
 
+
     }
 
 
     gerarJogoArrastar() {
+        let jogo = this.jogoControlador.getJogo()
+
         this.posJogo.innerHTML = `<div class="row elementosArrastar">
                                     <div class="col imgdrop" draggable="true">
-                                        <img class="imagemJogo" src="../../img/jogos/virus.png" id="virusDrop" height="220px">
+                                        <img class="imagemJogo" src="${jogo[0].imagem}" id="virusDrop" height="220px">
                                     </div>
                                     <div class="col imgdrop" draggable="true">
-                                        <img class="imagemJogo" src="../../img/jogos/mascara.png" id="mascaraDrop" height="215px">
+                                        <img class="imagemJogo" src="${jogo[1].imagem}" id="mascaraDrop" height="215px">
                                     </div>
                                     <div class="col imgdrop" draggable="true">
-                                        <img class="imagemJogo" src="../../img/jogos/alcool.png" id="alcoolDrop" height="220px">
+                                        <img class="imagemJogo" src="${jogo[2].imagem}" id="alcoolDrop" height="220px">
                                     </div> 
                                     <div class="col imgdrop" draggable="true">
-                                        <img class="imagemJogo" src="../../img/jogos/distanciamento.png" id="distanciamentoDrop" height="220px">
+                                        <img class="imagemJogo" src="${jogo[3].imagem}" id="distanciamentoDrop" height="220px">
                                     </div>
                                     <div class="col imgdrop" draggable="true">
-                                        <img class="imagemJogo" src="../../img/jogos/lavar maos.png" id="lavarAsMaosDrop" height="220px">
+                                        <img class="imagemJogo" src="${jogo[4].imagem}" id="lavarAsMaosDrop" height="220px">
                                     </div>
                                     <div class="col imgdrop" draggable="true">
-                                        <img class="imagemJogo" src="../../img/jogos/tobias febre.png" id="doencaDrop" height="220px">
+                                        <img class="imagemJogo" src="${jogo[5].imagem}" id="doencaDrop" height="220px">
                                     </div>
                                 </div>
                                 <br><br><br>
                                 <div class=" row elementoLargar">
                                     <div class="caixasDragDrop" id="virusdrop">
-                                        <span>Vírus</span>
+                                        <span>${jogo[0].caixa}</span>
                                     </div>
 
                                     <div class="caixasDragDrop" id="mascaradrop">
-                                        <span>Máscara</span>
+                                        <span>${jogo[1].caixa}</span>
                                     </div>
                                     <div class="caixasDragDrop" id="alcooldrop">
-                                        <span>Álcool-gel</span>
+                                        <span>${jogo[2].caixa}</span>
                                     </div>
                                     <div class="caixasDragDrop" id="distanciamentodrop">
-                                        <span>Distanciamento</span>
+                                        <span>${jogo[3].caixa}</span>
                                     </div>
                                     <div class="caixasDragDrop" id="lavarAsMaosdrop">
-                                        <span>Lavar as mãos</span>
+                                        <span>${jogo[4].caixa}</span>
                                     </div>
                                     <div class="caixasDragDrop" id="doencadrop">
-                                        <span>Doença</span>
+                                        <span>${jogo[5].caixa}</span>
                                     </div>
                                 </div>
 
@@ -155,16 +157,11 @@ export default class JogosDetalhes {
             let certas = this.jogoControlador.respostasQuestionario(rUm.value, rDois.value, rTres.value, rQuatro.value, rCinco.value)
             let pontos = certas * 20
 
-            alert(`Tens ${certas} respostas certas!`)
-
-            alert(`A tua pontuação foi de ${pontos}`)
+            document.querySelector('.caixaJogos').innerHTML += `<div class="alert alert-success" role="alert">Tens ${certas} respostas certas! <br>A tua pontuação foi de ${pontos} pontos</div>`
+            
 
             this.utilizadorControlador.setPontos(pontos);
             this.utilizadorControlador.setAtividades(sessionStorage['jogos'], pontos);
-
-            // this.utilizadorControlador.setPontos(pontos)
-
-            // enviar para uma tabela de classificação
         })
     }
 
@@ -231,14 +228,16 @@ export default class JogosDetalhes {
 
             const resultado = this.jogoControlador.jogoPreencherEspacos(caixaVirus.id, imagemVirus.id, caixaMascara.id, imagemMascara.id, caixaAlcool.id, imagemAlcool.id, caixaDistancia.id, imagemDistancia.id, caixaLavar.id, imagemLavar.id, caixaDoenca.id, imagemDoenca.id)
 
-            alert(`Tens ${resultado} certas`)
-
             let pontos = resultado*20
 
-            alert(`A tua pontuação foi de ${pontos}`)
+
+            document.querySelector('.caixaJogos').innerHTML += `<div class="alert alert-success" role="alert">Tens ${resultado} respostas certas! <br>A tua pontuação foi de ${pontos} pontos</div>`
 
             this.utilizadorControlador.setPontos(pontos);
             this.utilizadorControlador.setAtividades(sessionStorage['jogos'], pontos);
+
+            this.botaoResetar = document.querySelector('#resete')
+            this.resetar()
         })
     }
 

@@ -48,11 +48,8 @@ export default class jogosController {
             else if(filtroGenero == 'questionarios'){
                 filtroGenero = 'Questionários'
             }
-            else if (filtroGenero == 'Preencher'){
+            else if (filtroGenero == 'preencherEspacos'){
                 filtroGenero = 'Preencher espaços'
-            }
-            else if (filtroGenero == 'jogodamemoria'){
-                filtroGenero = 'Jogo da memória'
             }
         }
 
@@ -69,10 +66,10 @@ export default class jogosController {
      * Quando o jogo escolhi pelo o utilizador é um do genero Questionario
      * @returns terna todas as infromações (perguntas e respostas) do jogo
      */
-    jogoQuestionario(){
+    getJogo(){
         let jogo = this.jogosInformacoes(sessionStorage['jogos'])
 
-        return jogo.detelhesJogo[0]  
+        return jogo.detelhesJogo  
     }
 
     jogoAvaliacao(){
@@ -160,7 +157,27 @@ export default class jogosController {
                                     respostasCorretas: respostas,
                                     alternativas: alternativas}]
         
-        this.jogos.push(new jogoModelo(novoID, nomeJogo, imgJogo, generoJogo, descricao, avalicao, perguntasErespostas))
+        this.jogos.push(new jogoModelo(novoID, nomeJogo, imgJogo, generoJogo, descricao, avalicao, detelhesJogo))
+        localStorage.setItem('jogos', JSON.stringify(this.jogos))
+    }
+
+    novoJogoPreencher(nomeJogo, imgJogo, descricao, generoJogo, caixa1, img1, caixa2, img2, caixa3, img3, caixa4, img4, caixa5, img5, caixa6, img6){
+        const novoID = this.jogos.length > 0 ? this.jogos[this.jogos.length - 1].id + 1 : 1
+
+        const caixaJogo1 = this.guardarCaixa(caixa1, img1)
+        const caixaJogo2 = this.guardarCaixa(caixa2, img2)
+        const caixaJogo3 = this.guardarCaixa(caixa3, img3)
+        const caixaJogo4 = this.guardarCaixa(caixa4, img4)
+        const caixaJogo5 = this.guardarCaixa(caixa5, img5)
+        const caixaJogo6 = this.guardarCaixa(caixa6, img6)
+
+        const avalicao = [{postiva: 0,
+                            normal: 0,
+                            negativa: 0}]
+
+        const detelhesJogo = [caixaJogo1, caixaJogo2, caixaJogo3, caixaJogo4, caixaJogo5, caixaJogo6,]
+        
+        this.jogos.push(new jogoModelo(novoID, nomeJogo, imgJogo, generoJogo, descricao, avalicao, detelhesJogo))
         localStorage.setItem('jogos', JSON.stringify(this.jogos))
     }
 
@@ -186,6 +203,12 @@ export default class jogosController {
         else if (resposta == 'alternativa4'){
             return alternativas[3].value 
         }
+    }
+
+    guardarCaixa(caixa, img){
+        let resultado = {caixa: caixa, imagem: img}
+
+        return resultado
     }
     //guardar novos jogos
 

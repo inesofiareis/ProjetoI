@@ -11,6 +11,12 @@ export default class infoVista{
 
         this.btnsCapitulo = document.querySelectorAll('.btnCapitulo')
         this.btnCapitulo()
+
+        this.btnAdicionar = document.querySelector('#botaoAdicionar')
+        this.adicionar()
+
+        this.btnguardarAlterações = document.querySelector('#guardarInfo')
+        this.guardarAlterações()
     }
 
     txtInfo(){
@@ -37,5 +43,21 @@ export default class infoVista{
             })
         }
     }
+
+    adicionar(){
+        if (this.utilizadorControlador.admin()){
+            this.btnAdicionar.style.visibility = 'visible'
+        }
+    }
     
+    guardarAlterações(){
+        this.btnguardarAlterações.addEventListener('click', () => {
+            let capitulo = document.querySelector('#capituloEditar')
+            let titulo = document.querySelector('#titulo')
+            let subtitulo = document.querySelector('#subtitulo')
+            let imagem = document.querySelector('#imagem')
+            let texto1 = document.querySelector('#texto1')
+            let texto2 = document.querySelector('#texto2')
+        })
+    }
 }
