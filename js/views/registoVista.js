@@ -19,6 +19,9 @@ export default class UtilizadorVista {
         this.verificarRegisto();
     }
 
+    /**
+     * Função para pegar nos dados que o utilizador meteu para se registar e mandar para o utilizadorControlador
+     */
     verificarRegisto() {
         this.registoBotao.addEventListener('click', event => {
             try { 

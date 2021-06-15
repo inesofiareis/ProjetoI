@@ -15,6 +15,10 @@ export default class UtilizadorVista {
         // this.checkLoginStatus();
     }
 
+    /**
+     * Função que verifica se o login é válido
+     * Caso contrário apresenta a mensagem de erro
+     */
     verificarLogin() {
         this.loginBotao.addEventListener('click', event => {
 
@@ -30,7 +34,6 @@ export default class UtilizadorVista {
         });
         
     }
-
 
 
     checkLoginStatus() {

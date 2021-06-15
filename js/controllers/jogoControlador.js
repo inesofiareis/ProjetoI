@@ -38,11 +38,11 @@ export default class jogosController {
      * @param {string} filtroNome se quiser ordenar por nome
      * @param {string} filtroGenero se quiser ordenar por genero
      * @param {boolean} ordenado 
-     * @returns 
+     * @returns todos os jogos a ser mostrado no catalogo
      */
     getJogos(filtroGenero = ''){
         if(filtroGenero != ''){
-            if (filtroGenero == 'todos'){
+            if (filtroGenero == 'todos'){  //se o utilizador quiseres ver todos os jogos, limpa o filtro
                 filtroGenero = ''
             }
             else if(filtroGenero == 'questionarios'){
@@ -72,6 +72,10 @@ export default class jogosController {
         return jogo.detelhesJogo  
     }
 
+    /**
+     * Função para ver as avaliações do jogo que o utilizador esta a jogar no momento
+     * @returns retorna a informações das informações do jogo
+     */
     jogoAvaliacao(){
         let jogo = this.jogosInformacoes(sessionStorage['jogos']);
         let avaliacao = jogo.avaliacao;
@@ -128,10 +132,32 @@ export default class jogosController {
     }
 
     //guardar novos jogos
+    /**
+     * Função para guardar um jogo tipo questionario
+     * @param {string} nomeJogo nome do jogo
+     * @param {string} imgJogo imagem do jogo
+     * @param {string} descricao descrição do jogo
+     * @param {string} generoJogo genero do jogo
+     * @param {string} pergunta1 primeira pergunta
+     * @param {string} alternativa1 primeiro conjunto de alternativas
+     * @param {string} resposta1 primeira resposta correta
+     * @param {string} pergunta2 segunda pergunta
+     * @param {string} alternativa2 segundo conjunto de alternativas
+     * @param {string} resposta2 segunda resposta correta
+     * @param {string} pergunta3 terceira pergunta
+     * @param {string} alternativa3 terceiro conjunto de alternativas
+     * @param {string} resposta3 terceira resposta correta
+     * @param {string} pergunta4 quarta pergunta
+     * @param {string} alternativa4 quarto conjunto de alternativas
+     * @param {string} resposta4 quarta resposta correta
+     * @param {string} pergunta5 quinta pergunta
+     * @param {string} alternativa5 quinto conjunto de alternativas
+     * @param {string} resposta5 quinta resposta correta
+     */
     novoJogoQuestionario(nomeJogo, imgJogo, descricao, generoJogo, pergunta1, alternativa1, resposta1, pergunta2, alternativa2, resposta2, pergunta3, alternativa3, resposta3, pergunta4, alternativa4, resposta4, pergunta5, alternativa5, resposta5){
         const novoID = this.jogos.length > 0 ? this.jogos[this.jogos.length - 1].id + 1 : 1
 
-        const perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5]
+        const perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5]  //guardar todas as perguntas no array
 
         const resp1 = this.respostaCorreta(resposta1, alternativa1)
         const resp2 = this.respostaCorreta(resposta2, alternativa2)
@@ -140,14 +166,14 @@ export default class jogosController {
         const resp5 = this.respostaCorreta(resposta5, alternativa5)
 
 
-        const respostas = [resp1, resp2, resp3, resp4, resp5]
+        const respostas = [resp1, resp2, resp3, resp4, resp5] //guardar todas as respostas num array pela mesma ordem das perguntas
 
         const alternativas1 = this.guardarAlternativas(alternativa1)
         const alternativas2 = this.guardarAlternativas(alternativa2)    
         const alternativas3 = this.guardarAlternativas(alternativa3)
         const alternativas4 = this.guardarAlternativas(alternativa4)
         const alternativas5 = this.guardarAlternativas(alternativa5)
-        const alternativas = [alternativas1, alternativas2, alternativas3, alternativas4, alternativas5]
+        const alternativas = [alternativas1, alternativas2, alternativas3, alternativas4, alternativas5] //guardar todos os conjuntos de alternativas num array pela mesma ordem das perguntas
 
         const avalicao = [{postiva: 0,
                             normal: 0,
@@ -161,6 +187,25 @@ export default class jogosController {
         localStorage.setItem('jogos', JSON.stringify(this.jogos))
     }
 
+    /**
+     * Função para guardar um jogo tipo Preencher Espaços
+     * @param {string} nomeJogo nome do jogo
+     * @param {string} imgJogo imagem do jogo
+     * @param {string} descricao descrição do jogo
+     * @param {string} generoJogo genero do jogo
+     * @param {string} caixa1 primeiro conjunto (caixa)
+     * @param {string} img1 primeiro conjunto (imagem)
+     * @param {string} caixa2 segundo conjunto (caixa)
+     * @param {string} img2 segundo conjunto (imagem)
+     * @param {string} caixa3 terceiro conjunto (caixa)
+     * @param {string} img3 terceiro conjunto (imagem)
+     * @param {string} caixa4 quarta conjunto (caixa)
+     * @param {string} img4 quarta conjunto (imagem)
+     * @param {string} caixa5 quinta conjunto (caixa)
+     * @param {string} img5 quinta conjunto (imagem)
+     * @param {string} caixa6 sexta conjunto (caixa)
+     * @param {string} img6 sexta conjunto (imagem)
+     */
     novoJogoPreencher(nomeJogo, imgJogo, descricao, generoJogo, caixa1, img1, caixa2, img2, caixa3, img3, caixa4, img4, caixa5, img5, caixa6, img6){
         const novoID = this.jogos.length > 0 ? this.jogos[this.jogos.length - 1].id + 1 : 1
 
@@ -175,12 +220,17 @@ export default class jogosController {
                             normal: 0,
                             negativa: 0}]
 
-        const detelhesJogo = [caixaJogo1, caixaJogo2, caixaJogo3, caixaJogo4, caixaJogo5, caixaJogo6,]
+        const detelhesJogo = [caixaJogo1, caixaJogo2, caixaJogo3, caixaJogo4, caixaJogo5, caixaJogo6,]  //guardar toda a informação do jogo numa array
         
         this.jogos.push(new jogoModelo(novoID, nomeJogo, imgJogo, generoJogo, descricao, avalicao, detelhesJogo))
         localStorage.setItem('jogos', JSON.stringify(this.jogos))
     }
 
+    /**
+     * Função para guardar as alternativas das perguntas do questionarios num array
+     * @param {conjunto de alternativas} alternativas 
+     * @returns retorna o array das alternativas das perguntas
+     */
     guardarAlternativas(alternativas){
         const alternativasArray = []
         for (let alternativa of alternativas){
@@ -190,6 +240,12 @@ export default class jogosController {
         return alternativasArray
     }
 
+    /**
+     * Função para ver qual é a resposta correta da pergunta
+     * @param {string} resposta alternativa correta
+     * @param {string} alternativas alternativas
+     * @returns retorna a resposta correta da pergunta
+     */
     respostaCorreta(resposta, alternativas){
         if (resposta == 'alternativa1'){
             return alternativas[0].value 
@@ -205,6 +261,12 @@ export default class jogosController {
         }
     }
 
+    /**
+     * Função para guardar o conjundo de imagem e caixa num mesmo objeto
+     * @param {string} caixa caixa com o nome
+     * @param {string} img imagem
+     * @returns retorna o objeto do conjuto
+     */
     guardarCaixa(caixa, img){
         let resultado = {caixa: caixa, imagem: img}
 
@@ -213,26 +275,41 @@ export default class jogosController {
     //guardar novos jogos
 
     //preencher espaços
-
-    jogoPreencherEspacos(caixaVirus, imagemVirus, caixaMascara, imagemMascara, caixaAlcool, imagemAlcool, caixaDistancia, imagemDistancia, caixaLavar, imagemLavar, caixaDoenca, imagemDoenca){
+    /**
+     * Ver quantas certas tem no jogo Preencher Espaços
+     * @param {string} caixa1 
+     * @param {string} imagem1
+     * @param {string} caixa2 
+     * @param {string} imagem2 
+     * @param {string} caixa3 
+     * @param {string} imagem3 
+     * @param {string} caixa4 
+     * @param {string} imagem4 
+     * @param {string} caixa5 
+     * @param {string} imagem5 
+     * @param {string} caixa6 
+     * @param {string} imagem6 
+     * @returns retonar quantas respostas certas teve
+     */
+    jogoPreencherEspacos(caixa1, imagem1, caixa2, imagem2, caixa3, imagem3, caixa4, imagem4, caixa5, imagem5, caixa6, imagem6){
         let certas = 0
 
-        if (caixaVirus.toLocaleLowerCase() == imagemVirus.toLocaleLowerCase()){
+        if (caixa1.toLocaleLowerCase() == imagem1.toLocaleLowerCase()){
             certas++
         }
-        if (caixaMascara.toLocaleLowerCase() == imagemMascara.toLocaleLowerCase()){
+        if (caixa2.toLocaleLowerCase() == imagem2.toLocaleLowerCase()){
             certas++
         }
-        if (caixaAlcool.toLocaleLowerCase() == imagemAlcool.toLocaleLowerCase()){
+        if (caixa3.toLocaleLowerCase() == imagem3.toLocaleLowerCase()){
             certas++
         }
-        if (caixaDistancia.toLocaleLowerCase() == imagemDistancia.toLocaleLowerCase()){
+        if (caixa4.toLocaleLowerCase() == imagem4.toLocaleLowerCase()){
             certas++
         }
-        if (caixaLavar.toLocaleLowerCase() == imagemLavar.toLocaleLowerCase()){
+        if (caixa5.toLocaleLowerCase() == imagem5.toLocaleLowerCase()){
             certas++
         }
-        if (caixaDoenca.toLocaleLowerCase() == imagemDoenca.toLocaleLowerCase()){
+        if (caixa6.toLocaleLowerCase() == imagem6.toLocaleLowerCase()){
             certas++
         }
 
@@ -240,22 +317,35 @@ export default class jogosController {
     }
 
     //pontos
+    /**
+     * Adicionar no jogo mais uma avaliação posiva
+     */
     positivo(){
         let avaliacao = this.jogoAvaliacao()
         avaliacao.positiva++
         this.guardarAvaliacao(avaliacao)
     }
+    /**
+     * Adicionar no jogo mais uma avaliação normal
+     */
     medio(){
         let avaliacao = this.jogoAvaliacao()
         avaliacao.normal++
         this.guardarAvaliacao(avaliacao)
     }
+    /**
+     * Adicionar no jogo mais uma avaliação negativa
+     */
     negativo(){
         let avaliacao = this.jogoAvaliacao()
         avaliacao.negativa++
         this.guardarAvaliacao(avaliacao)
     }
 
+    /**
+     * Guardar a nova avalização dada pelo utilizador
+     * @param {number} avaliacao avaliação a ser alterada
+     */
     guardarAvaliacao(avaliacao){
         let jogo = sessionStorage['jogos']
         let todosJogos = localStorage['jogos']

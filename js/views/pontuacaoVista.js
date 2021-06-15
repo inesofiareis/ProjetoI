@@ -9,14 +9,15 @@ export default class pontuacaoMedalhas{
             this.tabelaMedalhas = document.querySelector('#tabelaMedalha');
             this.adicionar = document.querySelector('#funcaoAdicionar');
             this.botaoAdicionarMedalha = document.querySelector('#botaoAdicionarMedalha')
-            // this.adicionarFuncao = document.querySelector('#funcaoAdicionar');
             this.btnAdicionar();
-            // this.botaoAdicionar();
             this.conquistas();
             this.novoBadge()
 
         }
 
+        /**
+         * Função para colocar, consoantes os pontos do utilizador, as medalhas que ele tem
+         */
         conquistas(){
             let pontos = this.utilizadorControlador.getPontos();
 
@@ -76,6 +77,9 @@ export default class pontuacaoMedalhas{
             }
         }
 
+        /**
+         * Quando o utilizador for um administrador aparecer um botão com inputs para adiconar novas conquistas
+         */
         btnAdicionar(){
             if (this.utilizadorControlador.admin()) {
                 this.botaoAdicionarMedalha.style.visibility = 'visible'
@@ -94,6 +98,9 @@ export default class pontuacaoMedalhas{
 
         }
 
+        /**
+         * Adicionar na conquista
+         */
         novoBadge(){
             botaoAdicionarMedalha.addEventListener("click", () => {
                 let pontos = this.utilizadorControlador.getPontos();

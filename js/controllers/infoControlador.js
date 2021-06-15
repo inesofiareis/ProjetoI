@@ -7,7 +7,7 @@ export default class infoController {
     }
 
     /**
-     * 
+     * Função para guardar a informação sa Session Storage o capitulo que o utilizador selecionou 
      * @param {string} titulo titulo do capitulo
      */
     setCapituloAtual(capitulo){
@@ -15,16 +15,29 @@ export default class infoController {
         sessionStorage.setItem('informacao', capitulo)
     }
 
+    /**
+     * Função que pega a informação do capitulo que o utilizador esta a ver
+     * @returns retorna a informação do capitulo
+     */
     getCapituloAtual(){
         return this.capitulos.find(capitulo => capitulo.capitulo == this.capituloAtual)
     }
 
+    /**
+     * Função para guardar novas informações dadas a um capitulo
+     * @param {string} capitulo Qual capitulo foi selecionado para ser alterado 
+     * @param {string} titulo Titulo do capitulo
+     * @param {string} subtitulo Subtitulo do capitulo
+     * @param {string} imagem imagem que vai estar presente na informaçõa
+     * @param {string} texto1 primeiro paragrafo
+     * @param {string} texto2 segundo paragrafo
+     */
     guardarInformacao(capitulo, titulo, subtitulo, imagem, texto1, texto2){
         const todosCapitulos = this.todosCapitulos()
         let capituloExiste = false
 
-
-        for (let i = 0; i < todosCapitulos.length; i++){
+        //ver se o capitulo tem já informações, se sim alteras
+        for (let i = 0; i < todosCapitulos.length; i++){  
             if (todosCapitulos[i].capitulo == capitulo){
                 todosCapitulos[i].titulo  = titulo
                 todosCapitulos[i].subtitulo = subtitulo
@@ -39,6 +52,7 @@ export default class infoController {
             }
         }
 
+        //se o capitulo não tiver informações, criar um novo
         if (!capituloExiste){
             const novoID = this.capitulos.length > 0 ? this.capitulos[this.capitulos.length - 1].id + 1 : 1
 
@@ -49,6 +63,10 @@ export default class infoController {
         }
     }
 
+    /**
+     * Função que pega todos os capitulos que estam guardados na local Storage
+     * @returns retorna todos os capitulo e as suas informações
+     */
     todosCapitulos() {
         let capitulos = localStorage['informacao']
         capitulos = JSON.parse(capitulos)
