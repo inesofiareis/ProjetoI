@@ -84,7 +84,7 @@ export default class jogoVista{
                 <div class="card-body" style="width:20rem;">
                     <img src="${jogo.foto}" class="card-img-top" style="height: 20rem">
                     <h4 class="card-title" style="color:#FF5D59">${jogo.nome}</h4>
-                    <p class="card-text" style="color:#FF6D6A;">${jogo.genero}</p>
+                    <p class="card-text" style="color:#FFA09E;">${jogo.genero}</p>
                     <button id="${jogo.nome}" style="border-radius:10px; border:none; background-color:#FFA09E" class="btn btn-primary jogar">Jogar</button>
             `
         if (this.utilizadorControlador.admin()) {
