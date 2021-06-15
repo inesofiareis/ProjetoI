@@ -72,9 +72,9 @@ export default class utilizadorControlador {
         const utizador = this.utilizadoresInfo()
         const data = new Date
 
-        const ano = +utizador.dataNascimento.slice(0, dataNascimento.indexOf('-'))  //ano que utilizador nasceu
-        const mes = +utizador.dataNascimento.slice(dataNascimento.indexOf('-')+1, dataNascimento.lastIndexOf('-')+1) //mes em que o utilizador nasceu
-        const dia = +utizador.dataNascimento.slice(dataNascimento.lastIndexOf('-'))  //mes em que utilizador nasceu
+        const ano = +utizador.dataNascimento.slice(0, utizador.dataNascimento.indexOf('-'))  //ano que utilizador nasceu
+        const mes = +utizador.dataNascimento.slice(utizador.dataNascimento.indexOf('-')+1, utizador.dataNascimento.lastIndexOf('-')+1) //mes em que o utilizador nasceu
+        const dia = +utizador.dataNascimento.slice(utizador.dataNascimento.lastIndexOf('-'))  //mes em que utilizador nasceu
 
         const anoAtual = data.getFullYear()
         const mesAtual = data.getMonth()

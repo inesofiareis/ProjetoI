@@ -57,7 +57,15 @@ export default class jogoVista{
         //gerar catalogo
         let divisao = '<div class="row row-cols-2">';
         for (const jogo of jogos) {
-            divisao += this.gerarCardJogo(jogo);
+            if (jogo.genero == 'Preencher espaços'){
+                let idade = this.utilizadorControlador.idade()
+                if (idade <= 9 || this.utilizadorControlador.admin()){
+                    divisao += this.gerarCardJogo(jogo);
+                }
+            }
+            else{
+                divisao += this.gerarCardJogo(jogo);
+            }
         }
 
         divisao += '</div>'
