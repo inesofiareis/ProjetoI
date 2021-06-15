@@ -6,6 +6,17 @@ export default class JogosDetalhes {
         this.jogoControlador = new jogoControlador()
         this.utilizadorControlador = new utilizadorControlador()
 
+        this.txtPositiva = document.querySelector('.positivoTexto');
+        this.txtNormal = document.querySelector('.medioTexto');
+        this.txtNegativa = document.querySelector('.negativoTexto');
+
+        this.btnPositiva = document.querySelector('#positivo')
+        this.positivo()
+        this.btnNormal = document.querySelector('#medio')
+        this.medio()
+        this.btnNegativa = document.querySelector('#negativo')
+        this.negativo()
+        
         this.posJogo = document.querySelector(".caixaJogos");
 
         this.txtJogos = document.querySelector('.textoJogos');
@@ -225,12 +236,49 @@ export default class JogosDetalhes {
         })
     }
 
-    gostos() {
-        let gostos = this.utilizadorControlador.
-        this.btnPositivo = document.querySelector('#positivo').addEventListener('click', () => {
+    gostos(){
+        let gostos = this.jogoControlador.jogoAvaliacao();
+        let positivo = gostos.positiva;
+        let medio = gostos.normal;
+        let negativo = gostos.negativa;
 
+        this.txtPositiva.innerHTML = `<figcaption class="figure-caption textoFiguraJogo positivoTexto">${positivo}</figcaption>`;
+        this.txtNormal.innerHTML = `<figcaption class="figure-caption textoFiguraJogo positivoTexto">${medio}</figcaption>`;
+        this.txtNegativa.innerHTML = `<figcaption class="figure-caption textoFiguraJogo positivoTexto">${negativo}</figcaption>`;
+        
+        this.btnPositivo = document.querySelector('#positivo').addEventListener('click', () => {
+            positivo += 1
+            this.jogoControlador.jogoAvaliacao(positivo)
+            
         });
-        this.btnMedio = document.querySelector('#medio').addEventListener('click', medio());
-        this.btnNegativo = document.querySelector('#negativo').addEventListener('click', negativo());
+        this.btnMedio = document.querySelector('#medio').addEventListener('click', () => {
+            medio += 1
+            this.jogoControlador.jogoAvaliacao(medio)
+        });
+        this.btnNegativo = document.querySelector('#negativo').addEventListener('click',() => {
+            negativo += 1
+            this.jogoControlador.jogoAvaliacao(negativo)
+        });
+    }
+
+    positivo(){
+        this.btnPositiva.addEventListener('click', () =>{
+            this.jogoControlador.positivo()
+            this.gostos()
+        })
+    }
+
+    medio(){
+        this.btnNormal.addEventListener('click', () =>{
+            this.jogoControlador.medio()
+            this.gostos()
+        })
+    }
+
+    negativo(){
+        this.btnNegativa.addEventListener('click', () =>{
+            this.jogoControlador.negativo()
+            this.gostos()
+        })
     }
 }
