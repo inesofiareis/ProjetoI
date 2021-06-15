@@ -2,13 +2,13 @@ import jogoControlador from '../controllers/jogoControlador.js';
 import utilizadorControlador from '../controllers/utilizadorControlador.js'
 
 export default class JogosDetalhes {
-    constructor(){
+    constructor() {
         this.jogoControlador = new jogoControlador()
         this.utilizadorControlador = new utilizadorControlador()
- 
+
         this.posJogo = document.querySelector(".caixaJogos");
 
-        this.txtJogos = document.querySelector('.textoJogos');  
+        this.txtJogos = document.querySelector('.textoJogos');
         this.jogo();
         this.gostos();
 
@@ -19,51 +19,51 @@ export default class JogosDetalhes {
         document.querySelector('.nomeJogo').innerHTML = jogo.nome;
         document.querySelector('.descJogo').innerHTML = jogo.descricao;
     }
-    
 
-    gerarJogoQuestionarios(){
+
+    gerarJogoQuestionarios() {
         let perguntasErespostas = this.jogoControlador.jogoQuestionario()
         // let respostas = this.jogoControlador.respostasJogo()
 
         this.posJogo.innerHTML = `<h1 class="display-4">Vê o que aprendeste!</h1>
-        <h3 class="perguntaUm">${perguntasErespostas.perguntas[0]}</h3>
+        <h3 class="perguntaUm" style="color:#205D76;">${perguntasErespostas.perguntas[0]}</h3>
         <input type="radio" name="respostaUm" value="${perguntasErespostas.alternativas[0][0]}" class="opcaoUm">${perguntasErespostas.alternativas[0][0]}<br>
         <input type="radio" name="respostaUm" value="${perguntasErespostas.alternativas[0][1]}" class="opcaoDois">${perguntasErespostas.alternativas[0][1]}<br>
         <input type="radio" name="respostaUm" value="${perguntasErespostas.alternativas[0][2]}" class="opcaoTres">${perguntasErespostas.alternativas[0][2]}<br>
         <input type="radio" name="respostaUm" value="${perguntasErespostas.alternativas[0][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[0][3]}<br>
     
-        <h3 class="perguntaDois">${perguntasErespostas.perguntas[1]}</h3>
+        <h3 class="perguntaDois" style="color:#205D76;">${perguntasErespostas.perguntas[1]}</h3>
         <input type="radio" name="respostaDois" value="${perguntasErespostas.alternativas[1][0]}" class="opcaoUm">${perguntasErespostas.alternativas[1][0]} <br>
         <input type="radio" name="respostaDois" value="${perguntasErespostas.alternativas[1][1]}" class="opcaoDois">${perguntasErespostas.alternativas[1][1]} <br>
         <input type="radio" name="respostaDois" value="${perguntasErespostas.alternativas[1][2]}" class="opcaoTres">${perguntasErespostas.alternativas[1][2]} <br>
         <input type="radio" name="respostaDois" value="${perguntasErespostas.alternativas[1][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[1][3]} <br>
     
-        <h3 class="perguntaTres">${perguntasErespostas.perguntas[2]}</h3>
+        <h3 class="perguntaTres" style="color:#205D76;">${perguntasErespostas.perguntas[2]}</h3>
         <input type="radio" name="respostaTres" value="${perguntasErespostas.alternativas[2][0]}" class="opcaoUm">${perguntasErespostas.alternativas[2][0]} <br>
         <input type="radio" name="respostaTres" value="${perguntasErespostas.alternativas[2][1]}" class="opcaoDois">${perguntasErespostas.alternativas[2][1]} <br>
         <input type="radio" name="respostaTres" value="${perguntasErespostas.alternativas[2][2]}" class="opcaoTres">${perguntasErespostas.alternativas[2][2]} <br>
         <input type="radio" name="respostaTres" value="${perguntasErespostas.alternativas[2][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[2][3]} <br>
     
-        <h3 class="perguntaQuatro">${perguntasErespostas.perguntas[3]}</h3>
+        <h3 class="perguntaQuatro" style="color:#205D76;">${perguntasErespostas.perguntas[3]}</h3>
         <input type="radio" name="respostaQuatro" value="${perguntasErespostas.alternativas[3][0]}" class="opcaoUm">${perguntasErespostas.alternativas[3][0]} <br>
         <input type="radio" name="respostaQuatro" value="${perguntasErespostas.alternativas[3][1]}" class="opcaoDois">${perguntasErespostas.alternativas[3][1]} <br>
         <input type="radio" name="respostaQuatro" value="${perguntasErespostas.alternativas[3][2]}" class="opcaoTres">${perguntasErespostas.alternativas[3][2]} <br>
         <input type="radio" name="respostaQuatro" value="${perguntasErespostas.alternativas[3][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[3][3]} <br>
     
-        <h3 class="perguntaCinco">${perguntasErespostas.perguntas[4]}</h3>
+        <h3 class="perguntaCinco" style="color:#205D76;">${perguntasErespostas.perguntas[4]}</h3>
         <input type="radio" name="respostaCinco" value="${perguntasErespostas.alternativas[4][0]}" class="opcaoUm">${perguntasErespostas.alternativas[4][0]} <br>
         <input type="radio" name="respostaCinco" value="${perguntasErespostas.alternativas[4][1]}" class="opcaoDois">${perguntasErespostas.alternativas[4][1]} <br>
         <input type="radio" name="respostaCinco" value="${perguntasErespostas.alternativas[4][2]}" class="opcaoTres">${perguntasErespostas.alternativas[4][2]} <br>
         <input type="radio" name="respostaCinco" value="${perguntasErespostas.alternativas[4][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[4][3]} <br>
     
-        <input type="submit" name="submit" value="Diz-me a pontuação!" id="resultado">`
+        <input type="submit" name="submit" value="Diz-me a pontuação!" id="resultado" style="">`
 
         this.confirmar()
 
     }
-    
 
-    gerarJogoArrastar(){
+
+    gerarJogoArrastar() {
         this.posJogo.innerHTML = `<div class="row elementosArrastar">
                                     <div class="col imgdrop" draggable="true">
                                         <img class="imagemJogo" src="../../img/jogos/virus.png" id="virusDrop" height="220px">
@@ -123,19 +123,19 @@ export default class JogosDetalhes {
 
     jogo() {
         let jogo = this.jogoControlador.getJogoAtual();
-        if(jogo.genero == 'Preencher espaços') {
+        if (jogo.genero == 'Preencher espaços') {
             this.posJogo = this.gerarJogoArrastar(jogo);
-        }else if(jogo.genero =='Questionários'){
+        } else if (jogo.genero == 'Questionários') {
             this.posJogo = this.gerarJogoQuestionarios(jogo)
-        }else if(jogo == ''){
+        } else if (jogo == '') {
 
-        }else{
+        } else {
 
         }
     }
 
-    confirmar(){
-        this.botaoResultado = document.querySelector('#resultado').addEventListener('click', () =>{
+    confirmar() {
+        this.botaoResultado = document.querySelector('#resultado').addEventListener('click', () => {
             let rUm = document.querySelector('input[name="respostaUm"]:checked')
             let rDois = document.querySelector('input[name="respostaDois"]:checked')
             let rTres = document.querySelector('input[name="respostaTres"]:checked')
@@ -143,10 +143,10 @@ export default class JogosDetalhes {
             let rCinco = document.querySelector('input[name="respostaCinco"]:checked')
 
             let certas = this.jogoControlador.respostasQuestionario(rUm.value, rDois.value, rTres.value, rQuatro.value, rCinco.value)
-            let pontos = certas*20
+            let pontos = certas * 20
 
             alert(`Tens ${certas} respostas certas!`)
-            
+
             alert(`A tua pontuação foi de ${pontos}`)
 
             this.utilizadorControlador.setPontos(pontos);
@@ -158,7 +158,7 @@ export default class JogosDetalhes {
         })
     }
 
-    JogoArrastar(){
+    JogoArrastar() {
         let arrastados
         this.imgsdrop.forEach(imgdrop => {
             imgdrop.addEventListener('dragstart', e => {
@@ -170,7 +170,7 @@ export default class JogosDetalhes {
             })
             imgdrop.addEventListener('dragend', e => {
                 // e.target.style.opacity = "";
-            } )
+            })
         })
 
         //local onde soltar as imagens
@@ -185,7 +185,7 @@ export default class JogosDetalhes {
             caixaDragDrop.addEventListener('dragleave', e => {
                 if (e.target.className == "caixasDragDrop") {
                     e.target.style.background = "";
-                  }
+                }
             })
             caixaDragDrop.addEventListener('drop', e => {
                 e.preventDefault();
@@ -193,18 +193,18 @@ export default class JogosDetalhes {
                     e.target.style.background = "";
                     arrastados.parentNode.removeChild(arrastados);
                     e.target.appendChild(arrastados);
-                  }
+                }
             })
         })
     }
 
-    resetar(){
+    resetar() {
         this.botaoResetar.addEventListener('click', () => {
             location.reload()
         })
     }
 
-    ConfirmarPreencher(){
+    ConfirmarPreencher() {
         this.botaoConfirmarPreencher.addEventListener('click', () => {
             let caixaVirus = document.querySelector('#virusdrop')
             let imagemVirus = caixaVirus.querySelector('.imagemJogo')
@@ -218,19 +218,19 @@ export default class JogosDetalhes {
             let imagemLavar = caixaLavar.querySelector('.imagemJogo')
             let caixaDoenca = document.querySelector('#doencadrop')
             let imagemDoenca = caixaDoenca.querySelector('.imagemJogo')
-            
+
             const resultado = this.jogoControlador.jogoPreencherEspacos(caixaVirus.id, imagemVirus.id, caixaMascara.id, imagemMascara.id, caixaAlcool.id, imagemAlcool.id, caixaDistancia.id, imagemDistancia.id, caixaLavar.id, imagemLavar.id, caixaDoenca.id, imagemDoenca.id)
 
             alert(`Tens ${resultado} certas`)
         })
     }
 
-    gostos(){
+    gostos() {
         let gostos = this.utilizadorControlador.
         this.btnPositivo = document.querySelector('#positivo').addEventListener('click', () => {
 
         });
         this.btnMedio = document.querySelector('#medio').addEventListener('click', medio());
-        this.btnNegativo = document.querySelector('#negativo').addEventListener('click',negativo());
+        this.btnNegativo = document.querySelector('#negativo').addEventListener('click', negativo());
     }
 }

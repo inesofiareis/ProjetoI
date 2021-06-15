@@ -72,12 +72,12 @@ export default class jogoVista{
     gerarCardJogo(jogo) {
         let resultado = `
         <div class="col">
-            <div class="card">
+            <div class="card" style="background-color:#FFC7C6; border:none;">
                 <div class="card-body" style="width:20rem;">
                     <img src="${jogo.foto}" class="card-img-top" style="height: 20rem">
-                    <h4 class="card-title">${jogo.nome}</h4>
-                    <p class="card-text">${jogo.genero}</p>
-                    <button id="${jogo.nome}" class="btn btn-primary jogar">Jogar</button>
+                    <h4 class="card-title" style="color:#FF5D59">${jogo.nome}</h4>
+                    <p class="card-text" style="color:#FF6D6A;">${jogo.genero}</p>
+                    <button id="${jogo.nome}" style="border-radius:10px; border:none; background-color:#FFA09E" class="btn btn-primary jogar">Jogar</button>
             `
         if (this.utilizadorControlador.admin()) {
             resultado += `<button id="${jogo.nome}" class="btn btn-danger remover">Remover</button>`
