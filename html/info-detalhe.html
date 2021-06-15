@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-PT">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TATUDOBEM - Capítulo I</title>
+    <title>TATUDOBEM</title>
     <link rel="icon" href="../img/navbar/Tatinhas-página-inicial.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -13,249 +13,148 @@
     <!-- CSS da pagina -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <header>
-    <nav class="navbar navbar-expand-xl navbarAprender justify-content-center">
-        <a class="navbar-brand w-50 me-auto col-xs-5">
+    <nav class="navbar navbar-expand-lg justify-content-center navbarAprender" id="mainNav">
+        <a class="navbar-brand me-auto">
             <img src="../img/navbar/tatu_logo.png" class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerMenu"
-            aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation" style="background: none;">
-            <span class="navbar-toggler-icon" style="background-image: url(../img/navbar/menu.png) ;   width: 60px !important;
-            height:30px !important; opacity:70%;"></span>
+            aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation"
+            style="background: none;">
+            <span class="navbar-toggler-icon" style="background-image: url(../img/navbar/menu.png) ;width: 60px !important;
+            height:30px !important; opacity:70%;">
+            </span>
         </button>
-
-        <div class="collapse navbar-collapse w-100" id="navbarTogglerMenu">
-            
-            <div class="card-deck deckDeIcones justify-content-center">
-                <div class="card iconeZonas text-center col-auto mb-3">
+        <div class="collapse navbar-collapse" id="navbarTogglerMenu">
+            <ul class="navbar-nav center mx-auto itemsNavbar justify-content-center">
+                <li class="nav-item">
                     <a href="./inicio.html">
-                        <img src="../img/navbar/Icon-Inicio.png" alt="inicio" title="Início" class="inicio img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-Inicio.png">
+                            <figcaption class="figure-caption captionIcone">Inicio</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Início</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-3">
-                    <a href="./info.html" class="imagensIcones">
-                        <img src="../img/navbar/Icon-aprender.png" alt="aprender" title="Aprender" class="aprender img-card-top">
+                </li>
+                <li class="nav-item">
+                    <a href="./info.html">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-aprender.png">
+                            <figcaption class="figure-caption captionIcone">Aprender</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Aprender</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-3">
+                </li>
+                <li class="nav-item">
                     <a href="./jogo.html">
-                        <img src="../img/navbar/Icon-jogar.png" alt="jogar" title="Jogar" class="jogar img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-jogar.png">
+                            <figcaption class="figure-caption captionIcone">Jogar</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Jogar</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-8">
+                </li>
+                <li class="nav-item">
                     <a href="./perfil.html">
-                        <img src="../img/navbar/Icon-o teu espaço.png" alt="Pagina Pessoal" title="Pagina Pessoal"
-                        class="paginaPessoal img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-o teu espaço.png">
+                            <figcaption class="figure-caption captionIcone">O teu espaço</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">O teu espaço</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="nav ml-auto">
-                <img src="../img/navbar/Avatar.png" alt="Avatar" class="avatarImagem" id="avatar">
-                <span id="perfil" class="avatarTexto navbar-text" id="nomeUtilizador">Batuti da Silva</span>
-            </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav avatar">
+                <li class="nav-item">
+                    <figure class="figure">
+                        <img class="img-fluid figure-img" id="avatar" src="../img/navbar/Avatar.png" />
+                        <figcaption class="figure-caption nomeUtilizador" style="float: left;" id="nome">Batuti da Silva
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
         </div>
-            <div class="col-auto mb-3"> </div>
-
-
+        </div>
     </nav>
-
 </header>
 
 <body>
-
     <main class="corpoInfo container-fluid">
-        <h1 class="numeroDoCapitulo">Inserir número do capítulo</h1>
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col">
-                <h1 class="display-4 tituloDaInfo">Inserir título da info</h1>
-                <p class="conteudoDaInfo">Inserir todo o texto</p>
-            </div>
-            <img src="../img/info/Icon ajuda xico.png" alt="Precisas de ajuda?" title="botaoAjuda" id="tutorialXico"
-                width="150px">
-        </div>
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-xl-1 col-sm-2 col-4 imagemDaInfo">
-                <img src="../img/info/Xico.png" alt="Imagem" title="Imagem" width="300px" class="xico">
-            </div>
-            <div class="col-sm-1"></div>
-        </div>
-
-        <div class="container localDoQuiz">
-            <h1 class="display-4">Vê o que aprendeste!</h1>
-            <h3 class="perguntaUm">Q1. What is 2+3?</h3>
-            <input type="radio" name="questaoUm" id="corretaUm">5 <br>
-            <input type="radio" name="questaoUm">8 <br>
-            <input type="radio" name="questaoUm">9 <br>
-            <input type="radio" name="questaoUm">10 <br>
-
-            <h3 class="perguntaDois">Q1. What is 8+3?</h3>
-            <input type="radio" name="questaoDois">2 <br>
-            <input type="radio" name="questaoDois">8 <br>
-            <input type="radio" name="questaoDois" id="corretaDois">11 <br>
-            <input type="radio" name="questaoDois">9 <br>
-
-            <h3 class="perguntaTres">Q1. What is 28+3?</h3>
-            <input type="radio" name="question3">15 <br>
-            <input type="radio" name="question3" id="corretaDois">31 <br>
-            <input type="radio" name="question3">10 <br>
-            <input type="radio" name="question3">19 <br>
-
-            <h3 class="perguntaQuatro">Q1. What is 28+3?</h3>
-            <input type="radio" name="question3">15 <br>
-            <input type="radio" name="question3" id="corretaTres">31 <br>
-            <input type="radio" name="question3">10 <br>
-            <input type="radio" name="question3">19 <br>
-
-            <h3 class="perguntaCinco">Q1. What is 28+3?</h3>
-            <input type="radio" name="question3">15 <br>
-            <input type="radio" name="question3" id="corretaQuatro">31 <br>
-            <input type="radio" name="question3">10 <br>
-            <input type="radio" name="question3">19 <br>
-
-            <input type="submit" name="submit" value="Diz-me a pontuação!" onClick="result()">
-            <!--             <script type="text/javascript">
-            function result()
-            {
-                var score=0;
-                if(document.getElementById('corretaUm').checked)
-                    {	score++;
-                    }
-                if(document.getElementById('corretaDois').checked)
-                    {	score++;
-                    }
-                if(document.getElementById('corretaTres').checked)
-                    {	score++;
-                    }
-            alert("Your score is:"+score);
-            // to print on browser
-            // document.write("Your score is:"+score);
-            }
-            </script>
- -->
-            <div class="row">
-                <div class="col-sm-1"></div>
-                <div class="col-lg-2 col-sm-3 col-5">
-                    <a href="informacao.html"><input type="button" value="Voltar" id="botaoVoltar"
-                            class="btn btn-primary btn-lg botaoVoltar"></a>
+        <section class="article-clean">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                        <div id="caixaInfo">
+                            <div class="introducaoInfo">
+                                <h1 class="text-center tituloInfo"></h1>
+                                <p class="text-center conteudoInfo"></p>
+                                <img class="img-fluid imgInfo" src="" />
+                            </div>
+                            <div class="text">
+                                <p class="paragrafoUm"></p>
+                                <p class="paragrafoDois"></p>
+                            </div>
+                        </div>
+                        <div class="botaoVoltarInfo">
+                            <a name="botao retornar" id="botaoRetornar" class="btn" href="info.html"
+                                role="button">Voltar aos capítulos</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm col-1"></div>
-                <div class="col-lg-2 col-sm-3 col-5" id="btnProximo">
-                    <input type="button" value="Proximo Capitulo >" id="btnProximo"
-                        class="btn btn-primary btn-lg btnProximo" disabled>
-                </div>
-                <div class="col-sm-1"></div>
             </div>
-
-        </div>
+        </section>
     </main>
-
-
     <!-- Footer -->
-    <footer class="page-footer footerInfo" style="height: 100%;">
+    <footer class="footerAprender">
         <div class="row">
-            <div class="col-9"></div>
-            <span class="amigos h2">Os amigos</span>
-        </div>
-        <div class="row">
-            <div class="container col-4 text-center text-md-left">
-
-                <hr class="clearfix d-md-none">
-                <div class="col-md-5 mb-md-0 mb-3 divDoSobre">
-                    <h2 class="sobre">Sobre</h2>
-                    <span id="linhaSobre"></span>
-                    <ul class="list-unstyled sobreLista h4">
-                        <li>
-                            <a href="#!">Para os pais</a>
-                        </li>
-                        <li>
-                            <a href="#!">Contacte-nos</a>
-                        </li>
-                        <li>
-                            <a href="#!">Políticas de privacidade</a>
-                        </li>
-                    </ul>
-                </div>
-
+            <div class="col-sm-6 col-md-4 contentorSobre">
+                <h3 class="sobreFooter">Sobre</h3>
+                <hr class="linhaSobre">
+                <ul class="listaSobreFooter">
+                    <li>
+                        <a href="#" class="elementoSobre">Para os pais</a>
+                    </li>
+                    <li>
+                        <a href="#" class="elementoSobre">Contacte-nos</a>
+                    </li>
+                    <li>
+                        <a href="#" class="elementoSobre">Políticas de privacidade</a>
+                    </li>
+                </ul>
+                <p class="criadoresFooter"><br />Criado pela Inês, pelo Paulo e pela Sofia, da ESMAD.<br /><br /></p>
             </div>
-
-            <div class="col-2">
-
-            </div>
-
-
-            <div class="cartaoEquipa text-right d-flex justify-content-end col-6">
-                <div id="linhaAmigos"></div>
-                <div class="d-flex flex-row text-center">
-                    <div class="col-3">
-                        <div class="cartaoTatinhas">
+            <div class="col-sm-6 col-md-4 col-xxl-3 offset-xxl-0 footer-contacts"></div>
+            <div class="col-md-4 col-xxl-5 footer-about">
+                <h4 class="osAmigosFooter">Os amigos</h4>
+                <div class="cartoesAmigosFooter">
+                    <div class="card-group grupoCartoesFooter">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title tatinhasTitulo">Tatinhas</h3>
+                                <h4 class="card-title tituloCarta">Tatinhas</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Tatinhas.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Tatinhas.png" />
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="cartaoXico">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title xicoTitulo">Xico</h3>
+                                <h4 class="card-title tituloCarta">Xico</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Xico.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Xico.png" />
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="cartaoDora">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title doraTitulo">Dora</h3>
+                                <h4 class="card-title tituloCarta">Dora</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Dora.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Dora.png" />
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="cartaoAndre">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title andreTitulo">André</h3>
+                                <h4 class="card-title tituloCarta">André</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Andre.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Andre.png" />
                         </div>
                     </div>
                 </div>
-                <!-- Footer Links -->
+                <p class="slogan"> Está tudo bem com o tatu do bem </p>
             </div>
         </div>
-
-        <div class="row frasesPequenas">
-            <div class="fraseFooter col-4 h5">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da
-                ESMAD.</div>
-            <div class="col-4">
-
-            </div>
-            <div class="sloganFooter text-right col-3 py-3 h5">Está tudo bem com o tatu do bem.</div>
-        </div>
-        <!-- Copyright -->
-
-        <!-- Copyright -->
-
     </footer>
-
     <!-- Imagens fixas -->
-
-
     <script type="module" src="../js/app.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

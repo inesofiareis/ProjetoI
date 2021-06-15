@@ -1,9 +1,8 @@
 export default class Gamificacao {
-    constructor(premioAtribuido, pontosAtribuidos, premiosCompra, precoPremios) {
-        this.premioAtribuido = premioAtribuido
-        this.pontosAtribuidos = pontosAtribuidos
-        this.premiosCompra = premiosCompra
-        this.precoPremios = precoPremios
-
+    constructor(nome, descricao, img, pontos) {
+        this.nome = nome
+        this.descricao = descricao
+        this.img = img
+        this.pontos = pontos
     }
 }

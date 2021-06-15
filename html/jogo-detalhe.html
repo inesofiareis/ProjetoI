@@ -14,401 +14,167 @@
 </head>
 
 <header>
-    <nav class="navbar navbar-expand-xl navbarJogos justify-content-center">
-        <a class="navbar-brand w-50 me-auto col-xs-5">
+
+    <nav class="navbar navbar-expand-lg justify-content-center navbarJogo" id="mainNav">
+
+        <a class="navbar-brand me-auto">
             <img src="../img/navbar/tatu_logo.png" class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerMenu"
-            aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation" style="background: none;">
+            aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation"
+            style="background: none;">
             <span class="navbar-toggler-icon" style="background-image: url(../img/navbar/menu.png) ;   width: 60px !important;
-            height:30px !important; opacity:70%;"></span>
+                height:30px !important; opacity:70%;"></span>
         </button>
-
-        <div class="collapse navbar-collapse w-100" id="navbarTogglerMenu">
-            
-            <div class="card-deck deckDeIcones justify-content-center">
-                <div class="card iconeZonas text-center col-auto mb-3">
+        <div class="collapse navbar-collapse" id="navbarTogglerMenu">
+            <ul class="navbar-nav center mx-auto itemsNavbar justify-content-center">
+                <li class="nav-item">
                     <a href="./inicio.html">
-                        <img src="../img/navbar/Icon-Inicio.png" alt="inicio" title="Início" class="inicio img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-Inicio.png">
+                            <figcaption class="figure-caption captionIcone">Inicio</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Início</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-3">
-                    <a href="./info.html" class="imagensIcones">
-                        <img src="../img/navbar/Icon-aprender.png" alt="aprender" title="Aprender" class="aprender img-card-top">
+                </li>
+                <li class="nav-item">
+                    <a href="./info.html">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-aprender.png">
+                            <figcaption class="figure-caption captionIcone">Aprender</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Aprender</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-3">
+                </li>
+                <li class="nav-item">
                     <a href="./jogo.html">
-                        <img src="../img/navbar/Icon-jogar.png" alt="jogar" title="Jogar" class="jogar img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-jogar.png">
+                            <figcaption class="figure-caption captionIcone">Jogar</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Jogar</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-8">
+                </li>
+                <li class="nav-item">
                     <a href="./perfil.html">
-                        <img src="../img/navbar/Icon-o teu espaço.png" alt="Pagina Pessoal" title="Pagina Pessoal"
-                        class="paginaPessoal img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-o teu espaço.png">
+                            <figcaption class="figure-caption captionIcone">O teu espaço</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">O teu espaço</h4>
-                    </div>
-                </div>
-            </div>
+                </li>
+            </ul>
 
-            <div class="nav ml-auto">
-                <img src="../img/navbar/Avatar.png" alt="Avatar" class="avatarImagem" id="avatar">
-                <span id="perfil" class="avatarTexto navbar-text" id="nome">Batuti da Silva</span>
-            </div>
+            <ul class="navbar-nav avatar">
+                <li class="nav-item">
+                    <figure class="figure">
+                        <img class="img-fluid figure-img" id="avatar" src="../img/navbar/Avatar.png" />
+                        <figcaption class="figure-caption nomeUtilizador" style="float: left;" id="nome">Batuti da Silva
+                        </figcaption>
+                    </figure>
+
+                </li>
+            </ul>
         </div>
-            <div class="col-auto mb-3"> </div>
-
-
+        </div>
     </nav>
 
 </header>
+
 <body>
     <main class="corpoJogos container-fluid">
-        <div class="container localJogo">
-            <div class="container cartasMemoria">
-                <!-- Jogo da memória -->
-                <section class="jogoMemoria">
-                    <div class="cartaMemoria">
-                        <img class="parteDaFrente" src="img/react.svg" alt="Fica em casa">
-                        <img class="parteDeTras" src="img/js-badge.svg" alt="Carta">
-                    </div>
-
-                    <div class="cartaMemoria">
-                        <img class="parteDaFrente" src="img/react.svg" alt="Fica em casa"">
-                        <img class=" parteDeTras" src="img/js-badge.svg" alt="Carta">
-                    </div>
-
-                    <div class="cartaMemoria">
-                        <img class="parteDaFrente" src="img/angular.svg" alt="Máscara">
-                        <img class="parteDeTras" src="img/js-badge.svg" alt="Carta">
-                    </div>
-
-                    <div class="cartaMemoria">
-                        <img class="parteDaFrente" src="img/angular.svg" alt="Máscara">
-                        <img class="parteDeTras" src="img/js-badge.svg" alt="Carta">
-                    </div>
-
-                    <div class="cartaMemoria">
-                        <img class="parteDaFrente" src="img/ember.svg" alt="Álcool">
-                        <img class="parteDeTras" src="img/js-badge.svg" alt="Carta">
-                    </div>
-
-                    <div class="cartaMemoria">
-                        <img class="parteDaFrente" src="img/ember.svg" alt="Álcool">
-                        <img class="parteDeTras" src="img/js-badge.svg" alt="Carta">
-                    </div>
-
-                    <div class="cartaMemoria">
-                        <img class="parteDaFrente" src="img/vue.svg" alt="Lavar as mãos">
-                        <img class="parteDeTras" src="img/js-badge.svg" alt="Carta">
-                    </div>
-
-                    <div class="memory-card">
-                        <img class="parteDaFrente" src="img/vue.svg" alt="Lavar as mãos">
-                        <img class="parteDeTras" src="img/js-badge.svg" alt="Carta">
-                    </div>
-
-                    <div class="cartaMemoria">
-                        <img class="parteDaFrente" src="img/backbone.svg" alt="Não tocar nos olhos">
-                        <img class="parteDeTras" src="img/js-badge.svg" alt="Carta">
-                    </div>
-
-                    <div class="cartaMemoria">
-                        <img class="parteDaFrente" src="img/backbone.svg" alt="Não tocar nos olhos">
-                        <img class="parteDeTras" src="img/js-badge.svg" alt="Carta">
-                    </div>
-
-                    <div class="cartaMemoria">
-                        <img class="parteDaFrente" src="img/aurelia.svg" alt="Afastamento Social">
-                        <img class="parteDeTras" src="img/js-badge.svg" alt="Carta">
-                    </div>
-
-                    <div class="cartaMemoria">
-                        <img class="parteDaFrente" src="img/aurelia.svg" alt="Afastamento Social">
-                        <img class="parteDeTras" src="img/js-badge.svg" alt="Carta">
-                    </div>
-                </section>
-
-                <!--                 <div class="jogoDeArrastar">
-                    <section class="dragAndDrop">
-                        <i class="fas fa-cat draggable" draggable="true" style="color: #ff6384;" id="cat"></i>
-                        <i class="fas fa-dog draggable" draggable="true" style="color: #36a2eb;" id="dog"></i>
-                        <i class="fas fa-dove draggable" draggable="true" style="color: #ffce56;" id="dove"></i>
-                        <i class="fas fa-fish draggable" draggable="true" style="color: #9966ff;" id="fish"></i>
-                        <i class="fas fa-frog draggable" draggable="true" style="color: #4bc0c0;" id="frog"></i> -->
-                <!-- <i class="fas fa-horse draggable" draggable="true" style="color: #333333;" id="horse"></i>
-                        <i class="fas fa-hippo draggable" draggable="true" style="color: #ff9f40;" id="hippo"></i>
-                        <i class="fas fa-spider draggable" draggable="true" style="color: #ff99cc;" id="spider"></i> -->
-                <!--                     </section> -->
-                <!--                     <section class="droppable-elements">
-                        <div class="droppable" data-draggable-id="frog"><span>Frog</span></div>
-                        <div class="droppable" data-draggable-id="dove"><span>Bird</span></div>
-                        <div class="droppable" data-draggable-id="cat"><span>Cat</span></div>
-                        <div class="droppable" data-draggable-id="fish"><span>Fish</span></div>
-                        <div class="droppable" data-draggable-id="dog"><span>Dog</span></div> -->
-                <!-- <div class="droppable" data-draggable-id="spider"><span>Spider</span></div>
-                        <div class="droppable" data-draggable-id="horse"><span>Horse</span></div>
-                        <div class="droppable" data-draggable-id="hippo"><span>Hippo</span></div> -->
-                <!--                     </section>
-                </div>
- -->
-
-                <!-- PROTEGE-TE -->
-                <!--                 <div id="fogeDoVirus">
-                    <div id="personagem"></div>
-                    <div id="pessoaComVirus"></div>
-                </div> -->
-
-
-                <!-- PREENCHE OS ESPAÇOS -->
-
-                <!--                 <div id="frame001">
-                    <div id="color001">
-                        <div id="center001">
-                            <h2><strong>Name It Quiz</strong></h2>
-                            <p><strong>Word Bank:</strong> Amman - Ottawa - Jerusalem - London - Brasilia</p>
-                        </div><br />
-                        <p>The capital of Palestine is <input type="text" class="check003" id="input001"
-                                size="15" /><text class="button002" id="check001"></text>, and the capital of Jordan is
-                            <input id="input002" size="15" /><text class="button002" id="check002"></text>, and the
-                            capital of England is <input id="input003" size="15" /> <text class="button002"
-                                id="check003"></text> and the capital of Brazil is <input id="input004"
-                                size="15" /><text class="button002" id="check004"></text>, and the capital of Canada is
-                            <input id="input005" size="15" /><text class="button002" id="check005"></text>.</p>
-                        <div id="disappear001">
-                            <div id="center001"><button class="button001" onclick="submit001()">Submit</button></div>
-                        </div><br />
-                        <div id="center001">
-                            <p id="message001"></p>
-                            <p id="reload001"></p>
+        <section class="jogo">
+            <div class="container-fluid sitioJogo">
+                <div class="row">
+                    <div class="col-lg-10 col-xl-10 col-xxl-10 offset-lg-1  containerJogo">
+                        <div class="caixaJogos">
+                            <!--Inserir Jogo-->
                         </div>
-                        <br />
-                        <br />
-                    </div>
-                </div> -->
-
-
-                <!--  MATA O VIRUS -->
-
-                <!--                 <div class="wrapper">
-                    <div class="score">0</div>
-                    <div class="countDown">20</div>
-                    <button class="startBtn">Start</button>
-
-                    <div class="game">
-                        <div class="hole hole1">
-                            <div class="mole small"></div>
-                        </div>
-                        <div class="hole hole2">
-                            <div class="mole small"></div>
-                        </div>
-                        <div class="hole hole3">
-                            <div class="mole small"></div>
-                        </div>
-                        <div class="hole hole4">
-                            <div class="mole large"></div>
-                        </div>
-                        <div class="hole hole5">
-                            <div class="mole large"></div>
-                        </div>
-                        <div class="hole hole6">
-                            <div class="mole large"></div>
-                        </div>
-                    </div>
-                </div> -->
-
-
-                <!-- PUZZLE -->
-
-                <!--                 <div id='puz_box'>
-                    <div id='puz'>
-                        <i class='first' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
-                        <i class='secon' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
-                        <i class='third' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
-                        <i class='fourt' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
-                        <i class='fifth' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
-                        <i class='sixth' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
-                        <i class='seven' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
-                        <i class='eight' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
-                        <i class='ninth' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
-                    </div>
-                    <div id='puzz'>
-                        <i class='third' draggable='true' ondragstart='drag(event)'></i>
-                        <i class='first' draggable='true' ondragstart='drag(event)'></i>
-                        <i class='secon' draggable='true' ondragstart='drag(event)'></i>
-                        <i class='fourt' draggable='true' ondragstart='drag(event)'></i>
-                        <i class='fifth' draggable='true' ondragstart='drag(event)'></i>
-                        <i class='sixth' draggable='true' ondragstart='drag(event)'></i>
-                        <i class='seven' draggable='true' ondragstart='drag(event)'></i>
-                        <i class='eight' draggable='true' ondragstart='drag(event)'></i>
-                        <i class='ninth' draggable='true' ondragstart='drag(event)'></i>
-                    </div>
-                </div>
-                <div id='clicks'>0</div> -->
-
-
-
-            </div>
-            <div class="container infoGeralJogo">
-                <div class="card text-left cartaoInfoJogo">
-                    <img class="card-img-bottom" src="holder.js/100px180/" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title tituloJogo">Nome do Jogo</h4>
-                        <p class="card-text descJogo">Descrição</p>
-                        <div class="container avaliacoes">
-                            <div class="card-deck">
-                                <div class="card positivo">
-                                    <img class="card-img-top" src="../img/carinha feliz.png" alt="Adorei!"
-                                        title="Adorei!">
-                                    <div class="card-body">
-                                        <h4 class="card-title avaliacaoPositiva">0</h4>
-                                    </div>
-                                </div>
-                                <div class="card neutro">
-                                    <img class="card-img-top" src="../img/carinha media.png" alt="Bom" title="Bom">
-                                    <div class="card-body">
-                                        <h4 class="card-title avaliacaoNeutra">0</h4>
-                                    </div>
-                                </div>
-                                <div class="card negativo">
-                                    <img class="card-img-top" src="../img/carinha triste.png" alt="Podia ser melhor"
-                                        title="Podia ser melhor">
-                                    <div class="card-body">
-                                        <h4 class="card-title avaliacaoNegativa">0</h4>
-                                    </div>
-                                </div>
+                        <div class="infoJogo">
+                            <div class="textoJogo">
+                                <h1 class="text-center nomeJogo">Nome do jogo</h1>
+                                <p class="text-center descJogo">Aqui vai ficar a grande descrição de cada jogo
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-around">
+                                <figure class="figure positivo d-flex align-items-center">
+                                    <input type="image" class="img-fluid figure-img avaliacaoBtn"
+                                        src="../img/jogos/carinha feliz.png" id="positivo">
+                                    <figcaption class="figure-caption textoFiguraJogo positivoTexto">0</figcaption>
+                                </figure>
+                                <figure class="figure medio d-flex align-items-center">
+                                    <input type="image" class="img-fluid figure-img avaliacaoBtn"
+                                        src="../img/jogos/carinha media.png" id="medio">
+                                    <figcaption class="figure-caption textoFiguraJogo medioTexto">0</figcaption>
+                                </figure>
+                                <figure class="figure negativo d-flex align-items-center">
+                                    <input type="image" class="img-fluid figure-img avaliacaoBtn"
+                                        src="../img/jogos/carinha triste.png" id="negativo">
+                                    <figcaption class="figure-caption textoFiguraJogo negativoTexto">0</figcaption>
+                                </figure>
                             </div>
                         </div>
 
-                        <div class="container float-right espacoComentar">
-                            <div class="card-deck float-right d-flex flex-column mr-5 cartoesComentarios">
-                                <div class="card">
-                                    <img class="card-img-top" src="holder.js/100x180/" alt="">
-                                    <div class="card-body">
-                                        <h4 class="card-title nomeComentadorUm">Nome</h4>
-                                        <p class="card-text textoComentadoUm">Comentário</p>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <img class="card-img-top" src="holder.js/100x180/" alt="">
-                                    <div class="card-body">
-                                        <h4 class="card-title nomeComentadorDois">Nome</h4>
-                                        <p class="card-text textoComentadoDois">Comentário</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group formularioComentar">
-                                <label for="inputDeComentario">Inserir com js "o x pessoa diz"</label>
-                                <input type="text" class="form-control" name="inputDeComentario" id="inputDeComentario"
-                                    aria-describedby="helpId" placeholder="">
-                                <button type="submit" class="btn btn-primary botaoComentar">Comentar</button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-
-        </div>
+        </section>
     </main>
 
+
     <!-- Footer -->
-    <footer class="page-footer footerJogos" style="height: 100%;">
+    <footer class="footerJogo">
         <div class="row">
-            <div class="col-9"></div>
-            <span class="amigos h2">Os amigos</span>
-        </div>
-        <div class="row">
-            <div class="container col-4 text-center text-md-left">
-
-                <hr class="clearfix d-md-none">
-                <div class="col-md-5 mb-md-0 mb-3 divDoSobre">
-                    <h2 class="sobre">Sobre</h2>
-                    <span id="linhaSobre"></span>
-                    <ul class="list-unstyled sobreLista h4">
-                        <li>
-                            <a href="#!">Para os pais</a>
-                        </li>
-                        <li>
-                            <a href="#!">Contacte-nos</a>
-                        </li>
-                        <li>
-                            <a href="#!">Políticas de privacidade</a>
-                        </li>
-                    </ul>
-                </div>
-
+            <div class="col-sm-6 col-md-4 contentorSobre">
+                <h3 class="sobreFooter">Sobre</h3>
+                <hr class="linhaSobre">
+                <ul class="listaSobreFooter">
+                    <li>
+                        <a href="#" class="elementoSobre">Para os pais</a>
+                    </li>
+                    <li>
+                        <a href="#" class="elementoSobre">Contacte-nos</a>
+                    </li>
+                    <li>
+                        <a href="#" class="elementoSobre">Políticas de privacidade</a>
+                    </li>
+                </ul>
+                <p class="criadoresFooter"><br />Criado pela Inês, pelo Paulo e pela Sofia, da ESMAD.<br /><br /></p>
             </div>
-
-            <div class="col-2">
-
-            </div>
-
-
-            <div class="cartaoEquipa text-right d-flex justify-content-end col-6">
-                <div id="linhaAmigos"></div>
-                <div class="d-flex flex-row text-center">
-                    <div class="col-3">
-                        <div class="cartaoTatinhas">
+            <div class="col-sm-6 col-md-4 col-xxl-3 offset-xxl-0 footer-contacts"></div>
+            <div class="col-md-4 col-xxl-5 footer-about">
+                <h4 class="osAmigosFooter">Os amigos</h4>
+                <div class="cartoesAmigosFooter">
+                    <div class="card-group grupoCartoesFooter">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title tatinhasTitulo">Tatinhas</h3>
+                                <h4 class="card-title tituloCarta">Tatinhas</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Tatinhas.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Tatinhas.png" />
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="cartaoXico">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title xicoTitulo">Xico</h3>
+                                <h4 class="card-title tituloCarta">Xico</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Xico.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Xico.png" />
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="cartaoDora">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title doraTitulo">Dora</h3>
+                                <h4 class="card-title tituloCarta">Dora</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Dora.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Dora.png" />
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="cartaoAndre">
+                        <div class="card cardsAmigos">
                             <div class="card-body">
-                                <h3 class="card-title andreTitulo">André</h3>
+                                <h4 class="card-title tituloCarta">André</h4>
                             </div>
-                            <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Andre.png" alt="">
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Andre.png" />
                         </div>
                     </div>
                 </div>
-                <!-- Footer Links -->
+                <p class="slogan"> Está tudo bem com o tatu do bem </p>
             </div>
         </div>
-
-        <div class="row frasesPequenas">
-            <div class="fraseFooter col-4 h5">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da
-                ESMAD.</div>
-            <div class="col-4">
-
-            </div>
-            <div class="sloganFooter text-right col-3 py-3 h5">Está tudo bem com o tatu do bem.</div>
-        </div>
-        <!-- Copyright -->
-
-        <!-- Copyright -->
-
     </footer>
 
+    <!-- Footer -->
     <!-- Imagens fixas -->
 
 
@@ -416,7 +182,7 @@
 
 
 
-    <script src="../Scripts/script.js"></script>
+    <!-- <script src="../Scripts/script.js"></script> -->
     <!-- Optional JavaScript -->
     <script type="module" src="../js/app.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

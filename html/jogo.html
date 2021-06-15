@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-pt">
+<html lang="pt-PT">
 
 <head>
     <title>TATUDOBEM</title>
@@ -14,310 +14,170 @@
 </head>
 
 <header>
-    <nav class="navbar navbar-expand-xl navbarJogos justify-content-center">
-        <a class="navbar-brand w-50 me-auto col-xs-5">
+
+    <nav class="navbar navbar-expand-lg justify-content-center navbarJogo" id="mainNav">
+        <a class="navbar-brand me-auto">
             <img src="../img/navbar/tatu_logo.png" class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerMenu"
-            aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation" style="background: none;">
+            aria-controls="navbarTogglerMenu" aria-expanded="false" aria-label="Toggle navigation"
+            style="background: none;">
             <span class="navbar-toggler-icon" style="background-image: url(../img/navbar/menu.png) ;   width: 60px !important;
-            height:30px !important; opacity:70%;"></span>
+                height:30px !important; opacity:70%;"></span>
         </button>
-
-        <div class="collapse navbar-collapse w-100" id="navbarTogglerMenu">
-            
-            <div class="card-deck deckDeIcones justify-content-center">
-                <div class="card iconeZonas text-center col-auto mb-3">
+        <div class="collapse navbar-collapse" id="navbarTogglerMenu">
+            <ul class="navbar-nav center mx-auto itemsNavbar justify-content-center">
+                <li class="nav-item">
                     <a href="./inicio.html">
-                        <img src="../img/navbar/Icon-Inicio.png" alt="inicio" title="Início" class="inicio img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-Inicio.png">
+                            <figcaption class="figure-caption captionIcone">Inicio</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Início</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-3">
-                    <a href="./info.html" class="imagensIcones">
-                        <img src="../img/navbar/Icon-aprender.png" alt="aprender" title="Aprender" class="aprender img-card-top">
+                </li>
+                <li class="nav-item">
+                    <a href="./info.html">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-aprender.png">
+                            <figcaption class="figure-caption captionIcone">Aprender</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Aprender</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-3">
+                </li>
+                <li class="nav-item">
                     <a href="./jogo.html">
-                        <img src="../img/navbar/Icon-jogar.png" alt="jogar" title="Jogar" class="jogar img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-jogar.png">
+                            <figcaption class="figure-caption captionIcone">Jogar</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">Jogar</h4>
-                    </div>
-                </div>
-                <div class="card iconeZonas text-center col-auto mb-8">
+                </li>
+                <li class="nav-item">
                     <a href="./perfil.html">
-                        <img src="../img/navbar/Icon-o teu espaço.png" alt="Pagina Pessoal" title="Pagina Pessoal"
-                        class="paginaPessoal img-card-top">
+                        <figure class="figure">
+                            <img class="img-fluid figure-img iconNavbar" src="../img/navbar/Icon-o teu espaço.png">
+                            <figcaption class="figure-caption captionIcone">O teu espaço</figcaption>
+                        </figure>
                     </a>
-                    <div class="card-body">
-                        <h4 class="card-title iconeTexto">O teu espaço</h4>
-                    </div>
-                </div>
-            </div>
+                </li>
+            </ul>
 
-            <div class="nav ml-auto">
-                <img src="../img/navbar/Avatar.png" alt="Avatar" class="avatarImagem" id="avatar">
-                <span id="perfil" class="avatarTexto navbar-text" id="nome">Batuti da Silva</span>
-            </div>
+            <ul class="navbar-nav avatar">
+                <li class="nav-item">
+                    <figure class="figure">
+                        <img class="img-fluid figure-img" id="avatar" src="../img/navbar/Avatar.png" />
+                        <figcaption class="figure-caption nomeUtilizador" style="float: left;" id="nome">Batuti da Silva
+                        </figcaption>
+                    </figure>
+
+                </li>
+            </ul>
         </div>
-            <div class="col-auto mb-3"> </div>
-
-
+        </div>
     </nav>
 
 </header>
+
 <body>
-    <!--     </div> -->
-
-    <!--heather header igual em todos-->
-
     <main class="corpoJogos container-fluid">
-
-        <div class="row">
-            <div class="col-5"></div>
-            <div class="col-2">
-                <div class="input-group col-8">
-                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                        aria-describedby="search-addon" />
-                    <button type="button" class="btn btn-outline-primary">search</button>
+        <section class="caixasDeJogos">
+            <div class="container-fluid apresentacaoContainer">
+                <div class="apresentacaoDora">
+                    <p class="display-3 introDora text-center" id="textoJogos">
+                        Sê bem-vinde à área de
+                        jogos! Explora e diverte-te!</p>
+                    <img class="tutorialDora" src="../img/Icon ajuda dora.png" width="120px" alt="">
                 </div>
-            </div>
-            <div class="col-2 mt-5">
-                <button type="button" class="btn btn-primary col-4">Inserir</button>
-            </div>
-            <div class="col-2"></div>
-        </div>
-        <div class="row">
-            <div class="col-5"></div>
-
-            <div class="col-5">
-                <table class="table table-striped table-inverse table-responsive col-8">
-                    <thead class="thead-inverse">
-                        <tr>
-                            <th>Título</th>
-                            <th>Descriçãp</th>
-                            <th>Avaliação</th>
-                            <th>Alterar</th>
-                            <th>Remover</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="row utilizadorTabela"></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td scope="row utilizadorTabela"></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-4"></div>
-        </div>
-
-        <div class="row"></div>
-
-        <div class="row">
-            <div class="col-6"></div>
-            <div class="col-2 mt-5">
-                <button type="button" class="btn btn-primary col-4">Inserir</button>
-            </div>
-            <div class="col-5"></div>
-        </div>
-        <div class="row">
-            <div class="col-5"></div>
-            <div class="col-4">
-                <table class="table table-striped table-inverse table-responsive col-12">
-                    <thead class="thead-inverse">
-                        <tr>
-                            <th>Pessoa</th>
-                            <th>Comentário</th>
-                            <th>Data</th>
-                            <th>Alterar</th>
-                            <th>Remover</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td scope="row utilizadorTabela"></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td scope="row utilizadorTabela"></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!--         <div class="row">
-            <p class="display-3" style="margin: 0px 0px 30px 50px; color:#444E6E" id="textoJogos">Sê bem-vinde à área de
-                jogos! Explora e diverte-te!</p>
-            <div class="col-3"></div>
-            <a href="" style="margin: 0rem 0rem 0rem 5rem;">
-                <img src="../img/Icon ajuda dora.png" width="120px" alt="">
-            </a>
-        </div>
-
-        <div class="container">
-            <button class="btn btn-primary botaoFiltrar" data-filter="todos">Todos</button>
-            <button class="btn btn-default botaoFiltrar" data-filter="quizzes">Questionários</button>
-            <button class="btn btn-default botaoFiltrar" data-filter="fill in the blanks">Preencher espaços</button>
-            <button class="btn btn-default botaoFiltrar" data-filter="jogo da memoria">Jogo da memória</button>
-        </div>
-        <div class="card-group d-flex justify-content-around">
-            <img src="../img/JogadoraCadeira.png" alt="Dora" title="Olá, eu sou a Dora!" width="250px" id="doraPagina"
-                style="transform: scaleX(-1);">
-            <div class="card col-sm-3 col-xs-12 w-50 " style="background: none; border:none;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Completa os espaços</p>
+                <div class="filtragemJogo text-right">
+                    <button class="btn btn-outline-dark" id="botaoAdicionar"
+                        style="visibility: hidden;">Adicionar</button>
+                    <button class="btn botaoFiltrar" data-filter="todos" id="todos">Todos</button>
+                    <button class="btn btn-default botaoFiltrar" data-filter="quizzes"
+                        id="questionarios">Questionários</button>
+                    <button class="btn btn-default botaoFiltrar" data-filter="preencher espacos"
+                        id="preencherEspacos">Preencher Espaços</button>
                 </div>
-            </div>
-            <div class="card col-sm-3 col-xs-12" style="background: none; border:none;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
-                </div>
-            </div>
-            <div class="card col-sm-3 col-xs-12" style="background: none; border:none;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to show that equal height
-                        action.</p>
-                </div>
-            </div>
-        </div>
-        </div> -->
-        <!--alterar conforme os jogos-->
-        <!--         </div>
-    </main> -->
-
-        <!-- Footer -->
-        <footer class="page-footer footerJogos" style="height: 100%;">
-            <div class="row">
-                <div class="col-9"></div>
-                <span class="amigos h2">Os amigos</span>
-            </div>
-            <div class="row">
-                <div class="container col-4 text-center text-md-left">
-
-                    <hr class="clearfix d-md-none">
-                    <div class="col-md-5 mb-md-0 mb-3 divDoSobre">
-                        <h2 class="sobre">Sobre</h2>
-                        <span id="linhaSobre"></span>
-                        <ul class="list-unstyled sobreLista h4">
-                            <li>
-                                <a href="#!">Para os pais</a>
-                            </li>
-                            <li>
-                                <a href="#!">Contacte-nos</a>
-                            </li>
-                            <li>
-                                <a href="#!">Políticas de privacidade</a>
-                            </li>
-                        </ul>
+                <div class="row justify-content-center caixaDosJogos">
+                    <div class="col-lg-4" style="height: 616.8px;">
+                        <img src="../img/jogos/Dora.png" alt="Dora" title="Olá, eu sou a Dora!" width="250px"
+                            id="doraPagina" style="transform: scaleX(-1);">
                     </div>
-
+                    <div id="catalogoJogos"></div>
                 </div>
+        </section>
+    </main>
 
-                <div class="col-2">
-
-                </div>
-
-
-                <div class="cartaoEquipa text-right d-flex justify-content-end col-6">
-                    <div id="linhaAmigos"></div>
-                    <div class="d-flex flex-row text-center">
-                        <div class="col-3">
-                            <div class="cartaoTatinhas">
-                                <div class="card-body">
-                                    <h3 class="card-title tatinhasTitulo">Tatinhas</h3>
-                                </div>
-                                <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Tatinhas.png" alt="">
+    <!-- Footer -->
+    <footer class="footerJogo">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 contentorSobre">
+                <h3 class="sobreFooter">Sobre</h3>
+                <hr class="linhaSobre">
+                <ul class="listaSobreFooter">
+                    <li>
+                        <a href="#" class="elementoSobre">Para os pais</a>
+                    </li>
+                    <li>
+                        <a href="#" class="elementoSobre">Contacte-nos</a>
+                    </li>
+                    <li>
+                        <a href="#" class="elementoSobre">Políticas de privacidade</a>
+                    </li>
+                </ul>
+                <p class="criadoresFooter"><br />Criado pela Inês, pelo Paulo e pela Sofia, da ESMAD.<br /><br />
+                </p>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xxl-3 offset-xxl-0 footer-contacts"></div>
+            <div class="col-md-4 col-xxl-5 footer-about">
+                <h4 class="osAmigosFooter">Os amigos</h4>
+                <div class="cartoesAmigosFooter">
+                    <div class="card-group grupoCartoesFooter">
+                        <div class="card cardsAmigos">
+                            <div class="card-body">
+                                <h4 class="card-title tituloCarta">Tatinhas</h4>
                             </div>
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Tatinhas.png" />
                         </div>
-                        <div class="col-3">
-                            <div class="cartaoXico">
-                                <div class="card-body">
-                                    <h3 class="card-title xicoTitulo">Xico</h3>
-                                </div>
-                                <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Xico.png" alt="">
+                        <div class="card cardsAmigos">
+                            <div class="card-body">
+                                <h4 class="card-title tituloCarta">Xico</h4>
                             </div>
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Xico.png" />
                         </div>
-                        <div class="col-3">
-                            <div class="cartaoDora">
-                                <div class="card-body">
-                                    <h3 class="card-title doraTitulo">Dora</h3>
-                                </div>
-                                <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Dora.png" alt="">
+                        <div class="card cardsAmigos">
+                            <div class="card-body">
+                                <h4 class="card-title tituloCarta">Dora</h4>
                             </div>
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Dora.png" />
                         </div>
-                        <div class="col-3">
-                            <div class="cartaoAndre">
-                                <div class="card-body">
-                                    <h3 class="card-title andreTitulo">André</h3>
-                                </div>
-                                <img class="card-img-top imagemAmigos" src="../img/footer/A equipa-Andre.png" alt="">
+                        <div class="card cardsAmigos">
+                            <div class="card-body">
+                                <h4 class="card-title tituloCarta">André</h4>
                             </div>
+                            <img class="card-img-bottom w-100 d-block" src="../img/footer/A equipa-Andre.png" />
                         </div>
                     </div>
-                    <!-- Footer Links -->
                 </div>
+                <p class="slogan"> Está tudo bem com o tatu do bem </p>
             </div>
-
-            <div class="row frasesPequenas">
-                <div class="fraseFooter col-4 h5">Criado pela Inês, pelo Paulo e pela Sofia, três alunos da
-                    ESMAD.</div>
-                <div class="col-4">
-
-                </div>
-                <div class="sloganFooter text-right col-3 py-3 h5">Está tudo bem com o tatu do bem.</div>
-            </div>
-            <!-- Copyright -->
-
-            <!-- Copyright -->
-
-        </footer>
-
-        <!-- Imagens fixas -->
+        </div>
+    </footer>
 
 
 
 
-
-
-        <script src="../Scripts/script.js"></script>
-        <!-- Optional JavaScript -->
-        <script type="module" src="../js/app.js"></script>
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+    <!-- <script src="../Scripts/script.js"></script> -->
+    <!-- Optional JavaScript -->
+    <script type="module" src="../js/app.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
