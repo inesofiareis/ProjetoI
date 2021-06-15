@@ -155,7 +155,7 @@ class App {
                 estado: 'regular',
                 amigos: ['fifs', 'PauloR'],
                 atividades: [{
-                    atividade: 'Ajudar o xico',
+                    atividade: 'Ajudar o Xico',
                     pontuacao: 100
                 }]
             },
@@ -174,7 +174,7 @@ class App {
                 estado: 'regular',
                 amigos: ['InêsReis', 'PauloR'],
                 atividades: [{
-                    atividade: 'Ajudar o xico',
+                    atividade: 'Ajudar o Xico',
                     pontuacao: 100
                 }]
             },
@@ -193,7 +193,7 @@ class App {
                 estado: 'regular',
                 amigos: ['InêsReis', 'fifs'],
                 atividades: [{
-                    atividade: 'Ajudar o xico',
+                    atividade: 'Ajudar o Xico',
                     pontuacao: 100
                 }]
             }

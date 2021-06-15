@@ -41,6 +41,7 @@ export default class genero{
 
                 this.utilizadorControlador.setEditar(this.nomeUtilizador.value, this.emailUtilizador.value,this.palavraPasse.value);
                 this.placeholder();
+                location.reload()
             
             } catch (e) {
                 document.querySelector('.infoAlteravel').innerHTML += `<div class="alert alert-danger" role="alert">${e}</div>`;

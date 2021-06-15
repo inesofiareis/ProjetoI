@@ -22,7 +22,7 @@ export default class utilizadorControlador {
             const tipo = 'utilizador' //tipo de utilizador, para novos são sempre utilizadores
             const estado = 'regular' //utilizador estra com estado de utilizador regular
             const amigos = [] //lista vazia para puder ser adicionado novos amigos
-            const atividades = 0 //numero de ativades que utilizador já fez (0 no inicio)
+            const atividades = [] //numero de ativades que utilizador já fez (0 no inicio)
             this.utilizadores.push(new utilizadorModelo(novoID, nome, apelido, nomeUtilizador, email, palavraPasse, dataNascimento, genero, pontos, avatar, tipo, estado, amigos, atividades))
             localStorage.setItem('utilizadores', JSON.stringify(this.utilizadores))
             sessionStorage.setItem('utilizadorLogado', nomeUtilizador)
@@ -168,17 +168,16 @@ export default class utilizadorControlador {
             if (i.atividade == atividade){
                 if (i.pontuacao < pontos){
                     i.pontuacao = pontos
-                    atividadeRealizada = true
-
-                    break
                 }
+
+                atividadeRealizada = true
+                break
             }
         }
 
         if(!atividadeRealizada){
             utilizador.atividades.push({atividade: atividade, pontuacao: pontos})
         }
-        console.log(utilizador.atividades)
         this.guardarLocalStorage(utilizador)
     }
 

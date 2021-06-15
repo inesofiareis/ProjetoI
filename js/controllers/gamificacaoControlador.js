@@ -12,7 +12,6 @@ export default class gamificacaoControlador{
 
     getMedalhas(){
         let medalhas = localStorage['gamificacao']
-        console.log(medalhas)
 
         medalhas = JSON.parse(medalhas)
         
