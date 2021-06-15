@@ -101,19 +101,21 @@ body {
 @media screen and (max-width:767px) {
     .tatudobemAbanar {
         margin-top: 50px;
+        margin-left: -10px;
     }
 
     .tituloIndex {
-        text-align: center;
+        text-align: justify;
+        font-size: 40px;
     }
 
     .textoIndex {
-        text-align: center;
-        margin-left: -50px;
+        text-align: justify;
+        width:470px;
     }
 
     .divDosBotoesIndex {
-        margin-left: 50px;
+        margin-left: 0px;
     }
 
     .tatuTatinhasIndex {
