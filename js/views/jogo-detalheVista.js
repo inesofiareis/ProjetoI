@@ -34,38 +34,38 @@ export default class JogosDetalhes {
     gerarJogoQuestionarios() {
         let perguntasErespostas = this.jogoControlador.getJogo()
 
-        this.posJogo.innerHTML = `<h1 class="display-4">Vê o que aprendeste!</h1>
-        <h3 class="perguntaUm" style="color:#205D76;">${perguntasErespostas.perguntas[0]}</h3>
-        <input type="radio" name="respostaUm" value="${perguntasErespostas.alternativas[0][0]}" class="opcaoUm">${perguntasErespostas.alternativas[0][0]}<br>
-        <input type="radio" name="respostaUm" value="${perguntasErespostas.alternativas[0][1]}" class="opcaoDois">${perguntasErespostas.alternativas[0][1]}<br>
-        <input type="radio" name="respostaUm" value="${perguntasErespostas.alternativas[0][2]}" class="opcaoTres">${perguntasErespostas.alternativas[0][2]}<br>
-        <input type="radio" name="respostaUm" value="${perguntasErespostas.alternativas[0][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[0][3]}<br>
+        this.posJogo.innerHTML = `<h1 class="display-4 text-center" style="color:#205D76; margin-left:5px">Vê o que aprendeste!</h1>
+        <h3 class="perguntaUm" style="color:#4685BD; margin-left:30px">${perguntasErespostas.perguntas[0]}</h3>
+        <input type="radio" name="respostaUm" value="${perguntasErespostas.alternativas[0][0]}" class="opcaoUm" style="margin-left:30px"> ${perguntasErespostas.alternativas[0][0]}<br>
+        <input type="radio" style="margin-left:30px" name="respostaUm" value="${perguntasErespostas.alternativas[0][1]}" class="opcaoDois">${perguntasErespostas.alternativas[0][1]}<br>
+        <input type="radio" style="margin-left:30px" name="respostaUm" value="${perguntasErespostas.alternativas[0][2]}" class="opcaoTres">${perguntasErespostas.alternativas[0][2]}<br>
+        <input type="radio" style="margin-left:30px" name="respostaUm" value="${perguntasErespostas.alternativas[0][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[0][3]}<br>
     
-        <h3 class="perguntaDois" style="color:#205D76;">${perguntasErespostas.perguntas[1]}</h3>
-        <input type="radio" name="respostaDois" value="${perguntasErespostas.alternativas[1][0]}" class="opcaoUm">${perguntasErespostas.alternativas[1][0]} <br>
-        <input type="radio" name="respostaDois" value="${perguntasErespostas.alternativas[1][1]}" class="opcaoDois">${perguntasErespostas.alternativas[1][1]} <br>
-        <input type="radio" name="respostaDois" value="${perguntasErespostas.alternativas[1][2]}" class="opcaoTres">${perguntasErespostas.alternativas[1][2]} <br>
-        <input type="radio" name="respostaDois" value="${perguntasErespostas.alternativas[1][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[1][3]} <br>
+        <h3 class="perguntaDois" style="color:#4685BD;margin-left:30px"">${perguntasErespostas.perguntas[1]}</h3>
+        <input type="radio" style="margin-left:30px" name="respostaDois" value="${perguntasErespostas.alternativas[1][0]}" class="opcaoUm">${perguntasErespostas.alternativas[1][0]} <br>
+        <input type="radio" style="margin-left:30px" name="respostaDois" value="${perguntasErespostas.alternativas[1][1]}" class="opcaoDois">${perguntasErespostas.alternativas[1][1]} <br>
+        <input type="radio" style="margin-left:30px" name="respostaDois" value="${perguntasErespostas.alternativas[1][2]}" class="opcaoTres">${perguntasErespostas.alternativas[1][2]} <br>
+        <input type="radio" style="margin-left:30px" name="respostaDois" value="${perguntasErespostas.alternativas[1][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[1][3]} <br>
     
-        <h3 class="perguntaTres" style="color:#205D76;">${perguntasErespostas.perguntas[2]}</h3>
-        <input type="radio" name="respostaTres" value="${perguntasErespostas.alternativas[2][0]}" class="opcaoUm">${perguntasErespostas.alternativas[2][0]} <br>
-        <input type="radio" name="respostaTres" value="${perguntasErespostas.alternativas[2][1]}" class="opcaoDois">${perguntasErespostas.alternativas[2][1]} <br>
-        <input type="radio" name="respostaTres" value="${perguntasErespostas.alternativas[2][2]}" class="opcaoTres">${perguntasErespostas.alternativas[2][2]} <br>
-        <input type="radio" name="respostaTres" value="${perguntasErespostas.alternativas[2][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[2][3]} <br>
+        <h3 class="perguntaTres" style="color:#4685BD;margin-left:30px"">${perguntasErespostas.perguntas[2]}</h3>
+        <input type="radio" style="margin-left:30px" name="respostaTres" value="${perguntasErespostas.alternativas[2][0]}" class="opcaoUm">${perguntasErespostas.alternativas[2][0]} <br>
+        <input type="radio" style="margin-left:30px" name="respostaTres" value="${perguntasErespostas.alternativas[2][1]}" class="opcaoDois">${perguntasErespostas.alternativas[2][1]} <br>
+        <input type="radio" style="margin-left:30px" name="respostaTres" value="${perguntasErespostas.alternativas[2][2]}" class="opcaoTres">${perguntasErespostas.alternativas[2][2]} <br>
+        <input type="radio" style="margin-left:30px" name="respostaTres" value="${perguntasErespostas.alternativas[2][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[2][3]} <br>
     
-        <h3 class="perguntaQuatro" style="color:#205D76;">${perguntasErespostas.perguntas[3]}</h3>
-        <input type="radio" name="respostaQuatro" value="${perguntasErespostas.alternativas[3][0]}" class="opcaoUm">${perguntasErespostas.alternativas[3][0]} <br>
-        <input type="radio" name="respostaQuatro" value="${perguntasErespostas.alternativas[3][1]}" class="opcaoDois">${perguntasErespostas.alternativas[3][1]} <br>
-        <input type="radio" name="respostaQuatro" value="${perguntasErespostas.alternativas[3][2]}" class="opcaoTres">${perguntasErespostas.alternativas[3][2]} <br>
-        <input type="radio" name="respostaQuatro" value="${perguntasErespostas.alternativas[3][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[3][3]} <br>
+        <h3 class="perguntaQuatro" style="color:#4685BD; margin-left:30px"">${perguntasErespostas.perguntas[3]}</h3>
+        <input type="radio" style="margin-left:30px" name="respostaQuatro" value="${perguntasErespostas.alternativas[3][0]}" class="opcaoUm">${perguntasErespostas.alternativas[3][0]} <br>
+        <input type="radio" style="margin-left:30px" name="respostaQuatro" value="${perguntasErespostas.alternativas[3][1]}" class="opcaoDois">${perguntasErespostas.alternativas[3][1]} <br>
+        <input type="radio" style="margin-left:30px" name="respostaQuatro" value="${perguntasErespostas.alternativas[3][2]}" class="opcaoTres">${perguntasErespostas.alternativas[3][2]} <br>
+        <input type="radio" style="margin-left:30px" name="respostaQuatro" value="${perguntasErespostas.alternativas[3][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[3][3]} <br>
     
-        <h3 class="perguntaCinco" style="color:#205D76;">${perguntasErespostas.perguntas[4]}</h3>
-        <input type="radio" name="respostaCinco" value="${perguntasErespostas.alternativas[4][0]}" class="opcaoUm">${perguntasErespostas.alternativas[4][0]} <br>
-        <input type="radio" name="respostaCinco" value="${perguntasErespostas.alternativas[4][1]}" class="opcaoDois">${perguntasErespostas.alternativas[4][1]} <br>
-        <input type="radio" name="respostaCinco" value="${perguntasErespostas.alternativas[4][2]}" class="opcaoTres">${perguntasErespostas.alternativas[4][2]} <br>
-        <input type="radio" name="respostaCinco" value="${perguntasErespostas.alternativas[4][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[4][3]} <br>
+        <h3 class="perguntaCinco" style="color:#4685BD; margin-left:30px"">${perguntasErespostas.perguntas[4]}</h3>
+        <input type="radio" style="margin-left:30px" name="respostaCinco" value="${perguntasErespostas.alternativas[4][0]}" class="opcaoUm">${perguntasErespostas.alternativas[4][0]} <br>
+        <input type="radio" style="margin-left:30px" name="respostaCinco" value="${perguntasErespostas.alternativas[4][1]}" class="opcaoDois">${perguntasErespostas.alternativas[4][1]} <br>
+        <input type="radio" style="margin-left:30px" name="respostaCinco" value="${perguntasErespostas.alternativas[4][2]}" class="opcaoTres">${perguntasErespostas.alternativas[4][2]} <br>
+        <input type="radio" style="margin-left:30px; margin-bottom:20px;" name="respostaCinco" value="${perguntasErespostas.alternativas[4][3]}" class="opcaoQuatro">${perguntasErespostas.alternativas[4][3]} <br>
     
-        <input type="submit" name="submit" value="Diz-me a pontuação!" id="resultado" style="">`
+        <input type="submit" name="submit" value="Diz-me a pontuação!" id="resultado" style="background-color:#205D76; color:white; border:1px solid #133C4D; border-radius:5px; margin-top:-50px; margin-right:7px; padding:10px;float:right;">`
 
         this.confirmar()
 
@@ -78,49 +78,49 @@ export default class JogosDetalhes {
 
         this.posJogo.innerHTML = `<div class="row elementosArrastar">
                                     <div class="col imgdrop" draggable="true">
-                                        <img class="imagemJogo" src="${jogo[0].imagem}" id="virusDrop" height="220px">
+                                        <img class="imagemJogo" src="${jogo[0].imagem}" id="virusDrop" height="120px">
                                     </div>
                                     <div class="col imgdrop" draggable="true">
-                                        <img class="imagemJogo" src="${jogo[1].imagem}" id="mascaraDrop" height="215px">
+                                        <img class="imagemJogo" src="${jogo[1].imagem}" id="mascaraDrop" height="120px">
                                     </div>
                                     <div class="col imgdrop" draggable="true">
-                                        <img class="imagemJogo" src="${jogo[2].imagem}" id="alcoolDrop" height="220px">
+                                        <img class="imagemJogo" src="${jogo[2].imagem}" id="alcoolDrop" height="120px">
                                     </div> 
                                     <div class="col imgdrop" draggable="true">
-                                        <img class="imagemJogo" src="${jogo[3].imagem}" id="distanciamentoDrop" height="220px">
+                                        <img class="imagemJogo" src="${jogo[3].imagem}" id="distanciamentoDrop" height="120px">
                                     </div>
                                     <div class="col imgdrop" draggable="true">
-                                        <img class="imagemJogo" src="${jogo[4].imagem}" id="lavarAsMaosDrop" height="220px">
+                                        <img class="imagemJogo" src="${jogo[4].imagem}" id="lavarAsMaosDrop" height="120px">
                                     </div>
                                     <div class="col imgdrop" draggable="true">
-                                        <img class="imagemJogo" src="${jogo[5].imagem}" id="doencaDrop" height="220px">
+                                        <img class="imagemJogo" src="${jogo[5].imagem}" id="doencaDrop" height="120px">
                                     </div>
                                 </div>
                                 <br><br><br>
-                                <div class=" row elementoLargar">
-                                    <div class="caixasDragDrop" id="virusdrop">
-                                        <span>${jogo[0].caixa}</span>
+                                <div class=" row elementoLargar" style="margin-left:10px">
+                                    <div class="caixasDragDrop" style=" border: 2px solid #1C6785; text-align:center;" id="virusdrop">
+                                        <span style="font-size:20px; color:#1C6785;">${jogo[0].caixa}</span>
                                     </div>
 
-                                    <div class="caixasDragDrop" id="mascaradrop">
-                                        <span>${jogo[1].caixa}</span>
+                                    <div class="caixasDragDrop" id="mascaradrop" style=" border: 2px solid #1C6785; text-align:center;">
+                                        <span style="font-size:20px; color:#1C6785;">${jogo[1].caixa}</span>
                                     </div>
-                                    <div class="caixasDragDrop" id="alcooldrop">
-                                        <span>${jogo[2].caixa}</span>
+                                    <div class="caixasDragDrop" id="alcooldrop" style=" border: 2px solid #1C6785; text-align:center;">
+                                        <span style="font-size:20px; color:#1C6785;">${jogo[2].caixa}</span>
                                     </div>
-                                    <div class="caixasDragDrop" id="distanciamentodrop">
-                                        <span>${jogo[3].caixa}</span>
+                                    <div class="caixasDragDrop" id="distanciamentodrop" style=" border: 2px solid #1C6785; text-align:center;">
+                                        <span style="font-size:20px; color:#1C6785;">${jogo[3].caixa}</span>
                                     </div>
-                                    <div class="caixasDragDrop" id="lavarAsMaosdrop">
-                                        <span>${jogo[4].caixa}</span>
+                                    <div class="caixasDragDrop" id="lavarAsMaosdrop" style=" border: 2px solid #1C6785; text-align:center;">
+                                        <span style="font-size:20px; color:#1C6785;">${jogo[4].caixa}</span>
                                     </div>
-                                    <div class="caixasDragDrop" id="doencadrop">
-                                        <span>${jogo[5].caixa}</span>
+                                    <div class="caixasDragDrop" id="doencadrop" style=" border: 2px solid #1C6785; text-align:center;">
+                                        <span style="font-size:20px; color:#1C6785;">${jogo[5].caixa}</span>
                                     </div>
                                 </div>
 
-                                <input type="button" value="Confirmar" id="confirmar">
-                                <input type="button" value="Resetar" id="resete">
+                                <input type="button" value="Confirmar" id="confirmar" style="background-color:#205D76; color:white; border:1px solid #133C4D; border-radius:5px; padding:10px; margin-top:10px; margin-left:10px; margin-bottom:10px;">
+                                <input type="button" value="Recomeçar" id="resete" style="background-color:#205D76; color:white; border:1px solid #133C4D; border-radius:5px; padding:10px;">
                                 </div>`
 
         this.imgsdrop = document.querySelectorAll('.imgdrop')

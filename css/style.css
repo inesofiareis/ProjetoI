@@ -1131,3 +1131,17 @@ body {
 .modal-body{
     text-align: center;
 }
+
+.caixaJogos{
+    background-color: white;
+    border-style: ridge;
+    border-color: #ffd8d7;
+    border-bottom: none;
+}
+
+#botaoRetornar{
+    background-color:#3F9999;
+    color: white;
+    font-size:30px;
+    margin-bottom: 10px
+}
