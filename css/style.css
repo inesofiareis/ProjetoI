@@ -103,16 +103,19 @@ body {
         margin-top: 50px;
     }
 
-    .tituloIndex{
+    .tituloIndex {
         text-align: center;
     }
-    .textoIndex{
+
+    .textoIndex {
         text-align: center;
         margin-left: -50px;
     }
-    .divDosBotoesIndex{
+
+    .divDosBotoesIndex {
         margin-left: 50px;
     }
+
     .tatuTatinhasIndex {
         margin-top: 50px;
         margin-left: 50px;
@@ -120,11 +123,11 @@ body {
     }
 }
 
-@media (min-width: 768px) and (max-width: 974px){
+@media (min-width: 768px) and (max-width: 974px) {
 
     .tatuTatinhasIndex {
         width: 230px;
-        margin-top:280px;
+        margin-top: 280px;
 
     }
 
@@ -132,7 +135,7 @@ body {
 }
 
 
-@media (min-width: 975px) and (max-width: 1199px){
+@media (min-width: 975px) and (max-width: 1199px) {
 
     .tatuTatinhasIndex {
         width: 400px;
@@ -148,7 +151,7 @@ body {
         width: 35rem;
     }
 
-    .tatudobemAbanar{
+    .tatudobemAbanar {
         margin-left: 50px;
     }
 }
@@ -527,7 +530,7 @@ body {
 
 
 /* O CSS DOS JOGOS */
-.avaliacaoBtn:hover{
+.avaliacaoBtn:hover {
     background-color: #ff8e8c;
 }
 
@@ -711,7 +714,7 @@ body {
     padding: 10px;
     border: 1px solid #aaaaaa;
     text-align: center;
-  }
+}
 
 
 .elementosArrastar {
@@ -1051,4 +1054,70 @@ body {
 
 .botaoPontosDois {
     border-radius: 20px;
+}
+
+
+/* Alterações na página jogo.html */
+
+#todos {
+    background-color: #EF9AC3;
+    color: white;
+    font-size: 20px;
+    padding: 10px 30px 10px 30px;
+}
+
+#questionarios {
+    background-color: #FAF8DA;
+    color: #EF9AC3;
+    border-color: #EF9AC3;
+    font-size: 20px;
+    padding: 10px 25px 10px 25px;
+}
+
+#jogodamemoria {
+    background-color: #FAF8DA;
+    color: #EF9AC3;
+    border-color: #EF9AC3;
+    font-size: 20px;
+    padding: 10px 25px 10px 25px;
+}
+
+.introDora {
+    font-size: 65px;
+    color: #444E6E;
+    padding-top: 15px;
+}
+
+.introXico {
+    font-size: 65px;
+    color: #444E6E;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+@media (min-width: 500px) and (max-width: 575px) {
+
+    .caixinhasInfo {
+        margin: 0px 50px 0px 100px;
+    }
+
+    .xicoDaPagina {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .caixinhasInfo {
+        margin: 0px 50px 0px 0px;
+        display: flexbox;
+        align-items: center;
+
+    }
+
+    .xicoDaPagina {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
