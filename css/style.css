@@ -157,7 +157,7 @@ body {
 }
 
 
-@media (min-height:792px) {
+@media (min-height:768px) {
     .tituloIndex {
         font-size: 55px !important;
     }
@@ -548,7 +548,7 @@ body {
 #personagem {
     width: 20px;
     height: 50px;
-    background-image: ;
+    background-image: url(../img/jogos/rapazpersonagem.png) ;
     position: relative;
     top: 150px;
 }
@@ -589,7 +589,7 @@ body {
 #virus {
     width: 20px;
     height: 20px;
-    background-image: ;
+    background-image: url(../img/jogos/virus.png);
     position: relative;
     top: 130px;
     left: 480px;
@@ -870,12 +870,13 @@ body {
 
 .estatisticas {
     opacity: 75%;
+
 }
 
 @media (max-width: 800px) {
     .estatisticas {
-        margin-top: 10px;
-        margin-bottom: 50px;
+        margin-top: 40px;
+        margin-bottom: 10px;
     }
 
     .botoesPerfil {
@@ -1120,4 +1121,9 @@ body {
         justify-content: center;
         align-items: center;
     }
+}
+
+.nomeCapítulo {
+    margin-top: 10px;
+    color:#444E6E;
 }
