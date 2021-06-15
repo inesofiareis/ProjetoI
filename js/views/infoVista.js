@@ -58,6 +58,8 @@ export default class infoVista{
             let imagem = document.querySelector('#imagem')
             let texto1 = document.querySelector('#texto1')
             let texto2 = document.querySelector('#texto2')
+
+            this.infoControlador.guardarInformacao(capitulo.value, titulo.value, subtitulo.value, imagem.value, texto1.value, texto2.value)
         })
     }
 }

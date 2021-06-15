@@ -110,19 +110,18 @@ class App {
             avaliacao: {positiva: 5,
                         normal: 2,
                         negativa: 0},
-            detelhesJogo: [{
+            detelhesJogo: {
                                     id:1,
-                                    idades: '<12',
                                     perguntas: ['O que devo fazer quando chego a casa?', 'Qual não é uma forma de me proteger do vírus?', 'Qual a distância que devo manter?', 'Qual destes não é um sintoma do covid-19?', 'O que temos de usar no rosto para nos proteger?'],
-                                    respostasCorretas: ['Lavar as mãos', 'Correr', '2m', 'Espirros', 'Mascara'],
+                                    respostasCorretas: ['Lavar as mãos', 'Ir correr', '2m', 'Espirros', 'Mascara'],
                                     alternativas: [
-                                                    ['Ir jogar', 'Comer aqualas bolachas deliciosas da mãe', 'Lavar as mãos', 'Ver televisão'],
+                                                    ['Ir jogar', 'Comer aquelas bolachas deliciosas da mãe', 'Lavar as mãos', 'Ver televisão'],
                                                     ['Mascara', 'Lavar as mãos', 'Ir correr', 'Distanciamento'],
                                                     ['2m', '0.5m', '1m', '5m'],
                                                     ['Tosse', 'Febre', 'Dores de cabeça', 'Espirros'],
                                                     ['Alcool em gel', 'Mascara', 'Protetor Solar', 'Capacete']
                                                 ]
-                                    }]
+                                    }
                                 },
             {   id: 2,
                 nome: 'Preencher os espaços',
@@ -200,13 +199,23 @@ class App {
             }
         ];
 
+        const gamificacao = []
+
         // Carrega as innformações, caso não haja na localStorage 
         if (!localStorage.utilizadores) {
             localStorage.setItem('utilizadores', JSON.stringify(utilizadores))
+        }
+        if (!localStorage.jogos) {
             localStorage.setItem('jogos', JSON.stringify(jogos))
+        }
+        if (!localStorage.informacao) {
             localStorage.setItem('informacao', JSON.stringify(informacao));
         }
-    }
+        if (!localStorage.gamificacao) {
+            localStorage.setItem('gamificacao', JSON.stringify(gamificacao))
+;
+        }
+    }   
 
     #instantiateViews() {
         const path = window.location.pathname

@@ -70,6 +70,7 @@ export default class pontuacaoMedalhas{
                     <h5 class="mt-0 font-weight-bold mb-2">${medalha.nome}</h5>
                     <p class="font-italic text-muted mb-0 small">${medalha.descricao}</p>  
                     <img src="${medalha.img}" alt="badge" width="200" class="ml-lg-5 order-1 order-lg-2" />
+
                     </div>`
                 }
             }
