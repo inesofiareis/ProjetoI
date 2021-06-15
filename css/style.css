@@ -1158,6 +1158,7 @@ body {
         margin-left: 10px;
     }
 
+
     .medioTexto {
         margin-left: 10px;
     }
@@ -1165,4 +1166,8 @@ body {
     .negativoTexto {
         margin-left: 10px;
     }
+}
+
+.CartaInicio{
+    font-size: 18px;
 }
