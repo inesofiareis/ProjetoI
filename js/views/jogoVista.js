@@ -40,6 +40,9 @@ export default class jogoVista{
         this.txtJogos.innerHTML = texto;
     }
 
+    /**
+     * funçao que filtra pelo tipo de jogo
+     */
     filtrar(){
         for (let btnFiltro of this.btnsFiltro){
                 btnFiltro.addEventListener('click', () => {
@@ -48,6 +51,9 @@ export default class jogoVista{
         }
     }
 
+    /**
+     * apresenta os jogos
+     */
     catalogoJogo(jogos = []) {
         //gerir o botão de adicionar jogo
         if (this.utilizadorControlador.admin()){
@@ -77,6 +83,9 @@ export default class jogoVista{
         this.removerJogo()
     }
 
+    /**
+     * insere no catalogo o jogo conforme os parametros que são passados
+     */
     gerarCardJogo(jogo) {
         let resultado = `
         <div class="col">
@@ -99,6 +108,10 @@ export default class jogoVista{
         return resultado
     }
 
+    /**
+     * retorna o jogo escolhido
+     * passando o utilizador para a pagina de jogo-detalhe
+     */
     vicularMostrarJogo() {
         for (const btnJogar of document.querySelectorAll(".jogar")) {
             btnJogar.addEventListener('click', event => {
@@ -108,6 +121,10 @@ export default class jogoVista{
         }
     }
 
+    /**
+     * funcao para admins
+     * remove o jogo
+     */
     removerJogo(){
         for (const btnRemover of document.querySelectorAll('.remover')){
             btnRemover.addEventListener('click', event => {
@@ -117,8 +134,10 @@ export default class jogoVista{
         }
     }
 
-    //criar novo jogo
-
+    /**
+     * funçao para admins
+     * funçao para adicionar jogo e adicionar os seus campos
+     */
     adicionarJogoFormulario(){
         this.botaoAdicionarJogo.addEventListener('click', () => {
             //cabeçalho do jogo
@@ -171,6 +190,9 @@ export default class jogoVista{
         })
     }
 
+    /**
+     * adiciona o genero do jogo
+     */
     adicionarJogoGenero(){
         this.generoJogo.addEventListener('change', () => {
             if(this.generoJogo.value == 'Questionários'){
@@ -182,6 +204,9 @@ export default class jogoVista{
         })
     }
 
+    /**
+     * funcao para preencher os campos do questionarios
+     */
     adicionarJogoQuestionario(){
         this.informacaoJogo.innerHTML = `<div class="row perguntasRespostas">
                                             <form>
@@ -356,6 +381,9 @@ export default class jogoVista{
         this.confirmarQuestionario()
     }
 
+    /**
+     * função para preencher as informaçoes do jogo de preencher os espaços
+     */
     adicionarJogoPreencher(){
         this.informacaoJogo.innerHTML = `<div class="col preencher">
                                             <div class='row'>
@@ -448,18 +476,27 @@ export default class jogoVista{
         this.confirmarPreencher()
     }
 
+    /**
+     * cancela a adicao do jogo
+     */
     cancelarAdicao(){
         this.botaoCancelar.addEventListener('click', () => {
             location.reload()
         })
     }
 
+    /**
+     * envia os dados inseridos do questionario
+     */
     confirmarQuestionario(){
         this.botaoConfirmarQuestionario.addEventListener('click', () => {
             this.jogoControlador.novoJogoQuestionario(this.nomeJogo.value, this.imgJogo.value, this.descricao.value, this.generoJogo.value, this.pergunta1.value, this.alternativa1, this.resposta1.value, this.pergunta2.value, this.alternativa2, this.resposta2.value, this.pergunta3.value, this.alternativa3, this.resposta3.value, this.pergunta4.value, this.alternativa4, this.resposta4.value, this.pergunt5.value, this.alternativa5, this.respost5.value)
         })
     }
 
+    /** 
+     * envia os dados inseridos do jogo de preencher
+     */
     confirmarPreencher(){
         this.botaoConfirmarPreencher.addEventListener('click', () =>{
             this.jogoControlador.novoJogoPreencher(this.nomeJogo.value, this.imgJogo.value, this.descricao.value, this.generoJogo.value, this.caixa1.value, this.img1.value, this.caixa2.value, this.img2.value, this.caixa3.value, this.img3.value, this.caixa4.value, this.img4.value, this.caixa5.value, this.img5.value, this.caixa6.value, this.img6.value)

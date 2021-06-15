@@ -30,7 +30,9 @@ export default class JogosDetalhes {
         document.querySelector('.descJogo').innerHTML = jogo.descricao;
     }
 
-
+    /**
+     * Apos o jogo selecionado esta função retorna os seus dados e cria o questionário
+     */
     gerarJogoQuestionarios() {
         let perguntasErespostas = this.jogoControlador.getJogo()
 
@@ -72,7 +74,9 @@ export default class JogosDetalhes {
 
     }
 
-
+    /**
+     * Após selecionar o jogo insere os dados sobre o jogo de preencher espaços
+     */
     gerarJogoArrastar() {
         let jogo = this.jogoControlador.getJogo()
 
@@ -132,7 +136,10 @@ export default class JogosDetalhes {
         this.ConfirmarPreencher()
     }
 
-
+    /**
+     * Conforme o jogo selecionado uma das funçoes abre de forma a inserir o jogo correto
+     * posteriormente, será injetado o formato atraves das funçoes
+     */
     jogo() {
         let jogo = this.jogoControlador.getJogoAtual();
         if (jogo.genero == 'Preencher espaços') {
@@ -146,6 +153,9 @@ export default class JogosDetalhes {
         }
     }
 
+    /**
+     * retorna o resultado do questionario
+     */
     confirmar() {
         this.botaoResultado = document.querySelector('#resultado').addEventListener('click', () => {
             let rUm = document.querySelector('input[name="respostaUm"]:checked')
@@ -165,6 +175,9 @@ export default class JogosDetalhes {
         })
     }
 
+    /**
+     * funçoes do jogo de preencher espaços
+     */
     JogoArrastar() {
         let arrastados
         this.imgsdrop.forEach(imgdrop => {
@@ -205,12 +218,18 @@ export default class JogosDetalhes {
         })
     }
 
+    /**
+     * dá reset ao jogo e as imagens deixam de estar na tabela
+     */
     resetar() {
         this.botaoResetar.addEventListener('click', () => {
             location.reload()
         })
     }
 
+    /**
+     * retorna o resultado no jogo de preencher espaços
+     */
     ConfirmarPreencher() {
         this.botaoConfirmarPreencher.addEventListener('click', () => {
             let caixaVirus = document.querySelector('#virusdrop')
@@ -241,6 +260,10 @@ export default class JogosDetalhes {
         })
     }
 
+    /**
+     * Elementos de gamificação
+     * incrementa a avaliacao quando clicado no que deseja avaliar
+     */
     gostos(){
         let gostos = this.jogoControlador.jogoAvaliacao();
         let positivo = gostos.positiva;
@@ -266,6 +289,9 @@ export default class JogosDetalhes {
         });
     }
 
+    /**
+     * funçao de  avaliaçao positiva
+     */
     positivo(){
         this.btnPositiva.addEventListener('click', () =>{
             this.jogoControlador.positivo()
@@ -273,6 +299,9 @@ export default class JogosDetalhes {
         })
     }
 
+    /**
+     * função de avaliaçao normal
+     */
     medio(){
         this.btnNormal.addEventListener('click', () =>{
             this.jogoControlador.medio()
@@ -280,6 +309,9 @@ export default class JogosDetalhes {
         })
     }
 
+    /**
+     * função de avaliação negativa
+     */
     negativo(){
         this.btnNegativa.addEventListener('click', () =>{
             this.jogoControlador.negativo()

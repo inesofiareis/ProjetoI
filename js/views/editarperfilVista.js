@@ -30,6 +30,10 @@ export default class genero{
         this.guardarAvatarF()
     }
 
+    /**
+     * Função que atualiza os dados que são preenchidos pelo utilizador
+     * se houver algum erro este é comunicado através de uma div
+     */
     atualizarDados(){
         this.botaoAlterar.addEventListener("click", () =>{ 
             try {
@@ -49,12 +53,18 @@ export default class genero{
         })
     }
 
+    /**
+     * Função que exibe o avatar
+     */
     avatar(){
         let avatar = this.utilizadorControlador.avatar()
 
         this.fotoPerfil.src = avatar
     }
 
+    /**
+     * Função que coloca nos placeholders os dados do utilizador
+     */
     placeholder(){
         let atualNomeUtilizador = this.utilizadorControlador.utilizadoresInfo()
         let email = this.utilizadorControlador.email()
@@ -63,6 +73,10 @@ export default class genero{
         this.emailUtilizador.placeholder = email;
     }
 
+    /**
+     * Função apenas para admins
+     * Se o utilizador for um administrador a tabela aparece e poderá bloquear, remover e mudar o tipo do utilizador
+     */
     gerirUtilizadores(){    
         let utilizadores = this.utilizadorControlador.todosUtilizadores();
 
@@ -112,7 +126,10 @@ export default class genero{
 
         
     }
-
+    
+    /**
+     * Função que altera os dados do utilizador, atualizando-os
+     */
     botaoAlterarTipo(){
         for (const btnAlterar of document.querySelectorAll('.alterar')){
             btnAlterar.addEventListener('click', event =>{
@@ -123,6 +140,9 @@ export default class genero{
         
     }
 
+    /**
+     * Função que está associada à remoção dos utilizadores
+     */
     botaoRemover(){
         for (const btnRemover of document.querySelectorAll('.remover')){
             btnRemover.addEventListener('click', event =>{
@@ -132,6 +152,9 @@ export default class genero{
         }
     }
 
+    /**
+     * Função que está associada ao bloqueio dos utilizadores
+     */
     botaoBloquear(){
         for (const btnBloquear of document.querySelectorAll('.bloquear')){
             btnBloquear.addEventListener('click', event =>{
@@ -141,6 +164,9 @@ export default class genero{
         }
     }
 
+    /**
+     * Função que retorna as atividades que o utilizador já fez
+     */
     estatisticas(){
         let atividades = this.utilizadorControlador.getAtividades();
         this.nAtividades.innerHTML = atividades.length;
@@ -151,6 +177,9 @@ export default class genero{
 
     }
 
+    /**
+     * Função que retorna as pontuaçoes na atividade selecionada
+     */
     estatisticasAtividade(){
         this.nomeAtividades.addEventListener('change', () =>{
             let atividades = this.utilizadorControlador.getAtividades();
@@ -159,6 +188,9 @@ export default class genero{
         })
     }
 
+    /**
+     * Função que abre uma modal com acesso aos avatares desbloqueados
+     */
     avataresModalF(){
         let pontuacao = this.utilizadorControlador.getPontos()
         let novosAvatares = `<div class="row">
@@ -194,6 +226,9 @@ export default class genero{
         this.novoAvatarF()
     }
 
+    /**
+     * Função que atualiza para o avatar escolhido
+     */
     novoAvatarF(){
         for (let novo of this.novoAvatar){
             novo.addEventListener('click', event =>{

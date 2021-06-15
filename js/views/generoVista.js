@@ -11,7 +11,9 @@ export default class genero{
         this.textoGenero();
     }
 
-
+    /**
+     * Função que altera os determinantes do texto conforme o genero do utilizador
+     */
     textoGenero(){
         const generoUtilizador = this.utilizadorControlador.getGenero();
         if (generoUtilizador == 'Feminino'){

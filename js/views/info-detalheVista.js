@@ -11,6 +11,9 @@ export default class infoDetelhes {
         this.informacao()
     }
 
+    /**
+     * Através do capitulo escolhiso exibe o texto 
+     */
     informacao(){
         let info = this.infoControlador.getCapituloAtual()
         

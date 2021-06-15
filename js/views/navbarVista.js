@@ -10,6 +10,9 @@ export default class UtilizadorVista {
         this.navbar();   
     }
 
+    /**
+     * Meter na barra da navbar o avatar e o primeiro e ultimo nome do utilizador
+     */
     navbar(){
         let nomeApelido = this.utilizadorControlador.nomeApelido();
         let avatar = this.utilizadorControlador.avatar();

@@ -18,7 +18,10 @@ export default class infoVista{
         this.btnguardarAlterações = document.querySelector('#guardarInfo')
         this.guardarAlterações()
     }
-
+    
+    /**
+     * Através do género do utilizador o texto muda
+     */
     txtInfo(){
         const generoUtilizador = this.utilizadorControlador.getGenero();
         let texto
@@ -35,6 +38,9 @@ export default class infoVista{
         this.txtInfos.innerHTML = texto;
     }
 
+    /**
+     * adiciona os capitulos de informação
+     */
     btnCapitulo(){
         for (let btnCapitulo of this.btnsCapitulo){
             btnCapitulo.addEventListener('click', () =>{
@@ -44,12 +50,19 @@ export default class infoVista{
         }
     }
 
+    /**
+     * função apenas disponivel para admins
+     * torna o botao visivel
+     */
     adicionar(){
         if (this.utilizadorControlador.admin()){
             this.btnAdicionar.style.visibility = 'visible'
         }
     }
     
+    /**
+     * Ao selecionar o botao de adicionar abre uma modal que permite passar os dados novos e criar ou editar o capitulo
+     */
     guardarAlterações(){
         this.btnguardarAlterações.addEventListener('click', () => {
             let capitulo = document.querySelector('#capituloEditar')

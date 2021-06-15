@@ -48,10 +48,6 @@ export default class utilizadorControlador {
         sessionStorage.removeItem('utilizadorLogado')
     }
 
-    isLogged() {
-        return sessionStorage.getItem('utilizadorLogado') ? true : false
-    }
-
     /**
      * Função para juntar o primeiro e ultimo nome do utilizador numa só string
      * @returns primeiro e ultimo nome do utilizador
@@ -103,6 +99,10 @@ export default class utilizadorControlador {
         return utilizador.avatar
     }
 
+    /**
+     * função para guardar a alteração do avatar
+     * @param {string} avatar avatar a ser alterado
+     */
     setAvatar(avatar){
         let utilizador = this.utilizadoresInfo()
         
@@ -181,6 +181,12 @@ export default class utilizadorControlador {
         this.guardarLocalStorage(utilizador)
     }
 
+    /**
+     * Função para ver a pontuação maxima numa certa atividade
+     * @param {Array} atividades lista de atividades
+     * @param {string} atividade atividade em questão
+     * @returns 
+     */
     atividadePontuacao(atividades, atividade){
         for (const ati of atividades){
             if(ati.atividade == atividade){
@@ -326,6 +332,10 @@ export default class utilizadorControlador {
         this.guardarLocalStorage(utilizador)
     }
 
+    /**
+     * Remover um utilizador da lista de utilizadores
+     * @param {string} nomeUtilizador utilizador a ser removido
+     */
     remover(nomeUtilizador){
         let todosUtilizadores = this.todosUtilizadores()
 
@@ -351,6 +361,11 @@ export default class utilizadorControlador {
     }
     //admin - gerir utilizadores
 
+    /**
+     * função para alterar o nome de utilizador
+     * @param {string} utilizador nome de utlizador antigo
+     * @param {string} novoUtilizador novo nome de utilizador
+     */
     alterarNomeUtilizador(utilizador, novoUtilizador){
         const todosUtilizadores = this.todosUtilizadores()
 
